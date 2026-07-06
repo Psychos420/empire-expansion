@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Der Finanzielle Freiheit-Check für 40+ | Empire Expansion</title>
+  <meta name="description" content="Kostenloser PDF-Check für Berufstätige 40+: Finde in 15 Minuten Klarheit über PKV, ETF-Sparplan, Zahnzusatz und Vorsorge.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a2e; background: #f8f9fa; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+    header { background: #16213e; color: white; padding: 40px 0; text-align: center; }
+    header h1 { font-size: 2.2rem; margin-bottom: 16px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+    .hero { background: white; padding: 60px 0; text-align: center; }
+    .hero h2 { font-size: 1.8rem; margin-bottom: 20px; color: #16213e; }
+    .hero p { font-size: 1.1rem; margin-bottom: 30px; color: #4a4a68; }
+    .mockup { background: #f1f3f5; border: 2px dashed #ced4da; border-radius: 12px; padding: 30px; margin-bottom: 24px; color: #6c757d; }
+    .badge { display: inline-block; background: #e94560; color: white; font-size: 0.85rem; font-weight: 600; padding: 6px 14px; border-radius: 20px; margin-top: 12px; }
+    .trust-line { font-size: 0.9rem; color: #6c757d; margin-top: 16px; }
+    .cta-button { display: inline-block; background: #e94560; color: white; padding: 16px 40px; font-size: 1.1rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
+    .cta-button:hover { background: #c73e54; }
+    .problem { background: #fff; padding: 60px 0; }
+    .problem h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .problem ul { list-style: none; margin-bottom: 24px; }
+    .problem li { padding: 10px 0; padding-left: 28px; position: relative; color: #4a4a68; }
+    .problem li::before { content: "✕"; position: absolute; left: 0; color: #e94560; font-weight: 700; }
+    .quote { background: #f1f3f5; border-left: 4px solid #e94560; padding: 16px 20px; margin-bottom: 16px; border-radius: 0 12px 12px 0; color: #4a4a68; font-style: italic; }
+    .benefits { background: #f1f3f5; padding: 50px 0; }
+    .benefits h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .benefit-grid { display: grid; gap: 20px; }
+    .benefit { background: white; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .benefit h4 { color: #e94560; margin-bottom: 8px; }
+    .benefit p { color: #4a4a68; font-size: 0.95rem; }
+    .how-it-works { background: white; padding: 60px 0; }
+    .how-it-works h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .step { display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; background: #16213e; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .step div h4 { color: #16213e; margin-bottom: 4px; }
+    .step div p { color: #4a4a68; font-size: 0.95rem; }
+    .social-proof { background: #f1f3f5; padding: 60px 0; }
+    .social-proof h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .testimonial { background: white; padding: 20px; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); color: #4a4a68; font-style: italic; }
+    .testimonial strong { display: block; margin-top: 10px; font-style: normal; color: #16213e; font-size: 0.9rem; }
+    .trust-list { list-style: none; margin-top: 24px; }
+    .trust-list li { padding: 6px 0; padding-left: 28px; position: relative; color: #4a4a68; }
+    .trust-list li::before { content: "✓"; position: absolute; left: 0; color: #28a745; font-weight: 700; }
+    .form-section { background: white; padding: 60px 0; text-align: center; }
+    .form-section h3 { font-size: 1.6rem; margin-bottom: 12px; color: #16213e; }
+    .form-section p { color: #4a4a68; margin-bottom: 24px; }
+    .lead-form { max-width: 480px; margin: 0 auto; text-align: left; }
+    .lead-form label { display: block; margin-bottom: 6px; font-weight: 600; color: #16213e; font-size: 0.95rem; }
+    .lead-form input[type="email"], .lead-form input[type="text"] { width: 100%; padding: 14px; margin-bottom: 16px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+    .lead-form .checkbox { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; }
+    .lead-form .checkbox input { margin-top: 4px; }
+    .lead-form .checkbox label { margin: 0; font-weight: 400; font-size: 0.9rem; color: #4a4a68; }
+    .lead-form button { width: 100%; padding: 16px; background: #e94560; color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; }
+    .lead-form button:hover { background: #c73e54; }
+    .disclaimer { font-size: 0.8rem; color: #6c757d; margin-top: 16px; text-align: center; }
+    .affiliate-box { background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 12px; padding: 16px; margin-top: 20px; font-size: 0.85rem; color: #856404; text-align: left; }
+    .faq { background: #f1f3f5; padding: 50px 0; }
+    .faq h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .faq-item { background: white; padding: 20px; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .faq-item h4 { color: #16213e; margin-bottom: 8px; }
+    .faq-item p { color: #4a4a68; font-size: 0.95rem; }
+    footer { background: #16213e; color: white; text-align: center; padding: 30px 0; font-size: 0.9rem; }
+    footer a { color: #f8f9fa; text-decoration: underline; }
+    footer p { margin-bottom: 8px; }
+    @media (min-width: 600px) { .benefit-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+
+  <!-- Tracking-Platzhalter: Meta Pixel -->
+  <!-- Meta Pixel Code hier einfügen -->
+
+  <!-- Tracking-Platzhalter: Google Analytics 4 -->
+  <!-- GA4 Tracking Code hier einfügen -->
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Der Finanzielle Freiheit-Check für 40+</h1>
+    <p>Wie Berufstätige 40+ in 15 Minuten Klarheit über ihre Vorsorge bekommen — ohne stundenlanges Recherchieren</p>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Hol dir den kostenlosen Finanzielle Freiheit-Check für 40+</h2>
+    <p>Finde heraus, ob PKV, ETF-Sparplan und Zahnzusatz für dich jetzt Priorität haben — Schritt für Schritt, ohne Fachchinesisch.</p>
+    <div class="mockup">
+      [Mockup: PDF-Checkliste Titelblatt + aufgeklappte Checkliste]
+      <br><span class="badge">Kostenloser PDF-Download — 12 Seiten</span>
+    </div>
+    <a href="#form" class="cta-button">Kostenlosen Check sichern →</a>
+    <p class="trust-line">Kostenlos. Kein Spam. Jederzeit abbestellbar. 100 % DSGVO-konform.</p>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container">
+    <h3>Kennst du das?</h3>
+    <ul>
+      <li>Du weißt nicht, ob du genug für die Rente zur Seite legst.</li>
+      <li>Du überlegst seit Monaten, ob PKV oder Zahnzusatz für dich Sinn machen — kommst aber nicht ins Handeln.</li>
+      <li>Die meisten Ratgeber sind entweder zu oberflächlich oder voller Versicherungsfachchinesisch.</li>
+      <li>Du hast Angst, eine teure Fehlentscheidung zu treffen und später dafür zu bezahlen.</li>
+      <li>Du wünschst dir eine vertrauenswürdige, überschaubare Schritt-für-Schritt-Anleitung.</li>
+    </ul>
+    <p class="quote">Das Frustrierende daran: Je länger du wartest, desto teurer werden Versicherungen und desto weniger Zeit bleibt deinem Vermögen, zu wachsen. Jede verpasste Entscheidung kostet nicht nur Geld, sondern auch Nerven.</p>
+    <p class="quote">Es gibt einen einfacheren Weg. Der <strong>Finanzielle Freiheit-Check für 40+</strong> zeigt dir in 15 Minuten, worauf es wirklich ankommt.</p>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="container">
+    <h3>Das bekommst du im kostenlosen Check</h3>
+    <div class="benefit-grid">
+      <div class="benefit">
+        <h4>40+-Vorsorge-Schnellcheck</h4>
+        <p>Finde in 10 Minuten deine größten Handlungsfelder.</p>
+      </div>
+      <div class="benefit">
+        <h4>Kapitel Krankenversicherung</h4>
+        <p>PKV, Zahnzusatz & Co. verständlich erklärt.</p>
+      </div>
+      <div class="benefit">
+        <h4>Kapitel Vermögensaufbau</h4>
+        <p>ETF-Sparplan, Depot & Rentenlücke im Klaren.</p>
+      </div>
+      <div class="benefit">
+        <h4>Kapitel Freiheits-Plan</h4>
+        <p>Dein persönlicher 3-Schritte-Plan für die nächsten 12 Monate.</p>
+      </div>
+      <div class="benefit">
+        <h4>Bonus: Die 5 häufigsten Fehler bei 40+</h4>
+        <p>Und wie du sie vermeidest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how-it-works">
+  <div class="container">
+    <h3>So funktioniert's</h3>
+    <div class="step">
+      <div class="step-number">1</div>
+      <div>
+        <h4>Download sichern</h4>
+        <p>Trage deine E-Mail ein und erhalte den <strong>Finanzielle Freiheit-Check für 40+</strong> sofort als PDF.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div>
+        <h4>Check in 15 Minuten durchgehen</h4>
+        <p>Arbeite den 40+-Vorsorge-Schnellcheck und die drei Kapitel in deinem Tempo ab.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div>
+        <h4>Ersten Schritt umsetzen</h4>
+        <p>Nutze deinen persönlichen 3-Schritte-Action-Plan und starte direkt — egal ob PKV-Vergleich, Depot-Eröffnung oder Zahnzusatz-Check.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="social-proof">
+  <div class="container">
+    <h3>So empfinden andere den Check</h3>
+    <div class="testimonial">„Endlich eine Checkliste, die ohne Druck auskommt und trotzdem alles Wichtige abdeckt." <strong>— M. K., 42, Selbstständig</strong></div>
+    <div class="testimonial">„Ich habe in 15 Minuten mehr Klarheit gewonnen als in 3 Stunden Google-Recherche." <strong>— S. B., 48, Angestellter</strong></div>
+    <div class="testimonial">„Kein Finanz-Blabla, sondern direkt umsetzbare Schritte." <strong>— T. M., 51, Beamter</strong></div>
+    <ul class="trust-list">
+      <li>DSGVO-konformes Opt-in</li>
+      <li>Kein Spam, jederzeit abbestellbar</li>
+      <li>Keine individuelle Beratung, keine Verkaufsverpflichtung</li>
+      <li>Affiliate-Links werden transparent gekennzeichnet</li>
+    </ul>
+  </div>
+</section>
+
+<section class="form-section" id="form">
+  <div class="container">
+    <h3>Bereit für mehr finanzielle Klarheit?</h3>
+    <p>Trag dich jetzt ein und hol dir den <strong>Finanzielle Freiheit-Check für 40+</strong>. Es dauert weniger als eine Minute — und kann dir viele Stunden Recherche ersparen.</p>
+    <form class="lead-form" action="{{FORM_ACTION}}" method="POST">
+      <label for="email">Deine beste E-Mail-Adresse</label>
+      <input type="email" id="email" name="email" placeholder="z. B. max@beispiel.de" required>
+
+      <label for="first_name">Dein Vorname (optional)</label>
+      <input type="text" id="first_name" name="first_name" placeholder="Dein Vorname">
+
+      <input type="hidden" name="tag" value="01-affiliate-marketing">
+
+      <div class="checkbox">
+        <input type="checkbox" id="dsgvo" name="dsgvo" required>
+        <label for="dsgvo">Ja, ich möchte den kostenlosen Check erhalten und akzeptiere die Datenschutzerklärung.</label>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="marketing" name="marketing">
+        <label for="marketing">Ja, ich möchte regelmäßig Tipps zu finanzieller Vorsorge erhalten. (optional, empfohlen)</label>
+      </div>
+
+      <button type="submit">Kostenlosen Check jetzt sichern →</button>
+    </form>
+
+    <p class="disclaimer">Kostenlos. Kein Spam. Jederzeit abbestellbar. 100 % DSGVO-konform.</p>
+
+    <div class="affiliate-box">
+      <strong>Hinweis:</strong> Diese Seite enthält Affiliate-Links. Wenn du über einen unserer Links ein Produkt buchst oder ein Depot eröffnest, erhalten wir ggf. eine Provision — für dich entstehen keine Mehrkosten. Alle Inhalte sind allgemeiner Natur und ersetzen keine individuelle Anlage-, Steuer- oder Versicherungsberatung.
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h3>Häufige Fragen</h3>
+    <div class="faq-item">
+      <h4>Ist der Download wirklich kostenlos?</h4>
+      <p>Ja, vollkommen kostenlos. Du bekommst die Checkliste sofort per E-Mail.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Werde ich anschließend zugespamt?</h4>
+      <p>Nein. Du bekommst eine kurze 5-teilige Willkommens-Sequenz zum Thema finanzielle Vorsorge 40+ und danach nur noch Inhalte, die für dich relevant sind. Du kannst dich jederzeit abmelden.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Für wen ist der Check geeignet?</h4>
+      <p>Für Berufstätige zwischen 40 und 55, die Klarheit über Vorsorge, Krankenversicherung und Vermögensaufbau wollen — und bereit sind, den ersten Schritt zu machen.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Ist das eine Beratung?</h4>
+      <p>Nein. Der Check dient der allgemeinen Information. Bei individuellen Entscheidungen empfehlen wir dir, einen unabhängigen Versicherungsmakler, Steuerberater oder Finanzberater zu konsultieren.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Warum stehen Affiliate-Links drin?</h4>
+      <p>Weil wir transparent verdienen möchten, ohne dir Kosten aufzubürden. Jeder empfohlene Anbieter wird gekennzeichnet. Du entscheidest selbst, ob du den Link nutzt.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="#">Affiliate-Hinweis</a> · <a href="#">Widerrufsbelehrung</a></p>
+    <p>&copy; 2026 Empire Expansion. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+</body>
+</html>
