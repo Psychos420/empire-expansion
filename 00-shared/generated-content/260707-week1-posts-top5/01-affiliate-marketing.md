@@ -1,7 +1,7 @@
 # Woche-1-Posts — 01 Affiliate Marketing (Zahnzusatz/ETF 40+)
 
 **Kanal:** LinkedIn (Hauptkanal) + Facebook-Gruppen (Finanztipps, Beamte, Mütter 40+)
-**Ziel-Link:** {{LANDING_PAGE_URL}}/01-affiliate-marketing/ (einsetzen sobald GitHub Pages live ist)
+**Ziel-Link:** https://psychos420.github.io/empire-expansion/01-affiliate-marketing/ (einsetzen sobald GitHub Pages live ist)
 **Ton:** persönlich, sachlich, nicht verkäuferisch (Kimi-Empfehlung)
 
 ---

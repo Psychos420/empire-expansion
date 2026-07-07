@@ -1,7 +1,7 @@
 # Woche-1-Posts — 05 PKV Lead-Generation (Beamte)
 
 **Kanal:** LinkedIn, Xing, Beamten-Facebook-Gruppen
-**Ziel-Link:** {{LANDING_PAGE_URL}}/05-lead-generation-pkv/
+**Ziel-Link:** https://psychos420.github.io/empire-expansion/05-lead-generation-pkv/
 **Kimi-Priorität:** HOCH — aktuelles Zeitfenster optimal (60% der Privatversicherten von PKV-Beitragserhöhung 2026 betroffen)
 **Ton:** sachlich, keine Angstmache, konkrete Zahlen
 

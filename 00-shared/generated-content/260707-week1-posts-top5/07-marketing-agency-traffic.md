@@ -1,7 +1,7 @@
 # Woche-1-Posts — 07 Marketing Agency Traffic
 
 **Kanal:** LinkedIn Outreach + Cold-E-Mail (max. 15 LinkedIn-Anfragen/Tag laut Kimi, sonst Sperre-Risiko)
-**Ziel-Link:** {{LANDING_PAGE_URL}}/07-marketing-agency-traffic/
+**Ziel-Link:** https://psychos420.github.io/empire-expansion/07-marketing-agency-traffic/
 **Angebot:** Woche-1-Sprint €997 (Kimi-Recherche)
 **Ton:** direkt, Ergebnis-fokussiert
 

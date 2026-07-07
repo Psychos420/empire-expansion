@@ -1,7 +1,7 @@
 # Woche-1-Posts — 09 Finanzielle Freiheit / FIRE
 
 **Kanal:** LinkedIn DMs, Reddit r/Finanzen (nur wertvolle Antworten mit Link im Profil, keine Werbung — Kimi-Hinweis)
-**Ziel-Link:** {{LANDING_PAGE_URL}}/09-finanzielle-freiheit/
+**Ziel-Link:** https://psychos420.github.io/empire-expansion/09-finanzielle-freiheit/
 **Angebot:** 20-min kostenloser Check → 350 € Strategiegespräch
 **Ton:** ehrlich, zahlenbasiert, kein "reich in 5 Jahren"-Hype
 

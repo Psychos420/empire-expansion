@@ -1,7 +1,7 @@
 # Woche-1-Posts — 04 KI-Integrationen für den Mittelstand 35+
 
 **Kanal:** LinkedIn (warmes Netzwerk + Mittelstand-Gruppen)
-**Ziel-Link:** {{LANDING_PAGE_URL}}/04-ki-integrationen-35plus/
+**Ziel-Link:** https://psychos420.github.io/empire-expansion/04-ki-integrationen-35plus/
 **Preispositionierung:** €299 Starter vs. Marktpreis 990–1.500 €+ (Kimi-Recherche, Quelle: Der Prozessmeister)
 **Ton:** konkret, ROI-fokussiert, DSGVO-Sicherheit betonen (Kimi-Hinweis: hohes Misstrauen gegenüber Buzzwords)
 

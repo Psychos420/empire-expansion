@@ -24,9 +24,10 @@
       "_todo": "Braucht PayPal-Account (STOP-Punkt: Zahlungsdaten)."
     },
     "github": {
-      "username": "",
+      "username": "Psychos420",
       "repo": "empire-expansion",
-      "_todo": "Braucht GitHub-Account-Username fuer Pages-URL."
+      "pages_url": "https://psychos420.github.io/empire-expansion/",
+      "_note": "GitHub Pages live seit dieser Session, Branch main, root path."
     },
     "web3forms": {
       "access_key": "d4cddc96-085c-497b-bd25-b77b7dd3eca9",
