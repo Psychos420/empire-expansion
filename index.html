@@ -1,227 +1,289 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empire Expansion — 35+ Lead-Ökosystem</title>
-  <meta name="description" content="14 vernetzte Nischen-Projekte für Lead-Generierung, PDF-Verkauf, PKV-Leads, KI-Agentur und mehr.">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a2e; background: #f8f9fa; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    header { background: #16213e; color: white; padding: 50px 0; text-align: center; }
-    header h1 { font-size: 2.4rem; margin-bottom: 16px; }
-    header p { font-size: 1.2rem; opacity: 0.9; max-width: 720px; margin: 0 auto; }
-    .hero { background: white; padding: 50px 0; text-align: center; border-bottom: 1px solid #e9ecef; }
-    .hero p { font-size: 1.1rem; color: #4a4a68; max-width: 760px; margin: 0 auto 24px; }
-    .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .cta-button { display: inline-block; background: #e94560; color: white; padding: 14px 32px; font-size: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; }
-    .cta-button:hover { background: #c73e54; }
-    .cta-button.secondary { background: #16213e; }
-    .cta-button.secondary:hover { background: #0f172a; }
-    .projects { background: #f8f9fa; padding: 60px 0; }
-    .projects h2 { text-align: center; font-size: 1.8rem; margin-bottom: 40px; color: #16213e; }
-    .project-grid { display: grid; gap: 24px; }
-    .project-card { background: white; border-radius: 12px; padding: 28px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #e9ecef; transition: transform 0.15s, box-shadow 0.15s; }
-    .project-card:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
-    .project-number { display: inline-block; background: #e94560; color: white; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; margin-bottom: 12px; }
-    .project-card h3 { font-size: 1.15rem; margin-bottom: 8px; color: #16213e; }
-    .project-card p { color: #4a4a68; font-size: 0.95rem; margin-bottom: 18px; }
-    .project-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-    .project-actions a { display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: background 0.2s; }
-    .btn-landing { background: #16213e; color: white; }
-    .btn-landing:hover { background: #0f172a; }
-    .btn-pdf { background: #f1f3f5; color: #16213e; border: 1px solid #dee2e6; }
-    .btn-pdf:hover { background: #e9ecef; }
-    .status-bar { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 24px; font-size: 0.9rem; color: #4a4a68; }
-    .status-bar span { display: inline-flex; align-items: center; gap: 6px; }
-    .status-bar .dot { width: 8px; height: 8px; border-radius: 50%; background: #28a745; }
-    footer { background: #16213e; color: white; text-align: center; padding: 30px 0; font-size: 0.9rem; }
-    footer a { color: #f8f9fa; text-decoration: underline; }
-    footer p { margin-bottom: 8px; }
-    @media (min-width: 640px) { .project-grid { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 960px) { .project-grid { grid-template-columns: 1fr 1fr 1fr; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empire Expansion — Verfahrensregister 2026</title>
+<meta name="description" content="Empire Expansion betreibt 14 unabhängige Verfahren für Vorsorge, Business und Alltag ab 35 — jedes mit eigenem Check und eigenem Fahrplan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16213e;
+    --paper:#f4f3ee;
+    --paper-raised:#fbfaf7;
+    --coral:#e94560;
+    --coral-deep:#c73e54;
+    --muted:#4a4a68;
+    --line:#dbd7cd;
+    --finanz:#1f6f5c;
+    --business:#3c4d8a;
+    --alltag:#a85a2b;
+    --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+    --display: 'Space Grotesk', system-ui, sans-serif;
+    --serif: 'Source Serif 4', Georgia, serif;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family: var(--serif);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap{ max-width: 920px; margin: 0 auto; padding: 0 24px; }
+  a{ color: inherit; }
+  :focus-visible{ outline: 3px solid var(--coral); outline-offset: 2px; }
+
+  /* Masthead */
+  .masthead{ border-bottom: 1px solid var(--line); background: var(--paper-raised); }
+  .masthead-inner{
+    display:flex; align-items:baseline; justify-content:space-between;
+    padding: 22px 0; flex-wrap: wrap; gap: 8px 20px;
+  }
+  .wordmark{ font-family: var(--display); font-weight:700; font-size:1.15rem; letter-spacing:-0.01em; }
+  .wordmark span{ color: var(--coral); }
+  .register-tag{ font-family: var(--mono); font-size:0.72rem; letter-spacing:0.14em; text-transform:uppercase; color: var(--muted); }
+
+  /* Hero */
+  .hero{ padding: 72px 0 56px; }
+  .hero h1{
+    font-family: var(--display); font-weight:700;
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    line-height: 1.08; letter-spacing:-0.01em;
+    max-width: 14ch;
+    margin-bottom: 28px;
+  }
+  .hero h1 em{ font-style:normal; color: var(--coral); }
+  .hero p.lede{
+    font-size: 1.14rem; color: var(--muted); max-width: 56ch; margin-bottom: 32px;
+  }
+  .hero-meta{
+    display:flex; gap: 28px; flex-wrap:wrap; font-family: var(--mono); font-size:0.82rem; color: var(--muted);
+  }
+  .hero-meta strong{ color: var(--ink); font-size: 1rem; font-family: var(--display); }
+
+  /* Register (cluster sections) */
+  .register{ padding: 8px 0 64px; }
+  .cluster{ border-top: 1px solid var(--line); padding-top: 28px; margin-top: 28px; }
+  .cluster:first-child{ border-top: 1px solid var(--line); }
+  .cluster-head{ display:flex; align-items:baseline; gap:14px; margin-bottom: 8px; flex-wrap:wrap; }
+  .cluster-roman{ font-family: var(--mono); font-size:0.85rem; color: var(--c, var(--ink)); font-weight:500; }
+  .cluster-title{ font-family: var(--display); font-weight:600; font-size:1.25rem; }
+  .cluster-desc{ color: var(--muted); font-size:0.98rem; max-width:60ch; margin-bottom:22px; }
+
+  .cluster[data-c="finanz"]{ --c: var(--finanz); }
+  .cluster[data-c="business"]{ --c: var(--business); }
+  .cluster[data-c="alltag"]{ --c: var(--alltag); }
+
+  .row{
+    display:grid;
+    grid-template-columns: 44px 1fr auto;
+    align-items:center;
+    gap: 18px;
+    padding: 16px 14px;
+    border-left: 3px solid var(--c, var(--line));
+    background: var(--paper-raised);
+    margin-bottom: 10px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0; transform: translateY(10px);
+    transition: background 0.15s ease;
+  }
+  .row.is-visible{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){ .row{ opacity:1; transform:none; } }
+  .row:hover{ background: #ffffff; }
+  .row-num{
+    font-family: var(--mono); font-weight:500; font-size:0.85rem;
+    color: var(--c, var(--ink));
+    border: 1px solid var(--c, var(--line));
+    border-radius: 4px;
+    width: 34px; height: 34px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .row-body h3{ font-family: var(--display); font-weight:600; font-size:1.02rem; margin-bottom:3px; }
+  .row-body p{ color: var(--muted); font-size:0.92rem; }
+  .row-actions{ display:flex; gap:10px; white-space:nowrap; }
+  .row-actions a{
+    font-family: var(--mono); font-size:0.78rem; text-decoration:none;
+    padding: 7px 12px; border-radius:5px; font-weight:500;
+  }
+  .act-open{ background: var(--ink); color:#fff; }
+  .act-open:hover{ background:#0f172a; }
+  .act-pdf{ background: transparent; color: var(--ink); border: 1px solid var(--line); }
+  .act-pdf:hover{ background: var(--paper); }
+
+  @media (max-width: 640px){
+    .row{ grid-template-columns: 36px 1fr; }
+    .row-actions{ grid-column: 1 / -1; padding-left: 54px; }
+  }
+
+  /* Status line */
+  .status{
+    font-family: var(--mono); font-size:0.8rem; color: var(--muted);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding: 16px 0; display:flex; gap:24px; flex-wrap:wrap;
+  }
+  .status .ok::before{ content:"● "; color:#1f6f5c; }
+
+  footer{ padding: 32px 0 48px; font-size:0.85rem; color: var(--muted); }
+  footer a{ text-decoration: underline; text-underline-offset:2px; }
+  footer .legal{ margin-bottom:8px; }
+</style>
 </head>
 <body>
 
-<header>
-  <div class="container">
-    <h1>Empire Expansion</h1>
-    <p>14 vernetzte Nischen-Projekte für Menschen ab 35 — Lead-Generierung, PDF-Produkte, PKV-Leads, KI-Agentur und mehr.</p>
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <div class="wordmark">Empire<span>·</span>Expansion</div>
+    <div class="register-tag">Verfahrensregister · 2026</div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="container">
-    <p>Dieser Hub verbindet alle aktiven Landing Pages und Lead-Magnet-PDFs. Jeder Bereich kann standalone laufen, füttert aber gleichzeitig das zentrale Ökosystem.</p>
-    <div class="hero-actions">
-      <a href="README.md" class="cta-button secondary">Gesamtstrategie lesen</a>
-      <a href="MASTER-PLAN.md" class="cta-button">Master-Plan öffnen</a>
-    </div>
-    <div class="status-bar">
-      <span><span class="dot"></span> 14 Landing Pages live</span>
-      <span><span class="dot"></span> 14 Lead-Magnet-PDFs generiert</span>
-      <span><span class="dot"></span> Hub & PDF-Downloads verbunden</span>
+  <div class="wrap">
+    <h1>Ein Betreiber.<br>14&nbsp;Verfahren.<br>Eine Frage: <em>Wo stehst du?</em></h1>
+    <p class="lede">Empire Expansion führt 14 unabhängige, spezialisierte Verfahren für Themen, die ab 35 wichtig werden — von Altersvorsorge über KI im Mittelstand bis Baufinanzierung. Jedes Verfahren hat einen eigenen Check, einen eigenen Fahrplan und ein eigenes Ziel. Kein Rundum-Sorglos-Paket, sondern für jedes Thema die Tiefe, die es verdient.</p>
+    <div class="hero-meta">
+      <span><strong>14</strong><br>aktive Verfahren</span>
+      <span><strong>3</strong><br>Themenfelder</span>
+      <span><strong>0&nbsp;€</strong><br>für jeden Check</span>
     </div>
   </div>
 </section>
 
-<section class="projects" id="projects">
-  <div class="container">
-    <h2>Die 14 Expansionsbereiche</h2>
-    <div class="project-grid">
+<section class="register">
+  <div class="wrap">
 
-      <div class="project-card">
-        <span class="project-number">01</span>
-        <h3>Affiliate Marketing</h3>
-        <p>Der Finanzielle Freiheit-Check für 40+ — Klarheit über Vorsorge, ETF &amp; Krankenversicherung.</p>
-        <div class="project-actions">
-          <a href="01-affiliate-marketing/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="01-affiliate-marketing/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
+    <div class="cluster" data-c="finanz">
+      <div class="cluster-head">
+        <span class="cluster-roman">I — FINANZ &amp; VORSORGE</span>
       </div>
+      <p class="cluster-desc">Sechs Verfahren rund um Vorsorge, Absicherung und Vermögensaufbau — für alle, die wissen wollen, wo sie wirklich stehen, bevor die nächste Entscheidung ansteht.</p>
 
-      <div class="project-card">
-        <span class="project-number">02</span>
-        <h3>TikTok Shop</h3>
-        <p>GlowAfter35 — Mature Skin / Anti-Aging als Direktverkauf &amp; Lead-Maschine.</p>
-        <div class="project-actions">
-          <a href="02-tiktok-shop/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="02-tiktok-shop/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
+      <div class="row">
+        <div class="row-num">01</div>
+        <div class="row-body"><h3>Affiliate Marketing</h3><p>Der Finanzielle-Freiheit-Check für 40+ — Klarheit über Vorsorge, ETF &amp; Zahnzusatzversicherung.</p></div>
+        <div class="row-actions"><a class="act-open" href="01-affiliate-marketing/landing-page.html">Öffnen</a><a class="act-pdf" href="01-affiliate-marketing/lead-magnet.pdf" download>PDF laden</a></div>
       </div>
-
-      <div class="project-card">
-        <span class="project-number">03</span>
-        <h3>PDFs &amp; Guides</h3>
-        <p>Die 5-teilige Checkliste: Rente mit 65 sicher — Low-Ticket-Produkt &amp; Lead-Magnet.</p>
-        <div class="project-actions">
-          <a href="03-pdfs-guides/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="03-pdfs-guides/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
+      <div class="row">
+        <div class="row-num">03</div>
+        <div class="row-body"><h3>PDFs &amp; Guides</h3><p>„Rente mit 65 sicher?" — 5-teilige Checkliste plus Low-Ticket-Vertiefung für 19&nbsp;€.</p></div>
+        <div class="row-actions"><a class="act-open" href="03-pdfs-guides/landing-page.html">Öffnen</a><a class="act-pdf" href="03-pdfs-guides/lead-magnet.pdf" download>PDF laden</a></div>
       </div>
-
-      <div class="project-card">
-        <span class="project-number">04</span>
-        <h3>KI-Integrationen 35+</h3>
-        <p>KI-Kundenkommunikation &amp; Terminbuchung für Mittelstand und Solopreneure.</p>
-        <div class="project-actions">
-          <a href="04-ki-integrationen-35plus/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="04-ki-integrationen-35plus/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
+      <div class="row">
+        <div class="row-num">05</div>
+        <div class="row-body"><h3>PKV Lead-Gen</h3><p>PKV-Wechsel-Checkliste 2026 für Beamte — Beihilfe und Restkosten im Gleichschritt.</p></div>
+        <div class="row-actions"><a class="act-open" href="05-lead-generation-pkv/landing-page.html">Öffnen</a><a class="act-pdf" href="05-lead-generation-pkv/lead-magnet.pdf" download>PDF laden</a></div>
       </div>
-
-      <div class="project-card">
-        <span class="project-number">05</span>
-        <h3>Lead Generation PKV</h3>
-        <p>PKV-Wechsel-Checkliste 2026 für Beamte — hochmargige Versicherungsleads.</p>
-        <div class="project-actions">
-          <a href="05-lead-generation-pkv/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="05-lead-generation-pkv/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
+      <div class="row">
+        <div class="row-num">08</div>
+        <div class="row-body"><h3>App-Ideen &amp; App Store</h3><p>Rentenlücke-Rechner als Web-App — die eigene Zahl in zwei Minuten.</p></div>
+        <div class="row-actions"><a class="act-open" href="08-app-ideen-appstore/landing-page.html">Öffnen</a><a class="act-pdf" href="08-app-ideen-appstore/lead-magnet.pdf" download>PDF laden</a></div>
       </div>
-
-      <div class="project-card">
-        <span class="project-number">06</span>
-        <h3>Lead Generation Dropshipping</h3>
-        <p>Schlaf &amp; Erholung — E-Commerce-Leads &amp; wiederkehrende Kunden.</p>
-        <div class="project-actions">
-          <a href="06-lead-generation-dropshipping/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="06-lead-generation-dropshipping/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
+      <div class="row">
+        <div class="row-num">09</div>
+        <div class="row-body"><h3>Finanzielle Freiheit / FIRE</h3><p>Coast-FIRE-Check für 40+ — reicht der bestehende ETF-Sparplan wirklich?</p></div>
+        <div class="row-actions"><a class="act-open" href="09-finanzielle-freiheit/landing-page.html">Öffnen</a><a class="act-pdf" href="09-finanzielle-freiheit/lead-magnet.pdf" download>PDF laden</a></div>
       </div>
-
-      <div class="project-card">
-        <span class="project-number">07</span>
-        <h3>Marketing Agency Traffic</h3>
-        <p>Der 10-Punkte-Check — Performance-Marketing für Dienstleister 35+.</p>
-        <div class="project-actions">
-          <a href="07-marketing-agency-traffic/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="07-marketing-agency-traffic/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
+      <div class="row">
+        <div class="row-num">11</div>
+        <div class="row-body"><h3>Immobilien &amp; Baufinanzierung</h3><p>Baufi-Readiness-Check für Selbstständige — bevor die Bank die Frage stellt.</p></div>
+        <div class="row-actions"><a class="act-open" href="11-immobilien-baufinanzierung/landing-page.html">Öffnen</a><a class="act-pdf" href="11-immobilien-baufinanzierung/lead-magnet.pdf" download>PDF laden</a></div>
       </div>
-
-      <div class="project-card">
-        <span class="project-number">08</span>
-        <h3>App-Ideen &amp; App Store</h3>
-        <p>„Rentenlücke-Rechner" als Web-App — Mobile Apps als Traffic-Magneten.</p>
-        <div class="project-actions">
-          <a href="08-app-ideen-appstore/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="08-app-ideen-appstore/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <span class="project-number">09</span>
-        <h3>Finanzielle Freiheit / FIRE</h3>
-        <p>FIRE-Schnellcheck für 35+ — Vermögensaufbau, passive Einkommen, finanzielle Unabhängigkeit.</p>
-        <div class="project-actions">
-          <a href="09-finanzielle-freiheit/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="09-finanzielle-freiheit/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <span class="project-number">10</span>
-        <h3>Gesundheit &amp; Prävention 40+</h3>
-        <p>Der 5-Minuten-Energie-Check ab 40 — Stoffwechsel &amp; Energie-Reset.</p>
-        <div class="project-actions">
-          <a href="10-gesundheit-praevention-40plus/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="10-gesundheit-praevention-40plus/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <span class="project-number">11</span>
-        <h3>Immobilien &amp; Baufinanzierung</h3>
-        <p>Immobilien-Readiness für 35+ — Baufi-Leads, Coaching &amp; Kaufberatung.</p>
-        <div class="project-actions">
-          <a href="11-immobilien-baufinanzierung/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="11-immobilien-baufinanzierung/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <span class="project-number">12</span>
-        <h3>Selbstständigkeit &amp; Business Setup</h3>
-        <p>35+ Experten-Business-in-a-Box — Gründung, Nebenerwerb &amp; Expert-Business.</p>
-        <div class="project-actions">
-          <a href="12-selbststaendigkeit-business-setup/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="12-selbststaendigkeit-business-setup/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <span class="project-number">13</span>
-        <h3>Reisen &amp; Lifestyle 35+</h3>
-        <p>Kulinarische Aktivreisen für Paare 35–50 — kuratierte Reisen &amp; Affiliate-Kommissionen.</p>
-        <div class="project-actions">
-          <a href="13-reisen-lifestyle-35plus/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="13-reisen-lifestyle-35plus/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <span class="project-number">14</span>
-        <h3>Nachhaltigkeit &amp; Eco-Produkte</h3>
-        <p>Plastikfreie Küche &amp; Bad — Eco-Produkte, Abo-Modelle &amp; Green Living.</p>
-        <div class="project-actions">
-          <a href="14-nachhaltigkeit-eco/landing-page.html" class="btn-landing">Landing Page</a>
-          <a href="14-nachhaltigkeit-eco/lead-magnet.pdf" class="btn-pdf" download>PDF herunterladen</a>
-        </div>
-      </div>
-
     </div>
+
+    <div class="cluster" data-c="business">
+      <div class="cluster-head">
+        <span class="cluster-roman">II — BUSINESS &amp; DIGITAL</span>
+      </div>
+      <p class="cluster-desc">Drei Verfahren für alle, die ihr Business oder ihre Selbstständigkeit mit den richtigen Werkzeugen und dem richtigen Tempo voranbringen wollen.</p>
+
+      <div class="row">
+        <div class="row-num">04</div>
+        <div class="row-body"><h3>KI-Integrationen 35+</h3><p>KI-Kundenkommunikation &amp; Terminbuchung für Mittelstand und Solopreneure, DSGVO-sicher.</p></div>
+        <div class="row-actions"><a class="act-open" href="04-ki-integrationen-35plus/landing-page.html">Öffnen</a><a class="act-pdf" href="04-ki-integrationen-35plus/lead-magnet.pdf" download>PDF laden</a></div>
+      </div>
+      <div class="row">
+        <div class="row-num">07</div>
+        <div class="row-body"><h3>Marketing Agency Traffic</h3><p>Der Website-Check, der zeigt, warum eine gute Seite trotzdem keine Termine bringt.</p></div>
+        <div class="row-actions"><a class="act-open" href="07-marketing-agency-traffic/landing-page.html">Öffnen</a><a class="act-pdf" href="07-marketing-agency-traffic/lead-magnet.pdf" download>PDF laden</a></div>
+      </div>
+      <div class="row">
+        <div class="row-num">12</div>
+        <div class="row-body"><h3>Selbstständigkeit &amp; Business Setup</h3><p>Sicherer Start-Plan für den Nebenerwerb — ohne Einkommensverlust ins eigene Business.</p></div>
+        <div class="row-actions"><a class="act-open" href="12-selbststaendigkeit-business-setup/landing-page.html">Öffnen</a><a class="act-pdf" href="12-selbststaendigkeit-business-setup/lead-magnet.pdf" download>PDF laden</a></div>
+      </div>
+    </div>
+
+    <div class="cluster" data-c="alltag">
+      <div class="cluster-head">
+        <span class="cluster-roman">III — ALLTAG &amp; LIFESTYLE</span>
+      </div>
+      <p class="cluster-desc">Fünf Verfahren für die Themen, die den Alltag ab 35 leichter, gesünder und bewusster machen.</p>
+
+      <div class="row">
+        <div class="row-num">02</div>
+        <div class="row-body"><h3>TikTok Shop</h3><p>GlowAfter35 — Mature-Skin-Pflege als Direktverkauf, aufgebaut auf Aufklärung statt Vorher-Nachher.</p></div>
+        <div class="row-actions"><a class="act-open" href="02-tiktok-shop/landing-page.html">Öffnen</a><a class="act-pdf" href="02-tiktok-shop/lead-magnet.pdf" download>PDF laden</a></div>
+      </div>
+      <div class="row">
+        <div class="row-num">06</div>
+        <div class="row-body"><h3>Lead-Gen Dropshipping</h3><p>Schlaf &amp; Erholung ab 40 — drei Fehler, die die Nacht sabotieren.</p></div>
+        <div class="row-actions"><a class="act-open" href="06-lead-generation-dropshipping/landing-page.html">Öffnen</a><a class="act-pdf" href="06-lead-generation-dropshipping/lead-magnet.pdf" download>PDF laden</a></div>
+      </div>
+      <div class="row">
+        <div class="row-num">10</div>
+        <div class="row-body"><h3>Gesundheit &amp; Prävention 40+</h3><p>Der 5-Minuten-Energie-Check — kleine Stellschrauben statt großer Versprechen.</p></div>
+        <div class="row-actions"><a class="act-open" href="10-gesundheit-praevention-40plus/landing-page.html">Öffnen</a><a class="act-pdf" href="10-gesundheit-praevention-40plus/lead-magnet.pdf" download>PDF laden</a></div>
+      </div>
+      <div class="row">
+        <div class="row-num">13</div>
+        <div class="row-body"><h3>Reisen &amp; Lifestyle 35+</h3><p>Kulinarische Aktivreisen für Paare 35–50 — kuratiert statt Pauschalware.</p></div>
+        <div class="row-actions"><a class="act-open" href="13-reisen-lifestyle-35plus/landing-page.html">Öffnen</a><a class="act-pdf" href="13-reisen-lifestyle-35plus/lead-magnet.pdf" download>PDF laden</a></div>
+      </div>
+      <div class="row">
+        <div class="row-num">14</div>
+        <div class="row-body"><h3>Nachhaltigkeit &amp; Eco</h3><p>Plastikfrei in 14 Tagen — für Zuhause und, als B2B-Variante, fürs Büro.</p></div>
+        <div class="row-actions"><a class="act-open" href="14-nachhaltigkeit-eco/landing-page.html">Öffnen</a><a class="act-pdf" href="14-nachhaltigkeit-eco/lead-magnet.pdf" download>PDF laden</a></div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<div class="wrap">
+  <div class="status">
+    <span class="ok">14/14 Verfahren live</span>
+    <span class="ok">Formulare aktiv</span>
+    <span>Stand: Juli 2026</span>
+  </div>
+</div>
 
 <footer>
-  <div class="container">
-    <p><a href="README.md">Projekt-Übersicht</a> · <a href="MASTER-PLAN.md">Master-Plan</a> · <a href="PRIORITIZATION-MATRIX.md">Priorisierung</a></p>
-    <p>&copy; 2026 Empire Expansion. Alle Rechte vorbehalten.</p>
+  <div class="wrap">
+    <p class="legal"><a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="mailto:hallo@ecom28.de">Kontakt</a></p>
+    <p>&copy; 2026 Empire Expansion.</p>
   </div>
 </footer>
+
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var rows = document.querySelectorAll('.row');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e, i){
+        if (e.isIntersecting) {
+          setTimeout(function(){ e.target.classList.add('is-visible'); }, (i % 6) * 40);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    rows.forEach(function(r){ io.observe(r); });
+  } else {
+    document.querySelectorAll('.row').forEach(function(r){ r.classList.add('is-visible'); });
+  }
+</script>
 
 </body>
 </html>
