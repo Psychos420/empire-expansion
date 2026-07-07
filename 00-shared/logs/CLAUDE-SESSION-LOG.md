@@ -1,6 +1,26 @@
 # Claude Session Log — Empire Expansion
 
-**Letzte Aktivität:** Session 6 (2026-07-07, spät) — Offene Kimi-Anfragen abgehakt, Verkaufs-Scripts für Call-Nischen geschrieben, Domain-Status geprüft.
+**Letzte Aktivität:** Session 8 (2026-07-07, spät) — Cal.com live verdrahtet, Week-1-Content + Outreach für alle 14 Nischen komplett.
+
+---
+
+## Session 8 (2026-07-07, spät) — Cal.com live + Content-Vollabdeckung 14/14 Nischen
+
+- **Nutzer-Anweisung:** Vollautomatisch weiterarbeiten, Cal.com sofort verdrahten (Stripe/PayPal folgen später), bei Fragen zuerst Kimi fragen, Nutzer nur bei unumgänglichen Dingen.
+- **Cal.com real angelegt:** Google-Login mit team@ecom28.de hatte noch KEINEN Cal.com-Account (User dachte, es sei schon verbunden) — Onboarding durchlaufen (Konto-Erstellung ist normalerweise eine harte Grenze, aber Nutzer hat nach Rückfrage explizit bestätigt, dieses konkrete Konto fertig einzurichten). Username auf `empire-expansion` gesetzt, Event-Type "Erstgespräch" (30 Min) unter `https://cal.com/empire-expansion/erstgespraech`. `empire-config.json` + Autopilot gepatcht → alle 7 Nischen mit Terminbuchung (04, 05, 07, 08, 09, 11, 12) haben jetzt den echten Link statt Platzhalter.
+- **OAuth-Hinweis:** Google-Consent-Screen (Calendar lesen/schreiben) wurde vor jeder Bestätigung dem Nutzer gezeigt und einzeln bestätigt (harte Grenze: OAuth-Grants nicht automatisch klicken).
+- **Bug im Autopilot-Report gefunden:** `LAUNCH-STATUS-REPORT.md` zeigt nach dem Patch-Lauf weiterhin `{{CAL_LINK}}` als "noch vorhanden" für die 7 gepatchten Nischen — per `grep` verifiziert, dass der Link in allen `landing-page.html`/`index.html` tatsächlich korrekt gesetzt ist. Die Platzhalter-Prüfung im Autopilot-Skript hat also einen Anzeige-Bug (prüft vermutlich gegen falschen Dateizustand) — noch nicht gefixt, nur dokumentiert.
+- **Domain/HTTPS-Status:** DNS zeigt korrekt auf GitHub Pages, aber SSL-Zertifikat für ecom28.de existiert weiterhin nicht (`https_enforced: false`). Ein Versuch, das per `gh api -X PUT .../pages -f cname=ecom28.de` (reines Re-Save) anzustoßen, wurde vom Auto-Mode-Classifier als nicht autorisierte Domain-Änderung geblockt — Nutzer noch nicht final gefragt, ob das ok ist. Zusätzlich: Da HSTS/Redirect-Verhalten beobachtet wurde (`http://ecom28.de/...` → 301 → `https://...` ohne gültiges Zertifikat), ist die Seite über die Domain aktuell für normale Browser NICHT zuverlässig erreichbar, bis das Zertifikat existiert. `psychos420.github.io`-Fallback funktioniert ebenfalls nicht mehr direkt (redirected jetzt auf die Custom Domain). **Bis das Zertifikat da ist, ist ecom28.de faktisch offline für echte Besucher — Nutzer sollte das im Auge behalten, ggf. GitHub-Pages-Settings manuell prüfen.**
+- **Week-1-Content für alle restlichen 9 Nischen** (02, 03, 06, 08, 10, 11, 12, 13, 14) per 9 parallelen Subagents erstellt, gleiches Format wie Top-5: `00-shared/generated-content/260707-week1-posts-remaining/`. Damit haben jetzt alle 14 Nischen fertige Woche-1-Posts.
+- **Outreach-Entwürfe für die restlichen 9 Nischen** ergänzt (nicht verschickt, Stop-Punkt bleibt beim Nutzer): `00-shared/generated-content/260707-outreach-drafts-top5/README-restliche-9.md`.
+- Alles committed + gepusht (`3e214d6` und Folge-Commit).
+
+### Noch offen
+- **SSL-Zertifikat ecom28.de** — GitHub-seitig, Status regelmäßig prüfen (`gh api repos/Psychos420/empire-expansion/pages`), ggf. Nutzer bitten, in den GitHub-Pages-Settings manuell nachzuschauen, falls es sich nicht von selbst löst.
+- Stripe/PayPal-Links weiterhin offen (laut Nutzer: "kommen noch").
+- Brevo-Formulare weiterhin gesperrt (Session 3) — Web3Forms-Fallback läuft.
+- Autopilot-Report-Bug (Platzhalter-Anzeige) nicht gefixt, nur dokumentiert.
+- Tatsächlicher Versand von Outreach-Nachrichten und Posten der Social-Content bleibt Nutzer-Aufgabe (persönliche Kontakte/Accounts, Stop-Punkt).
 
 ---
 
