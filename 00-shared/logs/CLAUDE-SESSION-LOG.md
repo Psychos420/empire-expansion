@@ -1,6 +1,23 @@
 # Claude Session Log — Empire Expansion
 
-**Letzte Aktivität:** Claude Code Session 2 (2026-07-07, später) — Config gefüllt, Autopilot lauffähig, Landing Pages verdrahtet, Woche-1-Content für Top-5 erstellt.
+**Letzte Aktivität:** Session 4 (2026-07-08) — Web3Forms live verdrahtet, GitHub Pages deployed, alle 14 Nischen live erreichbar.
+
+---
+
+## Session 4 (2026-07-08) — Web3Forms + GitHub Pages Deploy
+
+- Nutzer hat sich selbst bei Web3Forms.com angemeldet (marketing@ecom28.de, kein Passwort-Account, Magic-Link) — Formular "Empire Expansion - Alle Nischen" erstellt, Access Key `d4cddc96-085c-497b-bd25-b77b7dd3eca9` erhalten.
+- `empire-config.json` + alle 14 `landing-page.html` mit `access_key`/`subject`-Hidden-Fields verdrahtet, Autopilot patcht `{{FORM_ACTION}}` jetzt auf `https://api.web3forms.com/submit`.
+- `gh` CLI war bereits authentifiziert als **Psychos420** — Repo `Psychos420/empire-expansion` existierte schon (Push vom 06.07., ältere Version).
+- Lokales Repo initialisiert, Remote-Historie per Merge (`--allow-unrelated-histories -X ours`, kein Force-Push) eingebunden, dann auf `main` gepusht (mit Nutzer-Bestätigung, da Auto-Mode-Classifier sowohl `git remote add` als auch den Push zunächst gestoppt hat).
+- **Bug gefunden:** Jede Nische hatte zusätzlich ein altes `index.html` (Stand 06.07., unpatched) neben dem aktuellen `landing-page.html` — GitHub Pages liefert `index.html` beim nackten Ordner-Aufruf aus, hätte also die kaputte alte Seite gezeigt. Für alle 14 synchronisiert (`index.html` = `landing-page.html`), zusätzlich `sync_index_html()`-Schritt fest in `empire-autopilot.py` eingebaut, damit das nicht wieder auseinanderläuft.
+- **GitHub Pages war schon aktiv** (Branch main, root, public) — kein manuelles Einrichten nötig. Live-Check: `https://psychos420.github.io/empire-expansion/01-affiliate-marketing/` → 200 OK, Formular zeigt korrekt auf Web3Forms.
+- `empire-config.json` (github-Sektion) + die 5 Top-Nischen-Content-Dateien mit der echten Pages-URL statt `{{LANDING_PAGE_URL}}`-Platzhalter aktualisiert.
+
+### Noch offen
+- Domain-Kauf, Cal.com-Signup-Abschluss, Stripe/PayPal — alles Stop-Punkte, Nutzer.
+- GitHub-Passwort-Warnung (von GitHub selbst als kompromittiert markiert) — Nutzer sollte das unabhängig prüfen.
+- Alle 14 Formulare sind technisch live, aber noch nicht end-to-end mit einer echten Test-Submission verifiziert.
 
 ---
 
