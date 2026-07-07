@@ -1,15 +1,15 @@
 {
   "brand": {
     "name": "Empire Expansion",
-    "domain": "empire-expansion.de",
-    "email": "hallo@empire-expansion.de",
-    "_todo_domain": "Platzhalter-Domain. Noch nicht gekauft (STOP-Punkt: Kreditkarte/Domain-Kauf). Sobald User Domain gekauft hat, hier echten Domainnamen eintragen."
+    "domain": "ecom28.de",
+    "email": "hallo@ecom28.de",
+    "_note": "Echte, bereits vorhandene Domain (User-Account, verwaltet bei Strato). GitHub Pages Custom Domain ist gesetzt (CNAME-Datei im Repo), DNS bei Strato muss der User noch auf GitHub Pages zeigen lassen."
   },
   "tools": {
     "brevo": {
       "account_name": "Empire Expansion",
-      "sender_email": "hallo@empire-expansion.de",
-      "_todo": "Braucht echten Brevo-Account (STOP-Punkt: Signup mit echter E-Mail). Nach Account-Erstellung sender_email ggf. anpassen."
+      "sender_email": "hallo@ecom28.de",
+      "_todo": "Sender-E-Mail hallo@ecom28.de muss in Brevo verifiziert werden (Senders & IP > Domains), sobald DNS bei Strato eingerichtet ist."
     },
     "cal": {
       "base_url": "https://empire-expansion.cal.com",
@@ -27,7 +27,9 @@
       "username": "Psychos420",
       "repo": "empire-expansion",
       "pages_url": "https://psychos420.github.io/empire-expansion/",
-      "_note": "GitHub Pages live seit dieser Session, Branch main, root path."
+      "custom_domain": "ecom28.de",
+      "custom_domain_url": "https://ecom28.de/",
+      "_note": "GitHub Pages Custom Domain auf ecom28.de gesetzt (CNAME-Datei im Repo, GitHub-API-Setting aktiv). Live erst nachdem DNS bei Strato auf GitHub Pages zeigt. Bis dahin funktioniert die alte psychos420.github.io-URL weiter."
     },
     "web3forms": {
       "access_key": "d4cddc96-085c-497b-bd25-b77b7dd3eca9",
