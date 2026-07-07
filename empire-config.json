@@ -12,8 +12,8 @@
       "_todo": "Sender-E-Mail hallo@ecom28.de muss in Brevo verifiziert werden (Senders & IP > Domains), sobald DNS bei Strato eingerichtet ist."
     },
     "cal": {
-      "base_url": "https://empire-expansion.cal.com",
-      "_todo": "Braucht echten Cal.com-Account + verbundenen Kalender (STOP-Punkt: persönliches Konto)."
+      "base_url": "https://cal.com/empire-expansion/erstgespraech",
+      "_note": "Echter Cal.com-Account (team@ecom28.de), Google Calendar verbunden, Event-Type 'Erstgespräch' (30 Min)."
     },
     "stripe": {
       "account_email": "",
@@ -40,19 +40,19 @@
     }
   },
   "niches": {
-    "01-affiliate-marketing": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "02-tiktok-shop": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "03-pdfs-guides": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "04-ki-integrationen-35plus": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "05-lead-generation-pkv": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "06-lead-generation-dropshipping": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "07-marketing-agency-traffic": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "08-app-ideen-appstore": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "09-finanzielle-freiheit": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "10-gesundheit-praevention-40plus": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "11-immobilien-baufinanzierung": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "12-selbststaendigkeit-business-setup": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "13-reisen-lifestyle-35plus": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" },
-    "14-nachhaltigkeit-eco": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "", "stripe_link": "" }
+    "01-affiliate-marketing": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "02-tiktok-shop": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "03-pdfs-guides": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "04-ki-integrationen-35plus": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "05-lead-generation-pkv": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "06-lead-generation-dropshipping": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "07-marketing-agency-traffic": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "08-app-ideen-appstore": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "09-finanzielle-freiheit": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "10-gesundheit-praevention-40plus": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "11-immobilien-baufinanzierung": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "12-selbststaendigkeit-business-setup": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "13-reisen-lifestyle-35plus": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" },
+    "14-nachhaltigkeit-eco": { "brevo_form_url": "https://api.web3forms.com/submit", "cal_link": "https://cal.com/empire-expansion/erstgespraech", "stripe_link": "" }
   }
 }

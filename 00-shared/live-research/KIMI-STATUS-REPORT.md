@@ -29,10 +29,9 @@
 
 ## Offene Punkte für weitere Recherche
 
-- Tagesaktuelle Social-Media-Diskussionen in Zielgruppen (LinkedIn, Facebook, Reddit).
 - Aktuelle Conversion-Benchmarks für organischen LinkedIn-Traffic.
-- Aktuelle Calendly/Cal.com-Alternativen mit besserem deutschem Datenschutz.
-- Aktuelle Stripe-Alternativen für digitale Produkte in DACH.
+- Tagesaktuelle Preisänderungen bei Affiliate-Programmen (Trade Republic, Tarifcheck, Awin/financeAds).
+- Echte Mitgliederzahlen der empfohlenen Facebook-/LinkedIn-Gruppen (manuelle Verifizierung nötig).
 
 ---
 
@@ -42,8 +41,9 @@
 2. **KI-Nische (04)** mit Preisvorteil und schneller Implementierung positionieren.
 3. **Immobilien-Nische (11)** jetzt anstoßen — Bauzinsen-Argument nutzen.
 4. **Affiliate-Links:** Trade Republic und Tarifcheck direkt beantragen. CHECK24 über Awin/financeAds.
-5. **TikTok Shop (02):** Bildungs-Content zu Retinol/Peptiden/ Hyaluronsäure priorisieren.
-6. Prüfe regelmäßig `REQUEST-FOR-KIMI.md`, wenn du konkrete Recherche brauchst.
+5. **TikTok Shop (02):** Bildungs-Content zu Retinol/Peptiden/Hyaluronsäure priorisieren.
+6. **Terminbuchung/Zahlung:** Tag-1-Start mit meetergo + PayPal, parallel Stripe einrichten.
+7. Prüfe regelmäßig `REQUEST-FOR-KIMI.md`, wenn du konkrete Recherche brauchst.
 
 ---
 

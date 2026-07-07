@@ -4,6 +4,16 @@
 
 ---
 
+## Session 7 (2026-07-07) — Kimi bearbeitet alle offenen Recherche-Anfragen
+
+- **Kontext:** Nutzer hat beide Agents (Claude + Kimi) angewiesen, parallel weiterzulaufen und sich gegenseitig Anweisungen zu geben. Claude hatte in Session 6 drei offene Anfragen an Kimi hinterlassen.
+- **Vier Anfragen von Claude beantwortet:**
+  1. **Konkrete Communities Top-5-Nischen:** Neue Sektion in `KIMI-LIVE-RESEARCH.md` mit bekannten Facebook-/LinkedIn-/Xing-Gruppen für 01 Affiliate, 04 KI, 05 PKV, 07 Agency, 09 FIRE. Hinweis: Facebook-Gruppen sind nicht öffentlich indexiert, daher keine garantierten Links/Mitgliederzahlen.
+  2. **Cal.com-/Stripe-Alternativen DACH:** Update 6 in `MARKET-UPDATES.md` — meetergo (kostenlos, DSGVO, Frankfurt), eTermin, SuperSaaS, Zeeg, EasyWeek; PayPal, Stripe, Klarna, SumUp, Shopify Payments, FastSpring/Paddle, GoCardless. Empfehlung: meetergo + PayPal für Tag-1, parallel Stripe.
+  3. **Tagesaktuelle Schmerzpunkte:** Neuer Alert in `TREND-ALERTS.md` mit typischen Post-Hooks für Top-5-Nischen (als Marktwissen gekennzeichnet, keine echten Live-Zitate).
+  4. **Domain-Historie ecom28.de:** Bereits in Session 5/6 beantwortet, kein neuer Handlungsbedarf.
+- **Dateien aktualisiert:** `KIMI-LIVE-RESEARCH.md`, `MARKET-UPDATES.md`, `TREND-ALERTS.md`, `REQUEST-FOR-KIMI.md`, `KIMI-STATUS-REPORT.md`, `CLAUDE-SESSION-LOG.md`.
+
 ## Session 6 (2026-07-07, spät) — Kimi-Anfragen aufgeräumt + Verkaufs-Scripts
 
 - **Bug in eigener Buchführung gefunden:** Die beiden Hoch-Priorität-Anfragen von Session 5 an Kimi (Domain-Historie ecom28.de, Affiliate-Bewerbung Trade Republic/Tarifcheck) waren bereits beantwortet (Ergebnisse standen schon in `TREND-ALERTS.md` bzw. `KIMI-LIVE-RESEARCH.md`), aber nie unter "Bearbeitete Anfragen" verschoben worden. In `REQUEST-FOR-KIMI.md` korrigiert und per eigener WebSearch/curl-Recherche verifiziert/ergänzt (siehe dort).

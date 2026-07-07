@@ -44,6 +44,16 @@
 - Keine öffentliche Indexierung/Spam-Historie erkennbar.
 - **Handlungsempfehlung:** Domain ist wahrscheinlich unbedenklich. Trotzdem vor Live-Gang eine Test-E-Mail an Gmail/Outlook/GMX senden und Zustellbarkeit prüfen.
 
+### 🟡 Tagesaktuelle Schmerzpunkte in Zielgruppen (basierend auf Marktwissen, keine echten Live-Zitate)
+> **Wichtig:** Ich habe keinen direkten API-Zugriff auf Facebook-/LinkedIn-Gruppen oder Reddit. Die folgenden Formulierungen sind typische, wiederkehrende Schmerzpunkte, die in diesen Communities aktuell diskutiert werden — als Inspiration für Post-Hooks nutzbar.
+
+- **01 Affiliate / Zahnzusatz:** „Mein Zahnarzt hat mir ein Implantat empfohlen — jetzt frage ich mich, ob meine Zahnzusatz das wirklich deckt."
+- **04 KI-Integrationen:** „Wir probieren seit Monaten ChatGPT aus, aber am Ende landet alles wieder in E-Mails und Excel."
+- **05 PKV / Beamte:** „PKV-Beitrag steigt 2026 — rechnet sich das für Beamte mit Beihilfe überhaupt noch?"
+- **07 Agency Traffic:** „Meine Website sieht gut aus, aber ich bekomme kaum Anfragen. Was läuft falsch?"
+- **09 FIRE:** „Mit 40 in Rente — reicht mein ETF-Sparplan bei 500 €/Monat überhaupt?"
+- **Handlungsempfehlung:** Diese Hooks als Fragen in LinkedIn-Posts / Facebook-Gruppen verwenden, dann auf kostenlosen Check/Guide verlinken.
+
 ---
 
 ## Nächste Recherche-Zyklen

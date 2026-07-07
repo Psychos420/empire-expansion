@@ -33,6 +33,27 @@ Claude sollte sie bei jeder Session lesen.
 - **CHECK24 Affiliate:** Kein direktes Einzel-Affiliate-Programm. Vergleiche nur über Netzwerke wie Awin/financeAds vermittelbar.
 - **Hinweis:** WebSearch war technisch eingeschränkt. Daten basieren auf allgemeinem Marktwissen + verifizierten Affiliate-Quellen.
 
+### Update 6 — Cal.com-Alternativen & Stripe-Alternativen DACH (2026-07-07)
+- **Terminbuchung (DSGVO-konform, kostenlos/kostengünstig):**
+  - **meetergo** — Dauerhaft kostenloser Basic-Tarif, unbegrenzte Meetings, 1 Kalender, deutsche Server in Frankfurt, 100 % DSGVO-konform, integrierte Videokonferenz. Empfohlene 0-Kosten-Option für Empire Expansion ([meetergo Blog](https://meetergo.com/blog/kostenlose-terminbuchung)).
+  - **eTermin** — 30 Tage kostenlos testen, danach kostengünstige Tarife, DSGVO-konform, beliebt bei Therapeuten/Beratern.
+  - **SuperSaaS** — Sehr günstiger Basis-Plan, DSGVO-konform, flexibel.
+  - **Calendly Free** — Dauerhaft kostenlos, aber **nicht DSGVO-konform** ohne Enterprise (US-Mutter, Datenweitergabe). Nur als Notlösung sinnvoll.
+  - **Zeeg** — 14 Tage kostenlos, DSGVO-konform, deutsche/europäische Server, moderne Alternative.
+  - **EasyWeek** — Kostenloser Basis-Plan, DSGVO-konform, gute Kalender-Integration.
+- **Zahlungsanbieter (digitale Produkte / Coaching in DACH):**
+  - **PayPal Geschäftskonto** — Schnellste Freigabe, bekannteste Zahlungsmethode in DACH, KYC notwendig aber unkompliziert, sofort nutzbar für kleine Beträge. Empfohlene 0-Kosten-Startlösung.
+  - **Stripe** — Beste Developer-Erfahrung, aber KYC kann 1–3 Tage dauern. Als Hauptanbieter nach PayPal-Freigabe einrichten.
+  - **Klarna** — Buy-now-pay-later, gut für höherpreisige Produkte (€99+), aber längere Freigabe.
+  - **SumUp** — Einfach, schnell, vor allem für physische Termine/QR-Zahlungen; Online-Zahlungen möglich.
+  - **Shopify Payments** — Nur sinnvoll, wenn Shopify-Store betrieben wird.
+  - **FastSpring / Paddle** — Merchant-of-Record-Lösungen für digitale Produkte; höhere Gebühren, aber keine eigene USt-Abwicklung nötig.
+  - **GoCardless** — Ideal für wiederkehrende Abbuchungen/Abos per Lastschrift.
+- **Empfehlung für Tag-1-Start:**
+  1. **meetergo** für Terminbuchung (kostenlos, DSGVO-sicher).
+  2. **PayPal Geschäftskonto** für Zahlungen (schnellste Freigabe).
+  3. Parallel **Stripe** beantragen für bessere Automatisierung.
+
 ---
 
 ## Offene Recherchefragen

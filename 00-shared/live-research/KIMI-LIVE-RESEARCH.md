@@ -122,6 +122,41 @@
 
 ---
 
+## Konkrete Communities für Top-5-Nischen
+
+> **Hinweis:** Facebook-Gruppen sind nicht öffentlich indexiert. Die folgenden Namen basieren auf allgemeinem Marktwissen und gängigen Suchmustern. Konkrete Mitgliederzahlen ändern sich laufend — bitte direkt auf Facebook/LinkedIn/Xing verifizieren. Post-Regeln stehen in der Gruppenbeschreibung; Eigenwerbung ist in den meisten Communities nur in dedizierten Werbe-Threads erlaubt.
+
+### 01 — Affiliate / Zahnzusatz / Vorsorge 40+
+- **Facebook:** Suche nach „Zahnzusatzversicherung Erfahrungen", „Private Krankenversicherung Erfahrungen", „Finanztipps Deutschland", „Geldanlage für Anfänger", „Beamte Finanzen". Große themenverwandte Gruppen haben typischerweise 5.000–50.000 Mitglieder.
+- **LinkedIn:** Hashtags #Finanztipps, #Vorsorge, #Zahnzusatz; persönliche Posts funktionieren besser als Gruppen-Spam.
+- **Reddit:** r/Finanzen (keine Werbung, aber wertvolle Antworten mit Profil-Link möglich), r/versicherungen.
+- **Regel:** In Finanz-Communities meist keine direkten Affiliate-Links im ersten Post. Wert geben → Profil/Link in Bio nutzen.
+
+### 04 — KI-Integrationen für Mittelstand / KMU
+- **LinkedIn:** Gruppen/Suchen nach „KI im Mittelstand", „Digitalisierung Mittelstand", „Industrie 4.0", „Mittelstand Digital". LinkedIn-Gruppen sind weniger aktiv als persönliche Netzwerke — besser: gezielte DMs an Geschäftsführer mit konkretem ROI-Beispiel.
+- **Xing:** „Digitalisierung & KI"-Gruppen, Branchengruppen (Handwerk, Logistik, Beratung).
+- **Facebook:** „KI für Unternehmer", „ChatGPT & KI für Business" (meist kleiner, 1.000–10.000 Mitglieder).
+- **Regel:** Keine Cold-Pitches. Erst Beitrag mit echtem Fallbeispiel (z. B. „So spart ein 15-Mann-Handwerksbetrieb 8 Stunden/Woche mit KI-Mails"), dann DM an Interaktionen.
+
+### 05 — Lead Gen PKV / Beamte
+- **Facebook:** „Beamte Deutschland", „Beamtenforum", „Beamte & Finanzen", „PKV Erfahrungen". Spezifische Beamten-Gruppen erreichen 10.000+ Mitglieder.
+- **Xing:** Beamten-Netzwerke und öffentlicher Dienst-Gruppen.
+- **LinkedIn:** Lehrer, Polizei, Verwaltungsbeamte ansprechen über Job-Titel-Filter.
+- **Regel:** Beamten-Gruppen sind restriktiv. Angebote als „unabhängiger Vergleich" / „kostenloser 15-Minuten-Check" positionieren, nicht als Verkauf.
+
+### 07 — Marketing Agency Traffic (Selbstständige / KMU)
+- **LinkedIn:** „Unternehmer & Selbstständige Deutschland", „Marketing & Vertrieb", „E-Commerce Deutschland".
+- **Facebook:** „Selbstständige in Deutschland", „Online Marketing Deutschland", „Unternehmer austausch".
+- **Regel:** In diesen Gruppen gibt es oft wöchentliche „Werbe-Mittwochs"-Threads — dort darf man sich vorstellen.
+
+### 09 — Finanzielle Freiheit / FIRE DACH
+- **Facebook:** „FIRE Deutschland", „Finanzielle Freiheit Deutschland", „ETF Sparplan Deutschland", „Frugalismus Deutschland". Die FIRE-Community in DACH ist kleiner als in den USA, aber hoch engagiert (typisch 1.000–15.000 Mitglieder pro Gruppe).
+- **Reddit:** r/Finanzen (Top-Community für FIRE in DACH), r/aktiv, r/euFIRE.
+- **LinkedIn:** Persönliche Posts mit eigenem FIRE-Fortschritt / Zahlen performen gut.
+- **Regel:** FIRE-Communities hassen „get rich quick". Seriös, transparent, mit eigenen Zahlen kommunizieren.
+
+---
+
 ## Allgemeine Trend-Updates
 
 - **LinkedIn-Organic** bleibt für B2B und Finanz-Nischen der kostengünstigste Kanal.

@@ -1,10 +1,10 @@
 # Empire Expansion — Launch-Status-Report
-**Erstellt:** 2026-07-07 21:21
+**Erstellt:** 2026-07-07 23:27
 
 ## Zusammenfassung
 
 - PDFs neu gebaut: ✅ Ja
-- Landing Pages gepatched: 0 von 14
+- Landing Pages gepatched: 7 von 14
 - Nischen mit fehlenden Dateien: 0
 - Nischen mit noch vorhandenen Platzhaltern: 12
 

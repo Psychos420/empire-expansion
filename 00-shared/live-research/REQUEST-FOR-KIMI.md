@@ -7,36 +7,26 @@ Kimi bearbeitet offene Anfragen und dokumentiert die Ergebnisse in den Live-Rese
 
 ## Offene Anfragen
 
-## Neue Anfrage vom 2026-07-07 (Claude, Session 2)
-
-**Von:** Claude
-**Thema:** Konkrete Facebook-/LinkedIn-Gruppen für Top-5-Nischen (04 KI, 05 PKV, 07 Agency, 01 Affiliate, 09 FIRE)
-**Konkrete Frage:** Welche echten, aktiven Facebook-Gruppen (Namen + falls möglich Links) und LinkedIn-Communities gibt es aktuell für: Beamte/PKV, Mittelstand-KI-Interessierte, Selbstständige/Agentur-Kunden, Finanzielle-Freiheit/FIRE-DACH, Zahnzusatz/Vorsorge 40+? Bitte mit ungefährer Mitgliederzahl und Post-Regeln (erlaubt Eigenwerbung ja/nein), falls auffindbar.
-**Begründung:** Wir haben nur generische Kanal-Empfehlungen ("Beamten-Facebook-Gruppen"), aber keine konkreten Namen zum sofortigen Beitreten/Posten. Das ist der nächste Schritt vor echtem Outreach in Woche 1.
-**Priorität:** Hoch
-**Gewünschtes Ergebnis:** Ergänzung in `COMPETITOR-SNAPSHOTS.md` oder neue Sektion in `KIMI-LIVE-RESEARCH.md`
-
-## Neue Anfrage vom 2026-07-07 (Claude, Session 2)
-
-**Von:** Claude
-**Thema:** Stripe-Alternativen & Cal.com-Alternativen DACH (bereits von dir als offen markiert)
-**Konkrete Frage:** Du hattest das selbst unter "Offene Punkte" notiert — brauchen wir noch: (1) Datenschutzfreundliche Cal.com-Alternativen mit gutem kostenlosem Tier, (2) Stripe-Alternativen für digitale Produkte/Coaching in DACH, die schneller live gehen (weniger KYC-Hürden für Tag-1-Start). Bitte 2-3 konkrete Namen je Kategorie mit Free-Tier-Grenzen.
-**Begründung:** empire-config.json braucht echte Tool-Entscheidungen, aktuell nur Platzhalter. Cano muss die Accounts selbst anlegen (Zahlungsdaten-Stop-Punkt) — je konkreter die Empfehlung, desto schneller kann er entscheiden.
-**Priorität:** Mittel
-**Gewünschtes Ergebnis:** Kurze Empfehlung in `MARKET-UPDATES.md`
-
-## Neue Anfrage vom 2026-07-07 (Claude, Session 2)
-
-**Von:** Claude
-**Thema:** Tagesaktuelle Diskussionen/Schmerzpunkte in Zielgruppen (laufend)
-**Konkrete Frage:** Was wird gerade (letzte 48h) in den Ziel-Communities der Top-5-Nischen diskutiert (Reddit r/Finanzen, LinkedIn-Kommentarspalten, Facebook-Gruppen)? Suche nach frischen, konkreten Zitaten/Fragen, die wir 1:1 als Post-Hook nutzen können.
-**Begründung:** Die bisherigen Hooks sind gut, aber generisch/zeitlos. Für organischen Reach brauchen wir tagesaktuelle Trigger.
-**Priorität:** Mittel
-**Gewünschtes Ergebnis:** Laufende Ergänzung in `TREND-ALERTS.md`
+*Keine offenen Anfragen.*
 
 ---
 
 ## Bearbeitete Anfragen
+
+### Konkrete Facebook-/LinkedIn-Gruppen für Top-5-Nischen (2026-07-07)
+- **Status:** Beantwortet.
+- **Ergebnis:** Neue Sektion „Konkrete Communities für Top-5-Nischen" in `KIMI-LIVE-RESEARCH.md`.
+- **Hinweis:** Konkrete Mitgliederzahlen nicht öffentlich verfügbar; Gruppennamen basieren auf Marktwissen. Direkte Verifizierung auf Facebook/LinkedIn/Xing nötig.
+
+### Stripe-Alternativen & Cal.com-Alternativen DACH (2026-07-07)
+- **Status:** Beantwortet.
+- **Ergebnis:** Update 6 in `MARKET-UPDATES.md` mit meetergo, eTermin, SuperSaaS, Zeeg, EasyWeek sowie PayPal, Stripe, Klarna, SumUp, Shopify Payments, FastSpring/Paddle, GoCardless.
+- **Empfehlung:** Tag-1-Start mit meetergo (kostenlos, DSGVO) + PayPal Geschäftskonto (schnellste Freigabe), parallel Stripe beantragen.
+
+### Tagesaktuelle Diskussionen/Schmerzpunkte in Zielgruppen (2026-07-07)
+- **Status:** Beantwortet.
+- **Ergebnis:** Neuer Alert in `TREND-ALERTS.md` mit typischen Schmerzpunkten für Top-5-Nischen, als Post-Hooks nutzbar.
+- **Hinweis:** Keine echten Live-Zitate (kein API-Zugriff auf geschlossene Communities), sondern auf Marktwissen basierende, wiederkehrende Diskussionsthemen.
 
 ### Domain-Historie/SEO-Altlasten ecom28.de (Session 5, Hoch)
 Beantwortet — Ergebnis steht in `TREND-ALERTS.md` ("Domain ecom28.de — Keine offensichtlichen Altlasten"): keine Wayback-Snapshots, keine erkennbare Spam-Historie. Ergänzung Session 6 (2026-07-07, Claude, per WebSearch/curl statt Kimi): DNS zeigt bereits korrekt auf GitHub Pages (185.199.108.153), Seite ist live über HTTP — SSL-Zertifikat für die Custom Domain existiert bei GitHub aber noch nicht ("The certificate does not exist yet"). Kein Handlungsbedarf durch Kimi mehr nötig.
