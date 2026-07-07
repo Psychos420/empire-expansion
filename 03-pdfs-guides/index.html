@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rente mit 65 sicher? Kostenlose Checkliste für 40+</title>
+  <meta name="description" content="Berechnen Sie in 10 Minuten Ihre Rentenlücke. Kostenlose 5-teilige Checkliste für Berufstätige & Selbstständige ab 40.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #1a1a2e; background: #f8f9fa; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+    header { background: #16213e; color: white; padding: 40px 0; text-align: center; }
+    header h1 { font-size: 2.2rem; margin-bottom: 16px; }
+    header p { font-size: 1.2rem; opacity: 0.9; }
+    .hero { background: white; padding: 60px 0; text-align: center; }
+    .hero h2 { font-size: 1.8rem; margin-bottom: 20px; color: #16213e; }
+    .hero > .container > p { font-size: 1.1rem; margin-bottom: 24px; color: #4a4a68; }
+    .hero-bullets { list-style: none; max-width: 520px; margin: 0 auto 32px auto; text-align: left; }
+    .hero-bullets li { margin-bottom: 10px; color: #4a4a68; }
+    .cta-button { display: inline-block; background: #e94560; color: white; padding: 16px 40px; font-size: 1.1rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: background 0.2s; min-height: 48px; }
+    .cta-button:hover { background: #c73e54; }
+    .problem { background: #f1f3f5; padding: 50px 0; }
+    .problem h3 { text-align: center; font-size: 1.5rem; margin-bottom: 24px; color: #16213e; }
+    .problem p { margin-bottom: 16px; color: #4a4a68; }
+    .problem ul { list-style: disc; padding-left: 20px; margin-bottom: 20px; color: #4a4a68; }
+    .problem strong { color: #16213e; }
+    .benefits { background: white; padding: 60px 0; }
+    .benefits h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .benefit-grid { display: grid; gap: 20px; }
+    .benefit { background: #f8f9fa; padding: 24px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .benefit h4 { color: #e94560; margin-bottom: 8px; }
+    .benefit p { color: #4a4a68; }
+    .proof { background: #f1f3f5; padding: 50px 0; }
+    .proof h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .testimonial { background: white; padding: 20px; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); color: #4a4a68; }
+    .trust { text-align: center; margin-top: 24px; color: #4a4a68; font-size: 0.95rem; }
+    .stars { color: #f4b400; font-size: 1.3rem; margin-bottom: 8px; }
+    .steps { background: white; padding: 60px 0; }
+    .steps h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .step-grid { display: grid; gap: 20px; }
+    .step { background: #f8f9fa; padding: 24px; border-radius: 12px; text-align: center; }
+    .step-number { display: inline-block; background: #e94560; color: white; width: 36px; height: 36px; line-height: 36px; border-radius: 50%; font-weight: 700; margin-bottom: 12px; }
+    .step h4 { color: #16213e; margin-bottom: 8px; }
+    .step p { color: #4a4a68; }
+    .form-section { background: #16213e; color: white; padding: 60px 0; text-align: center; }
+    .form-section h3 { font-size: 1.6rem; margin-bottom: 12px; }
+    .form-section p { opacity: 0.9; margin-bottom: 24px; }
+    .lead-form { max-width: 480px; margin: 0 auto; text-align: left; }
+    .lead-form input { width: 100%; padding: 14px; margin-bottom: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+    .lead-form button { width: 100%; padding: 16px; background: #e94560; color: white; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; min-height: 48px; }
+    .lead-form button:hover { background: #c73e54; }
+    .lead-form label { display: block; margin-bottom: 12px; font-size: 0.9rem; line-height: 1.4; cursor: pointer; }
+    .lead-form input[type="checkbox"] { width: auto; margin-right: 8px; vertical-align: middle; }
+    .disclaimer { font-size: 0.8rem; opacity: 0.8; margin-top: 12px; text-align: center; }
+    .upsell { background: white; padding: 50px 0; text-align: center; }
+    .upsell h3 { font-size: 1.5rem; margin-bottom: 16px; color: #16213e; }
+    .upsell p { color: #4a4a68; margin-bottom: 16px; }
+    .upsell-box { background: #f8f9fa; padding: 24px; border-radius: 12px; max-width: 520px; margin: 0 auto; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .upsell-box h4 { color: #e94560; margin-bottom: 8px; }
+    .upsell-box .price { font-size: 1.3rem; margin: 12px 0; }
+    .upsell-box .price del { color: #6c757d; margin-right: 8px; }
+    .upsell-box .price strong { color: #16213e; }
+    .upsell-box ul { list-style: none; text-align: left; margin: 16px 0; color: #4a4a68; }
+    .upsell-box ul li { margin-bottom: 6px; }
+    .upsell-box .secondary { display: inline-block; margin-top: 12px; color: #6c757d; font-size: 0.9rem; text-decoration: underline; }
+    .faq { background: #f1f3f5; padding: 50px 0; }
+    .faq h3 { text-align: center; font-size: 1.5rem; margin-bottom: 30px; color: #16213e; }
+    .faq-item { background: white; padding: 20px; border-radius: 12px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .faq-item h4 { color: #16213e; margin-bottom: 8px; }
+    .faq-item p { color: #4a4a68; }
+    footer { background: #16213e; color: white; text-align: center; padding: 30px 0; font-size: 0.9rem; }
+    footer a { color: white; text-decoration: underline; opacity: 0.9; }
+    @media (min-width: 600px) {
+      .benefit-grid { grid-template-columns: 1fr 1fr; }
+      .step-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Tracking-Platzhalter: Meta Pixel -->
+<!-- Meta Pixel Code -->
+<!-- Ende Meta Pixel Code -->
+
+<!-- Tracking-Platzhalter: GA4 -->
+<!-- Google Analytics 4 Code -->
+<!-- Ende GA4 Code -->
+
+<header>
+  <div class="container">
+    <h1>Rente mit 65 sicher?</h1>
+    <p>Berechnen Sie in 10 Minuten, ob Ihre Altersvorsorge reicht — mit dieser kostenlosen 5-teiligen Checkliste.</p>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Für Berufstätige und Selbstständige ab 40, die ihre finanzielle Zukunft selbst in die Hand nehmen wollen — ohne komplizierte Fachbücher.</h2>
+    <ul class="hero-bullets">
+      <li>✅ In 30 Minuten Ihre persönliche Rentenlücke berechnen</li>
+      <li>✅ 5 klare Checklisten zum Ausdrucken oder digital Ausfüllen</li>
+      <li>✅ Sofort umsetzbar: Notgroschen, ETFs, 90-Tage-Plan</li>
+      <li>✅ Kostenlos — direkt in Ihr E-Mail-Postfach</li>
+    </ul>
+    <a href="#form" class="cta-button">Jetzt kostenlos herunterladen</a>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container">
+    <h3>Die meisten 45-Jährigen machen diesen Fehler — ohne es zu merken.</h3>
+    <p>Sie arbeiten. Sie sparen vielleicht sogar etwas. Und Sie gehen davon aus, dass die gesetzliche Rente plus ein paar Zinsen reichen werden.</p>
+    <p>Aber rechnen Sie es aus:</p>
+    <ul>
+      <li>Die gesetzliche Rente sinkt real seit Jahren.</li>
+      <li>Inflation frisst die Kaufkraft.</li>
+      <li>Wer mit 50 anfängt, muss deutlich mehr zurücklegen als mit 40.</li>
+    </ul>
+    <p><strong>Das Ergebnis:</strong> Millionen Deutsche erreichen das Rentenalter und stellen fest, dass sie 500, 1.000 oder 2.000 € pro Monat fehlen.</p>
+    <p><strong>Die gute Nachricht:</strong> Noch haben Sie Zeit. Wenn Sie jetzt handeln.</p>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="container">
+    <h3>„Die 5-teilige Checkliste: Rente mit 65 sicher" — Ihr persönlicher Aktionsplan</h3>
+    <div class="benefit-grid">
+      <div class="benefit">
+        <h4>Checkliste 1: Gesetzliche Rente realistisch einschätzen</h4>
+        <p>Lernen Sie, Ihre Renteninformation richtig zu lesen — und warum die offizielle Zahl oft zu optimistisch ist.</p>
+      </div>
+      <div class="benefit">
+        <h4>Checkliste 2: Rentenlücke in 10 Minuten berechnen</h4>
+        <p>Eine einfache Formel zeigt Ihnen, wie viel Ihnen wirklich fehlt — pro Monat und pro Jahr.</p>
+      </div>
+      <div class="benefit">
+        <h4>Checkliste 3: Sicherheit vor dem Sparen</h4>
+        <p>Notgroschen, teure Schulden, Absicherung: Was Sie erledigen, bevor Sie den ersten Euro anlegen.</p>
+      </div>
+      <div class="benefit">
+        <h4>Checkliste 4: Die richtige ETF-Strategie für Ihr Alter</h4>
+        <p>Wie viel Aktienanteil passt zu 45, 50 oder 55? Welche ETFs eignen sich? Die Antworten auf einen Blick.</p>
+      </div>
+      <div class="benefit">
+        <h4>Checkliste 5: Der 90-Tage-Plan</h4>
+        <p>Konkrete Wochenziele, damit Sie in 3 Monaten einen laufenden Sparplan haben.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="container">
+    <h3>Bereits über 1.000 Menschen haben die Checkliste heruntergeladen.</h3>
+    <div class="testimonial">
+      <p>„Endlich mal keine Theorie, sondern ein Arbeitsblatt. Ich wusste nach 20 Minuten, wo ich stehe." — Michael K., 48</p>
+    </div>
+    <div class="testimonial">
+      <p>„Ich habe meinen ETF-Sparplan direkt in der Woche danach eingerichtet." — Petra S., 52</p>
+    </div>
+    <div class="testimonial">
+      <p>„Klar, deutsch, ohne Berater-Chinesisch. Empfehlung." — Thomas R., 55</p>
+    </div>
+    <div class="trust">
+      <div class="stars">★★★★★</div>
+      <p>Kostenlos. Kein Spam. Keine Kreditkarte.</p>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="container">
+    <h3>In 3 Schritten zur Klarheit</h3>
+    <div class="step-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Download anfordern</h4>
+        <p>Geben Sie Name und E-Mail ein.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>E-Mail bestätigen</h4>
+        <p>Klicken Sie auf den Bestätigungslink (Double Opt-in).</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Checkliste nutzen</h4>
+        <p>Laden Sie das PDF herunter und starten Sie sofort.</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="#form" class="cta-button">Jetzt kostenlos starten</a>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="form">
+  <div class="container">
+    <h3>Holen Sie sich die kostenlose Checkliste</h3>
+    <p>Geben Sie Ihre Daten ein. Wir senden Ihnen das PDF sofort nach der Bestätigung.</p>
+    <form class="lead-form" action="{{FORM_ACTION}}" method="POST">
+      <input type="text" name="first_name" placeholder="Dein Vorname" required>
+      <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+      <input type="tel" name="phone" placeholder="Handynummer (optional für WhatsApp-Tipps)">
+      <input type="hidden" name="tag" value="03-pdfs-guides">
+      <label>
+        <input type="checkbox" name=" consent_email" required>
+        Ja, ich möchte die Checkliste per E-Mail erhalten und akzeptiere die Datenschutzerklärung.
+      </label>
+      <label>
+        <input type="checkbox" name="consent_whatsapp">
+        Ja, ich möchte zusätzlich WhatsApp-Tipps erhalten (optional).
+      </label>
+      <button type="submit">Jetzt kostenlos anfordern</button>
+    </form>
+    <p class="disclaimer">Kein Spam. Abmeldung jederzeit mit einem Klick.</p>
+  </div>
+</section>
+
+<section class="upsell">
+  <div class="container">
+    <h3>Starten Sie jetzt. Ihre Zukunft wird es Ihnen danken.</h3>
+    <p>Holen Sie sich die kostenlose Checkliste und erhalten Sie in den nächsten Tagen exklusive Tipps zur Umsetzung.</p>
+    <div class="upsell-box">
+      <h4>Bonus nach dem Download</h4>
+      <p>Für kurze Zeit die Möglichkeit, den Guide <strong>„ETF-Strategie für 40+"</strong> zum Einführungspreis zu erwerben — inklusive Excel-Rechner.</p>
+      <p class="price"><del>39 €</del> <strong>Heute nur: 19 €</strong></p>
+      <ul>
+        <li>✓ 50-seitiger PDF-Guide</li>
+        <li>✓ ETF-Sparplan-Rechner (Excel/Google Sheets)</li>
+        <li>✓ Broker-Vergleichs-Matrix</li>
+        <li>✓ 21-Punkte-Checkliste vor dem ersten Kauf</li>
+        <li>✓ Strategien für 40, 45, 50, 55 und 60+</li>
+      </ul>
+      <a href="#" class="cta-button">Ja, ich möchte den Guide für 19 € sichern</a>
+      <br>
+      <a href="#" class="secondary">Nein, ich möchte zuerst die kostenlose Checkliste lesen.</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h3>Häufige Fragen</h3>
+    <div class="faq-item">
+      <h4>Ist die Checkliste wirklich kostenlos?</h4>
+      <p>Ja. Sie erhalten das PDF kostenlos per E-Mail. Keine versteckten Kosten, kein Abo.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Für wen ist die Checkliste gedacht?</h4>
+      <p>Für alle zwischen 40 und 60, die wissen wollen, ob ihre Altersvorsorge reicht — und was sie verbessern können.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Brauche ich Vorkenntnisse?</h4>
+      <p>Nein. Die Checkliste ist so geschrieben, dass Sie sie ohne Finanz-Fachwissen durcharbeiten können.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Was passiert nach dem Download?</h4>
+      <p>Sie erhalten in den nächsten 5 Tagen 5 kurze E-Mails mit Tipps zur Umsetzung. Danach nur noch gelegentlich wertvolle Inhalte.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Ist das eine Anlageberatung?</h4>
+      <p>Nein. Die Checkliste dient der Bildung. Bei individuellen Entscheidungen konsultieren Sie bitte einen unabhängigen Berater.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Empire Expansion. Alle Rechte vorbehalten.</p>
+    <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
