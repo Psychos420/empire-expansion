@@ -1,0 +1,185 @@
+{
+  "name": "Empire Expansion — Lead Router",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "empire-lead-router",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-node",
+      "name": "Lead Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "webhookId": "empire-lead-router"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lead-Validierung und Scoring\nconst lead = $input.first().json;\nconst email = lead.email?.toLowerCase().trim();\nconst tag = lead.tag || 'unknown';\nconst firstName = lead.first_name || 'Interessent';\n\n// Einfache Validierung\nconst isValid = email && email.includes('@') && email.includes('.');\n\n// Lead-Score basierend auf Tag\nconst scoreMap = {\n  '05-lead-generation-pkv': 100,\n  '04-ki-integrationen-35plus': 90,\n  '07-marketing-agency-traffic': 85,\n  '09-finanzielle-freiheit': 80,\n  '01-affiliate-marketing': 60,\n  '03-pdfs-guides': 50,\n  '08-app-ideen-appstore': 55,\n  '11-immobilien-baufinanzierung': 75,\n  '10-gesundheit-praevention-40plus': 65,\n  '12-selbststaendigkeit-business-setup': 70,\n  '06-lead-generation-dropshipping': 45,\n  '02-tiktok-shop': 40,\n  '13-reisen-lifestyle-35plus': 35,\n  '14-nachhaltigkeit-eco': 35\n};\n\nreturn [{\n  json: {\n    email,\n    firstName,\n    tag,\n    isValid,\n    score: scoreMap[tag] || 30,\n    source: lead.source || 'landing-page',\n    createdAt: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "scoring-node",
+      "name": "Validate + Score",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "valid-email",
+              "leftValue": "={{ $json.isValid }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        }
+      },
+      "id": "filter-node",
+      "name": "Valid Lead?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "tableId": "leads",
+        "options": {}
+      },
+      "id": "supabase-node",
+      "name": "Save to Supabase",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [850, 200]
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "tableId": "lead_tags",
+        "options": {}
+      },
+      "id": "tag-node",
+      "name": "Save Tag",
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [1050, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Tag → Brevo/Email List ID Mapping\nconst tag = $input.first().json.tag;\n\nconst listMap = {\n  '01-affiliate-marketing': 1,\n  '02-tiktok-shop': 2,\n  '03-pdfs-guides': 3,\n  '04-ki-integrationen-35plus': 4,\n  '05-lead-generation-pkv': 5,\n  '06-lead-generation-dropshipping': 6,\n  '07-marketing-agency-traffic': 7,\n  '08-app-ideen-appstore': 8,\n  '09-finanzielle-freiheit': 9,\n  '10-gesundheit-praevention-40plus': 10,\n  '11-immobilien-baufinanzierung': 11,\n  '12-selbststaendigkeit-business-setup': 12,\n  '13-reisen-lifestyle-35plus': 13,\n  '14-nachhaltigkeit-eco': 14\n};\n\nconst sequenceMap = {\n  '01-affiliate-marketing': 'affiliate_welcome',\n  '02-tiktok-shop': 'tiktok_welcome',\n  '03-pdfs-guides': 'pdf_welcome',\n  '04-ki-integrationen-35plus': 'ki_welcome',\n  '05-lead-generation-pkv': 'pkv_welcome',\n  '06-lead-generation-dropshipping': 'dropshipping_welcome',\n  '07-marketing-agency-traffic': 'agency_welcome',\n  '08-app-ideen-appstore': 'app_welcome',\n  '09-finanzielle-freiheit': 'fire_welcome',\n  '10-gesundheit-praevention-40plus': 'health_welcome',\n  '11-immobilien-baufinanzierung': 'immo_welcome',\n  '12-selbststaendigkeit-business-setup': 'business_welcome',\n  '13-reisen-lifestyle-35plus': 'travel_welcome',\n  '14-nachhaltigkeit-eco': 'eco_welcome'\n};\n\nreturn [{\n  json: {\n    ...$input.first().json,\n    listId: listMap[tag] || 1,\n    sequenceId: sequenceMap[tag] || 'generic_welcome'\n  }\n}];"
+      },
+      "id": "router-node",
+      "name": "Tag Router",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [850, 400]
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "resource": "contact",
+        "email": "={{ $json.email }}",
+        "attributes": {
+          "FIRSTNAME": "={{ $json.firstName }}",
+          "TAG": "={{ $json.tag }}",
+          "SOURCE": "={{ $json.source }}",
+          "LEAD_SCORE": "={{ $json.score }}"
+        },
+        "listIds": [
+          "={{ $json.listId }}"
+        ],
+        "options": {}
+      },
+      "id": "brevo-node",
+      "name": "Add to Brevo",
+      "type": "n8n-nodes-base.brevo",
+      "typeVersion": 1,
+      "position": [1050, 400]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "options": {}
+      },
+      "id": "response-node",
+      "name": "Success Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1250, 300]
+    }
+  ],
+  "connections": {
+    "Lead Webhook": {
+      "main": [
+        [
+          { "node": "Validate + Score", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Validate + Score": {
+      "main": [
+        [
+          { "node": "Valid Lead?", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Valid Lead?": {
+      "main": [
+        [
+          { "node": "Save to Supabase", "type": "main", "index": 0 },
+          { "node": "Tag Router", "type": "main", "index": 0 }
+        ],
+        [
+          { "node": "Success Response", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Save to Supabase": {
+      "main": [
+        [
+          { "node": "Save Tag", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Save Tag": {
+      "main": [
+        [
+          { "node": "Success Response", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Tag Router": {
+      "main": [
+        [
+          { "node": "Add to Brevo", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Add to Brevo": {
+      "main": [
+        [
+          { "node": "Success Response", "type": "main", "index": 0 }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": []
+}
