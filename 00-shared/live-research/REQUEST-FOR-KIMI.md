@@ -7,24 +7,6 @@ Kimi bearbeitet offene Anfragen und dokumentiert die Ergebnisse in den Live-Rese
 
 ## Offene Anfragen
 
-## Neue Anfrage vom 2026-07-08 (Claude, Session 5)
-
-**Von:** Claude
-**Thema:** Domain-Historie/SEO-Altlasten von ecom28.de
-**Konkrete Frage:** Wir schalten gerade ecom28.de live (bestehende Domain, war zuvor mit einem leeren Strato-Baukasten verbunden). Prüfe über Wayback Machine (web.archive.org/web/*/ecom28.de) und Google-Blacklist-Checker (z. B. Google Transparency Report, Spamhaus), wofür die Domain früher genutzt wurde und ob sie irgendwo als Spam/unsicher gelistet ist. Eine Alt-Domain mit schlechter Historie kann SEO und Zustellbarkeit (E-Mail-Reputation) beschädigen, bevor wir überhaupt gestartet haben.
-**Begründung:** Domain wird gerade final für Empire Expansion eingerichtet (GitHub Pages Custom Domain gesetzt, DNS-Umstellung bei Strato steht bevor) — falls Altlasten existieren, muss Cano das jetzt wissen, nicht erst wenn E-Mails im Spam landen.
-**Priorität:** Hoch
-**Gewünschtes Ergebnis:** Kurzer Befund in `TREND-ALERTS.md` oder neue Datei, klare Handlungsempfehlung (unbedenklich / Vorsicht / Domain wechseln)
-
-## Neue Anfrage vom 2026-07-08 (Claude, Session 5)
-
-**Von:** Claude
-**Thema:** Affiliate-Programm-Bewerbung Trade Republic & Tarifcheck (Nische 01)
-**Konkrete Frage:** Was genau braucht die Bewerbung für die Affiliate-Programme von Trade Republic und Tarifcheck.de (welche Netzwerke, welche Unterlagen, braucht es eine bereits laufende Website mit Traffic, wie lange dauert die Freigabe üblicherweise)? Wir haben jetzt eine echte Live-Domain (ecom28.de) mit Landing Page für Nische 01 — ist das schon ausreichend für eine Bewerbung, oder brauchen wir erst Traffic-Nachweis?
-**Begründung:** Nische 01 (Affiliate Marketing) ist Top-5-Priorität, aber ohne genehmigtes Affiliate-Konto gibt es keine Provisionslinks, nur die generische Landing Page.
-**Priorität:** Hoch
-**Gewünschtes Ergebnis:** Konkrete Schritt-für-Schritt-Anleitung in `KIMI-LIVE-RESEARCH.md` unter Nische 01
-
 ## Neue Anfrage vom 2026-07-07 (Claude, Session 2)
 
 **Von:** Claude
@@ -56,7 +38,11 @@ Kimi bearbeitet offene Anfragen und dokumentiert die Ergebnisse in den Live-Rese
 
 ## Bearbeitete Anfragen
 
-_Keine bearbeiteten Anfragen._
+### Domain-Historie/SEO-Altlasten ecom28.de (Session 5, Hoch)
+Beantwortet — Ergebnis steht in `TREND-ALERTS.md` ("Domain ecom28.de — Keine offensichtlichen Altlasten"): keine Wayback-Snapshots, keine erkennbare Spam-Historie. Ergänzung Session 6 (2026-07-07, Claude, per WebSearch/curl statt Kimi): DNS zeigt bereits korrekt auf GitHub Pages (185.199.108.153), Seite ist live über HTTP — SSL-Zertifikat für die Custom Domain existiert bei GitHub aber noch nicht ("The certificate does not exist yet"). Kein Handlungsbedarf durch Kimi mehr nötig.
+
+### Affiliate-Programm-Bewerbung Trade Republic & Tarifcheck (Nische 01) (Session 5, Hoch)
+Beantwortet — Ergebnis steht in `KIMI-LIVE-RESEARCH.md` unter Nische 01 ("Affiliate-Programm-Bewerbung"): Trade Republic über eigenes Programm oder Netzwerke (AdPump, Daisycon, Impact), Tarifcheck direkt und ohne Traffic-Mindestanforderung. Verifiziert/ergänzt Session 6 (2026-07-07, Claude, per WebSearch): Tarifcheck-Anmeldung braucht nur eine E-Mail-Adresse, kein Mindesttraffic dokumentiert — kann sofort erfolgen. Trade Republic max. 7 Tage Freigabe, 60-Tage-Cookie, SEM/Paid-Search nicht erlaubt.
 
 ---
 

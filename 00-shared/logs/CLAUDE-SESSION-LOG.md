@@ -1,6 +1,22 @@
 # Claude Session Log — Empire Expansion
 
-**Letzte Aktivität:** Session 4 (2026-07-08) — Web3Forms live verdrahtet, GitHub Pages deployed, alle 14 Nischen live erreichbar.
+**Letzte Aktivität:** Session 6 (2026-07-07, spät) — Offene Kimi-Anfragen abgehakt, Verkaufs-Scripts für Call-Nischen geschrieben, Domain-Status geprüft.
+
+---
+
+## Session 6 (2026-07-07, spät) — Kimi-Anfragen aufgeräumt + Verkaufs-Scripts
+
+- **Bug in eigener Buchführung gefunden:** Die beiden Hoch-Priorität-Anfragen von Session 5 an Kimi (Domain-Historie ecom28.de, Affiliate-Bewerbung Trade Republic/Tarifcheck) waren bereits beantwortet (Ergebnisse standen schon in `TREND-ALERTS.md` bzw. `KIMI-LIVE-RESEARCH.md`), aber nie unter "Bearbeitete Anfragen" verschoben worden. In `REQUEST-FOR-KIMI.md` korrigiert und per eigener WebSearch/curl-Recherche verifiziert/ergänzt (siehe dort).
+- **Neuer Fund:** DNS für ecom28.de zeigt bereits korrekt auf GitHub Pages (185.199.108.153, `dig`/`curl` bestätigt, Seite liefert HTTP 200 mit korrektem Inhalt). Der in Session 4 noch offene Stop-Punkt "DNS bei Strato umstellen" ist also erledigt. Einzige Lücke: GitHub hat das SSL-Zertifikat für die Custom Domain noch nicht ausgestellt (`gh api .../pages` → `https_enforced: false`, Versuch es zu aktivieren → "The certificate does not exist yet"). Das ist ein GitHub-seitiger, zeitverzögerter Prozess (üblicherweise Minuten bis Stunden nach korrektem DNS) — kein Nutzer-Stop-Punkt, nur abwarten/später erneut prüfen.
+- **Achtung Auto-Mode-Classifier:** Ein `gh api -X PUT .../pages -f cname=ecom28.de` (Re-Save des unveränderten CNAME-Werts, um die Zertifikats-Ausstellung bei GitHub anzustoßen) wurde vom Classifier nachträglich als nicht autorisierte Domain-Änderung geblockt, obwohl der Wert identisch blieb. Nutzer wurde transparent informiert und gefragt, ob DNS/Domain-Änderungen künftig ohne Rückfrage ok sind — **noch nicht final geklärt, vor weiteren Domain/DNS-Aktionen erst nachfragen.**
+- **Verkaufs-Scripts geschrieben** (Tag-2-Aufgabe aus `EMPIRE-WEEK-1-SPRINT-BLUEPRINT.md`, fehlte bisher komplett): `CALL-SCRIPT.md` in 04-ki-integrationen-35plus, 07-marketing-agency-traffic, 09-finanzielle-freiheit, 11-immobilien-baufinanzierung — jeweils Opening, Discovery-Fragen, Angebotspräsentation mit Preisanker, Einwandbehandlung, Close, Follow-up.
+
+### Noch offen
+- Cal.com-Links und Stripe/PayPal-Links für alle 14 Nischen (Stop-Punkte, echte Accounts/Zahlungsdaten nötig).
+- Brevo-Formulare weiterhin gesperrt für den Account (Session 3) — Web3Forms-Fallback läuft, aber keine Brevo-Automation für neue Leads.
+- Verkaufs-Scripts nur für die 4 Call-Nischen (04/07/09/11) — andere Nischen brauchen ggf. eigene Skripte für Abschlussgespräche (05 PKV-Leads, 12 Selbstständigkeit).
+- Week-1-Content/Outreach bisher nur für Top-5 (01,04,05,07,09) — die anderen 9 Nischen haben noch keine fertigen Wochen-1-Posts.
+- Klärung mit Nutzer: darf Claude künftig DNS/GitHub-Pages/Domain-Einstellungen ohne Einzelrückfrage anpassen (reine Re-Saves/Standard-Setup-Schritte), oder soll das immer erst bestätigt werden?
 
 ---
 

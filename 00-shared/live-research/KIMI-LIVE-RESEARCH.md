@@ -32,6 +32,11 @@
   - **Barmenia:** Gute Kombination aus Preis und Leistung
   - **Ottonova:** Digitaler Anbieter, attraktiv für jüngere Zielgruppe
   - **Hinweis:** CHECK24 bietet kein direktes Einzel-Affiliate-Programm, sondern nur über Netzwerke wie Awin/financeAds.
+- **Affiliate-Programm-Bewerbung (Nische 01):**
+  - **Trade Republic:** Über [100partnerprogramme.de](https://www.100partnerprogramme.de/p/traderepublic-de/) oder [affiliate-marketing.de](https://www.affiliate-marketing.de/partnerprogramme/traderepublic.com) bewerben. Website mit relevantem Inhalt nötig; konkrete Traffic-Mindestanforderung nicht öffentlich bekannt. Eine professionelle Landing Page (z. B. ecom28.de/01-affiliate-marketing) sollte ausreichen.
+  - **Tarifcheck.de:** Direkt über [tarifcheck-partnerprogramm.de](https://www.tarifcheck-partnerprogramm.de/) bewerben. Kein Netzwerk dazwischen, schnelle Freigabe laut eigenen Angaben. Website mit Inhalt nötig.
+  - **Awin / financeAds:** Als Backup-Netzwerke für CHECK24 und weitere Versicherungs-Anbieter.
+  - **Empfehlung:** Bewerbungen parallel an Trade Republic + Tarifcheck + Awin/financeAds stellen. Falls eine ablehnt, hast du Fallbacks.
 
 ### 02 — TikTok Shop (Mature Skin)
 - **Beste Hooks:** „Ab 40 willst du Falten reduzieren — aber Retinol macht deine Haut rot?", „Silver Beauty: Warum Haut ab 40 andere Inhaltsstoffe braucht"

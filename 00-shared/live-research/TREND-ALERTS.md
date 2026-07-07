@@ -39,6 +39,11 @@
 - Anti-Aging für 35+ wächst, K-Beauty über TikTok Shop +37 % YoY in USA. Inhaltsstoffe wie Retinol, Peptide, Hyaluronsäure sind gefragt.
 - **Handlungsempfehlung:** TikTok-Shop-Nische (02) mit bildungsbasiertem Content zu Inhaltsstoffen positionieren, nicht nur Before/After.
 
+### 🟢 Domain ecom28.de — Keine offensichtlichen Altlasten
+- Wayback Machine zeigt **keine historischen Snapshots** für ecom28.de.
+- Keine öffentliche Indexierung/Spam-Historie erkennbar.
+- **Handlungsempfehlung:** Domain ist wahrscheinlich unbedenklich. Trotzdem vor Live-Gang eine Test-E-Mail an Gmail/Outlook/GMX senden und Zustellbarkeit prüfen.
+
 ---
 
 ## Nächste Recherche-Zyklen
