@@ -181,6 +181,18 @@ def patch_landing_pages(config: dict) -> dict:
     return results
 
 
+def sync_index_html() -> None:
+    """Kopiert landing-page.html nach index.html, damit GitHub Pages beim Aufruf des
+    nackten Ordnerpfads (ohne Dateinamen) immer die aktuelle, gepatchte Seite zeigt."""
+    log("🔗 Synchronisiere index.html mit landing-page.html...")
+    for folder in NICHE_FOLDERS:
+        src = ROOT / folder / "landing-page.html"
+        dst = ROOT / folder / "index.html"
+        if src.exists():
+            shutil.copyfile(src, dst)
+    log("✅ index.html synchronisiert.")
+
+
 def generate_outreach_templates() -> None:
     """Generiert Outreach-Vorlagen für LinkedIn/WhatsApp/E-Mail."""
     log("✉️  Generiere Outreach-Vorlagen...")
@@ -331,6 +343,7 @@ def main():
     pdf_ok = rebuild_pdfs()
     placeholders = check_landing_pages()
     patched = patch_landing_pages(config)
+    sync_index_html()
     generate_outreach_templates()
     generate_content_plan()
     generate_report(folder_status, placeholders, patched, pdf_ok)

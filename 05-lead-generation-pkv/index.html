@@ -54,7 +54,9 @@
       .benefit-grid { grid-template-columns: 1fr 1fr; }
       .stats { grid-template-columns: 1fr 1fr; }
     }
-  </style>
+      .cta-button.secondary { background: #16213e; margin-left: 0; margin-top: 12px; }
+    .cta-button.secondary:hover { background: #0f172a; }
+</style>
   <!-- Tracking-Platzhalter: Meta Pixel (Lead-Event) -->
   <!-- Tracking-Platzhalter: Google Analytics 4 (conversion_event "generate_lead") -->
   <!-- Tracking-Platzhalter: Google Ads Conversion-Tag -->
@@ -72,8 +74,9 @@
   <div class="container">
     <h2>PKV für Beamte 2026</h2>
     <p>Beihilfe + Restkostenversicherung = optimale Absicherung. Prüfen Sie Ihren Tarif mit unserer kostenlosen Checkliste.</p>
-    <a href="#form" class="cta-button">Kostenlose Checkliste herunterladen</a><br>
-    <a href="#form" class="cta-button-secondary">Direkt Termin buchen</a>
+    <a href="#form" class="cta-button">Kostenlose Checkliste herunterladen</a>
+    <a href="lead-magnet.pdf" class="cta-button secondary" download>PDF direkt herunterladen</a><br>
+    <a href="{{CAL_LINK}}" class="cta-button-secondary">Direkt PKV-Check buchen</a>
   </div>
 </section>
 
@@ -143,7 +146,9 @@
   <div class="container">
     <h3>Laden Sie die kostenlose Checkliste herunter</h3>
     <p>Füllen Sie das Formular aus und erhalten Sie den Download-Link per E-Mail.</p>
-    <form class="lead-form" action="{{FORM_ACTION}}" method="POST">
+    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
+      <input type="hidden" name="subject" value="Neuer Lead: 05-lead-generation-pkv">
       <input type="text" name="first_name" placeholder="Vorname" required>
       <input type="email" name="email" placeholder="E-Mail-Adresse" required>
       <input type="tel" name="phone" placeholder="Telefonnummer (optional)">
@@ -175,6 +180,7 @@
         Ich bin einverstanden, dass mich ein lizenzierter Versicherungsmakler telefonisch oder per E-Mail kontaktieren darf. (Optional)
       </label>
       <button type="submit">Jetzt kostenlos herunterladen</button>
+    <p class="disclaimer" style="margin-top: 20px;"><a href="lead-magnet.pdf" download>PDF ohne Anmeldung herunterladen</a></p>
     </form>
     <p class="disclaimer">Kein Spam. Sie können sich jederzeit abmelden. Ihre Daten werden DSGVO-konform verarbeitet.</p>
   </div>
@@ -223,7 +229,7 @@
   <div class="container">
     <h3>Starten Sie Ihre PKV-Prüfung noch heute</h3>
     <p>Laden Sie die kostenlose Checkliste herunter und buchen Sie anschließend einen unverbindlichen 15-Minuten-Check.</p>
-    <p class="text-center"><a href="#form" class="cta-button">Checkliste herunterladen</a><br><a href="#form" class="cta-button-secondary">Termin buchen</a></p>
+    <p class="text-center"><a href="#form" class="cta-button">Checkliste herunterladen</a><br><a href="{{CAL_LINK}}" class="cta-button-secondary">Termin buchen</a></p>
   </div>
 </section>
 

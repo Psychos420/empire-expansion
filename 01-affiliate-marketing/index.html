@@ -67,7 +67,9 @@
     footer a { color: #f8f9fa; text-decoration: underline; }
     footer p { margin-bottom: 8px; }
     @media (min-width: 600px) { .benefit-grid { grid-template-columns: 1fr 1fr; } }
-  </style>
+      .cta-button.secondary { background: #16213e; margin-left: 0; margin-top: 12px; }
+    .cta-button.secondary:hover { background: #0f172a; }
+</style>
 
   <!-- Tracking-Platzhalter: Meta Pixel -->
   <!-- Meta Pixel Code hier einfügen -->
@@ -93,6 +95,7 @@
       <br><span class="badge">Kostenloser PDF-Download — 12 Seiten</span>
     </div>
     <a href="#form" class="cta-button">Kostenlosen Check sichern →</a>
+    <a href="lead-magnet.pdf" class="cta-button secondary" download>PDF direkt herunterladen</a>
     <p class="trust-line">Kostenlos. Kein Spam. Jederzeit abbestellbar. 100 % DSGVO-konform.</p>
   </div>
 </section>
@@ -186,7 +189,9 @@
   <div class="container">
     <h3>Bereit für mehr finanzielle Klarheit?</h3>
     <p>Trag dich jetzt ein und hol dir den <strong>Finanzielle Freiheit-Check für 40+</strong>. Es dauert weniger als eine Minute — und kann dir viele Stunden Recherche ersparen.</p>
-    <form class="lead-form" action="{{FORM_ACTION}}" method="POST">
+    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
+      <input type="hidden" name="subject" value="Neuer Lead: 01-affiliate-marketing">
       <label for="email">Deine beste E-Mail-Adresse</label>
       <input type="email" id="email" name="email" placeholder="z. B. max@beispiel.de" required>
 
@@ -206,6 +211,7 @@
       </div>
 
       <button type="submit">Kostenlosen Check jetzt sichern →</button>
+    <p class="disclaimer" style="margin-top: 20px;"><a href="lead-magnet.pdf" download>PDF ohne Anmeldung herunterladen</a></p>
     </form>
 
     <p class="disclaimer">Kostenlos. Kein Spam. Jederzeit abbestellbar. 100 % DSGVO-konform.</p>

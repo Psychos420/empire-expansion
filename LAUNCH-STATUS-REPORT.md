@@ -1,12 +1,12 @@
 # Empire Expansion — Launch-Status-Report
-**Erstellt:** 2026-07-07 20:35
+**Erstellt:** 2026-07-07 20:49
 
 ## Zusammenfassung
 
 - PDFs neu gebaut: ✅ Ja
-- Landing Pages gepatched: 14 von 14
+- Landing Pages gepatched: 0 von 14
 - Nischen mit fehlenden Dateien: 0
-- Nischen mit noch vorhandenen Platzhaltern: 14
+- Nischen mit noch vorhandenen Platzhaltern: 12
 
 ## Ordner-Status
 
@@ -31,20 +31,20 @@
 
 | Nische | Noch vorhandene Platzhalter |
 |--------|-----------------------------|
-| 01-affiliate-marketing | {{FORM_ACTION}} |
-| 02-tiktok-shop | {{FORM_ACTION}}, {{STRIPE_LINK}} |
-| 03-pdfs-guides | {{FORM_ACTION}}, {{STRIPE_LINK}} |
-| 04-ki-integrationen-35plus | {{FORM_ACTION}}, {{CAL_LINK}}, {{STRIPE_LINK}} |
-| 05-lead-generation-pkv | {{FORM_ACTION}}, {{CAL_LINK}} |
-| 06-lead-generation-dropshipping | {{FORM_ACTION}} |
-| 07-marketing-agency-traffic | {{FORM_ACTION}}, {{CAL_LINK}}, {{STRIPE_LINK}} |
-| 08-app-ideen-appstore | {{FORM_ACTION}}, {{CAL_LINK}} |
-| 09-finanzielle-freiheit | {{FORM_ACTION}}, {{CAL_LINK}}, {{STRIPE_LINK}} |
-| 10-gesundheit-praevention-40plus | {{FORM_ACTION}}, {{STRIPE_LINK}} |
-| 11-immobilien-baufinanzierung | {{FORM_ACTION}}, {{CAL_LINK}}, {{STRIPE_LINK}} |
-| 12-selbststaendigkeit-business-setup | {{FORM_ACTION}}, {{CAL_LINK}}, {{STRIPE_LINK}} |
-| 13-reisen-lifestyle-35plus | {{FORM_ACTION}}, {{STRIPE_LINK}} |
-| 14-nachhaltigkeit-eco | {{FORM_ACTION}}, {{STRIPE_LINK}} |
+| 01-affiliate-marketing | - |
+| 02-tiktok-shop | {{STRIPE_LINK}} |
+| 03-pdfs-guides | {{STRIPE_LINK}} |
+| 04-ki-integrationen-35plus | {{CAL_LINK}}, {{STRIPE_LINK}} |
+| 05-lead-generation-pkv | {{CAL_LINK}} |
+| 06-lead-generation-dropshipping | - |
+| 07-marketing-agency-traffic | {{CAL_LINK}}, {{STRIPE_LINK}} |
+| 08-app-ideen-appstore | {{CAL_LINK}} |
+| 09-finanzielle-freiheit | {{CAL_LINK}}, {{STRIPE_LINK}} |
+| 10-gesundheit-praevention-40plus | {{STRIPE_LINK}} |
+| 11-immobilien-baufinanzierung | {{CAL_LINK}}, {{STRIPE_LINK}} |
+| 12-selbststaendigkeit-business-setup | {{CAL_LINK}}, {{STRIPE_LINK}} |
+| 13-reisen-lifestyle-35plus | {{STRIPE_LINK}} |
+| 14-nachhaltigkeit-eco | {{STRIPE_LINK}} |
 
 ## Nächste manuelle Schritte
 
