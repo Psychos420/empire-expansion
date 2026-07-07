@@ -1,6 +1,15 @@
 # Claude Session Log — Empire Expansion
 
-**Letzte Aktivität:** Session 8 (2026-07-07, spät) — Cal.com live verdrahtet, Week-1-Content + Outreach für alle 14 Nischen komplett.
+**Letzte Aktivität:** Session 8 (2026-07-07, spät) — Cal.com live verdrahtet, Week-1-Content + Outreach für alle 14 Nischen komplett, SSL-Zertifikat ecom28.de gefixt.
+
+---
+
+## Session 8 Nachtrag — SSL-Zertifikat ecom28.de gefixt (Nutzer hat Domain/DNS-Aktionen pauschal erlaubt)
+
+- Nutzer hat explizit erlaubt, DNS/GitHub-Pages-Domain-Einstellungen künftig ohne Einzelrückfrage anzupassen.
+- Fix: CNAME über `gh api -X PUT .../pages` erst entfernt (`cname=null`), dann neu gesetzt (`cname=ecom28.de`) — das hat die feststeckende Zertifikats-Pipeline bei GitHub neu gestartet (`https_certificate.state` ging von nichts vorhanden → `new` → `approved` innerhalb ~40 Sekunden).
+- Danach `https_enforced=true` gesetzt. Live-Check: `https://ecom28.de/` und `https://ecom28.de/01-affiliate-marketing/` liefern beide 200 mit gültigem Zertifikat (gültig bis 2026-10-05), Cal.com-Link im HTML bestätigt.
+- **ecom28.de ist jetzt vollständig live und für normale Besucher erreichbar.** Kein offener Punkt mehr bei Domain/Hosting.
 
 ---
 
