@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KI-Agent für Unternehmer 35+ — DSGVO-konform, 14 Tage live | Empire Expansion</title>
+  <meta name="description" content="In 5 Minuten wissen Sie, wo KI in Ihrem Unternehmen Zeit und Kosten spart. Kostenloser PDF-Report + Erstgespräch. Setup ab 1.990 € Festpreis.">
+  
+  <meta property="og:title" content="KI-Agent für Unternehmer 35+ — DSGVO-konform, 14 Tage live">
+  <meta property="og:description" content="Vergleich: Freelancer 8.000–15.000 €. Empire Expansion: 1.990 € Festpreis. In 14 Tagen live.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --dark: #0A1628;
+      --dark-light: #111F38;
+      --teal: #00D4AA;
+      --teal-dark: #00B894;
+      --purple: #7B61FF;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-900: #0F172A;
+      --warning: #F59E0B;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      line-height: 1.6;
+      color: var(--gray-700);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+    
+    /* Urgency Bar */
+    .urgency-bar {
+      background: linear-gradient(90deg, var(--purple), var(--teal));
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+      color: var(--white);
+      padding: 56px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,212,170,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -40%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(123,97,255,0.1) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .brand {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      opacity: 0.9;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .brand span { color: var(--teal); }
+    
+    header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      max-width: 18ch;
+      position: relative;
+    }
+    header h1 em {
+      font-style: normal;
+      color: var(--teal);
+      position: relative;
+    }
+    header h1 em::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: rgba(0, 212, 170, 0.2);
+      z-index: -1;
+    }
+    
+    header .subhead {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      opacity: 0.92;
+      max-width: 50ch;
+      font-weight: 400;
+      position: relative;
+    }
+    
+    /* Hero */
+    .hero {
+      background: var(--gray-50);
+      padding: 48px 0;
+      text-align: center;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+    .hero-badge .dot {
+      width: 8px; height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+    
+    .hero h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    .hero p.lead {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 52ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Price Comparison Box */
+    .price-box {
+      background: var(--dark);
+      color: var(--white);
+      padding: 28px;
+      border-radius: 16px;
+      margin: 28px 0;
+      text-align: left;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .price-box h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .price-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .price-box li {
+      font-size: 0.92rem;
+      opacity: 0.88;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .price-box li:last-child { border-bottom: none; }
+    .price-box li.highlight {
+      background: rgba(0, 212, 170, 0.12);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 4px -8px;
+      border: 1px solid rgba(0, 212, 170, 0.2);
+      font-weight: 600;
+      opacity: 1;
+    }
+    .price-box .price-tag {
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .price-box .source {
+      font-size: 0.78rem;
+      opacity: 0.5;
+      margin-top: 12px;
+      font-style: italic;
+    }
+    
+    /* Mockup */
+    .mockup-wrap { margin: 0 auto 28px; max-width: 320px; position: relative; }
+    .mockup {
+      background: var(--white);
+      border-radius: 12px 12px 0 0;
+      padding: 24px 20px 16px;
+      box-shadow: 0 20px 40px -10px rgba(10, 22, 40, 0.25), 0 0 0 1px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 2;
+    }
+    .mockup::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 8px;
+      right: 8px;
+      height: 8px;
+      background: var(--gray-200);
+      border-radius: 0 0 8px 8px;
+      z-index: 1;
+    }
+    .mockup-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--purple), var(--teal));
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .mockup h4 { font-family: var(--font-display); font-size: 1.1rem; color: var(--dark); margin-bottom: 8px; line-height: 1.3; }
+    .mockup-meta { font-size: 0.8rem; color: var(--gray-500); margin-bottom: 16px; }
+    .mockup-checks { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .mockup-checks li { display: flex; align-items: center; gap: 10px; font-size: 0.82rem; color: var(--gray-600); }
+    .mockup-checks .box { width: 16px; height: 16px; border: 2px solid var(--gray-200); border-radius: 3px; flex-shrink: 0; }
+    .mockup-checks .box.checked { background: var(--teal); border-color: var(--teal); display: flex; align-items: center; justify-content: center; }
+    .mockup-checks .box.checked::after { content: "✓"; color: white; font-size: 0.65rem; font-weight: 700; }
+    
+    /* CTAs */
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+      color: var(--dark);
+      padding: 18px 36px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 14px rgba(0, 212, 170, 0.35);
+      width: 100%;
+      max-width: 400px;
+    }
+    .cta-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 212, 170, 0.45); }
+    
+    .cta-secondary { display: inline-block; color: var(--dark); font-weight: 600; font-size: 0.95rem; text-decoration: underline; text-underline-offset: 3px; margin-top: 14px; transition: color 0.15s ease; }
+    .cta-secondary:hover { color: var(--teal); }
+    
+    .cta-tertiary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--dark);
+      padding: 14px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 2px solid var(--gray-200);
+      margin-top: 12px;
+      transition: all 0.15s ease;
+    }
+    .cta-tertiary:hover { border-color: var(--dark); background: var(--gray-50); }
+    
+    /* Trust Bar */
+    .trust-bar { background: var(--white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); padding: 16px 0; }
+    .trust-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 24px; list-style: none; font-size: 0.82rem; color: var(--gray-500); }
+    .trust-items li { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .trust-items .icon { font-size: 1rem; }
+    
+    /* Problem Section */
+    .problem { padding: 56px 0 40px; background: var(--white); }
+    .problem h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+    .problem h3 em { font-style: normal; color: var(--purple); }
+    .problem > .container > p { color: var(--gray-600); font-size: 1.05rem; line-height: 1.7; margin-bottom: 28px; }
+    
+    .problem-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .problem-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 20px;
+      background: var(--gray-50);
+      border-radius: 12px;
+      border-left: 3px solid var(--purple);
+    }
+    .problem-list .emoji { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .problem-list li h4 { font-weight: 700; color: var(--dark); margin-bottom: 4px; font-size: 1rem; }
+    .problem-list li p { font-size: 0.92rem; color: var(--gray-600); line-height: 1.5; }
+    
+    /* Solution / Steps */
+    .solution { background: var(--gray-50); padding: 56px 0; }
+    .solution h3 { font-family: var(--font-display); font-size: clamp(1.35rem, 3.5vw, 1.75rem); font-weight: 700; color: var(--dark); margin-bottom: 12px; text-align: center; }
+    .solution > .container > p.intro { text-align: center; color: var(--gray-600); font-size: 1.05rem; max-width: 48ch; margin: 0 auto 32px; }
+    
+    .check-steps { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+    .check-steps li { display: flex; align-items: flex-start; gap: 16px; background: var(--white); padding: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid var(--gray-200); }
+    .step-num { width: 36px; height: 36px; background: linear-gradient(135deg, var(--purple), var(--teal)); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+    .check-steps li h4 { font-weight: 700; color: var(--dark); margin-bottom: 4px; font-size: 1rem; }
+    .check-steps li p { font-size: 0.92rem; color: var(--gray-600); line-height: 1.5; }
+    
+    /* Benefits */
+    .benefits { background: var(--white); padding: 56px 0; }
+    .benefits h3 { font-family: var(--font-display); font-size: clamp(1.35rem, 3.5vw, 1.75rem); font-weight: 700; color: var(--dark); margin-bottom: 28px; text-align: center; }
+    .benefit-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 520px) { .benefit-grid { grid-template-columns: 1fr 1fr; } }
+    .benefit-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+    .benefit-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px -8px rgba(10, 22, 40, 0.12); }
+    .benefit-card .icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .benefit-card h4 { font-weight: 700; color: var(--dark); margin-bottom: 6px; font-size: 1rem; }
+    .benefit-card p { font-size: 0.88rem; color: var(--gray-600); line-height: 1.55; }
+    
+    /* Guarantee Box */
+    .guarantee-box {
+      background: linear-gradient(135deg, rgba(0,212,170,0.08) 0%, rgba(123,97,255,0.08) 100%);
+      border: 1px solid rgba(0,212,170,0.2);
+      border-radius: 16px;
+      padding: 28px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .guarantee-box .shield { font-size: 2.5rem; margin-bottom: 12px; }
+    .guarantee-box h4 { font-family: var(--font-display); font-size: 1.25rem; color: var(--dark); margin-bottom: 8px; }
+    .guarantee-box p { font-size: 0.95rem; color: var(--gray-600); max-width: 48ch; margin: 0 auto; line-height: 1.6; }
+    
+    /* Form */
+    .form-section { background: var(--gray-50); padding: 56px 0; text-align: center; }
+    .form-section h3 { font-family: var(--font-display); font-size: clamp(1.35rem, 3.5vw, 1.75rem); font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+    .form-section .form-sub { color: var(--gray-600); font-size: 1.05rem; max-width: 48ch; margin: 0 auto 28px; line-height: 1.6; }
+    
+    .lead-form { max-width: 440px; margin: 0 auto; text-align: left; background: var(--white); padding: 32px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--gray-200); }
+    .lead-form label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--gray-700); margin-bottom: 6px; }
+    .lead-form input, .lead-form select { width: 100%; padding: 14px 16px; margin-bottom: 16px; border: 1px solid var(--gray-200); border-radius: 10px; font-size: 1rem; font-family: inherit; transition: border-color 0.15s ease, box-shadow 0.15s ease; }
+    .lead-form input:focus, .lead-form select:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.1); }
+    .lead-form button { width: 100%; padding: 16px; background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); color: var(--dark); border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 700; cursor: pointer; transition: transform 0.15s ease, box-shadow 0.15s ease; box-shadow: 0 4px 14px rgba(0, 212, 170, 0.35); margin-top: 8px; }
+    .lead-form button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 212, 170, 0.45); }
+    .form-note { font-size: 0.8rem; color: var(--gray-500); margin-top: 16px; text-align: center; line-height: 1.5; }
+    .form-bonus { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, rgba(0,212,170,0.15), rgba(123,97,255,0.15)); color: var(--dark); padding: 10px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; border: 1px solid rgba(0,212,170,0.2); }
+    
+    /* FAQ */
+    .faq { background: var(--white); padding: 56px 0; }
+    .faq h3 { font-family: var(--font-display); font-size: clamp(1.35rem, 3.5vw, 1.75rem); font-weight: 700; color: var(--dark); margin-bottom: 28px; text-align: center; }
+    .faq-item { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 12px; padding: 20px; margin-bottom: 14px; transition: box-shadow 0.15s ease; }
+    .faq-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
+    .faq-item h4 { font-weight: 700; color: var(--dark); margin-bottom: 8px; font-size: 1rem; }
+    .faq-item p { font-size: 0.92rem; color: var(--gray-600); line-height: 1.6; }
+    
+    /* Final CTA */
+    .final-cta { background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%); color: var(--white); padding: 56px 0; text-align: center; }
+    .final-cta h3 { font-family: var(--font-display); font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; margin-bottom: 12px; }
+    .final-cta p { opacity: 0.9; max-width: 48ch; margin: 0 auto 24px; font-size: 1.05rem; }
+    
+    /* Footer */
+    footer { background: var(--gray-900); color: var(--gray-500); padding: 32px 0; text-align: center; font-size: 0.85rem; }
+    footer a { color: var(--gray-400); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+    
+    /* Sticky CTA */
+    .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--white); padding: 12px 20px; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); z-index: 100; border-top: 1px solid var(--gray-200); }
+    .sticky-cta a { display: block; width: 100%; text-align: center; }
+    @media (max-width: 599px) { .sticky-cta { display: block; } body { padding-bottom: 70px; } }
+    
+    .text-center { text-align: center; }
+  </style>
+  
+  <!-- TRACKING PLACEHOLDER: Meta Pixel -->
+  <!-- TRACKING PLACEHOLDER: Google Analytics 4 -->
+</head>
+<body>
+
+<!-- Urgency Bar -->
+<div class="urgency-bar">
+  💡 Nur für Unternehmer 35+: Kostenloser KI-Potenzial-Check + Erstgespräch. Setup ab 1.990 € Festpreis — in 14 Tagen live.
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="brand">Empire<span>·</span>Expansion</div>
+    <h1>In 5 Minuten wissen Sie, wo <em>KI</em> Ihnen Stunden spart</h1>
+    <p class="subhead">Der KI-Potenzial-Check für Unternehmer 35+. 12 gezielte Fragen. Ihr individueller Score. Ein PDF-Report mit Top-3-Automatisierungsbereichen und geschätztem Einsparpotenzial.</p>
+  </div>
+</header>
+
+<!-- Trust Bar -->
+<section class="trust-bar">
+  <div class="container">
+    <ul class="trust-items">
+      <li><span class="icon">🛡️</span> DSGVO-konform</li>
+      <li><span class="icon">🇪🇺</span> EU-basiert</li>
+      <li><span class="icon">✅</span> Kein Spam</li>
+      <li><span class="icon">🔄</span> 30-Tage-Erfolgsgarantie</li>
+      <li><span class="icon">💶</span> Festpreis statt Stundensatz</li>
+      <li><span class="icon">⚡</span> Go-Live in 14 Tagen</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge"><span class="dot"></span>Kostenloser PDF-Report — 5 Minuten</div>
+    <h2>KI-Potenzial-Check für Unternehmer 35+</h2>
+    <p class="lead">Finden Sie in 5 Minuten heraus, welche Prozesse sich mit KI automatisieren lassen — mit konkretem Einsparpotenzial in Stunden und Euro.</p>
+    
+    <!-- PDF Mockup -->
+    <div class="mockup-wrap">
+      <div class="mockup">
+        <div class="mockup-badge">KI-Report</div>
+        <h4>Ihr KI-Potenzial-Report</h4>
+        <div class="mockup-meta">12 Fragen · Sofort-Download · Mit Einsparpotenzial</div>
+        <ul class="mockup-checks">
+          <li><div class="box checked"></div> KI-Score: 78/100</li>
+          <li><div class="box checked"></div> Top-3: Kundenkommunikation</li>
+          <li><div class="box checked"></div> Einsparung: 12 Std/Woche</li>
+          <li><div class="box"></div> Erstgespräch buchen</li>
+        </ul>
+      </div>
+    </div>
+    
+    <a href="#form" class="cta-primary">→ KI-Potenzial jetzt checken</a>
+    <br>
+    <a href="lead-magnet.pdf" class="cta-tertiary" download>📄 PDF ohne Anmeldung herunterladen</a>
+  </div>
+</section>
+
+<!-- Problem -->
+<section class="problem">
+  <div class="container">
+    <h3>Klingt das bekannt? <em>Sie sind nicht allein.</em></h3>
+    <p>Die meisten Unternehmer 35+ wissen, dass KI helfen könnte. Aber niemand sagt ihnen, WO genau — und was es wirklich kostet.</p>
+    
+    <ul class="problem-list">
+      <li>
+        <span class="emoji">📧</span>
+        <div>
+          <h4>Anfragen gehen verloren</h4>
+          <p>E-Mails, WhatsApp-Nachrichten und Anrufe erreichen Sie außerhalb der Bürozeiten. Manche bleiben unbeantwortet — und damit Aufträge liegen.</p>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">⏰</span>
+        <div>
+          <h4>Ihr Team ist mit Routine überlastet</h4>
+          <p>Terminabsprachen, FAQs, Dokumente sortieren, Daten einpflegen. Stunden, die für wichtigere Arbeit fehlen.</p>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">📊</span>
+        <div>
+          <h4>Angebote dauern zu lange</h4>
+          <p>Was manuell Stunden oder Tage dauert, lässt sich mit KI in Minuten erledigen — wenn die Prozesse richtig aufgesetzt sind.</p>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🤷</span>
+        <div>
+          <h4>Sie haben keine klare Übersicht</h4>
+          <p>Wichtige Kennzahlen liegen in Excel-Listen oder im Kopf einzelner Mitarbeiter. Entscheidungen werden auf unvollständigen Daten getroffen.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Price Comparison -->
+<section class="problem" style="background: var(--gray-50); padding-top: 0;">
+  <div class="container">
+    <div class="price-box">
+      <h4>💡 Preisvergleich Juli 2026</h4>
+      <ul>
+        <li>KI-Freelancer (150–350 €/h) <span style="margin-left: auto; opacity: 0.6;">→ mittleres Projekt: 8.000–15.000 €</span></li>
+        <li>DerProzessMeister (Startklar) <span style="margin-left: auto; opacity: 0.6;">→ ab 2.900 €</span></li>
+        <li>SYNAPSE / ConSol AI <span style="margin-left: auto; opacity: 0.6;">→ ab 5.000 € (geschätzt)</span></li>
+        <li class="highlight">🎯 <strong>Empire Expansion</strong> <span class="price-tag" style="margin-left: auto;">Setup: 1.990 € Festpreis</span></li>
+      </ul>
+      <div class="source">Quellen: derprozessmeister.de, neuroflash.de, eigene Recherche. Stand: Juli 2026.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution -->
+<section class="solution">
+  <div class="container">
+    <h3>Der KI-Potenzial-Check zeigt Ihnen den konkreten Hebel</h3>
+    <p class="intro">In 3 Schritten von der Analyse zum live-System — ohne Buzzword-Bingo, mit messbarem Ergebnis.</p>
+    
+    <ul class="check-steps">
+      <li>
+        <div class="step-num">1</div>
+        <div>
+          <h4>Check ausfüllen</h4>
+          <p>In 5 Minuten 12 Fragen zu Ihren Prozessen, Tools und Zielen beantworten.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div>
+          <h4>PDF-Report erhalten</h4>
+          <p>Sofortiger Download mit Ihrem persönlichen KI-Score, Top-3-Bereichen und geschätztem Einsparpotenzial.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div>
+          <h4>Erstgespräch buchen</h4>
+          <p>In 20 Minuten besprechen wir, welcher erste Use-Case in den nächsten 14 Tagen live gehen kann.</p>
+        </div>
+      </li>
+    </ul>
+    
+    <div class="text-center">
+      <a href="#form" class="cta-primary">→ Kostenlosen Report erhalten</a>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+  <div class="container">
+    <h3>Unser Einstiegspaket: KI-Kundenkommunikation & Terminbuchung</h3>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="icon">🤖</div>
+        <h4>KI-Agent</h4>
+        <p>Natürliche Sprache auf Deutsch. Antworten aus Ihren FAQs und Prozessen — 24/7.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">📅</div>
+        <h4>Terminbuchung</h4>
+        <p>Kalenderanbindung, Verfügbarkeitsprüfung, automatische Erinnerungen.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🎯</div>
+        <h4>Lead-Qualifikation</h4>
+        <p>Name, Anliegen, Budget, Dringlichkeit — automatisch erfasst und strukturiert.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🔒</div>
+        <h4>DSGVO-konform</h4>
+        <p>EU-basierte Verarbeitung. Keine unnötigen Daten an US-Clouds. Souveränität als Standard.</p>
+      </div>
+    </div>
+    
+    <!-- Guarantee Box -->
+    <div class="guarantee-box">
+      <div class="shield">🛡️</div>
+      <h4>30-Tage-Erfolgsgarantie</h4>
+      <p>Wenn Ihr KI-Agent nach 30 Tagen nicht mindestens 5 Stunden pro Woche spart, optimieren wir kostenlos — bis es funktioniert.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Form -->
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="form-bonus">🎁 Bonus: Report enthält sofortigen Termin-Link</div>
+    <h3>Starten Sie Ihren KI-Check jetzt</h3>
+    <p class="form-sub">Füllen Sie den kostenlosen Check aus und erhalten Sie sofort Ihren individuellen PDF-Report.</p>
+    
+    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
+      <input type="hidden" name="subject" value="Neuer Lead: 04-ki-integrationen-35plus">
+      <input type="hidden" name="tag" value="04-ki-integrationen-35plus">
+      
+      <label for="first_name">Vorname *</label>
+      <input type="text" id="first_name" name="first_name" placeholder="z. B. Michael" required>
+      
+      <label for="email">E-Mail-Adresse *</label>
+      <input type="email" id="email" name="email" placeholder="z. B. michael@firma.de" required>
+      
+      <label for="company_size">Unternehmensgröße *</label>
+      <select id="company_size" name="company_size" required>
+        <option value="" disabled selected>Bitte wählen...</option>
+        <option value="1">1 Mitarbeiter</option>
+        <option value="2-5">2–5 Mitarbeiter</option>
+        <option value="6-20">6–20 Mitarbeiter</option>
+        <option value="21-50">21–50 Mitarbeiter</option>
+        <option value="50+">Mehr als 50</option>
+      </select>
+      
+      <label for="industry">Branche *</label>
+      <select id="industry" name="industry" required>
+        <option value="" disabled selected>Bitte wählen...</option>
+        <option value="handwerk">Handwerk</option>
+        <option value="b2b-dienstleistung">B2B-Dienstleistung</option>
+        <option value="kanzlei-praxis">Kanzlei / Praxis</option>
+        <option value="handel">Handel</option>
+        <option value="sonstige">Sonstige</option>
+      </select>
+      
+      <label for="pain_point">Größter Schmerzpunkt *</label>
+      <select id="pain_point" name="pain_point" required>
+        <option value="" disabled selected>Bitte wählen...</option>
+        <option value="anfragen-termine">Anfragen beantworten / Termine buchen</option>
+        <option value="angebote">Angebote erstellen</option>
+        <option value="vertrieb-followup">Vertrieb & Follow-up</option>
+        <option value="wissensorganisation">Interne Wissensorganisation</option>
+        <option value="reporting">Reporting & Kennzahlen</option>
+        <option value="backoffice">Backoffice & Datenpflege</option>
+      </select>
+      
+      <button type="submit">→ Kostenlosen Report erhalten</button>
+    </form>
+    
+    <p class="form-note">
+      <a href="lead-magnet.pdf" download>📄 PDF ohne Anmeldung herunterladen</a><br><br>
+      Ihre Daten werden DSGVO-konform verarbeitet. Keine Weitergabe. Abmeldung jederzeit möglich.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <h3>Häufige Fragen</h3>
+    <div class="faq-item">
+      <h4>Was kostet der Check?</h4>
+      <p>Nichts. Der KI-Potenzial-Check ist kostenlos und unverbindlich. Sie erhalten sofort Ihren PDF-Report.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Wer bekommt meine Daten?</h4>
+      <p>Nur Empire Expansion. Wir geben Ihre Daten nicht weiter und verarbeiten sie DSGVO-konform auf EU-Servern.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Was passiert nach dem Check?</h4>
+      <p>Sie erhalten sofort Ihren PDF-Report. Danach können Sie ein kostenloses 20-Minuten-Erstgespräch buchen — ohne Verpflichtung.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Für welche Unternehmen ist das geeignet?</h4>
+      <p>Für Unternehmen ab 1 Mitarbeiter, besonders Handwerk, B2B-Dienstleistungen, Kanzleien, Praxen und Solopreneure ab 35.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Kann ich den Check auch ohne Terminbuchung nutzen?</h4>
+      <p>Ja. Der Report steht Ihnen auch ohne weiteren Kontakt zur Verfügung. Kein Verkaufsdruck.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h3>Starten Sie jetzt. In 5 Minuten wissen Sie mehr.</h3>
+    <p>Oder vereinbaren Sie direkt ein kostenloses Erstgespräch — ohne vorherigen Check.</p>
+    <a href="#form" class="cta-primary">→ KI-Potenzial-Check starten</a>
+    <br>
+    <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-secondary" style="color: var(--teal);">📅 Direkt Erstgespräch buchen</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="#">Kontakt</a></p>
+    <p>&copy; 2026 Empire Expansion</p>
+  </div>
+</footer>
+
+<!-- Sticky CTA Mobile -->
+<div class="sticky-cta">
+  <a href="#form" class="cta-primary">→ KI-Potenzial jetzt checken</a>
+</div>
+
+</body>
+</html>

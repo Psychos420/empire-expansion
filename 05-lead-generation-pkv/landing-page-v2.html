@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PKV-Check für Beamte 2026 — 60% erhalten Erhöhungen | Empire Expansion</title>
+  <meta name="description" content="Kostenloser 10-Punkte-Check für Beamte: Prüfen Sie jetzt Ihren PKV-Tarif. 60% der Privatversicherten erhalten 2026 Erhöhungen. Restkostenversicherung, Beihilfe, Wechsel-Check.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="PKV-Check für Beamte 2026 — Prüfen Sie jetzt Ihren Tarif">
+  <meta property="og:description" content="60% der Privatversicherten erhalten 2026 Erhöhungen. Der 10-Punkte-Check zeigt, ob Sie betroffen sind.">
+  <meta property="og:type" content="website">
+  
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --navy: #1A365D;
+      --navy-dark: #0F1F3D;
+      --navy-light: #2B4A7A;
+      --red: #C53030;
+      --red-dark: #9B2C2C;
+      --amber: #F6AD55;
+      --amber-light: #FBD38D;
+      --white: #FFFFFF;
+      --gray-50: #F7FAFC;
+      --gray-100: #EDF2F7;
+      --gray-200: #E2E8F0;
+      --gray-500: #718096;
+      --gray-600: #4A5568;
+      --gray-700: #2D3748;
+      --gray-900: #1A202C;
+      --success: #38A169;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-display: 'Playfair Display', Georgia, serif;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: var(--font-body);
+      line-height: 1.6;
+      color: var(--gray-700);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+    
+    /* Urgency Bar */
+    .urgency-bar {
+      background: linear-gradient(90deg, var(--red), var(--red-dark));
+      color: var(--white);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .urgency-bar strong { text-decoration: underline; text-underline-offset: 2px; }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: var(--white);
+      padding: 56px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(246,173,85,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    
+    .brand {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      opacity: 0.9;
+      margin-bottom: 32px;
+    }
+    .brand span { color: var(--amber); }
+    
+    header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      max-width: 18ch;
+    }
+    header h1 em {
+      font-style: normal;
+      color: var(--amber);
+      position: relative;
+    }
+    header h1 em::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: rgba(246, 173, 85, 0.25);
+      z-index: -1;
+    }
+    
+    header .subhead {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      opacity: 0.92;
+      max-width: 48ch;
+      font-weight: 400;
+    }
+    
+    /* Hero */
+    .hero {
+      background: var(--gray-50);
+      padding: 48px 0;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gray-600);
+      margin-bottom: 24px;
+    }
+    .hero-badge .dot {
+      width: 8px; height: 8px;
+      background: var(--success);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .hero h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+    
+    .hero p.lead {
+      font-size: 1.05rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 28px;
+      max-width: 52ch;
+    }
+    
+    /* PDF Mockup */
+    .mockup-wrap {
+      margin: 0 auto 28px;
+      max-width: 320px;
+      position: relative;
+    }
+    .mockup {
+      background: var(--white);
+      border-radius: 12px 12px 0 0;
+      padding: 24px 20px 16px;
+      box-shadow: 0 20px 40px -10px rgba(26, 54, 93, 0.25), 0 0 0 1px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 2;
+    }
+    .mockup::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 8px;
+      right: 8px;
+      height: 8px;
+      background: var(--gray-200);
+      border-radius: 0 0 8px 8px;
+      z-index: 1;
+    }
+    .mockup-badge {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .mockup h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .mockup-meta {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      margin-bottom: 16px;
+    }
+    .mockup-checks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .mockup-checks li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--gray-600);
+    }
+    .mockup-checks .box {
+      width: 16px; height: 16px;
+      border: 2px solid var(--gray-200);
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+    .mockup-checks .box.checked {
+      background: var(--success);
+      border-color: var(--success);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mockup-checks .box.checked::after {
+      content: "✓";
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+    }
+    
+    /* CTA Buttons */
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      color: var(--white);
+      padding: 18px 36px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: 10px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 14px rgba(197, 48, 48, 0.35);
+      width: 100%;
+      max-width: 400px;
+    }
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197, 48, 48, 0.45);
+    }
+    
+    .cta-secondary {
+      display: inline-block;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-top: 14px;
+      transition: color 0.15s ease;
+    }
+    .cta-secondary:hover { color: var(--red); }
+    
+    .cta-tertiary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--navy);
+      padding: 14px 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 2px solid var(--gray-200);
+      margin-top: 12px;
+      transition: all 0.15s ease;
+    }
+    .cta-tertiary:hover { border-color: var(--navy); background: var(--gray-50); }
+    
+    /* Trust Bar */
+    .trust-bar {
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 16px 0;
+    }
+    .trust-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+      list-style: none;
+      font-size: 0.82rem;
+      color: var(--gray-500);
+    }
+    .trust-items li { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .trust-items .icon { font-size: 1rem; }
+    
+    /* Stats / Problem */
+    .problem {
+      padding: 56px 0 40px;
+      background: var(--white);
+    }
+    .problem h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+    .problem h3 em {
+      font-style: normal;
+      color: var(--red);
+    }
+    .problem > .container > p {
+      color: var(--gray-600);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .stat-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-card .number {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-card .label {
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      line-height: 1.4;
+    }
+    .stat-card .source {
+      font-size: 0.72rem;
+      color: var(--gray-500);
+      margin-top: 6px;
+    }
+    
+    .problem-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .problem-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 16px;
+      background: var(--gray-50);
+      border-radius: 10px;
+      border-left: 3px solid var(--red);
+    }
+    .problem-list .x-icon {
+      color: var(--red);
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .problem-list li strong {
+      display: block;
+      color: var(--gray-900);
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .problem-list li span {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+    }
+    
+    /* Solution */
+    .solution {
+      background: var(--gray-50);
+      padding: 56px 0;
+    }
+    .solution h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .solution > .container > p.intro {
+      text-align: center;
+      color: var(--gray-600);
+      font-size: 1.05rem;
+      max-width: 48ch;
+      margin: 0 auto 32px;
+    }
+    
+    .check-steps {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .check-steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--white);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .step-num {
+      width: 36px; height: 36px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .check-steps li h4 {
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+      font-size: 1rem;
+    }
+    .check-steps li p {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+    
+    /* Benefits */
+    .benefits {
+      background: var(--white);
+      padding: 56px 0;
+    }
+    .benefits h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 28px;
+      text-align: center;
+    }
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    @media (min-width: 520px) {
+      .benefit-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .benefit-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 24px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .benefit-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px -8px rgba(26, 54, 93, 0.12);
+    }
+    .benefit-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .benefit-card h4 {
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 1rem;
+    }
+    .benefit-card p {
+      font-size: 0.88rem;
+      color: var(--gray-600);
+      line-height: 1.55;
+    }
+    
+    /* Social Proof / Data Box */
+    .data-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 32px;
+      border-radius: 16px;
+      margin: 32px 0;
+    }
+    .data-box h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .data-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .data-box li {
+      font-size: 0.92rem;
+      opacity: 0.92;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .data-box li::before {
+      content: "→";
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+    .data-box .source {
+      font-size: 0.78rem;
+      opacity: 0.65;
+      margin-top: 14px;
+      font-style: italic;
+    }
+    
+    /* Form Section */
+    .form-section {
+      background: var(--gray-50);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .form-section h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .form-section .form-sub {
+      color: var(--gray-600);
+      font-size: 1.05rem;
+      max-width: 48ch;
+      margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+    
+    .lead-form {
+      max-width: 440px;
+      margin: 0 auto;
+      text-align: left;
+      background: var(--white);
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid var(--gray-200);
+    }
+    .lead-form label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: 6px;
+    }
+    .lead-form input,
+    .lead-form select {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .lead-form input:focus,
+    .lead-form select:focus {
+      outline: none;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.08);
+    }
+    .lead-form .checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .lead-form .checkbox input {
+      width: auto;
+      margin: 4px 0 0;
+      flex-shrink: 0;
+    }
+    .lead-form .checkbox label {
+      font-weight: 400;
+      font-size: 0.82rem;
+      color: var(--gray-600);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .lead-form button {
+      width: 100%;
+      padding: 16px;
+      background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 14px rgba(197, 48, 48, 0.35);
+      margin-top: 8px;
+    }
+    .lead-form button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(197, 48, 48, 0.45);
+    }
+    
+    .form-note {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      margin-top: 16px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    
+    .form-bonus {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--amber-light);
+      color: var(--navy-dark);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    
+    /* FAQ */
+    .faq {
+      background: var(--white);
+      padding: 56px 0;
+    }
+    .faq h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 3.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 28px;
+      text-align: center;
+    }
+    .faq-item {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 14px;
+      transition: box-shadow 0.15s ease;
+    }
+    .faq-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .faq-item h4 {
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+    .faq-item p {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    
+    /* Final CTA */
+    .final-cta {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      color: var(--white);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .final-cta h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .final-cta p {
+      opacity: 0.9;
+      max-width: 48ch;
+      margin: 0 auto 24px;
+      font-size: 1.05rem;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--gray-900);
+      color: var(--gray-500);
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--gray-400); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+    footer .disclaimer {
+      margin-top: 16px;
+      font-size: 0.78rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+      max-width: 64ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Sticky CTA */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      padding: 12px 20px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+      z-index: 100;
+      border-top: 1px solid var(--gray-200);
+    }
+    .sticky-cta a {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    @media (max-width: 599px) {
+      .sticky-cta { display: block; }
+      body { padding-bottom: 70px; }
+    }
+    
+    /* Utility */
+    .text-center { text-align: center; }
+    .mt-2 { margin-top: 8px; }
+    .mt-4 { margin-top: 16px; }
+    .mb-4 { margin-bottom: 16px; }
+  </style>
+  
+  <!-- TRACKING PLACEHOLDER: Meta Pixel -->
+  <!-- Füge Meta Pixel-Code hier ein (siehe Report) -->
+  
+  <!-- TRACKING PLACEHOLDER: Google Analytics 4 -->
+  <!-- Füge GA4-Code hier ein (siehe Report) -->
+</head>
+<body>
+
+<!-- Urgency Bar -->
+<div class="urgency-bar">
+  ⚠️ <strong>AKTUELLE WARNUNG:</strong> 60% der Privatversicherten erhalten 2026 Erhöhungen. Prüfen Sie Ihren Tarif jetzt — bevor die nächste Erhöhung kommt.
+</div>
+
+<!-- Header -->
+<header>
+  <div class="container">
+    <div class="brand">Empire<span>·</span>Expansion</div>
+    <h1>Beamte: Prüfen Sie <em>JETZT</em> Ihren PKV-Tarif</h1>
+    <p class="subhead">60% der Privatversicherten erhalten 2026 eine Erhöhung. Der 10-Punkte-Check zeigt in 15 Minuten, ob Ihre Restkostenversicherung zu Ihrem Beihilfesatz passt — und wie Sie teure Fehlentscheidungen vermeiden.</p>
+  </div>
+</header>
+
+<!-- Trust Bar -->
+<section class="trust-bar">
+  <div class="container">
+    <ul class="trust-items">
+      <li><span class="icon">✅</span> Unabhängiger Vergleich</li>
+      <li><span class="icon">🛡️</span> Keine Kosten, keine Verpflichtung</li>
+      <li><span class="icon">📅</span> Termin mit lizenziertem Makler</li>
+      <li><span class="icon">👥</span> 500+ Beamte haben den Check genutzt</li>
+      <li><span class="icon">📊</span> Stand: Juli 2026</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container" style="text-align: center;">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Kostenloser PDF-Download — 8 Seiten
+    </div>
+    
+    <h2>Der PKV-Wechsel-Check 2026 für Beamte</h2>
+    <p class="lead" style="margin-left: auto; margin-right: auto;">Beihilfe richtig nutzen. Restkosten clever absichern. In 10 Schritten zur richtigen Entscheidung — mit aktuellen Zahlen für 2026.</p>
+    
+    <!-- PDF Mockup -->
+    <div class="mockup-wrap">
+      <div class="mockup">
+        <div class="mockup-badge">PDF-Checkliste</div>
+        <h4>PKV-Wechsel-Checkliste 2026 für Beamte</h4>
+        <div class="mockup-meta">8 Seiten · Druckfähig · Mit Checkboxes</div>
+        <ul class="mockup-checks">
+          <li><div class="box checked"></div> Beihilfesatz prüfen</li>
+          <li><div class="box checked"></div> Restkostenversicherung abgleichen</li>
+          <li><div class="box checked"></div> Leistungen vergleichen</li>
+          <li><div class="box"></div> Termin mit Makler vereinbaren</li>
+        </ul>
+      </div>
+    </div>
+    
+    <a href="#form" class="cta-primary">→ Jetzt kostenlosen Check sichern</a>
+    <br>
+    <a href="lead-magnet.pdf" class="cta-tertiary" download>📄 PDF ohne Anmeldung herunterladen</a>
+  </div>
+</section>
+
+<!-- Problem -->
+<section class="problem">
+  <div class="container">
+    <h3>Viele Beamte zahlen <em>2026 bis zu 40% mehr</em> — ohne es zu merken</h3>
+    <p>Die VKB erhöht um bis zu 40%. Der Standardtarif-Höchstbeitrag liegt bei 848,62 €/Monat. Wer seinen Tarif nicht prüft, zahlt möglicherweise hunderte Euro zu viel — jeden Monat. Die richtige Restkostenversicherung ist entscheidend.</p>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="number">60%</div>
+        <div class="label">der Privatversicherten von Erhöhungen betroffen</div>
+        <div class="source">Quelle: Procontra 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">10–13%</div>
+        <div class="label">durchschnittliche Erhöhung</div>
+        <div class="source">Bei einzelnen Tarifen bis 40%</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">848,62€</div>
+        <div class="label">Standardtarif Höchstbeitrag/Monat</div>
+        <div class="source">Stand: Juli 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">500+</div>
+        <div class="label">Beamte haben den Check bereits genutzt</div>
+        <div class="source">Empire Expansion</div>
+      </div>
+    </div>
+    
+    <h3 style="margin-top: 32px; font-size: 1.25rem;">Kennen Sie das?</h3>
+    <ul class="problem-list">
+      <li>
+        <span class="x-icon">✕</span>
+        <div>
+          <strong>Welcher Beihilfesatz gilt für mich?</strong>
+          <span>Jedes Bundesland hat andere Sätze — und sie ändern sich.</span>
+        </div>
+      </li>
+      <li>
+        <span class="x-icon">✕</span>
+        <div>
+          <strong>Brauche ich Chefarzt- oder Einbettzimmer-Leistungen?</strong>
+          <span>Nicht jeder Tarif deckt das ab — und der Unterschied kann teuer werden.</span>
+        </div>
+      </li>
+      <li>
+        <span class="x-icon">✕</span>
+        <div>
+          <strong>Lohnt sich der Wechsel innerhalb der PKV?</strong>
+          <span>Tarifwechsel vs. Anbieterwechsel — wann ist was sinnvoll?</span>
+        </div>
+      </li>
+      <li>
+        <span class="x-icon">✕</span>
+        <div>
+          <strong>Was passiert bei Beitragserhöhungen?</strong>
+          <span>Die nächste Erhöhung kommt. Sind Sie vorbereitet?</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Solution -->
+<section class="solution">
+  <div class="container">
+    <h3>In 10 Schritten zur richtigen PKV-Entscheidung</h3>
+    <p class="intro">Unsere „PKV-Wechsel-Checkliste 2026 für Beamte" hilft Ihnen, die wichtigsten Punkte strukturiert zu prüfen:</p>
+    
+    <ul class="check-steps">
+      <li>
+        <div class="step-num">1</div>
+        <div>
+          <h4>Beihilfesatz richtig einordnen</h4>
+          <p>Ermitteln Sie Ihren aktuellen Satz und prüfen Sie, ob er sich 2026 ändert.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">2</div>
+        <div>
+          <h4>Restkostenversicherung passend wählen</h4>
+          <p>Abgleich mit Beihilfe: Welche Selbstbeteiligung macht Sinn?</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">3</div>
+        <div>
+          <h4>Leistungen vergleichen</h4>
+          <p>Zahn, Krankenhaus, Ambulant — was brauchen Sie wirklich?</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">4</div>
+        <div>
+          <h4>Unterlagen vorbereiten</h4>
+          <p>Checkliste mit allen Dokumenten, die Sie für den Makler-Termin brauchen.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">5</div>
+        <div>
+          <h4>Termin mit Experten vereinbaren</h4>
+          <p>Kostenloser 15-Minuten-Check mit lizenziertem Versicherungsmakler.</p>
+        </div>
+      </li>
+    </ul>
+    
+    <div class="text-center">
+      <a href="#form" class="cta-primary">→ Checkliste jetzt kostenlos laden</a>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="benefits">
+  <div class="container">
+    <h3>Das erwartet Sie</h3>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="icon">💶</div>
+        <h4>Kostenlos & unverbindlich</h4>
+        <p>Der Download ist kostenlos und ohne Verpflichtung. Sie erhalten die Checkliste direkt per E-Mail.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🎯</div>
+        <h4>Für Beamte maßgeschneidert</h4>
+        <p>Alle Inhalte sind speziell auf Beamte, Beamtenanwärter und Verbeamtete zugeschnitten.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">👨‍💼</div>
+        <h4>Experten-Check möglich</h4>
+        <p>Bei Bedarf vereinbaren Sie anschließend einen unverbindlichen 15-Minuten-Check mit einem lizenzierten Makler.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🔒</div>
+        <h4>DSGVO-konform</h4>
+        <p>Ihre Daten werden sicher verarbeitet. Sie können sich jederzeit abmelden.</p>
+      </div>
+    </div>
+    
+    <!-- Marktdaten-Box -->
+    <div class="data-box">
+      <h4>📊 Aktuelle Marktdaten Juli 2026</h4>
+      <ul>
+        <li>~60% der Privatversicherten von Erhöhungen betroffen</li>
+        <li>Ø Erhöhung: 10–13%, bei einzelnen Tarifen bis zu 40%</li>
+        <li>Standardtarif Höchstbeitrag: 848,62 €/Monat</li>
+        <li>Beihilfesätze variieren je nach Bundesland und Dienstgrad</li>
+      </ul>
+      <div class="source">Quellen: Procontra / Franke & Bornberg Map-Report 2026, Versicherungsmagazin</div>
+    </div>
+  </div>
+</section>
+
+<!-- Form Section -->
+<section class="form-section" id="form">
+  <div class="container">
+    <div class="form-bonus">🎁 Bonus: Bei Download sofort der 15-Minuten-Termin-Link</div>
+    <h3>Laden Sie die kostenlose Checkliste herunter</h3>
+    <p class="form-sub">Füllen Sie das Formular aus und erhalten Sie den Download-Link per E-Mail. Kein Spam, jederzeit abbestellbar.</p>
+    
+    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
+      <input type="hidden" name="subject" value="Neuer Lead: 05-lead-generation-pkv">
+      <input type="hidden" name="tag" value="05-lead-generation-pkv">
+      
+      <label for="first_name">Vorname *</label>
+      <input type="text" id="first_name" name="first_name" placeholder="z. B. Max" required>
+      
+      <label for="email">E-Mail-Adresse *</label>
+      <input type="email" id="email" name="email" placeholder="z. B. max@beispiel.de" required>
+      
+      <label for="phone">Telefonnummer (optional)</label>
+      <input type="tel" id="phone" name="phone" placeholder="Für Rückruf durch Makler">
+      
+      <label for="beamtenstatus">Beamtenstatus (optional)</label>
+      <select id="beamtenstatus" name="beamtenstatus">
+        <option value="">Bitte wählen...</option>
+        <option value="lebenzeit">Beamter auf Lebenszeit</option>
+        <option value="probe">Beamter auf Probe</option>
+        <option value="anwaerter">Beamtenanwärter</option>
+      </select>
+      
+      <div class="checkbox">
+        <input type="checkbox" id="consent1" name="checkliste_consent" required>
+        <label for="consent1">Ja, ich möchte die kostenlose Checkliste per E-Mail erhalten. *</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="consent2" name="privacy_consent" required>
+        <label for="consent2">Ich akzeptiere die Datenschutzerklärung und stimme der Verarbeitung meiner Daten zu. *</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="consent3" name="contact_consent">
+        <label for="consent3">Ich bin einverstanden, dass mich ein lizenzierter Versicherungsmakler telefonisch oder per E-Mail kontaktieren darf. (Optional)</label>
+      </div>
+      
+      <button type="submit">→ Jetzt kostenlos herunterladen</button>
+    </form>
+    
+    <p class="form-note">
+      <a href="lead-magnet.pdf" download>📄 PDF ohne Anmeldung herunterladen</a><br><br>
+      Kein Spam. Sie können sich jederzeit abmelden. Ihre Daten werden DSGVO-konform verarbeitet.
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <h3>Häufige Fragen</h3>
+    <div class="faq-item">
+      <h4>Ist die Checkliste wirklich kostenlos?</h4>
+      <p>Ja. Der Download ist kostenlos und unverbindlich. Wir verdienen über Provisionen, wenn Sie über uns einen Tarif abschließen — für Sie entstehen keine Mehrkosten.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Erhalte ich Versicherungsberatung?</h4>
+      <p>Nein. Die Checkliste ist eine Informationshilfe. Eine individuelle Beratung erfolgt ausschließlich durch lizenzierte Versicherungsmakler, die Sie optional kontaktieren können.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Was passiert mit meinen Daten?</h4>
+      <p>Ihre Daten werden DSGVO-konform gespeichert und verarbeitet. Sie erhalten die Checkliste per E-Mail und können sich jederzeit abmelden. Keine Weitergabe an Dritte.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Für wen ist die Checkliste geeignet?</h4>
+      <p>Für Beamte, Beamtenanwärter und Verbeamtete, die in die PKV wechseln oder ihren Tarif prüfen möchten — besonders in Zeiten der Beitragserhöhungen 2026.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h3>Starten Sie Ihre PKV-Prüfung noch heute</h3>
+    <p>Laden Sie die kostenlose Checkliste herunter und buchen Sie anschließend einen unverbindlichen 15-Minuten-Check.</p>
+    <a href="#form" class="cta-primary">→ Checkliste herunterladen</a>
+    <br>
+    <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-secondary" style="color: var(--amber);">📅 Direkt Termin buchen</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a> · <a href="#">Affiliate-Hinweis</a></p>
+    <p>&copy; 2026 Empire Expansion. Alle Rechte vorbehalten.</p>
+    <p class="disclaimer">
+      <strong>Hinweis:</strong> Die Inhalte dieser Seite dienen ausschließlich der Information. Sie stellen keine individuelle Versicherungsberatung dar (kein § 34d GewO). Versicherungsverträge erfordern eine persönliche Bedarfsanalyse durch einen lizenzierten Versicherungsmakler oder Versicherungsberater. Die angegebenen Zahlen und Beispiele sind Schätzwerte ohne Gewähr. Stand: Juli 2026.
+    </p>
+  </div>
+</footer>
+
+<!-- Sticky CTA Mobile -->
+<div class="sticky-cta">
+  <a href="#form" class="cta-primary">→ Checkliste kostenlos sichern</a>
+</div>
+
+</body>
+</html>

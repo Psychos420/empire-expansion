@@ -1,0 +1,262 @@
+/* ==========================================================================
+   EMPIRE NICHE THEME SYSTEM
+   14 nischenspezifische Farbschemata, abgestimmt auf die 3 Hub-Kategorien
+   
+   Usage: <body data-theme="{niche-id}"> (z. B. data-theme="pkv")
+   
+   Kategorien:
+   I  — Finanz & Vorsorge  (Grün-Töne)
+   II — Business & Digital  (Blau-Töne)
+   III — Alltag & Lifestyle (Warm-Töne)
+   ========================================================================== */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   KATEGORIE I — FINANZ & VORSORGE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 01 — Affiliate Marketing (Finanzielle Freiheit 40+) */
+body[data-theme="affiliate-marketing"] {
+  --theme-primary: #1a5c3a;
+  --theme-primary-dark: #124029;
+  --theme-primary-light: #eaf5ef;
+  --theme-accent: #c9a96e;
+  --theme-accent-dark: #a88b55;
+  --theme-accent-light: #f8f2e8;
+  --category-color: #1f6f5c;
+}
+
+/* 03 — PDFs & Guides (Rente mit 65) */
+body[data-theme="pdfs-guides"] {
+  --theme-primary: #156c5a;
+  --theme-primary-dark: #0e4a3d;
+  --theme-primary-light: #e8f5f2;
+  --theme-accent: #d4a843;
+  --theme-accent-dark: #b08f35;
+  --theme-accent-light: #faf4e4;
+  --category-color: #1f6f5c;
+}
+
+/* 05 — Lead Generation PKV (Beihilfe + Restkosten) */
+body[data-theme="pkv"] {
+  --theme-primary: #156c7c;
+  --theme-primary-dark: #0e4c58;
+  --theme-primary-light: #e8f3f5;
+  --theme-accent: #c4943a;
+  --theme-accent-dark: #a37c30;
+  --theme-accent-light: #f8f2e4;
+  --category-color: #1f6f5c;
+}
+
+/* 08 — App Ideen & App Store (Rentenlücke-Rechner) */
+body[data-theme="app-ideen"] {
+  --theme-primary: #2d5f4f;
+  --theme-primary-dark: #1f4337;
+  --theme-primary-light: #e8f2ef;
+  --theme-accent: #b8842e;
+  --theme-accent-dark: #966920;
+  --theme-accent-light: #f8f0e4;
+  --category-color: #1f6f5c;
+}
+
+/* 09 — Finanzielle Freiheit / FIRE (Coast-FIRE-Check) */
+body[data-theme="finanzielle-freiheit"] {
+  --theme-primary: #1f6f5c;
+  --theme-primary-dark: #164a3d;
+  --theme-primary-light: #eef4f0;
+  --theme-accent: #b8842e;
+  --theme-accent-dark: #966920;
+  --theme-accent-light: #f8f0e8;
+  --category-color: #1f6f5c;
+}
+
+/* 11 — Immobilien & Baufinanzierung (Baufi-Readiness) */
+body[data-theme="immobilien"] {
+  --theme-primary: #8c5e3c;
+  --theme-primary-dark: #6b4930;
+  --theme-primary-light: #f5efe8;
+  --theme-accent: #b8842e;
+  --theme-accent-dark: #966920;
+  --theme-accent-light: #f8f0e8;
+  --category-color: #b0602c;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   KATEGORIE II — BUSINESS & DIGITAL
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 04 — KI-Integrationen 35+ (Mittelstand) */
+body[data-theme="ki-integrationen"] {
+  --theme-primary: #3d4f8f;
+  --theme-primary-dark: #2c3a6b;
+  --theme-primary-light: #eef0f7;
+  --theme-accent: #6b8fc7;
+  --theme-accent-dark: #5575a8;
+  --theme-accent-light: #e8eef7;
+  --category-color: #3d4f8f;
+}
+
+/* 07 — Marketing Agency Traffic (Website-Check) */
+body[data-theme="marketing-agency"] {
+  --theme-primary: #2c4a7c;
+  --theme-primary-dark: #1f3560;
+  --theme-primary-light: #e8eef5;
+  --theme-accent: #e8a94d;
+  --theme-accent-dark: #c9923d;
+  --theme-accent-light: #faf3e4;
+  --category-color: #3d4f8f;
+}
+
+/* 12 — Selbstständigkeit & Business-Setup (Nebenerwerb) */
+body[data-theme="selbststaendigkeit"] {
+  --theme-primary: #2a3d5c;
+  --theme-primary-dark: #1f2d44;
+  --theme-primary-light: #e8ecf2;
+  --theme-accent: #c9a96e;
+  --theme-accent-dark: #a88b55;
+  --theme-accent-light: #f8f2e8;
+  --category-color: #3d4f8f;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   KATEGORIE III — ALLTAG & LIFESTYLE
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* 02 — TikTok Shop (GlowAfter35) */
+body[data-theme="tiktok-shop"] {
+  --theme-primary: #7c3f6e;
+  --theme-primary-dark: #5c2f52;
+  --theme-primary-light: #f5e8f0;
+  --theme-accent: #e8a94d;
+  --theme-accent-dark: #c9923d;
+  --theme-accent-light: #faf3e4;
+  --category-color: #b0602c;
+}
+
+/* 06 — Lead Generation Dropshipping (Schlaf & Erholung) */
+body[data-theme="dropshipping"] {
+  --theme-primary: #4a5d6e;
+  --theme-primary-dark: #384656;
+  --theme-primary-light: #e8ecf0;
+  --theme-accent: #c4943a;
+  --theme-accent-dark: #a37c30;
+  --theme-accent-light: #f8f2e4;
+  --category-color: #b0602c;
+}
+
+/* 10 — Gesundheit & Prävention 40+ (Energie-Check) */
+body[data-theme="gesundheit"] {
+  --theme-primary: #5a7c3f;
+  --theme-primary-dark: #425e2f;
+  --theme-primary-light: #eef2e8;
+  --theme-accent: #c9a96e;
+  --theme-accent-dark: #a88b55;
+  --theme-accent-light: #f8f2e8;
+  --category-color: #b0602c;
+}
+
+/* 13 — Reisen & Lifestyle 35+ (Kulinarische Aktivreisen) */
+body[data-theme="reisen-lifestyle"] {
+  --theme-primary: #c46a4a;
+  --theme-primary-dark: #a0553a;
+  --theme-primary-light: #f8ece8;
+  --theme-accent: #3a8c8c;
+  --theme-accent-dark: #2d6b6b;
+  --theme-accent-light: #e8f5f5;
+  --category-color: #b0602c;
+}
+
+/* 14 — Nachhaltigkeit & Eco (Plastikfrei in 14 Tagen) */
+body[data-theme="nachhaltigkeit"] {
+  --theme-primary: #2d6b3f;
+  --theme-primary-dark: #1f4d2e;
+  --theme-primary-light: #e8f2eb;
+  --theme-accent: #c9a96e;
+  --theme-accent-dark: #a88b55;
+  --theme-accent-light: #f8f2e8;
+  --category-color: #b0602c;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CATEGORY-BASED BACKGROUND TINTS (for section variations)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+body[data-theme="affiliate-marketing"] .bg-category,
+body[data-theme="pdfs-guides"] .bg-category,
+body[data-theme="pkv"] .bg-category,
+body[data-theme="app-ideen"] .bg-category,
+body[data-theme="finanzielle-freiheit"] .bg-category,
+body[data-theme="immobilien"] .bg-category {
+  background: var(--theme-primary-light);
+}
+
+body[data-theme="ki-integrationen"] .bg-category,
+body[data-theme="marketing-agency"] .bg-category,
+body[data-theme="selbststaendigkeit"] .bg-category {
+  background: var(--theme-primary-light);
+}
+
+body[data-theme="tiktok-shop"] .bg-category,
+body[data-theme="dropshipping"] .bg-category,
+body[data-theme="gesundheit"] .bg-category,
+body[data-theme="reisen-lifestyle"] .bg-category,
+body[data-theme="nachhaltigkeit"] .bg-category {
+  background: var(--theme-primary-light);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HUB-PAGE VISUAL LINK — Category accent bars on landing pages
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.category-bar {
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: var(--space-lg);
+}
+
+.category-bar::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--category-color, var(--theme-primary));
+  opacity: 0.8;
+}
+
+/* Animated category indicator for Finanz */
+body[data-theme="affiliate-marketing"] .category-bar::before,
+body[data-theme="pdfs-guides"] .category-bar::before,
+body[data-theme="pkv"] .category-bar::before,
+body[data-theme="app-ideen"] .category-bar::before,
+body[data-theme="finanzielle-freiheit"] .category-bar::before,
+body[data-theme="immobilien"] .category-bar::before {
+  background: linear-gradient(90deg, #1f6f5c, #2d8a73 60%, #1f6f5c);
+  background-size: 200% 100%;
+  animation: category-drift 8s ease-in-out infinite;
+}
+
+/* Animated category indicator for Business */
+body[data-theme="ki-integrationen"] .category-bar::before,
+body[data-theme="marketing-agency"] .category-bar::before,
+body[data-theme="selbststaendigkeit"] .category-bar::before {
+  background: linear-gradient(90deg, #3d4f8f, #5a75b8 60%, #3d4f8f);
+  background-size: 200% 100%;
+  animation: category-drift 8s ease-in-out infinite;
+}
+
+/* Animated category indicator for Alltag */
+body[data-theme="tiktok-shop"] .category-bar::before,
+body[data-theme="dropshipping"] .category-bar::before,
+body[data-theme="gesundheit"] .category-bar::before,
+body[data-theme="reisen-lifestyle"] .category-bar::before,
+body[data-theme="nachhaltigkeit"] .category-bar::before {
+  background: linear-gradient(90deg, #b0602c, #d4824a 60%, #b0602c);
+  background-size: 200% 100%;
+  animation: category-drift 8s ease-in-out infinite;
+}
+
+@keyframes category-drift {
+  0%, 100% { background-position: 0% 0; }
+  50% { background-position: 100% 0; }
+}
