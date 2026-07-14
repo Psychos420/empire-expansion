@@ -191,16 +191,20 @@ def main() -> int:
             print(f"[ERR] {niche.name}: {e}")
             errors.append((niche.name, str(e)))
 
-    # Extra paid product for PDFs/guides niche
-    paid = ROOT / "03-pdfs-guides" / "PAID-PRODUCT.md"
-    if paid.exists():
-        out = paid.parent / "paid-product.pdf"
+    # Paid products: any niche with a PAID-PRODUCT.md gets a paid-product.pdf
+    for niche in NICHE_DIRS:
+        paid = niche / "PAID-PRODUCT.md"
+        if not paid.exists():
+            continue
+        cluster_key = NICHE_CLUSTER.get(niche.name, "finanz")
+        az = niche.name[:2]
+        out = niche / "paid-product.pdf"
         try:
-            build_pdf(paid, out, "finanz", "03", kicker="Bezahlter Guide")
+            build_pdf(paid, out, cluster_key, az, kicker="Bezahltes Produkt")
             print(f"[OK] {out.relative_to(ROOT)}")
         except Exception as e:
-            print(f"[ERR] paid-product: {e}")
-            errors.append(("paid-product", str(e)))
+            print(f"[ERR] {niche.name} paid-product: {e}")
+            errors.append((f"{niche.name} paid-product", str(e)))
 
     if errors:
         print("\nErrors:")
