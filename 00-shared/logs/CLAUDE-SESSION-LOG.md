@@ -217,3 +217,30 @@
 ## Nächster Schritt
 
 Claude sollte den Masterprompt erhalten und mit „Starte Empire Launch" beginnen.
+
+---
+
+## Session 10+ — PDF-Redesign-Master v2 Fortsetzung (Sub-Agent)
+
+- **Kontext:** Vorheriger Agent-Swarm-Task "PDF-Redesign-Master" wurde wegen Timeout abgebrochen. Sub-Agent übernimmt die saubere Fertigstellung.
+- **Analyse des Stands:** 14/14 Lead-Magnet-PDFs waren bereits mit `build-pdfs-v2.py` neu gebaut (laut `pdf-redesign-log.md` vom vorherigen Agent). Allerdings existierten noch uncommittede Änderungen (neue Tools, Logs, Landing-Page-Backups, Theme-Dateien).
+- **Problem behoben:** `build-pdfs-v2.py` warf bei jedem Lauf Font-Warnungen für fehlende Unicode-Glyphen (`➔`, `✅`, `☐`, `□`) in fpdf2/IBM Plex Sans. Diese Zeichen kamen aus den `LEAD-MAGNET.md` Quelldateien:
+  - `01-affiliate-marketing/LEAD-MAGNET.md`: 3× `➔` → `->`
+  - `02-tiktok-shop/LEAD-MAGNET.md`: 4× `✅` → `[x]`
+  - `05-lead-generation-pkv/LEAD-MAGNET.md`: 10× `☐` → `[ ]`
+  - `07-marketing-agency-traffic/LEAD-MAGNET.md`: 1× `□` → `[ ]`
+- **Rebuild:** Alle 14 PDFs fehlerfrei und ohne Font-Warnungen neu generiert. Build-Log aktualisiert.
+- **Commit + Push:** 52 Dateien committed (`2fda900`) und auf `origin/main` gepusht. Working tree ist jetzt sauber.
+
+### Ergebnis
+- ✅ 14/14 Lead-Magnet-PDFs professionell redesignet (per-niche Farbschemas, Cover-Pages, Stat-Bars, Urgency-Boxen, Checklisten, CTA-Seiten, Legal-Footer)
+- ✅ Keine fpdf2 Font-Warnungen mehr
+- ✅ Alle Änderungen committed und gepusht
+- ✅ `regenerate-pdfs-v2.bat` / `.sh` Skripte für zukünftige Rebuilds verfügbar
+
+### Noch offen (kein PDF-Blocker)
+- `paid-product.pdf` existiert nur für Nische 03 (andere Nischen haben keine `PAID-PRODUCT.md`)
+- `{{STRIPE_LINK}}` Platzhalter in 7 Nischen — Stop-Punkt Nutzer
+- Landing-Page-Mockups (SVG) wurden durch `inject-mockups.py` bereits eingefügt, aber keine echten PNG-Mockups (P0 aus Kimis Action Plan)
+
+Claude sollte den Masterprompt erhalten und mit „Starte Empire Launch" beginnen.
