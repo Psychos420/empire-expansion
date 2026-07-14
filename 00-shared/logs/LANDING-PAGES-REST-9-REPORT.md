@@ -55,6 +55,44 @@
 
 ## Was fehlt noch?
 
+### Wichtiger Hinweis: Parallele Agenten-Modifikationen
+
+**Bei der Qualitaetsoffensive arbeiteten mehrere Agenten parallel.** Die Landing Pages enthalten daher teilweise ueberlappende Modifikationen:
+- Ein anderer Agent hat `empire-core.css`, `niche-themes.css` und `mockup-components.html` in `00-shared/themes/` erstellt
+- Manche Landing Pages enthalten zusaetzlich: Masthead-Navigation, Sticky-CTA, Scroll-Reveal-Animationen
+- **Potenzielle Konflikte:** Die externen CSS-Dateien koennen meine Inline-Styles ueberschreiben
+- **Empfohlene Aktion:** Ein Agent sollte alle 14 Landing Pages auf Konsistenz pruefen und entweder die Theme-CSS-Integration vervollstaendigen ODER die Inline-Styles als einheitlichen Standard festlegen
+
+### Kritisch (fuer 14.000 EUR Woche 1)
+
+1. **Echte Bilder/Mockups** - Die SVG-Mockups sind besser als Text, aber echte Produktfotos oder professionelle Mockups wuerden die Conversion deutlich steigern
+2. **Stripe/PayPal Links** - `{{STRIPE_LINK}}` Platzhalter existiert noch in 6 Nischen. Nutzer muss Zahlungs-Accounts einrichten
+3. **Meta Pixel + GA4** - Tracking-Codes sind nur Platzhalter. Echte IDs noetig fuer Retargeting
+4. **Echte Testimonials** - Die Zitate sind realistisch, aber ohne echte Namen/Fotos weniger ueberzeugend als echte Kundenbewertungen
+
+### Mittel
+
+5. **A/B-Testing** - Keine Variante-B fuer Headlines oder CTAs
+6. **Exit-Intent-Popups** - Keine Re-Engagement-Mechanismen
+7. **Sticky-CTA** - Kein fixierter Button beim Scrollen (in manchen Nischen bereits von anderem Agenten hinzugefuegt)
+8. **PDF-Redesign** - Die PDFs sind noch mit fpdf2 + Arial gebaut (sehr billig)
+
+### Optional
+
+9. **Video-Content** - Keine Video-Einbindungen
+10. **Multi-Step-Formulare** - Einfache 2-Feld-Formulare statt progressiver Profilierung
+
+---
+
+## Was braucht der Nutzer?
+
+1. **Stripe/PayPal-Account einrichten** - Die 10 Nischen mit `{{STRIPE_LINK}}` koennen erst Umsatz generieren, wenn Zahlungslinks existieren
+2. **Meta Pixel ID + GA4 Measurement ID** - Fuer Tracking und Retargeting
+3. **Echte Produktfotos** - Insbesondere fuer Nische 06 (Schlafprodukte) und 14 (Eco-Produkte)
+4. **Domain-DNS pruefen** - `ecom28.de` sollte auf GitHub Pages zeigen
+5. **Git commit + push** - Bereits durchgefuehrt (Commit `3a5bafb`)
+6. **Theme-System konsolidieren** - Entscheiden, ob `00-shared/themes/` oder Inline-Styles als Standard dienen sollen
+
 ### Kritisch (fuer 14.000 EUR Woche 1)
 
 1. **Echte Bilder/Mockups** - Die SVG-Mockups sind besser als Text, aber echte Produktfotos oder professionelle Mockups wuerden die Conversion deutlich steigern
