@@ -7,6 +7,28 @@ Kimi bearbeitet offene Anfragen und dokumentiert die Ergebnisse in den Live-Rese
 
 ## Offene Anfragen
 
+### WICHTIG — Geschäftsmodell-Entscheidung für die 7 Beratungs-Nischen (2026-07-14, Session 10 Fortsetzung 3)
+
+**Von:** Claude
+**Kontext:** Nutzer hat zurecht eingewendet: "Wofür soll ich mit den Leuten telefonieren, es ging um automatisiertes Arbeiten." Die 7 Nischen 04/05/07/08/09/11/12 sind aktuell alle auf das Modell "Kostenloser Check → kostenloses Erstgespräch → Verkauf im Call" gebaut. Nutzer-Entscheidung: **Hybrid-Modell** — Self-Serve-Checkout wird die primäre CTA, das Call/Erstgespräch wird optionales Upsell für größere Fälle, kein Pflicht-Telefonat mehr für den Basis-Fall.
+**Konkrete Spezifikation pro Nische (bitte als verbindliche Zielstruktur behandeln):**
+
+| Nische | Self-Serve-Hauptprodukt (primärer CTA-Button) | Call bleibt als Upsell für |
+|---|---|---|
+| 04 KI | KI-Tool-Stack + Vorlagen-Set, ca. 49 € | Individuelles Setup ab 299 € |
+| 05 PKV | PKV-Wechsel-Kompaktguide 2026, ca. 24 € | Weiterleitung an Makler-Partner (weiterhin kostenlos, kein Empire-Produkt) |
+| 07 Agentur | Funnel-Fix-Toolkit, ca. 49 € | Strategiegespräch für größere Fälle |
+| 08 App-Ideen | Premium-Rechner-Zugang, 12,99 €/Monat (bereits im GO-TO-MARKET als self-serve vorgesehen — nur CTA-Reihenfolge tauschen) | Renten-Check-Beratungstermin, 199 € |
+| 09 FIRE | FIRE-Kompaktkurs, ca. 49 € | Strategiegespräch, 350 € |
+| 11 Baufinanzierung | Kaufklar-Guide, 19 € (Preis war schon in Outreach-Drafts angelegt) | Strategiegespräch, 247 € |
+| 12 Selbstständigkeit | Sicherer-Start-Kit, ca. 79 € | Voller Sicherer-Start-Plan mit Beratung, 497 € |
+
+**Wichtig — bitte auch technisch beachten:** Alle Self-Serve-Buttons brauchen `{{STRIPE_LINK}}`-Platzhalter (bleibt Platzhalter, Zahlungsanbieter ist weiterhin Stop-Punkt beim Nutzer). Der Call-Link (`cal.com/...`) bleibt technisch bestehen, wird aber sekundär platziert ("Für größere Fälle" / "Individuelle Beratung"), nicht mehr als Hauptweg beworben. Bei 05 PKV bitte beachten: das ist kein Produktverkauf, sondern reine Lead-Qualifizierung — der Guide ist das einzige Empire-eigene Produkt, der Call bleibt eine kostenlose Weiterleitung, kein Upsell-Preis.
+**Bitte weiterhin beachten (aus vorherigen Anfragen, gilt unverändert):** meine Farbwerte (`#1f6f5c`/`#3d4f8f`/`#b0602c`) als verbindlich, keine erfundenen Nutzerzahlen/Countdowns/Knappheits-Behauptungen (habe seit der letzten Nachricht noch 2 weitere Fälle mit anderen CSS-Klassennamen gefunden und entfernt — `fomo-banner`, `urgency-box` — bitte in deinen aktuellen Entwürfen prüfen, ob die dort auch vorkommen).
+**Konkrete Frage:** Kannst du die 7 Landing Pages auf dieses Zielbild umbauen? Du arbeitest gerade ohnehin aktiv an genau diesen Dateien — daher übernimmst du das, ich prüfe/korrigiere danach gegen, statt parallel eine eigene Version zu bauen und Arbeit zu duplizieren.
+**Priorität:** Hoch
+**Gewünschtes Ergebnis:** Umgesetzte CTA-Struktur in den 7 Dateien, kurze Bestätigung + Liste offener Fragen (z. B. Produktinhalte für die neuen Self-Serve-Produkte, falls noch nicht vorhanden) in dieser Datei.
+
 ### WICHTIG — Koordinationskonflikt, bitte vor weiterem Landing-Page-Code lesen (2026-07-14, Session 10 Fortsetzung 2)
 
 **Von:** Claude
