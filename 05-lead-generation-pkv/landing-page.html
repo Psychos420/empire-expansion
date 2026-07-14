@@ -717,6 +717,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
   <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+<style>
+/* === HERO VISUALS === */
+.hero{position:relative;overflow:hidden;}.hero-bg-visual{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}.hero>*{position:relative;z-index:1;}
+.hero-bg-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,#1f6f5c12 0%,transparent 50%),radial-gradient(circle at 80% 20%,#1f6f5c08 0%,transparent 40%);}.hero-shield{position:absolute;width:180px;height:200px;right:8%;top:15%;opacity:0.08;border:2px solid #1f6f5c;border-radius:0 0 90px 90px;animation:shieldGlow 5s ease-in-out infinite;}.hero-shield::before{content:'';position:absolute;top:-2px;left:20%;right:20%;height:60px;border:2px solid #1f6f5c;border-bottom:none;border-radius:90px 90px 0 0;}.hero-curve{position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid #1f6f5c10;animation:curveSpin 20s linear infinite;}.hero-curve:nth-child(2){top:-50px;left:-50px;width:200px;height:200px;animation-duration:15s;animation-direction:reverse;}.hero-curve:nth-child(3){bottom:-80px;right:20%;width:250px;height:250px;animation-duration:25s;}@keyframes shieldGlow{0%,100%{opacity:0.06;box-shadow:0 0 30px #1f6f5c10;}50%{opacity:0.12;box-shadow:0 0 60px #1f6f5c20;}}@keyframes curveSpin{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.problem-list li::before,.problem li::before,.hero-bullets li::before{content:'\2713' !important;color:#1f6f5c!important;font-weight:bold!important;}.trust-icon{color:#1f6f5c!important;}
+.product-mockup{display:inline-block;width:220px;height:280px;background:linear-gradient(145deg,#ffffff,#f8f9fa);border-radius:12px;box-shadow:0 1px 0 rgba(255,255,255,0.8) inset,0 20px 40px -10px #1f6f5c30,0 8px 16px -6px rgba(0,0,0,0.08);position:relative;transform:perspective(800px) rotateY(-8deg) rotateX(4deg);transition:transform 0.4s ease,box-shadow 0.4s ease;margin:20px auto;overflow:hidden;border:1px solid rgba(0,0,0,0.06);}.product-mockup:hover{transform:perspective(800px) rotateY(-4deg) rotateX(2deg) translateY(-8px);box-shadow:0 1px 0 rgba(255,255,255,0.8) inset,0 30px 60px -15px #1f6f5c40,0 12px 24px -8px rgba(0,0,0,0.12);}.product-mockup::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#1f6f5c,#164c3e);border-radius:12px 12px 0 0;}.product-mockup::after{content:'';position:absolute;bottom:-12px;left:8%;right:8%;height:20px;background:radial-gradient(ellipse,rgba(0,0,0,0.08) 0%,transparent 70%);filter:blur(8px);}.product-mockup-header{padding:20px 20px 8px;font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:#1f6f5c;font-weight:600;}.product-mockup-badge{display:inline-block;margin:0 20px 12px;padding:4px 10px;background:#1f6f5c;color:white;font-size:0.65rem;font-weight:700;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;}.product-mockup-title{padding:0 20px;font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#164c3e;line-height:1.3;}.product-mockup-sub{padding:8px 20px 16px;font-size:0.78rem;color:#6b7280;line-height:1.4;}.product-mockup-lines{padding:0 20px;}.product-mockup-line{height:4px;border-radius:2px;background:#1f6f5c12;margin-bottom:8px;}.product-mockup-line:nth-child(1){width:100%;}.product-mockup-line:nth-child(2){width:85%;}.product-mockup-line:nth-child(3){width:70%;}.product-mockup-line:nth-child(4){width:90%;}.product-mockup-line:nth-child(5){width:60%;}.product-mockup-footer{position:absolute;bottom:0;left:0;right:0;padding:12px 20px;background:linear-gradient(90deg,#164c3e,#1f6f5c);color:white;font-size:0.7rem;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.05em;text-align:center;}.product-mockup-wrap{display:flex;justify-content:center;align-items:center;padding:20px 0;}
+</style>
 </head>
 <body data-theme="pkv">
 <!-- Masthead / Navigation -->
@@ -739,6 +746,8 @@
   
   <!-- Hero -->
   <section class="hero">
+<div class="hero-bg-visual"><div class="hero-shield"></div><div class="hero-curve"></div><div class="hero-curve"></div></div>
+
     <div class="container">
       <div class="hero-grid">
         <div class="hero-text">

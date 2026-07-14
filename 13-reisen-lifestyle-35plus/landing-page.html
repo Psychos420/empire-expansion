@@ -159,9 +159,90 @@
       .sticky-cta, .sticky-cta.is-visible { display: block !important; }
       body { padding-bottom: 72px; }
     }
-</style>
+
+    /* === HERO VISUAL UPGRADE === */
+    .hero { position: relative; overflow: hidden; }
+    .hero-bg-visual {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      overflow: hidden;
+    }
+    .hero > * { position: relative; z-index: 1; }
+    
+
+    .hero-bg-visual::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: 
+        radial-gradient(circle at 50% 50%, #b0602c08 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, #b0602c06 0%, transparent 40%);
+    }
+    .hero-globe {
+      position: absolute; width: 150px; height: 150px; border-radius: 50%;
+      border: 2px solid #b0602c15; top: 20%; right: 10%; opacity: 0.6;
+      animation: globeRotate 20s linear infinite;
+    }
+    .hero-globe::before {
+      content: ''; position: absolute; inset: 10px; border-radius: 50%;
+      border: 1px solid #b0602c10;
+    }
+    .hero-globe::after {
+      content: ''; position: absolute; width: 100%; height: 2px; background: #b0602c10;
+      top: 50%; left: 0; transform: translateY(-50%) rotate(20deg);
+    }
+    .hero-path {
+      position: absolute; width: 60px; height: 2px; background: #b0602c12;
+      top: 50%; left: 50%; transform-origin: left center;
+      animation: pathGrow 6s ease-in-out infinite;
+    }
+    .hero-path:nth-child(2) { transform: rotate(45deg); animation-delay: 0s; }
+    .hero-path:nth-child(3) { transform: rotate(-30deg); animation-delay: -2s; }
+    .hero-path:nth-child(4) { transform: rotate(120deg); animation-delay: -4s; }
+    @keyframes globeRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes pathGrow {
+      0%,100% { width: 60px; opacity: 0.3; }
+      50% { width: 80px; opacity: 0.5; }
+    }
+    
+
+    /* === ICON SYSTEM === */
+    .problem-list li::before,
+    .problem li::before,
+    .hero-bullets li::before {
+      content: "✓" !important;
+      color: #b0602c !important;
+      font-weight: bold !important;
+    }
+    .benefit-card h4::before,
+    .benefit h4::before {
+      content: "→ ";
+      color: #b0602c;
+      font-weight: bold;
+    }
+    .check-item::before {
+      content: "☐" !important;
+      color: #b0602c !important;
+    }
+    .trust-pill .check,
+    .trust-icon {
+      color: #b0602c !important;
+    }
+    .form-benefits li::before,
+    .benefit-card::before {
+      content: "";
+    }
+    
+    </style>
   <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
   <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+<style>
+/* === HERO VISUALS === */
+.hero{position:relative;overflow:hidden;}.hero-bg-visual{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}.hero>*{position:relative;z-index:1;}
+.hero-bg-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,#b0602c08 0%,transparent 60%),radial-gradient(circle at 20% 80%,#b0602c06 0%,transparent 40%);}.hero-globe{position:absolute;width:150px;height:150px;border-radius:50%;border:2px solid #b0602c15;top:20%;right:10%;opacity:0.6;animation:globeRotate 20s linear infinite;}.hero-globe::before{content:'';position:absolute;inset:10px;border-radius:50%;border:1px solid #b0602c10;}.hero-globe::after{content:'';position:absolute;width:100%;height:2px;background:#b0602c10;top:50%;left:0;transform:translateY(-50%) rotate(20deg);}.hero-path{position:absolute;width:60px;height:2px;background:#b0602c12;top:50%;left:50%;transform-origin:left center;animation:pathGrow 6s ease-in-out infinite;}.hero-path:nth-child(2){transform:rotate(45deg);animation-delay:0s;}.hero-path:nth-child(3){transform:rotate(-30deg);animation-delay:-2s;}.hero-path:nth-child(4){transform:rotate(120deg);animation-delay:-4s;}@keyframes globeRotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes pathGrow{0%,100%{width:60px;opacity:0.3;}50%{width:80px;opacity:0.5;}}
+.problem-list li::before,.problem li::before,.hero-bullets li::before{content:'\2713' !important;color:#b0602c!important;font-weight:bold!important;}.trust-icon{color:#b0602c!important;}
+</style>
 </head>
 <body data-theme="reisen-lifestyle">
 <!-- Masthead / Navigation -->
@@ -202,6 +283,8 @@
 </section>
 
 <section class="hero">
+<div class="hero-bg-visual"><div class="hero-globe"></div><div class="hero-path"></div><div class="hero-path"></div><div class="hero-path"></div></div>
+
   <div class="container">
     <h2>Entdecke Reisen, die zu deinem Leben passen</h2>
     <p>Kulinarische Aktivreisen, kuratierte Solo-Trips, Wellness-Short-Trips und Kulturerlebnisse fuer anspruchsvolle Reisende zwischen 35 und 65 - ohne Massentourismus, mit echten Insidern vor Ort. Kleine Gruppen, echte Kontakte, transparente Preise.</p>

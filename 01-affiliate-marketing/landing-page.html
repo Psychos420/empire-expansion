@@ -391,6 +391,12 @@
 </style>
   <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
   <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+<style>
+/* === HERO VISUALS === */
+.hero{position:relative;overflow:hidden;}.hero-bg-visual{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}.hero>*{position:relative;z-index:1;}
+.hero-bg-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,#1f6f5c15 0%,transparent 40%),radial-gradient(circle at 80% 30%,#1f6f5c10 0%,transparent 50%),radial-gradient(circle at 50% 80%,#1f6f5c08 0%,transparent 40%);}.hero-node{position:absolute;border-radius:50%;background:#1f6f5c;opacity:0.15;animation:heroFloat 8s ease-in-out infinite;}.hero-node:nth-child(1){width:120px;height:120px;top:10%;left:5%;animation-delay:0s;}.hero-node:nth-child(2){width:80px;height:80px;top:60%;left:80%;animation-delay:-2s;opacity:0.1;}.hero-node:nth-child(3){width:60px;height:60px;top:30%;left:70%;animation-delay:-4s;opacity:0.08;}.hero-node:nth-child(4){width:100px;height:100px;top:70%;left:15%;animation-delay:-6s;opacity:0.12;}.hero-line{position:absolute;height:1px;background:linear-gradient(90deg,transparent,#1f6f5c30,transparent);}.hero-line:nth-child(5){width:35%;top:25%;left:10%;transform:rotate(25deg);}.hero-line:nth-child(6){width:25%;top:55%;left:60%;transform:rotate(-15deg);}.hero-line:nth-child(7){width:30%;top:75%;left:25%;transform:rotate(35deg);}@keyframes heroFloat{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-15px) scale(1.05);}}
+.problem-list li::before,.problem li::before,.hero-bullets li::before{content:'\2713' !important;color:#1f6f5c!important;font-weight:bold!important;}.trust-icon{color:#1f6f5c!important;}
+</style>
 </head>
 <body data-theme="affiliate-marketing">
 
@@ -404,6 +410,8 @@
 
 <!-- HERO -->
 <section class="hero">
+<div class="hero-bg-visual"><div class="hero-node"></div><div class="hero-node"></div><div class="hero-node"></div><div class="hero-node"></div><div class="hero-line"></div><div class="hero-line"></div><div class="hero-line"></div></div>
+
   <div class="wrap">
     <div class="hero-eyebrow">Aktualisiert: Juli 2026 · Marktdaten live</div>
     <h1>Der <em>Finanzielle Freiheit-Check</em> für Berufstätige 40+</h1>

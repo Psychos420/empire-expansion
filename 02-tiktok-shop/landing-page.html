@@ -92,6 +92,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
   <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+<style>
+/* === HERO VISUALS === */
+.hero{position:relative;overflow:hidden;}.hero-bg-visual{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}.hero>*{position:relative;z-index:1;}
+.hero-bg-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,#b0602c12 0%,transparent 50%),radial-gradient(ellipse at 70% 80%,#b0602c08 0%,transparent 50%);}.hero-wave{position:absolute;bottom:0;left:0;width:200%;height:80px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23b0602c' fill-opacity='0.08' d='M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'/%3E%3C/svg%3E") repeat-x;background-size:50% 100%;animation:waveMove 12s linear infinite;}.hero-wave:nth-child(2){opacity:0.5;animation-duration:18s;animation-direction:reverse;height:60px;bottom:-10px;}@keyframes waveMove{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.problem-list li::before,.problem li::before,.hero-bullets li::before{content:'\2713' !important;color:#b0602c!important;font-weight:bold!important;}.trust-icon{color:#b0602c!important;}
+</style>
 </head>
 <body data-theme="tiktok-shop">
 <!-- Masthead / Navigation -->
@@ -113,6 +119,8 @@
 </header>
 
 <section class="hero">
+<div class="hero-bg-visual"><div class="hero-wave"></div><div class="hero-wave"></div></div>
+
   <div class="container">
     <h2>Kennst du das?</h2>
     <ul class="problem-list">

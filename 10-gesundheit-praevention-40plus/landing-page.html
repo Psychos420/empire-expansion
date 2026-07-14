@@ -159,9 +159,88 @@
       .sticky-cta, .sticky-cta.is-visible { display: block !important; }
       body { padding-bottom: 72px; }
     }
-</style>
+
+    /* === HERO VISUAL UPGRADE === */
+    .hero { position: relative; overflow: hidden; }
+    .hero-bg-visual {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      overflow: hidden;
+    }
+    .hero > * { position: relative; z-index: 1; }
+    
+
+    .hero-bg-visual::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: 
+        radial-gradient(circle at 50% 50%, #b0602c08 0%, transparent 60%),
+        radial-gradient(circle at 20% 20%, #b0602c06 0%, transparent 40%);
+    }
+    .hero-pulse {
+      position: absolute; width: 200px; height: 200px; border-radius: 50%;
+      border: 2px solid #b0602c12; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      animation: pulseRing 4s ease-out infinite;
+    }
+    .hero-pulse:nth-child(2) { animation-delay: -1.5s; }
+    .hero-pulse:nth-child(3) { animation-delay: -3s; width: 150px; height: 150px; }
+    .hero-heartbeat {
+      position: absolute; top: 20%; right: 15%; width: 100px; height: 40px;
+      opacity: 0.15;
+    }
+    .hero-heartbeat::before {
+      content: ''; position: absolute; inset: 0;
+      background: #b0602c;
+      clip-path: polygon(0 50%, 15% 50%, 20% 20%, 25% 80%, 30% 50%, 45% 50%, 50% 30%, 55% 50%, 70% 50%, 75% 20%, 80% 80%, 85% 50%, 100% 50%, 100% 55%, 0 55%);
+      animation: heartbeat 2s ease-in-out infinite;
+    }
+    @keyframes pulseRing {
+      0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.3; }
+      100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+    }
+    @keyframes heartbeat {
+      0%,100% { transform: scaleY(1); }
+      15% { transform: scaleY(1.3); }
+      30% { transform: scaleY(1); }
+      45% { transform: scaleY(1.2); }
+    }
+    
+
+    /* === ICON SYSTEM === */
+    .problem-list li::before,
+    .problem li::before,
+    .hero-bullets li::before {
+      content: "✓" !important;
+      color: #b0602c !important;
+      font-weight: bold !important;
+    }
+    .benefit-card h4::before,
+    .benefit h4::before {
+      content: "→ ";
+      color: #b0602c;
+      font-weight: bold;
+    }
+    .check-item::before {
+      content: "☐" !important;
+      color: #b0602c !important;
+    }
+    .trust-pill .check,
+    .trust-icon {
+      color: #b0602c !important;
+    }
+    .form-benefits li::before,
+    .benefit-card::before {
+      content: "";
+    }
+    
+    </style>
   <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
   <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+<style>
+/* === HERO VISUALS === */
+.hero{position:relative;overflow:hidden;}.hero-bg-visual{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}.hero>*{position:relative;z-index:1;}
+.hero-bg-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,#b0602c08 0%,transparent 60%),radial-gradient(circle at 20% 20%,#b0602c06 0%,transparent 40%);}.hero-pulse-ring{position:absolute;width:200px;height:200px;border-radius:50%;border:2px solid #b0602c12;top:50%;left:50%;transform:translate(-50%,-50%);animation:pulseRing 4s ease-out infinite;}.hero-pulse-ring:nth-child(2){animation-delay:-1.5s;}.hero-pulse-ring:nth-child(3){animation-delay:-3s;width:150px;height:150px;}.hero-heartbeat{position:absolute;top:20%;right:15%;width:100px;height:40px;opacity:0.15;}.hero-heartbeat::before{content:'';position:absolute;inset:0;background:#b0602c;clip-path:polygon(0 50%,15% 50%,20% 20%,25% 80%,30% 50%,45% 50%,50% 30%,55% 50%,70% 50%,75% 20%,80% 80%,85% 50%,100% 50%,100% 55%,0 55%);animation:heartbeat 2s ease-in-out infinite;}@keyframes pulseRing{0%{transform:translate(-50%,-50%) scale(0.8);opacity:0.3;}100%{transform:translate(-50%,-50%) scale(1.5);opacity:0;}}@keyframes heartbeat{0%,100%{transform:scaleY(1);}15%{transform:scaleY(1.3);}30%{transform:scaleY(1);}45%{transform:scaleY(1.2);}}
+.problem-list li::before,.problem li::before,.hero-bullets li::before{content:'\2713' !important;color:#b0602c!important;font-weight:bold!important;}.trust-icon{color:#b0602c!important;}
+</style>
 </head>
 <body data-theme="gesundheit">
 <!-- Masthead / Navigation -->
@@ -202,6 +281,8 @@
 </section>
 
 <section class="hero">
+<div class="hero-bg-visual"><div class="hero-pulse-ring"></div><div class="hero-pulse-ring"></div><div class="hero-pulse-ring"></div><div class="hero-heartbeat"></div></div>
+
   <div class="container">
     <h2>Endlich Klarheit ueber deine Gesundheit ab 40</h2>
     <p>Du fuehlst dich mueder, schlaefst schlechter oder nimmst leicht zu? Du bist nicht allein. Unser kostenloser Gesundheits-Check zeigt dir in 5 Minuten, wo du stehst - und welche drei Schritte am meisten wirken. Wissenschaftlich fundiert, ohne Heilversprechen.</p>

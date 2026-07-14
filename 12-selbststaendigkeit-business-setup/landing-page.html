@@ -159,9 +159,184 @@
       .sticky-cta, .sticky-cta.is-visible { display: block !important; }
       body { padding-bottom: 72px; }
     }
-</style>
+
+    /* === HERO VISUAL UPGRADE === */
+    .hero { position: relative; overflow: hidden; }
+    .hero-bg-visual {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      overflow: hidden;
+    }
+    .hero > * { position: relative; z-index: 1; }
+    
+
+    .hero-bg-visual::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: 
+        radial-gradient(circle at 30% 70%, #3d4f8f10 0%, transparent 50%),
+        radial-gradient(circle at 70% 20%, #3d4f8f08 0%, transparent 40%);
+    }
+    .hero-structure {
+      position: absolute; width: 100%; height: 100%; opacity: 0.06;
+      background-image: 
+        linear-gradient(#3d4f8f 1px, transparent 1px),
+        linear-gradient(90deg, #3d4f8f 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse at 70% 50%, black 0%, transparent 60%);
+      -webkit-mask-image: radial-gradient(ellipse at 70% 50%, black 0%, transparent 60%);
+    }
+    .hero-arrow-up {
+      position: absolute; width: 0; height: 0;
+      border-left: 8px solid transparent; border-right: 8px solid transparent;
+      border-bottom: 16px solid #3d4f8f20;
+      animation: arrowUp 4s ease-in-out infinite;
+    }
+    .hero-arrow-up:nth-child(2) { bottom: 20%; right: 15%; animation-delay: 0s; }
+    .hero-arrow-up:nth-child(3) { bottom: 25%; right: 22%; animation-delay: -1.5s; opacity: 0.7; }
+    .hero-arrow-up:nth-child(4) { bottom: 18%; right: 28%; animation-delay: -3s; opacity: 0.5; }
+    @keyframes arrowUp {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); opacity: 0.4; }
+    }
+    
+
+    /* === ICON SYSTEM === */
+    .problem-list li::before,
+    .problem li::before,
+    .hero-bullets li::before {
+      content: "✓" !important;
+      color: #3d4f8f !important;
+      font-weight: bold !important;
+    }
+    .benefit-card h4::before,
+    .benefit h4::before {
+      content: "→ ";
+      color: #3d4f8f;
+      font-weight: bold;
+    }
+    .check-item::before {
+      content: "☐" !important;
+      color: #3d4f8f !important;
+    }
+    .trust-pill .check,
+    .trust-icon {
+      color: #3d4f8f !important;
+    }
+    .form-benefits li::before,
+    .benefit-card::before {
+      content: "";
+    }
+    
+    /* === PRODUCT MOCKUP === */
+    .product-mockup {
+      display: inline-block;
+      width: 220px; height: 280px;
+      background: linear-gradient(145deg, #ffffff, #f8f9fa);
+      border-radius: 12px;
+      box-shadow: 
+        0 1px 0 rgba(255,255,255,0.8) inset,
+        0 20px 40px -10px #3d4f8f30,
+        0 8px 16px -6px rgba(0,0,0,0.08);
+      position: relative;
+      transform: perspective(800px) rotateY(-8deg) rotateX(4deg);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      margin: 20px auto;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .product-mockup:hover {
+      transform: perspective(800px) rotateY(-4deg) rotateX(2deg) translateY(-8px);
+      box-shadow: 
+        0 1px 0 rgba(255,255,255,0.8) inset,
+        0 30px 60px -15px #3d4f8f40,
+        0 12px 24px -8px rgba(0,0,0,0.12);
+    }
+    .product-mockup::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 6px;
+      background: linear-gradient(90deg, #3d4f8f, #2a3a6b);
+      border-radius: 12px 12px 0 0;
+    }
+    .product-mockup::after {
+      content: '';
+      position: absolute; bottom: -12px; left: 8%; right: 8%; height: 20px;
+      background: radial-gradient(ellipse, rgba(0,0,0,0.08) 0%, transparent 70%);
+      filter: blur(8px);
+    }
+    .product-mockup-header {
+      padding: 20px 20px 8px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #3d4f8f;
+      font-weight: 600;
+    }
+    .product-mockup-badge {
+      display: inline-block;
+      margin: 0 20px 12px;
+      padding: 4px 10px;
+      background: #3d4f8f;
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .product-mockup-title {
+      padding: 0 20px;
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2a3a6b;
+      line-height: 1.3;
+    }
+    .product-mockup-sub {
+      padding: 8px 20px 16px;
+      font-size: 0.78rem;
+      color: #6b7280;
+      line-height: 1.4;
+    }
+    .product-mockup-lines {
+      padding: 0 20px;
+    }
+    .product-mockup-line {
+      height: 4px; border-radius: 2px;
+      background: #3d4f8f12;
+      margin-bottom: 8px;
+    }
+    .product-mockup-line:nth-child(1) { width: 100%; }
+    .product-mockup-line:nth-child(2) { width: 85%; }
+    .product-mockup-line:nth-child(3) { width: 70%; }
+    .product-mockup-line:nth-child(4) { width: 90%; }
+    .product-mockup-line:nth-child(5) { width: 60%; }
+    .product-mockup-footer {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 12px 20px;
+      background: linear-gradient(90deg, #2a3a6b, #3d4f8f);
+      color: white;
+      font-size: 0.7rem;
+      font-family: 'IBM Plex Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+    .product-mockup-wrap {
+      display: flex; justify-content: center; align-items: center;
+      padding: 20px 0;
+    }
+    
+    </style>
   <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
   <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+<style>
+/* === HERO VISUALS === */
+.hero{position:relative;overflow:hidden;}.hero-bg-visual{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}.hero>*{position:relative;z-index:1;}
+.hero-bg-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 70%,#3d4f8f10 0%,transparent 50%),radial-gradient(circle at 70% 20%,#3d4f8f08 0%,transparent 40%);}.hero-structure{position:absolute;width:100%;height:100%;opacity:0.06;background-image:linear-gradient(#3d4f8f 1px,transparent 1px),linear-gradient(90deg,#3d4f8f 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(ellipse at 70% 50%,black 0%,transparent 60%);-webkit-mask-image:radial-gradient(ellipse at 70% 50%,black 0%,transparent 60%);}.hero-arrow-up{position:absolute;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:16px solid #3d4f8f20;animation:arrowUp 4s ease-in-out infinite;}.hero-arrow-up:nth-child(2){bottom:20%;right:15%;animation-delay:0s;}.hero-arrow-up:nth-child(3){bottom:25%;right:22%;animation-delay:-1.5s;opacity:0.7;}.hero-arrow-up:nth-child(4){bottom:18%;right:28%;animation-delay:-3s;opacity:0.5;}@keyframes arrowUp{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);opacity:0.4;}}
+.problem-list li::before,.problem li::before,.hero-bullets li::before{content:'\2713' !important;color:#3d4f8f!important;font-weight:bold!important;}.trust-icon{color:#3d4f8f!important;}
+.product-mockup{display:inline-block;width:220px;height:280px;background:linear-gradient(145deg,#ffffff,#f8f9fa);border-radius:12px;box-shadow:0 1px 0 rgba(255,255,255,0.8) inset,0 20px 40px -10px #3d4f8f30,0 8px 16px -6px rgba(0,0,0,0.08);position:relative;transform:perspective(800px) rotateY(-8deg) rotateX(4deg);transition:transform 0.4s ease,box-shadow 0.4s ease;margin:20px auto;overflow:hidden;border:1px solid rgba(0,0,0,0.06);}.product-mockup:hover{transform:perspective(800px) rotateY(-4deg) rotateX(2deg) translateY(-8px);box-shadow:0 1px 0 rgba(255,255,255,0.8) inset,0 30px 60px -15px #3d4f8f40,0 12px 24px -8px rgba(0,0,0,0.12);}.product-mockup::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#3d4f8f,#2a3a6b);border-radius:12px 12px 0 0;}.product-mockup::after{content:'';position:absolute;bottom:-12px;left:8%;right:8%;height:20px;background:radial-gradient(ellipse,rgba(0,0,0,0.08) 0%,transparent 70%);filter:blur(8px);}.product-mockup-header{padding:20px 20px 8px;font-family:'IBM Plex Mono',monospace;font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:#3d4f8f;font-weight:600;}.product-mockup-badge{display:inline-block;margin:0 20px 12px;padding:4px 10px;background:#3d4f8f;color:white;font-size:0.65rem;font-weight:700;border-radius:4px;text-transform:uppercase;letter-spacing:0.05em;}.product-mockup-title{padding:0 20px;font-family:'Fraunces',Georgia,serif;font-size:1.1rem;font-weight:700;color:#2a3a6b;line-height:1.3;}.product-mockup-sub{padding:8px 20px 16px;font-size:0.78rem;color:#6b7280;line-height:1.4;}.product-mockup-lines{padding:0 20px;}.product-mockup-line{height:4px;border-radius:2px;background:#3d4f8f12;margin-bottom:8px;}.product-mockup-line:nth-child(1){width:100%;}.product-mockup-line:nth-child(2){width:85%;}.product-mockup-line:nth-child(3){width:70%;}.product-mockup-line:nth-child(4){width:90%;}.product-mockup-line:nth-child(5){width:60%;}.product-mockup-footer{position:absolute;bottom:0;left:0;right:0;padding:12px 20px;background:linear-gradient(90deg,#2a3a6b,#3d4f8f);color:white;font-size:0.7rem;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;letter-spacing:0.05em;text-align:center;}.product-mockup-wrap{display:flex;justify-content:center;align-items:center;padding:20px 0;}
+</style>
 </head>
 <body data-theme="selbststaendigkeit">
 <!-- Masthead / Navigation -->
@@ -202,6 +377,8 @@
 </section>
 
 <section class="hero">
+<div class="hero-bg-visual"><div class="hero-structure"></div><div class="hero-arrow-up"></div><div class="hero-arrow-up"></div><div class="hero-arrow-up"></div></div>
+
   <div class="container">
     <h2>Sie haben die Expertise. Wir bauen das Unternehmen drumherum.</h2>
     <p>Kein Startup-Hype, keine theoretischen Ratgeber. Empire-Expansion liefert dir in 90 Tagen ein professionelles, automatisiertes Unternehmen - von Rechtsform und Behoerden bis zu Website, Vertrieb und Buchhaltung. KI-Agentur-Marktpreise liegen bei 990-1.500 EUR+, wir starten bei 299 EUR.</p>

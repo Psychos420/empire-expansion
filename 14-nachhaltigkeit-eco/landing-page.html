@@ -159,9 +159,93 @@
       .sticky-cta, .sticky-cta.is-visible { display: block !important; }
       body { padding-bottom: 72px; }
     }
-</style>
+
+    /* === HERO VISUAL UPGRADE === */
+    .hero { position: relative; overflow: hidden; }
+    .hero-bg-visual {
+      position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      overflow: hidden;
+    }
+    .hero > * { position: relative; z-index: 1; }
+    
+
+    .hero-bg-visual::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, #b0602c10 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, #b0602c08 0%, transparent 40%),
+        radial-gradient(circle at 50% 20%, #22c55e08 0%, transparent 40%);
+    }
+    .hero-leaf {
+      position: absolute; width: 60px; height: 80px; opacity: 0.12;
+      animation: leafSway 6s ease-in-out infinite;
+    }
+    .hero-leaf::before {
+      content: ''; position: absolute; inset: 0;
+      background: #b0602c;
+      border-radius: 0 80% 0 80%;
+      transform: rotate(-45deg);
+    }
+    .hero-leaf::after {
+      content: ''; position: absolute; width: 2px; height: 50px;
+      background: #b0602c30; bottom: -10px; left: 50%; transform: translateX(-50%) rotate(15deg);
+    }
+    .hero-leaf:nth-child(1) { top: 15%; right: 15%; animation-delay: 0s; }
+    .hero-leaf:nth-child(2) { top: 60%; right: 25%; width: 40px; height: 55px; animation-delay: -2s; opacity: 0.08; }
+    .hero-leaf:nth-child(3) { top: 30%; right: 8%; width: 35px; height: 45px; animation-delay: -4s; opacity: 0.1; }
+    .hero-organic {
+      position: absolute; width: 300px; height: 300px; border-radius: 60% 40% 50% 50%;
+      border: 1px solid #b0602c08; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      animation: organicMorph 15s ease-in-out infinite;
+    }
+    @keyframes leafSway {
+      0%,100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+    @keyframes organicMorph {
+      0%,100% { border-radius: 60% 40% 50% 50%; }
+      33% { border-radius: 40% 60% 60% 40%; }
+      66% { border-radius: 50% 50% 40% 60%; }
+    }
+    
+
+    /* === ICON SYSTEM === */
+    .problem-list li::before,
+    .problem li::before,
+    .hero-bullets li::before {
+      content: "✓" !important;
+      color: #b0602c !important;
+      font-weight: bold !important;
+    }
+    .benefit-card h4::before,
+    .benefit h4::before {
+      content: "→ ";
+      color: #b0602c;
+      font-weight: bold;
+    }
+    .check-item::before {
+      content: "☐" !important;
+      color: #b0602c !important;
+    }
+    .trust-pill .check,
+    .trust-icon {
+      color: #b0602c !important;
+    }
+    .form-benefits li::before,
+    .benefit-card::before {
+      content: "";
+    }
+    
+    </style>
   <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
   <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+<style>
+/* === HERO VISUALS === */
+.hero{position:relative;overflow:hidden;}.hero-bg-visual{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;}.hero>*{position:relative;z-index:1;}
+.hero-bg-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,#b0602c10 0%,transparent 50%),radial-gradient(circle at 80% 80%,#b0602c08 0%,transparent 40%),radial-gradient(circle at 50% 20%,#22c55e08 0%,transparent 40%);}.hero-leaf{position:absolute;width:60px;height:80px;opacity:0.12;animation:leafSway 6s ease-in-out infinite;}.hero-leaf::before{content:'';position:absolute;inset:0;background:#b0602c;border-radius:0 80% 0 80%;transform:rotate(-45deg);}.hero-leaf::after{content:'';position:absolute;width:2px;height:50px;background:#b0602c30;bottom:-10px;left:50%;transform:translateX(-50%) rotate(15deg);}.hero-leaf:nth-child(1){top:15%;right:15%;animation-delay:0s;}.hero-leaf:nth-child(2){top:60%;right:25%;width:40px;height:55px;animation-delay:-2s;opacity:0.08;}.hero-leaf:nth-child(3){top:30%;right:8%;width:35px;height:45px;animation-delay:-4s;opacity:0.1;}.hero-organic{position:absolute;width:300px;height:300px;border-radius:60% 40% 50% 50%;border:1px solid #b0602c08;top:50%;left:50%;transform:translate(-50%,-50%);animation:organicMorph 15s ease-in-out infinite;}@keyframes leafSway{0%,100%{transform:rotate(-5deg);}50%{transform:rotate(5deg);}}@keyframes organicMorph{0%,100%{border-radius:60% 40% 50% 50%;}33%{border-radius:40% 60% 60% 40%;}66%{border-radius:50% 50% 40% 60%;}}
+.problem-list li::before,.problem li::before,.hero-bullets li::before{content:'\2713' !important;color:#b0602c!important;font-weight:bold!important;}.trust-icon{color:#b0602c!important;}
+</style>
 </head>
 <body data-theme="nachhaltigkeit">
 <!-- Masthead / Navigation -->
@@ -202,6 +286,8 @@
 </section>
 
 <section class="hero">
+<div class="hero-bg-visual"><div class="hero-leaf"></div><div class="hero-leaf"></div><div class="hero-leaf"></div><div class="hero-organic"></div></div>
+
   <div class="container">
     <h2>Dein Eco-Haushalt startet mit einem klaren Set.</h2>
     <p>Wir haben recherchiert, du musst nur entscheiden: Produkte mit echtem Impact, transparenten Siegeln und flexiblem Nachfuell-Abo - lieferbar in 2-3 Tagen. Kein Greenwashing, nur anerkannte Zertifizierungen wie GOTS, Blauer Engel, B-Corp und EU-Bio.</p>
