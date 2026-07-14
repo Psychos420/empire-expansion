@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNW50YS2S1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DNW50YS2S1');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rentenluecke berechnen (2026): Wie viel Rente bekommen Sie wirklich? | VermoegenPlaner</title>
+  <meta name="description" content="Berechnen Sie in 2 Minuten Ihre persoenliche Rentenluecke. Kostenlos, ohne Anlageberatung, speziell fuer Berufstaetige 35-55 in DACH.">
+  
+  <!-- Meta Pixel Tracking-Platzhalter -->
+  <!-- TODO: Meta Pixel Code hier einfuegen -->
+  
+  <!-- Google Analytics 4 Tracking-Platzhalter -->
+  <!-- TODO: GA4 Tracking Code hier einfuegen -->
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #111827; background: #f0fdfa; }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    
+    header { background: linear-gradient(135deg, #1e3a5f 0%, #1e3a5fee 100%); color: white; padding: 60px 0 50px; text-align: center; position: relative; overflow: hidden; }
+    header::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(circle, #1f6f5c22 0%, transparent 70%); }
+    header h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 16px; line-height: 1.2; position: relative; }
+    header p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; position: relative; }
+    .brand-badge { display: inline-block; background: #1f6f5c33; color: #1f6f5c; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; border: 1px solid #1f6f5c44; }
+    
+    .stats-bar { background: white; padding: 24px 0; border-bottom: 1px solid #ecfdf5; }
+    .stats-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .stat-badge { text-align: center; }
+    .stat-number { font-size: 1.6rem; font-weight: 800; color: #1e3a5f; }
+    .stat-label { font-size: 0.8rem; color: #64748b; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .hero { background: white; padding: 50px 0 40px; text-align: center; }
+    .hero h2 { font-size: 1.7rem; margin-bottom: 16px; color: #1e3a5f; font-weight: 700; }
+    .hero p { font-size: 1.05rem; margin-bottom: 28px; color: #475569; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta-button { display: inline-block; background: linear-gradient(135deg, #1f6f5c 0%, #1f6f5cdd 100%); color: white; padding: 16px 40px; font-size: 1.1rem; border-radius: 10px; text-decoration: none; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 14px #1f6f5c44; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px #1f6f5c66; }
+    .cta-button.secondary { background: white; color: #1e3a5f; border: 2px solid #1e3a5f22; box-shadow: none; margin-left: 8px; margin-top: 12px; }
+    .cta-button.secondary:hover { background: #1e3a5f; color: white; border-color: #1e3a5f; }
+    
+    .problem { background: #ecfdf5; padding: 50px 0; }
+    .problem h3 { text-align: center; font-size: 1.5rem; margin-bottom: 28px; color: #1e3a5f; font-weight: 700; }
+    .problem ul { list-style: none; padding: 0; max-width: 600px; margin: 0 auto; }
+    .problem li { margin-bottom: 16px; padding-left: 32px; position: relative; color: #475569; font-size: 1.05rem; }
+    .problem li::before { content: '✗'; position: absolute; left: 0; color: #ef4444; font-weight: 700; }
+    
+    .benefits { background: white; padding: 50px 0; }
+    .benefits h3 { text-align: center; font-size: 1.5rem; margin-bottom: 12px; color: #1e3a5f; font-weight: 700; }
+    .benefits-intro { text-align: center; color: #64748b; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .benefit-grid { display: grid; gap: 20px; }
+    .benefit-card { background: #f0fdfa; padding: 28px; border-radius: 14px; border: 1px solid #ecfdf5; transition: all 0.3s; position: relative; overflow: hidden; }
+    .benefit-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .benefit-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #1f6f5c; }
+    .benefit-number { position: absolute; top: 12px; right: 16px; font-size: 2.2rem; font-weight: 800; color: #1e3a5f11; }
+    .benefit-card h4 { color: #1e3a5f; margin-bottom: 8px; font-size: 1.1rem; font-weight: 700; }
+    .benefit-card p { color: #64748b; font-size: 0.95rem; }
+    
+    .preview { background: #ecfdf5; padding: 50px 0; text-align: center; }
+    .preview h3 { font-size: 1.5rem; margin-bottom: 32px; color: #1e3a5f; font-weight: 700; }
+    .preview-grid { display: grid; gap: 20px; }
+    .mockup-card { background: white; padding: 24px; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .mockup-visual { margin-bottom: 16px; }
+    .mockup-visual svg { width: 100%; max-width: 180px; height: auto; }
+    .mockup-card h4 { color: #1e3a5f; margin-bottom: 6px; font-weight: 600; }
+    .mockup-card p { color: #64748b; font-size: 0.9rem; }
+    
+    .trust { background: white; padding: 50px 0; }
+    .trust h3 { text-align: center; font-size: 1.5rem; margin-bottom: 32px; color: #1e3a5f; font-weight: 700; }
+    .trust-grid { display: grid; gap: 16px; }
+    .trust-item { display: flex; align-items: flex-start; gap: 16px; background: #f0fdfa; padding: 20px; border-radius: 12px; }
+    .trust-icon { width: 36px; height: 36px; background: #1f6f5c22; color: #1f6f5c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 1.1rem; }
+    .trust-item h4 { color: #1e3a5f; margin-bottom: 4px; font-weight: 600; }
+    .trust-item p { color: #64748b; font-size: 0.9rem; }
+    
+    .social { background: #ecfdf5; padding: 50px 0; }
+    .social h3 { text-align: center; font-size: 1.5rem; margin-bottom: 32px; color: #1e3a5f; font-weight: 700; }
+    .testimonial { background: white; padding: 24px; border-radius: 14px; margin-bottom: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .testimonial p { color: #475569; font-style: italic; font-size: 1rem; line-height: 1.6; }
+    .testimonial-stars { color: #f59e0b; margin-top: 12px; font-size: 1.1rem; letter-spacing: 2px; }
+    
+    .products { background: white; padding: 50px 0; }
+    .products h3 { text-align: center; font-size: 1.5rem; margin-bottom: 32px; color: #1e3a5f; font-weight: 700; }
+    .product-grid { display: grid; gap: 20px; }
+    .product-card { background: #f0fdfa; padding: 28px; border-radius: 14px; text-align: center; border: 1px solid #ecfdf5; }
+    .product-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .product-card h4 { color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
+    .product-card p { color: #64748b; font-size: 0.95rem; margin-bottom: 12px; }
+    .product-price { color: #1f6f5c; font-weight: 700; font-size: 1.2rem; }
+    
+    .form-section { background: white; padding: 50px 0; text-align: center; }
+    .form-section h3 { font-size: 1.6rem; margin-bottom: 8px; color: #1e3a5f; font-weight: 700; }
+    .form-section p { color: #64748b; margin-bottom: 24px; }
+    .lead-form { max-width: 480px; margin: 0 auto; text-align: left; background: #f0fdfa; padding: 32px; border-radius: 16px; border: 1px solid #ecfdf5; }
+    .lead-form input, .lead-form select { width: 100%; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem; background: white; transition: border-color 0.2s; }
+    .lead-form input:focus, .lead-form select:focus { outline: none; border-color: #1f6f5c; }
+    .lead-form button { width: 100%; padding: 16px; background: linear-gradient(135deg, #1f6f5c 0%, #1f6f5cdd 100%); color: white; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 14px #1f6f5c44; }
+    .lead-form button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px #1f6f5c66; }
+    .disclaimer { font-size: 0.85rem; color: #94a3b8; margin-top: 16px; text-align: center; }
+    .checkbox { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.9rem; color: #475569; }
+    .checkbox input { width: auto; margin: 4px 0 0 0; }
+    
+    .faq { background: #ecfdf5; padding: 50px 0; }
+    .faq h3 { text-align: center; font-size: 1.5rem; margin-bottom: 32px; color: #1e3a5f; font-weight: 700; }
+    .faq-item { background: white; padding: 24px; border-radius: 14px; margin-bottom: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .faq-item h4 { color: #1e3a5f; margin-bottom: 8px; font-weight: 600; }
+    .faq-item p { color: #64748b; font-size: 0.95rem; }
+    
+    .final-cta { background: linear-gradient(135deg, #1e3a5f 0%, #1e3a5fee 100%); color: white; padding: 60px 0; text-align: center; position: relative; overflow: hidden; }
+    .final-cta::before { content: ''; position: absolute; top: -50%; left: -20%; width: 60%; height: 200%; background: radial-gradient(circle, #1f6f5c22 0%, transparent 70%); }
+    .final-cta h3 { font-size: 1.8rem; margin-bottom: 12px; font-weight: 700; position: relative; }
+    .final-cta p { opacity: 0.9; margin-bottom: 24px; position: relative; }
+    .final-cta .cta-button { background: white; color: #1e3a5f; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    .final-cta .cta-button:hover { background: #ecfdf5; }
+    
+    footer { background: #1e3a5f; color: white; text-align: center; padding: 30px 0; font-size: 0.9rem; }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: white; text-decoration: underline; }
+    
+    @media (min-width: 600px) {
+      .benefit-grid { grid-template-columns: 1fr 1fr; }
+      .preview-grid { grid-template-columns: repeat(3, 1fr); }
+      .trust-grid { grid-template-columns: repeat(3, 1fr); }
+      .product-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.8rem; }
+      .hero h2 { font-size: 1.4rem; }
+      .stats-grid { gap: 20px; }
+      .stat-number { font-size: 1.3rem; }
+      .cta-button { display: block; width: 100%; margin-bottom: 8px; text-align: center; }
+      .cta-button.secondary { margin-left: 0; }
+    }
+  </style>
+  <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
+  <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+</head>
+<body data-theme="app-ideen">
+<!-- Masthead / Navigation -->
+<header class="masthead">
+  <div class="container masthead-inner">
+    <div class="wordmark">Empire<span>·</span>Expansion</div>
+    <nav>
+      <a href="../index.html">Übersicht</a>
+      <a href="index.html">Info</a>
+    </nav>
+  </div>
+</header>
+<header>
+  <div class="container">
+    <div class="brand-badge">VermoegenPlaner</div>
+    <h1>Wie viel Rente bekommen Sie wirklich?</h1>
+    <p>Berechnen Sie Ihre persoenliche Rentenluecke in 2 Minuten - kostenlos, unverbindlich und ohne Anlageberatung. Fuer Berufstaetige in Deutschland, Oesterreich und der Schweiz.</p>
+  </div>
+</header>
+
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-badge">
+          <div class="stat-number">13,5 Mrd. USD</div>
+          <div class="stat-label">Deutscher App-Markt 2024 (MRFR)</div>
+        </div>
+<div class="stat-badge">
+          <div class="stat-number">35 %</div>
+          <div class="stat-label">der Apps nutzen Hybrid-Monetarisierung (RevenueCat)</div>
+        </div>
+<div class="stat-badge">
+          <div class="stat-number">0,44 USD</div>
+          <div class="stat-label">Median 14-Day ARPU Health & Fitness (RevenueCat)</div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="container">
+    <h2>Die meisten Berufstaetigen 35+ unterschaetzen ihre Rentenluecke.</h2>
+    <p>Die gesetzliche Rente deckt oft nur 40-50% des letzten Nettoeinkommens ab. ETF-Sparplaene, PKV und Lebensversicherungen wirken ueberfordernd - also wird aufgeschoben. Ohne Plan verliert man jedes Jahr an Zeit und Geld. VermoegenPlaner gibt Ihnen den Fahrplan, den Ihre Bank Ihnen nicht gibt.</p>
+    <a href="#form" class="cta-button">Meine Rentenluecke berechnen</a>
+    <a href="lead-magnet.pdf" class="cta-button secondary" download>PDF direkt herunterladen</a>
+    <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-button secondary">Kostenloses Gespraech buchen -></a>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container">
+    <h3>Ohne Plan verlieren Sie jedes Jahr Tausende Euro</h3>
+    <ul>
+      <li>Die gesetzliche Rente deckt oft nur 40-50% Ihres letzten Nettoeinkommens.</li>
+<li>ETF-Sparplaene, PKV und Lebensversicherungen wirken ueberfordernd - also wird aufgeschoben.</li>
+<li>Jedes Jahr ohne Plan verlieren Sie Zinseszins-Effekte, die Sie nie wieder einholen koennen.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="benefits reveal">
+  <div class="container">
+    <h3>VermoegenPlaner gibt Ihnen den Plan, den Ihre Bank Ihnen nicht gibt</h3>
+    <p class="benefits-intro">Keine Anlageberatung. Kein Bank-Login. Nur ein klarer Fahrplan fuer Rente, Vermoegen und Absicherung - speziell fuer Ihre Lebensphase.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+          <div class="benefit-number">01</div>
+          <h4>Rentenluecke-Rechner</h4>
+          <p>Wissen Sie in 2 Minuten, wie viel Sie zusaetzlich sparen sollten.</p>
+        </div>
+<div class="benefit-card">
+          <div class="benefit-number">02</div>
+          <h4>Vermoegens-Score</h4>
+          <p>Erkennen Sie Schwachstellen und Staerken Ihrer Finanzen.</p>
+        </div>
+<div class="benefit-card">
+          <div class="benefit-number">03</div>
+          <h4>Persoenliche Finanz-Roadmap</h4>
+          <p>Schritt-fuer-Schritt-Checklisten, die Sie nicht ueberfordern.</p>
+        </div>
+<div class="benefit-card">
+          <div class="benefit-number">04</div>
+          <h4>DACH-Fokus</h4>
+          <p>Deutsche Rentenformeln, oesterreichische und schweizerische Inhalte folgen.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="preview">
+  <div class="container">
+    <h3>Ein Blick in den VermoegenPlaner</h3>
+    <div class="preview-grid">
+      <div class="mockup-card">
+          <div class="mockup-visual">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="260" rx="8" fill="#ecfdf5"/>
+              <rect x="15" y="15" width="170" height="100" rx="4" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="130" width="120" height="12" rx="2" fill="#1e3a5f" opacity="0.2"/>
+              <rect x="15" y="150" width="80" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="165" width="100" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="180" width="60" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="200" width="170" height="40" rx="4" fill="#1f6f5c" opacity="0.15"/>
+            </svg>
+          </div>
+          <h4>Rentenluecke-Rechner</h4>
+          <p>Ihre persoenliche Luecke in 2 Minuten</p>
+        </div>
+<div class="mockup-card">
+          <div class="mockup-visual">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="260" rx="8" fill="#ecfdf5"/>
+              <rect x="15" y="15" width="170" height="100" rx="4" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="130" width="120" height="12" rx="2" fill="#1e3a5f" opacity="0.2"/>
+              <rect x="15" y="150" width="80" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="165" width="100" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="180" width="60" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="200" width="170" height="40" rx="4" fill="#1f6f5c" opacity="0.15"/>
+            </svg>
+          </div>
+          <h4>Vermoegens-Score</h4>
+          <p>Staerken & Schwachstellen auf einen Blick</p>
+        </div>
+<div class="mockup-card">
+          <div class="mockup-visual">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="260" rx="8" fill="#ecfdf5"/>
+              <rect x="15" y="15" width="170" height="100" rx="4" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="130" width="120" height="12" rx="2" fill="#1e3a5f" opacity="0.2"/>
+              <rect x="15" y="150" width="80" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="165" width="100" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="180" width="60" height="8" rx="2" fill="#1e3a5f" opacity="0.1"/>
+              <rect x="15" y="200" width="170" height="40" rx="4" fill="#1f6f5c" opacity="0.15"/>
+            </svg>
+          </div>
+          <h4>Finanz-Roadmap</h4>
+          <p>5 Schritte fuer Ihre finanzielle Zukunft</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container">
+    <h3>Warum Berufstaetige 35+ auf VermoegenPlaner vertrauen</h3>
+    <div class="trust-grid">
+      <div class="trust-item">
+          <div class="trust-icon">✓</div>
+          <div>
+            <h4>Keine Anlageberatung</h4>
+            <p>Wir geben Ihnen Informationen, keine Empfehlungen. Sie entscheiden selbst.</p>
+          </div>
+        </div>
+<div class="trust-item">
+          <div class="trust-icon">✓</div>
+          <div>
+            <h4>DSGVO-konform</h4>
+            <p>Ihre Daten werden verschluesselt gespeichert und nie an Dritte weitergegeben.</p>
+          </div>
+        </div>
+<div class="trust-item">
+          <div class="trust-icon">✓</div>
+          <div>
+            <h4>Kostenloser Einstieg</h4>
+            <p>Die Basis-App ist kostenlos. Premium kostet spaeter 12,99 EUR/Monat.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="social">
+  <div class="container">
+    <h3>Warum VermoegenPlaner auf realen Marktdaten basiert</h3>
+    <div class="testimonial">
+          <p>"Der globale Mobile-App-Markt wird 2026 auf 391,3 Mrd. USD geschätzt und waechst mit 17,18 % pro Jahr."</p>
+          <div style="margin-top:12px; font-size:0.85rem; color:#64748b;">Quelle: Mordor Intelligence 2026</div>
+        </div>
+<div class="testimonial">
+          <p>"35 % aller Apps kombinieren inzwischen Abos mit Einmalkaeufen – ein Modell, das sich besonders fuer 35+ eignet."</p>
+          <div style="margin-top:12px; font-size:0.85rem; color:#64748b;">Quelle: RevenueCat State of Subscription Apps 2025</div>
+        </div>
+<div class="testimonial">
+          <p>"Das App-Store-Oekosystem erreichte 2025 weltweit 1,4 Bio. USD an Entwicklerumsaetzen – der Markt ist riesig, aber Nischen-Apps gewinnen."</p>
+          <div style="margin-top:12px; font-size:0.85rem; color:#64748b;">Quelle: Apple Newsroom 2026</div>
+        </div>
+  </div>
+</section>
+
+
+
+<section class="form-section" id="form">
+  <div class="container">
+    <h3>Sichern Sie sich jetzt Ihren PDF-Guide</h3>
+    <p>Tragen Sie sich ein und erhalten Sie den exklusiven PDF-Guide 'Der 5-Schritte-Rentenplan' sowie fruehzeitige Informationen zur VermoegenPlaner-App.</p>
+    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
+      <input type="hidden" name="subject" value="Neuer Lead: 08-app-ideen-appstore">
+      <input type="text" name="first_name" placeholder="Dein Vorname" required>
+      <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+      <input type="hidden" name="tag" value="08-app-ideen-appstore">
+      <button type="submit">PDF-Guide jetzt sichern</button>
+      <p class="disclaimer" style="margin-top: 20px;"><a href="lead-magnet.pdf" download>PDF ohne Anmeldung herunterladen</a></p>
+    </form>
+    <p class="disclaimer">DSGVO-konform. Jederzeit abmeldbar. Keine Weitergabe deiner Daten.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h3>Haeufige Fragen</h3>
+    <div class="faq-item">
+          <h4>Ist der Rechner wirklich kostenlos?</h4>
+          <p>Ja. Die Berechnung ist kostenlos und unverbindlich. Sie erhalten zusaetzlich unseren E-Mail-Kurs mit Tipps zur Altersvorsorge.</p>
+        </div>
+<div class="faq-item">
+          <h4>Ist das eine Anlageberatung?</h4>
+          <p>Nein. VermoegenPlaner ist ein Informations- und Planungs-Tool. Fuer individuelle Anlageberatung wenden Sie sich an einen lizenzierten Berater.</p>
+        </div>
+<div class="faq-item">
+          <h4>Werden meine Daten weitergegeben?</h4>
+          <p>Nein. Ihre Daten werden DSGVO-konform gespeichert und nicht an Dritte weitergegeben.</p>
+        </div>
+<div class="faq-item">
+          <h4>Wann startet die App?</h4>
+          <p>Wir informieren Sie, sobald die App verfuegbar ist.</p>
+        </div>
+<div class="faq-item">
+          <h4>Was kostet die App spaeter?</h4>
+          <p>Die Basis-App ist kostenlos. Premium kostet 12,99 EUR/Monat oder 99,99 EUR/Jahr.</p>
+        </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h3>Holen Sie sich jetzt Ihren kostenlosen Rentenplan</h3>
+    <p>Kostenloser PDF-Guide mit 5-Schritte-Rentenplan.</p>
+    <a href="#form" class="cta-button">Jetzt PDF-Guide kostenlos sichern -></a>
+    <p style="margin-top:16px; font-size:0.85rem; opacity:0.8;">DSGVO-konform. Jederzeit abmeldbar.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Empire Expansion. Alle Rechte vorbehalten. | <a href="#">Datenschutzerklaerung</a> | <a href="#">Impressum</a></p>
+  </div>
+</footer>
+
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="cta-text">Bereit für mehr Klarheit?</span>
+  <a href="#form" class="cta-button">Jetzt kostenlos starten <span class="arrow">→</span></a>
+</div>
+
+  <script>
+  // Sticky CTA Bar
+  (function() {
+    var sticky = document.getElementById('stickyCta');
+    if (!sticky) return;
+    var formSection = document.getElementById('form');
+    function update() {
+      var scroll = window.scrollY;
+      var show = scroll > 400;
+      if (formSection) {
+        var formTop = formSection.getBoundingClientRect().top + scroll;
+        show = show && scroll < formTop - window.innerHeight + 200;
+      }
+      sticky.classList.toggle('is-visible', show);
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
+
+  <script>
+  // Scroll Reveal Animations
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function(el) { observer.observe(el); });
+  });
+  </script>
+</body>
+</html>

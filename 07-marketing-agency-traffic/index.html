@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNW50YS2S1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DNW50YS2S1');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mehr Leads in 30 Tagen - Kostenloser 10-Punkte-Check | Empire Expansion</title>
@@ -178,9 +186,9 @@
   <div class="container">
     <h2>Ein simpler Check - 10 Fragen, die Ihren Funnel entbloessen</h2>
     <p>Der '10-Punkte-Check: Generieren Sie mehr Leads in 30 Tagen' ist kein theoretisches Paper. Er ist ein Diagnose-Tool fuer Dienstleister, die wissen wollen, an welchen 3 Stellschrauben sie sofort drehen koennen. Ohne Agenturgebuehren, ohne langfristige Vertraege.</p>
-    <a href="#form" class="cta-button">📥 Kostenlosen Check herunterladen</a>
+    <a href="{{STRIPE_LINK}}" class="cta-button">Funnel-Fix-Toolkit kaufen — 49 €</a>
+    <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-button secondary">Kostenloses Strategiegespräch buchen →</a>
     <a href="lead-magnet.pdf" class="cta-button secondary" download>PDF direkt herunterladen</a>
-    <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-button secondary">Kostenloses Gespräch buchen -></a>
   </div>
 </section>
 
@@ -369,7 +377,8 @@
   <div class="container">
     <h3>Holen Sie sich jetzt Ihren 10-Punkte-Check</h3>
     <p>In 10 Minuten wissen Sie, wo Ihr Funnel leckt - und wie Sie es in 30 Tagen fixen.</p>
-    <a href="#form" class="cta-button">Jetzt Check kostenlos sichern -></a>
+    <a href="{{STRIPE_LINK}}" class="cta-button">Funnel-Fix-Toolkit kaufen — 49 €</a>
+    <p style="margin-top:16px; font-size:0.85rem; opacity:0.8;"><a href="https://cal.com/empire-expansion/erstgespraech" style="color:white;text-decoration:underline;">Strategiegespräch für größere Fälle buchen</a></p>
     <p style="margin-top:16px; font-size:0.85rem; opacity:0.8;">DSGVO-konform. Jederzeit abmeldbar.</p>
   </div>
 </section>
@@ -383,8 +392,7 @@
 
 <!-- Sticky CTA -->
 <div class="sticky-cta" id="stickyCta">
-  <span class="cta-text">Bereit für mehr Klarheit?</span>
-  <a href="#form" class="cta-button">Jetzt kostenlos starten <span class="arrow">→</span></a>
+  <a href="{{STRIPE_LINK}}" class="cta-button">Funnel-Fix-Toolkit — 49 € <span class="arrow">→</span></a>
 </div>
 
   <script>

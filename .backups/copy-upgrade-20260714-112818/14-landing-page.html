@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNW50YS2S1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DNW50YS2S1');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empire Eco Essentials | Nachhaltig umsteigen ab 35+ | Empire Expansion</title>
+  <meta name="description" content="Kuratierte Eco-Produkte fuer deinen Haushalt: plastikfreie Kueche & Bad, flexible Abos, transparente Zertifizierungen. Jetzt kostenlosen Eco-Guide sichern.">
+  
+  <!-- Meta Pixel Tracking-Platzhalter -->
+  <!-- TODO: Meta Pixel Code hier einfuegen -->
+  
+  <!-- Google Analytics 4 Tracking-Platzhalter -->
+  <!-- TODO: GA4 Tracking Code hier einfuegen -->
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #111827; background: #f0fdf4; }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    
+    header { background: linear-gradient(135deg, #b0602c 0%, #b0602cee 100%); color: white; padding: 60px 0 50px; text-align: center; position: relative; overflow: hidden; }
+    header::before { content: ''; position: absolute; top: -50%; right: -20%; width: 60%; height: 200%; background: radial-gradient(circle, #b0602c22 0%, transparent 70%); }
+    header h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 16px; line-height: 1.2; position: relative; }
+    header p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; position: relative; }
+    .brand-badge { display: inline-block; background: #b0602c33; color: #b0602c; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; border: 1px solid #b0602c44; }
+    
+    .stats-bar { background: white; padding: 24px 0; border-bottom: 1px solid #dcfce7; }
+    .stats-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .stat-badge { text-align: center; }
+    .stat-number { font-size: 1.6rem; font-weight: 800; color: #b0602c; }
+    .stat-label { font-size: 0.8rem; color: #64748b; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .hero { background: white; padding: 50px 0 40px; text-align: center; }
+    .hero h2 { font-size: 1.7rem; margin-bottom: 16px; color: #b0602c; font-weight: 700; }
+    .hero p { font-size: 1.05rem; margin-bottom: 28px; color: #475569; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .cta-button { display: inline-block; background: linear-gradient(135deg, #b0602c 0%, #b0602cdd 100%); color: white; padding: 16px 40px; font-size: 1.1rem; border-radius: 10px; text-decoration: none; font-weight: 700; transition: all 0.3s; box-shadow: 0 4px 14px #b0602c44; }
+    .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px #b0602c66; }
+    .cta-button.secondary { background: white; color: #b0602c; border: 2px solid #b0602c22; box-shadow: none; margin-left: 8px; margin-top: 12px; }
+    .cta-button.secondary:hover { background: #b0602c; color: white; border-color: #b0602c; }
+    
+    .problem { background: #dcfce7; padding: 50px 0; }
+    .problem h3 { text-align: center; font-size: 1.5rem; margin-bottom: 28px; color: #b0602c; font-weight: 700; }
+    .problem ul { list-style: none; padding: 0; max-width: 600px; margin: 0 auto; }
+    .problem li { margin-bottom: 16px; padding-left: 32px; position: relative; color: #475569; font-size: 1.05rem; }
+    .problem li::before { content: '✗'; position: absolute; left: 0; color: #ef4444; font-weight: 700; }
+    
+    .benefits { background: white; padding: 50px 0; }
+    .benefits h3 { text-align: center; font-size: 1.5rem; margin-bottom: 12px; color: #b0602c; font-weight: 700; }
+    .benefits-intro { text-align: center; color: #64748b; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .benefit-grid { display: grid; gap: 20px; }
+    .benefit-card { background: #f0fdf4; padding: 28px; border-radius: 14px; border: 1px solid #dcfce7; transition: all 0.3s; position: relative; overflow: hidden; }
+    .benefit-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .benefit-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #b0602c; }
+    .benefit-number { position: absolute; top: 12px; right: 16px; font-size: 2.2rem; font-weight: 800; color: #b0602c11; }
+    .benefit-card h4 { color: #b0602c; margin-bottom: 8px; font-size: 1.1rem; font-weight: 700; }
+    .benefit-card p { color: #64748b; font-size: 0.95rem; }
+    
+    .preview { background: #dcfce7; padding: 50px 0; text-align: center; }
+    .preview h3 { font-size: 1.5rem; margin-bottom: 32px; color: #b0602c; font-weight: 700; }
+    .preview-grid { display: grid; gap: 20px; }
+    .mockup-card { background: white; padding: 24px; border-radius: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .mockup-visual { margin-bottom: 16px; }
+    .mockup-visual svg { width: 100%; max-width: 180px; height: auto; }
+    .mockup-card h4 { color: #b0602c; margin-bottom: 6px; font-weight: 600; }
+    .mockup-card p { color: #64748b; font-size: 0.9rem; }
+    
+    .trust { background: white; padding: 50px 0; }
+    .trust h3 { text-align: center; font-size: 1.5rem; margin-bottom: 32px; color: #b0602c; font-weight: 700; }
+    .trust-grid { display: grid; gap: 16px; }
+    .trust-item { display: flex; align-items: flex-start; gap: 16px; background: #f0fdf4; padding: 20px; border-radius: 12px; }
+    .trust-icon { width: 36px; height: 36px; background: #b0602c22; color: #b0602c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 1.1rem; }
+    .trust-item h4 { color: #b0602c; margin-bottom: 4px; font-weight: 600; }
+    .trust-item p { color: #64748b; font-size: 0.9rem; }
+    
+    .social { background: #dcfce7; padding: 50px 0; }
+    .social h3 { text-align: center; font-size: 1.5rem; margin-bottom: 32px; color: #b0602c; font-weight: 700; }
+    .testimonial { background: white; padding: 24px; border-radius: 14px; margin-bottom: 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .testimonial p { color: #475569; font-style: italic; font-size: 1rem; line-height: 1.6; }
+    .testimonial-stars { color: #f59e0b; margin-top: 12px; font-size: 1.1rem; letter-spacing: 2px; }
+    
+    .products { background: white; padding: 50px 0; }
+    .products h3 { text-align: center; font-size: 1.5rem; margin-bottom: 32px; color: #b0602c; font-weight: 700; }
+    .product-grid { display: grid; gap: 20px; }
+    .product-card { background: #f0fdf4; padding: 28px; border-radius: 14px; text-align: center; border: 1px solid #dcfce7; }
+    .product-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .product-card h4 { color: #b0602c; margin-bottom: 8px; font-weight: 600; }
+    .product-card p { color: #64748b; font-size: 0.95rem; margin-bottom: 12px; }
+    .product-price { color: #b0602c; font-weight: 700; font-size: 1.2rem; }
+    
+    .form-section { background: white; padding: 50px 0; text-align: center; }
+    .form-section h3 { font-size: 1.6rem; margin-bottom: 8px; color: #b0602c; font-weight: 700; }
+    .form-section p { color: #64748b; margin-bottom: 24px; }
+    .lead-form { max-width: 480px; margin: 0 auto; text-align: left; background: #f0fdf4; padding: 32px; border-radius: 16px; border: 1px solid #dcfce7; }
+    .lead-form input, .lead-form select { width: 100%; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 1rem; background: white; transition: border-color 0.2s; }
+    .lead-form input:focus, .lead-form select:focus { outline: none; border-color: #b0602c; }
+    .lead-form button { width: 100%; padding: 16px; background: linear-gradient(135deg, #b0602c 0%, #b0602cdd 100%); color: white; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 14px #b0602c44; }
+    .lead-form button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px #b0602c66; }
+    .disclaimer { font-size: 0.85rem; color: #94a3b8; margin-top: 16px; text-align: center; }
+    .checkbox { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 0.9rem; color: #475569; }
+    .checkbox input { width: auto; margin: 4px 0 0 0; }
+    
+    .faq { background: #dcfce7; padding: 50px 0; }
+    .faq h3 { text-align: center; font-size: 1.5rem; margin-bottom: 32px; color: #b0602c; font-weight: 700; }
+    .faq-item { background: white; padding: 24px; border-radius: 14px; margin-bottom: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .faq-item h4 { color: #b0602c; margin-bottom: 8px; font-weight: 600; }
+    .faq-item p { color: #64748b; font-size: 0.95rem; }
+    
+    .final-cta { background: linear-gradient(135deg, #b0602c 0%, #b0602cee 100%); color: white; padding: 60px 0; text-align: center; position: relative; overflow: hidden; }
+    .final-cta::before { content: ''; position: absolute; top: -50%; left: -20%; width: 60%; height: 200%; background: radial-gradient(circle, #b0602c22 0%, transparent 70%); }
+    .final-cta h3 { font-size: 1.8rem; margin-bottom: 12px; font-weight: 700; position: relative; }
+    .final-cta p { opacity: 0.9; margin-bottom: 24px; position: relative; }
+    .final-cta .cta-button { background: white; color: #b0602c; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+    .final-cta .cta-button:hover { background: #dcfce7; }
+    
+    footer { background: #b0602c; color: white; text-align: center; padding: 30px 0; font-size: 0.9rem; }
+    footer a { color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: white; text-decoration: underline; }
+    
+    @media (min-width: 600px) {
+      .benefit-grid { grid-template-columns: 1fr 1fr; }
+      .preview-grid { grid-template-columns: repeat(3, 1fr); }
+      .trust-grid { grid-template-columns: repeat(3, 1fr); }
+      .product-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.8rem; }
+      .hero h2 { font-size: 1.4rem; }
+      .stats-grid { gap: 20px; }
+      .stat-number { font-size: 1.3rem; }
+      .cta-button { display: block; width: 100%; margin-bottom: 8px; text-align: center; }
+      .cta-button.secondary { margin-left: 0; }
+    }
+  </style>
+  <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
+  <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+</head>
+<body data-theme="nachhaltigkeit">
+<!-- Masthead / Navigation -->
+<header class="masthead">
+  <div class="container masthead-inner">
+    <div class="wordmark">Empire<span>·</span>Expansion</div>
+    <nav>
+      <a href="../index.html">Übersicht</a>
+      <a href="index.html">Info</a>
+    </nav>
+  </div>
+</header>
+<header>
+  <div class="container">
+    <div class="brand-badge">Empire Eco Essentials</div>
+    <h1>Nachhaltig umsteigen, ohne Kompromisse.</h1>
+    <p>Kuratierte Eco-Essentials fuer erwachsene Haushalte in DACH. Plastikfrei, transparent, flexibel.</p>
+  </div>
+</header>
+
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-badge">
+          <div class="stat-number">14</div>
+          <div class="stat-label">Tage bis plastikfrei</div>
+        </div>
+<div class="stat-badge">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Produkte pro Set</div>
+        </div>
+<div class="stat-badge">
+          <div class="stat-number">10%</div>
+          <div class="stat-label">Rabatt im Abo</div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="container">
+    <h2>Dein Eco-Haushalt startet mit einem klaren Set.</h2>
+    <p>Wir haben recherchiert, du musst nur entscheiden: Produkte mit echtem Impact, transparenten Siegeln und flexiblem Nachfuell-Abo - lieferbar in 2-3 Tagen. Kein Greenwashing, nur anerkannte Zertifizierungen wie GOTS, Blauer Engel, B-Corp und EU-Bio.</p>
+    <a href="#form" class="cta-button">Kostenlosen Eco-Guide sichern</a>
+    <a href="lead-magnet.pdf" class="cta-button secondary" download>PDF direkt herunterladen</a>
+    <a href="{{STRIPE_LINK}}" class="cta-button secondary">Premium sichern -></a>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container">
+    <h3>Nachhaltig leben ist ueberfordernd - aber es muss nicht sein</h3>
+    <ul>
+      <li>Der Produkt-Dschungel ist riesig: Welche Produkte sind wirklich nachhaltig?</li>
+<li>Greenwashing ist ueberall: Fake-Siegel, leere Versprechen, teure Produkte ohne Impact.</li>
+<li>Der Umstieg kostet Zeit, die niemand hat.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="benefits reveal">
+  <div class="container">
+    <h3>Warum Empire Eco Essentials?</h3>
+    <p class="benefits-intro">Kein Greenwashing. Kein Produkt-Dschungel. Nur kuratierte Sets mit echtem Impact.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+          <div class="benefit-number">01</div>
+          <h4>Kuratierte Sets statt Produkt-Dschungel</h4>
+          <p>Kueche, Bad & Koerperpflege als aufeinander abgestimmte Sets - 8 Produkte, die wirklich zusammenpassen.</p>
+        </div>
+<div class="benefit-card">
+          <div class="benefit-number">02</div>
+          <h4>Transparente Zertifizierungen</h4>
+          <p>Nur anerkannte Siegel wie GOTS, Blauer Engel, B-Corp und EU-Bio. Kein Greenwashing, keine leeren Versprechen.</p>
+        </div>
+<div class="benefit-card">
+          <div class="benefit-number">03</div>
+          <h4>Flexibles Nachfuell-Abo</h4>
+          <p>Jederzeit pausier- und kuendbar. Inklusive 10% Rabatt, kostenlosem Versand und jaehrlichem Impact-Report.</p>
+        </div>
+<div class="benefit-card">
+          <div class="benefit-number">04</div>
+          <h4>Sichtbarer Impact</h4>
+          <p>Sieh auf einen Blick, wie viel Plastik und CO2 du mit jedem Wechsel vermeidest - messbar und nachvollziehbar.</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="preview">
+  <div class="container">
+    <h3>Ein Blick in den Eco-Guide</h3>
+    <div class="preview-grid">
+      <div class="mockup-card">
+          <div class="mockup-visual">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="260" rx="8" fill="#dcfce7"/>
+              <rect x="15" y="15" width="170" height="100" rx="4" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="130" width="120" height="12" rx="2" fill="#b0602c" opacity="0.2"/>
+              <rect x="15" y="150" width="80" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="165" width="100" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="180" width="60" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="200" width="170" height="40" rx="4" fill="#b0602c" opacity="0.15"/>
+            </svg>
+          </div>
+          <h4>14-Tage-Plan</h4>
+          <p>Kueche & Bad plastikfrei</p>
+        </div>
+<div class="mockup-card">
+          <div class="mockup-visual">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="260" rx="8" fill="#dcfce7"/>
+              <rect x="15" y="15" width="170" height="100" rx="4" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="130" width="120" height="12" rx="2" fill="#b0602c" opacity="0.2"/>
+              <rect x="15" y="150" width="80" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="165" width="100" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="180" width="60" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="200" width="170" height="40" rx="4" fill="#b0602c" opacity="0.15"/>
+            </svg>
+          </div>
+          <h4>Siegel-Guide</h4>
+          <p>GOTS, Blauer Engel, B-Corp</p>
+        </div>
+<div class="mockup-card">
+          <div class="mockup-visual">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="260" rx="8" fill="#dcfce7"/>
+              <rect x="15" y="15" width="170" height="100" rx="4" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="130" width="120" height="12" rx="2" fill="#b0602c" opacity="0.2"/>
+              <rect x="15" y="150" width="80" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="165" width="100" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="180" width="60" height="8" rx="2" fill="#b0602c" opacity="0.1"/>
+              <rect x="15" y="200" width="170" height="40" rx="4" fill="#b0602c" opacity="0.15"/>
+            </svg>
+          </div>
+          <h4>Starter-Set</h4>
+          <p>8 Produkte, die passen</p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container">
+    <h3>Warum Empire Eco Essentials vertrauenswuerdig ist</h3>
+    <div class="trust-grid">
+      <div class="trust-item">
+          <div class="trust-icon">✓</div>
+          <div>
+            <h4>Green-Claims-konform</h4>
+            <p>Alle Claims sind ueberpruefbar und entsprechen der EU-Green-Claims-Richtlinie.</p>
+          </div>
+        </div>
+<div class="trust-item">
+          <div class="trust-icon">✓</div>
+          <div>
+            <h4>Transparente Lieferkette</h4>
+            <p>Wir kennen unsere Hersteller persoenlich. Keine anonymen Grosshaendler.</p>
+          </div>
+        </div>
+<div class="trust-item">
+          <div class="trust-icon">✓</div>
+          <div>
+            <h4>Jaehrlicher Impact-Report</h4>
+            <p>Sieh auf einen Blick, wie viel CO2 und Plastik du vermieden hast.</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="social">
+  <div class="container">
+    <h3>Nachhaltigkeit ohne Kompromisse</h3>
+    <div class="testimonial">
+          <p>Unsere Eco-Essentials werden mit anerkannten Zertifizierungen wie GOTS, Blauer Engel, B-Corp und EU-Bio ausgewählt. Transparent, überprüfbar und Green-Claims-konform.</p>
+        </div>
+  </div>
+</section>
+
+
+
+<section class="form-section" id="form">
+  <div class="container">
+    <h3>Hol dir den kostenlosen Eco-Guide</h3>
+    <p>'Plastikfreie Kueche & Bad in 14 Tagen' - mit Checkliste, Siegel-Guide und dem passenden Starter-Set.</p>
+    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
+      <input type="hidden" name="subject" value="Neuer Lead: 14-nachhaltigkeit-eco">
+      <input type="text" name="first_name" placeholder="Dein Vorname" required>
+      <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+      <input type="hidden" name="tag" value="14-nachhaltigkeit-eco">
+      <button type="submit">Jetzt kostenlos herunterladen</button>
+      <p class="disclaimer" style="margin-top: 20px;"><a href="lead-magnet.pdf" download>PDF ohne Anmeldung herunterladen</a></p>
+    </form>
+    <p class="disclaimer">DSGVO-konform. Jederzeit abmeldbar. Keine Weitergabe deiner Daten.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h3>Haeufige Fragen</h3>
+    <div class="faq-item">
+          <h4>Sind die Produkte wirklich nachhaltig?</h4>
+          <p>Ja. Wir arbeiten nur mit Produkten, die anerkannte Zertifizierungen wie GOTS, Blauer Engel, B-Corp oder EU-Bio tragen. Alle Claims sind ueberpruefbar und Green-Claims-konform.</p>
+        </div>
+<div class="faq-item">
+          <h4>Wie funktioniert das Nachfuell-Abo?</h4>
+          <p>Du waehlst dein Set und den Lieferrhythmus. Das Abo ist jederzeit pausier- und kuendbar, versandkostenfrei und beinhaltet 10% Rabatt gegenueber dem Einzelkauf.</p>
+        </div>
+<div class="faq-item">
+          <h4>Fuer wen ist Empire Eco Essentials gedacht?</h4>
+          <p>Fuer erwachsene, kaufkraeftige Menschen ab 35 in DACH, die Nachhaltigkeit einfach, transparent und ohne erhoehten Rechercheaufwand in ihren Alltag integrieren wollen.</p>
+        </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h3>Starte jetzt deinen Eco-Haushalt</h3>
+    <p>Kostenloser Eco-Guide + 10% Rabatt auf dein erstes Starter-Set.</p>
+    <a href="#form" class="cta-button">Jetzt Eco-Guide sichern -></a>
+    <p style="margin-top:16px; font-size:0.85rem; opacity:0.8;">DSGVO-konform. Jederzeit abmeldbar.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Empire Expansion. Alle Rechte vorbehalten. | <a href="#">Datenschutzerklaerung</a> | <a href="#">Impressum</a></p>
+  </div>
+</footer>
+
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <span class="cta-text">Bereit für mehr Klarheit?</span>
+  <a href="#form" class="cta-button">Jetzt kostenlos starten <span class="arrow">→</span></a>
+</div>
+
+  <script>
+  // Sticky CTA Bar
+  (function() {
+    var sticky = document.getElementById('stickyCta');
+    if (!sticky) return;
+    var formSection = document.getElementById('form');
+    function update() {
+      var scroll = window.scrollY;
+      var show = scroll > 400;
+      if (formSection) {
+        var formTop = formSection.getBoundingClientRect().top + scroll;
+        show = show && scroll < formTop - window.innerHeight + 200;
+      }
+      sticky.classList.toggle('is-visible', show);
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+  </script>
+
+  <script>
+  // Scroll Reveal Animations
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function(el) { observer.observe(el); });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIRE-Schnellcheck 35+ | Dein persönlicher Vermögensaufbau-Plan — Empire Expansion</title>
+  <meta name="description" content="Erfahre in 10 Fragen, wie weit du von finanzieller Unabhängigkeit entfernt bist. Kostenloser FIRE-Schnellcheck für Berufstätige 35+ im DACH-Raum. Basierend auf aktuellen Marktdaten Juli 2026.">
+  
+  <!-- Google Fonts: Fraunces (Display) + IBM Plex Sans + IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="FIRE-Schnellcheck 35+ | Dein persönlicher Vermögensaufbau-Plan">
+  <meta property="og:description" content="In 10 Fragen zur finanziellen Freiheit. Kostenlos, DSGVO-konform, für Berufstätige 35+.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/og-fire.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+  
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNW50YS2S1"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DNW50YS2S1');</script>
+  
+  <!-- Meta Pixel — 123456789012345 (hier einfügen) -->
+  <!-- <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','123456789012345');fbq('track','PageView');</script> -->
+
+  <style>
+    :root{
+      --paper:#f6f1e7;
+      --paper-raised:#fffdf8;
+      --ink:#0a2540;
+      --ink-soft:#1c2333;
+      --muted:#5b5a6e;
+      --line:#e0d8c6;
+      --amber:#b8842e;
+      --amber-light:#d4a54a;
+      --finanz:#1f6f5c;
+      --finanz-tint:#eef4f0;
+      --finanz-deep:#145c4b;
+      --danger:#c0392b;
+      --success:#00c853;
+      --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+      --sans:'IBM Plex Sans',system-ui,sans-serif;
+      --display:'Fraunces',Georgia,serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+    a{color:inherit}
+    :focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+    @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+    /* ========== MASTHEAD ========== */
+    .masthead{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:rgba(246,241,231,0.95);backdrop-filter:blur(8px)}
+    .masthead-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;flex-wrap:wrap;gap:8px 20px}
+    .wordmark{font-family:var(--display);font-weight:600;font-size:1.18rem;letter-spacing:-0.01em;color:var(--ink)}
+    .wordmark span{color:var(--amber)}
+    .wordmark-niche{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--finanz);background:var(--finanz-tint);padding:4px 10px;border-radius:4px;margin-left:10px;vertical-align:middle}
+    .masthead nav{display:flex;gap:20px;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
+    .masthead nav a{text-decoration:none;transition:color .2s}
+    .masthead nav a:hover{color:var(--ink)}
+    @media (max-width:720px){.masthead nav{display:none}}
+
+    /* ========== HERO ========== */
+    .hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding:72px 0 64px}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(31,111,92,0.25) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(184,132,46,0.12) 0%,transparent 50%);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;position:relative;z-index:2}
+    .hero-eyebrow{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--amber-light);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+    .hero-eyebrow::before{content:'';display:inline-block;width:6px;height:6px;background:var(--success);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,200,83,0.4)}50%{opacity:0.8;box-shadow:0 0 0 6px rgba(0,200,83,0)}}
+    .hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;letter-spacing:-0.02em;margin-bottom:22px}
+    .hero h1 em{font-style:italic;color:var(--amber-light);font-weight:500}
+    .hero-lede{font-size:1.15rem;color:rgba(255,255,255,0.82);max-width:48ch;margin-bottom:32px;line-height:1.55}
+    .hero-stats{display:flex;gap:28px;flex-wrap:wrap;margin-bottom:32px;font-family:var(--mono);font-size:0.78rem;color:rgba(255,255,255,0.6)}
+    .hero-stats .stat strong{display:block;color:#fff;font-family:var(--display);font-size:1.5rem;font-weight:600;margin-bottom:2px}
+    .hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--amber);color:#fff;padding:16px 36px;font-size:1.05rem;font-weight:700;border-radius:8px;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-family:var(--sans);box-shadow:0 4px 16px rgba(184,132,46,0.35)}
+    .hero-cta:hover{background:var(--amber-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(184,132,46,0.45)}
+    .hero-cta svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .hero-trust{margin-top:18px;font-size:0.78rem;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .hero-trust .badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);padding:5px 12px;border-radius:20px;font-family:var(--mono);font-size:0.68rem;letter-spacing:0.04em}
+    .hero-trust .badge svg{width:13px;height:13px;fill:none;stroke:var(--success);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+    /* PDF Mockup */
+    .mockup-wrap{position:relative;perspective:1000px}
+    .pdf-mockup{background:var(--paper-raised);border-radius:8px;box-shadow:0 24px 64px rgba(0,0,0,0.35),0 0 0 1px rgba(255,255,255,0.08);padding:28px 24px 24px;position:relative;transform:rotateY(-6deg) rotateX(4deg);transition:transform .4s}
+    .pdf-mockup:hover{transform:rotateY(-3deg) rotateX(2deg) translateY(-4px)}
+    .pdf-mockup::before{content:'';position:absolute;top:-8px;left:20px;right:20px;height:8px;background:var(--finanz);border-radius:4px 4px 0 0;opacity:0.8}
+    .pdf-mockup::after{content:'';position:absolute;top:-16px;left:40px;right:40px;height:8px;background:var(--finanz);border-radius:4px 4px 0 0;opacity:0.5}
+    .pdf-header{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+    .pdf-logo{width:28px;height:28px;background:var(--finanz);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:14px;color:#fff;font-weight:700}
+    .pdf-title{font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--ink);line-height:1.2}
+    .pdf-sub{font-family:var(--mono);font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:3px}
+    .pdf-divider{height:3px;background:linear-gradient(90deg,var(--finanz),var(--amber));border-radius:2px;margin:12px 0 16px}
+    .pdf-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:0.82rem;color:var(--ink-soft)}
+    .pdf-item .chk{width:16px;height:16px;border:2px solid var(--finanz);border-radius:4px;flex-shrink:0;margin-top:2px;position:relative}
+    .pdf-item .chk::after{content:'';position:absolute;inset:2px;background:var(--finanz);border-radius:1px}
+    .pdf-item span{opacity:0.85}
+    .pdf-footer{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;font-family:var(--mono);font-size:0.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em}
+    .pdf-badge{position:absolute;top:-4px;right:-4px;background:var(--success);color:#fff;font-family:var(--mono);font-size:0.58rem;font-weight:700;padding:4px 8px;border-radius:4px;box-shadow:0 2px 8px rgba(0,200,83,0.4);text-transform:uppercase;letter-spacing:0.06em}
+
+    @media (max-width:860px){
+      .hero-grid{grid-template-columns:1fr;text-align:center}
+      .hero-stats{justify-content:center}
+      .hero-trust{justify-content:center}
+      .mockup-wrap{max-width:320px;margin:0 auto}
+      .pdf-mockup{transform:rotateY(-2deg) rotateX(2deg)}
+    }
+
+    /* ========== STICKY MOBILE CTA ========== */
+    .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:40;background:rgba(10,37,64,0.96);backdrop-filter:blur(8px);padding:12px 20px;border-top:1px solid rgba(255,255,255,0.1);text-align:center}
+    .sticky-cta a{display:block;width:100%;background:var(--amber);color:#fff;padding:14px 24px;font-size:1rem;font-weight:700;border-radius:8px;text-decoration:none;font-family:var(--sans)}
+    @media (max-width:720px){.sticky-cta{display:block}body{padding-bottom:70px}}
+
+    /* ========== PAIN SECTION ========== */
+    .pain{background:var(--paper-raised);padding:72px 0 56px;position:relative}
+    .pain-eyebrow{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--danger);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+    .pain-eyebrow::before{content:'!';display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:var(--danger);color:#fff;border-radius:50%;font-size:12px;font-weight:700}
+    .pain h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--ink);margin-bottom:16px;line-height:1.15;max-width:26ch}
+    .pain-lede{font-size:1.08rem;color:var(--muted);max-width:58ch;margin-bottom:44px}
+    .pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .pain-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;position:relative;overflow:hidden}
+    .pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--danger);opacity:0.3}
+    .pain-card h4{font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:8px}
+    .pain-card p{font-size:0.92rem;color:var(--muted);line-height:1.55}
+    .pain-card .data-point{font-family:var(--mono);font-size:0.72rem;color:var(--danger);background:rgba(192,57,43,0.06);display:inline-block;padding:3px 8px;border-radius:4px;margin-top:10px;letter-spacing:0.02em}
+    @media (max-width:640px){.pain-grid{grid-template-columns:1fr}}
+
+    /* ========== SOLUTION SECTION ========== */
+    .solution{background:var(--finanz-tint);padding:72px 0 64px}
+    .section-eyebrow{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--finanz);margin-bottom:14px}
+    .solution h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--ink);margin-bottom:16px;line-height:1.15}
+    .solution-lede{font-size:1.08rem;color:var(--muted);max-width:58ch;margin-bottom:44px}
+    .solution-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .sol-card{background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,0.04);border:1px solid rgba(31,111,92,0.1);transition:transform .2s,box-shadow .2s}
+    .sol-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+    .sol-icon{width:44px;height:44px;background:var(--finanz-tint);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--finanz)}
+    .sol-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .sol-card h4{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:6px}
+    .sol-card p{font-size:0.9rem;color:var(--muted);line-height:1.5}
+    @media (max-width:860px){.solution-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.solution-grid{grid-template-columns:1fr}}
+
+    /* ========== SOCIAL PROOF ========== */
+    .proof{background:var(--ink);color:#fff;padding:64px 0 56px;position:relative;overflow:hidden}
+    .proof::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(31,111,92,0.2) 0%,transparent 60%);pointer-events:none}
+    .proof h2{font-family:var(--display);font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;text-align:center;margin-bottom:10px;position:relative}
+    .proof-sub{text-align:center;color:rgba(255,255,255,0.55);font-size:0.95rem;margin-bottom:44px;position:relative;max-width:50ch;margin-left:auto;margin-right:auto}
+    .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+    .proof-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;text-align:center;transition:background .2s}
+    .proof-card:hover{background:rgba(255,255,255,0.07)}
+    .proof-card .num{font-family:var(--display);font-size:2.4rem;font-weight:700;color:var(--amber-light);line-height:1;margin-bottom:6px}
+    .proof-card .num small{font-size:0.55em;color:rgba(255,255,255,0.5);font-weight:500}
+    .proof-card .label{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:8px}
+    .proof-card .desc{font-size:0.88rem;color:rgba(255,255,255,0.7);line-height:1.5}
+    .proof-source{font-family:var(--mono);font-size:0.62rem;color:rgba(255,255,255,0.35);margin-top:10px;letter-spacing:0.04em}
+    @media (max-width:720px){.proof-grid{grid-template-columns:1fr}}
+
+    /* ========== HOW IT WORKS ========== */
+    .steps{background:var(--paper-raised);padding:72px 0 64px}
+    .steps h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;text-align:center;margin-bottom:12px}
+    .steps-sub{text-align:center;color:var(--muted);font-size:1.05rem;margin-bottom:48px;max-width:48ch;margin-left:auto;margin-right:auto}
+    .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
+    .steps-grid::before{content:'';position:absolute;top:28px;left:16.66%;right:16.66%;height:2px;background:var(--line);z-index:0}
+    .step-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;text-align:center;position:relative;z-index:1}
+    .step-num{width:44px;height:44px;background:var(--finanz);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:1.1rem;font-weight:700;margin:0 auto 16px;border:4px solid var(--paper-raised)}
+    .step-card h4{font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:8px}
+    .step-card p{font-size:0.92rem;color:var(--muted);line-height:1.5}
+    @media (max-width:720px){.steps-grid{grid-template-columns:1fr}.steps-grid::before{display:none}}
+
+    /* ========== FORM SECTION ========== */
+    .form-section{background:var(--finanz-tint);padding:72px 0 80px;position:relative}
+    .form-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(31,111,92,0.08) 0%,transparent 60%);pointer-events:none}
+    .form-box{max-width:540px;margin:0 auto;background:#fff;border-radius:16px;padding:40px 36px;box-shadow:0 12px 40px rgba(0,0,0,0.06);border:1px solid rgba(31,111,92,0.1);position:relative;z-index:2}
+    .form-box h3{font-family:var(--display);font-size:1.6rem;font-weight:700;text-align:center;margin-bottom:6px}
+    .form-box .sub{text-align:center;color:var(--muted);font-size:0.95rem;margin-bottom:28px}
+    .lead-form{display:flex;flex-direction:column;gap:14px}
+    .lead-form input{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:8px;font-size:1rem;font-family:var(--sans);transition:border-color .2s,box-shadow .2s;background:var(--paper-raised)}
+    .lead-form input:focus{outline:none;border-color:var(--finanz);box-shadow:0 0 0 3px rgba(31,111,92,0.1)}
+    .lead-form button{width:100%;padding:16px;background:var(--finanz);color:#fff;border:none;border-radius:8px;font-size:1.08rem;font-weight:700;cursor:pointer;font-family:var(--sans);transition:background .2s,transform .2s;box-shadow:0 4px 16px rgba(31,111,92,0.25)}
+    .lead-form button:hover{background:var(--finanz-deep);transform:translateY(-1px)}
+    .form-trust{display:flex;justify-content:center;gap:16px;margin-top:18px;flex-wrap:wrap}
+    .form-trust span{display:flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--muted);font-family:var(--mono)}
+    .form-trust svg{width:14px;height:14px;fill:none;stroke:var(--success);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .form-disclaimer{font-size:0.78rem;color:var(--muted);text-align:center;margin-top:16px;line-height:1.5}
+    .form-disclaimer a{color:var(--finanz);text-decoration:underline}
+    .urgency-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(192,57,43,0.08);color:var(--danger);padding:8px 14px;border-radius:8px;font-size:0.82rem;font-weight:600;margin-bottom:20px;border:1px solid rgba(192,57,43,0.15);font-family:var(--sans)}
+    .urgency-badge svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round}
+    .urgency-wrap{text-align:center}
+
+    /* ========== FAQ ========== */
+    .faq{background:var(--paper);padding:64px 0 72px}
+    .faq h2{font-family:var(--display);font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;text-align:center;margin-bottom:40px}
+    .faq-item{background:var(--paper-raised);border:1px solid var(--line);border-radius:12px;margin-bottom:14px;overflow:hidden}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;font-size:1rem;font-weight:600;color:var(--ink);cursor:pointer;transition:background .2s}
+    .faq-q:hover{background:rgba(31,111,92,0.03)}
+    .faq-q svg{width:18px;height:18px;fill:none;stroke:var(--muted);stroke-width:2;stroke-linecap:round;transition:transform .3s;flex-shrink:0}
+    .faq-a{padding:0 24px 20px;font-size:0.95rem;color:var(--muted);line-height:1.6;display:none}
+    .faq-item.open .faq-a{display:block}
+    .faq-item.open .faq-q svg{transform:rotate(180deg)}
+
+    /* ========== FINAL CTA ========== */
+    .final-cta{background:var(--ink);color:#fff;padding:64px 0;text-align:center;position:relative;overflow:hidden}
+    .final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(31,111,92,0.2) 0%,transparent 60%);pointer-events:none}
+    .final-cta h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:14px;position:relative}
+    .final-cta p{font-size:1.05rem;color:rgba(255,255,255,0.7);max-width:48ch;margin:0 auto 28px;position:relative}
+    .final-cta .cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--amber);color:#fff;padding:16px 40px;font-size:1.1rem;font-weight:700;border-radius:8px;text-decoration:none;transition:all .2s;position:relative;box-shadow:0 4px 20px rgba(184,132,46,0.4)}
+    .final-cta .cta-btn:hover{background:var(--amber-light);transform:translateY(-2px);box-shadow:0 6px 24px rgba(184,132,46,0.5)}
+    .final-cta .fine-print{margin-top:16px;font-size:0.78rem;color:rgba(255,255,255,0.4);position:relative}
+
+    /* ========== FOOTER ========== */
+    footer{background:var(--ink-soft);color:rgba(255,255,255,0.5);padding:40px 0 32px;font-size:0.85rem}
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .footer-links{display:flex;gap:20px;font-family:var(--mono);font-size:0.72rem;letter-spacing:0.04em;text-transform:uppercase}
+    .footer-links a{text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:#fff}
+    .footer-disclaimer{font-size:0.72rem;color:rgba(255,255,255,0.35);margin-top:12px;line-height:1.5;max-width:70ch}
+    @media (max-width:640px){.footer-inner{flex-direction:column;text-align:center}}
+  </style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <div class="wordmark">Empire <span>Expansion</span> <span class="wordmark-niche">Verfahren 09 — Finanzielle Freiheit</span></div>
+    <nav>
+      <a href="#problem">Problem</a>
+      <a href="#loesung">Lösung</a>
+      <a href="#beweis">Beweis</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Kostenloser Schnellcheck — Aktualisiert Juli 2026</div>
+      <h1>Wie Berufstätige 35+ mit dem <em>FIRE-Schnellcheck</em> in 15 Minuten ihren persönlichen Vermögensaufbau-Plan erhalten</h1>
+      <p class="hero-lede">Kein Fachchinesisch. Keine „Get-rich-quick"-Versprechen. Nur eine evidenzbasierte Standortbestimmung mit deinen nächsten 3 konkreten Schritten — basierend auf aktuellen Zins-, ETF- und Versicherungsdaten.</p>
+      <div class="hero-stats">
+        <div class="stat"><strong>10 Mio.</strong>Kunden bei Trade Republic</div>
+        <div class="stat"><strong>150 Mrd. €</strong>verwaltetes Vermögen</div>
+        <div class="stat"><strong>2,25 %</strong>Cash-Zins p.a. (Juli 2026)</div>
+      </div>
+      <a href="#form" class="hero-cta">
+        <svg viewBox="0 0 24 24"><path d="M12 15V3m0 0L7 8m5-5l5 5M3 12h1.5a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5H3a1.5 1.5 0 01-1.5-1.5v-6A1.5 1.5 0 013 12zm16.5 0H21a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5h-1.5a1.5 1.5 0 01-1.5-1.5v-6a1.5 1.5 0 011.5-1.5z"/></svg>
+        Kostenlosen FIRE-Schnellcheck sichern
+      </a>
+      <div class="hero-trust">
+        <span class="badge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>DSGVO-konform</span>
+        <span class="badge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Kein Spam</span>
+        <span class="badge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Sofortiger Download</span>
+      </div>
+    </div>
+    <div class="mockup-wrap">
+      <div class="pdf-mockup">
+        <div class="pdf-badge">Kostenlos</div>
+        <div class="pdf-header">
+          <div class="pdf-logo">E</div>
+          <div>
+            <div class="pdf-title">Der FIRE-Schnellcheck für 35+</div>
+            <div class="pdf-sub">Vermögensaufbau-Plan · 10 Fragen · 15 Minuten</div>
+          </div>
+        </div>
+        <div class="pdf-divider"></div>
+        <div class="pdf-item"><div class="chk"></div><span>Individuelle Standortbestimmung in 10 Fragen</span></div>
+        <div class="pdf-item"><div class="chk"></div><span>Dein persönliches FIRE-Profil (Starter / Aufholer / Optimierer / Coast-FIRE)</span></div>
+        <div class="pdf-item"><div class="chk"></div><span>3 konkrete nächste Schritte mit Zeitplan</span></div>
+        <div class="pdf-item"><div class="chk"></div><span>Die 3-Säulen-Strategie: Liquidität, ETFs, Steuer-Optimierung</span></div>
+        <div class="pdf-item"><div class="chk"></div><span>Aktuelle Marktdaten: Zinsen, Broker, Versicherungen Juli 2026</span></div>
+        <div class="pdf-footer">
+          <span>15 Seiten · DIN A4</span>
+          <span>Empire Expansion</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN SECTION -->
+<section class="pain" id="problem">
+  <div class="wrap">
+    <div class="pain-eyebrow">Das Problem</div>
+    <h2>Warum die meisten 35+ ihr Vermögenspotenzial verschenken</h2>
+    <p class="pain-lede">Du verdienst gut. Du bist diszipliniert. Und doch fehlt dir die Klarheit, wo dein Geld wirklich am effizientsten arbeitet. Das kostet dich jedes Jahr Tausende Euro.</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <h4>Der „zu-spät"-Effekt</h4>
+        <p>Mit 35 fehlen dir 10 Jahre Compound-Interest gegenüber 25-Jährigen. Jeder Monat, den du wartest, kostet dich später exponentielles Vermögenswachstum.</p>
+        <span class="data-point">Beispiel: 500 €/Monat ab 35 → ~612.000 € mit 65</span>
+      </div>
+      <div class="pain-card">
+        <h4>Die Informations-Flut</h4>
+        <p>YouTube, Podcasts, Blogs — jeder sagt etwas anderes. Die meisten Ratgeber richten sich an 25-jährige Tech-Brothers, nicht an Familien und Berufstätige.</p>
+        <span class="data-point">Marktlücke: Kein großer Player adressiert 35+ ganzheitlich</span>
+      </div>
+      <div class="pain-card">
+        <h4>Die „Lebenslüge" Versicherung</h4>
+        <p>2026 stehen ~60 % der Privatversicherten vor Erhöhungen bis 40 %. Der Standardtarif-Höchstbeitrag liegt bei 848,62 €/Monat. Viele zahlen zu viel für zu wenig.</p>
+        <span class="data-point">PKV 2026: Ø 10–13 % Erhöhung, teils bis 40 % (VKB)</span>
+      </div>
+      <div class="pain-card">
+        <h4>Der Zinsen-Blindflug</h4>
+        <p>Bauzinsen sind leicht gesunken (10J 3,39 %), aber Experten erwarten Herbst-Anstieg. Wer nicht reagiert, verpasst den optimalen Zeitpunkt für Umschuldung oder Kauf.</p>
+        <span class="data-point">Bauzinsen Juli 2026: 10J 3,39 % — leicht gesunken vs. März</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION SECTION -->
+<section class="solution" id="loesung">
+  <div class="wrap">
+    <div class="section-eyebrow">Die Lösung</div>
+    <h2>Was du im FIRE-Schnellcheck bekommst</h2>
+    <p class="solution-lede">Kein 200-seitiges Buch. Kein Webinar-Marathon. Ein präzises Werkzeug, das dir in 15 Minuten Klarheit verschafft — mit aktuellen Marktdaten und konkreten Handlungsanweisungen.</p>
+    <div class="solution-grid">
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <h4>Individuelle Auswertung</h4>
+        <p>10 gezielte Fragen zu Einkommen, Kosten, Vermögen und Zielen. Du erhältst eines von 4 Ergebnisprofilen mit persönlichem FIRE-Zeitpunkt.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M12 20V10m0 0l-4 4m4-4l4 4M6 4h12"/></svg></div>
+        <h4>3 konkrete Schritte</h4>
+        <p>Keine Theorie-Flut. Jeder Schritt ist in 10 Minuten umsetzbar: Sparrate erhöhen, Broker wechseln, Freistellungsauftrag optimieren.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div>
+        <h4>3-Säulen-Strategie</h4>
+        <p>Säule 1: Notgroschen & Liquidität. Säule 2: Welt-ETF-Sparplan. Säule 3: Steuer-Optimierung & Absicherung (PKV, BU, Immobilien).</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg></div>
+        <h4>Aktuelle Marktdaten</h4>
+        <p>Basiert auf Juli 2026: Trade Republic 10M Kunden, 150 Mrd. € AUM, Cash-Zins 2,25 %. Bauzinsen 3,39 %. PKV-Höchstbeitrag 848,62 €.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof" id="beweis">
+  <div class="wrap">
+    <h2>Vertrauen durch Daten, nicht durch Marketing-Blabla</h2>
+    <p class="proof-sub">Wir nutzen keine fiktiven „M. K., 42"-Testimonials. Wir nutzen öffentlich verifizierbare Marktdaten, die jeder selbst prüfen kann.</p>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <div class="label">Broker-Markt</div>
+        <div class="num">10 <small>Mio.</small></div>
+        <div class="desc">Kunden bei Trade Republic — die größte Neo-Broker-Plattform Europas mit 150 Mrd. € verwaltetem Vermögen.</div>
+        <div class="proof-source">Quelle: Trade Republic GmbH, Juli 2026</div>
+      </div>
+      <div class="proof-card">
+        <div class="label">Affiliate-Provision</div>
+        <div class="num">1.750 <small>€</small></div>
+        <div class="desc">Maximale Provision bei Tarifcheck.de für erfolgreiche Vermittlung — wöchentliche Auszahlung möglich.</div>
+        <div class="proof-source">Quelle: Tarifcheck.de Partnerprogramm</div>
+      </div>
+      <div class="proof-card">
+        <div class="label">KI-Automatisierung</div>
+        <div class="num">299 <small>€</small></div>
+        <div class="desc">Empire startet bei 299 € — Marktpreis für KI-Agentur-Services liegt bei 990–1.500 €+. Gleiche Qualität, faire Preise.</div>
+        <div class="proof-source">Quelle: Empire Expansion Marktrecherche</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps">
+  <div class="wrap">
+    <h2>So funktioniert's in 3 Schritten</h2>
+    <p class="steps-sub">Von der Anmeldung zum ersten Ergebnis in weniger als 5 Minuten. Kein Kreditkartendaten. Kein Abo-Trick.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h4>Schnellcheck anfordern</h4>
+        <p>Trage deinen Vornamen und deine E-Mail ein. Der Download-Link kommt sofort — kein Doppel-Opt-in-Zwang für den PDF-Zugang.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h4>10 Fragen beantworten</h4>
+        <p>Arbeite den Check in deinem Tempo ab. Ehrliche Antworten reichen — perfekte Zahlen sind nicht nötig. Das Ergebnis berechnet sich automatisch.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h4>Ergebnis umsetzen</h4>
+        <p>Du weißt sofort, welcher der 4 Profile du bist und welche 3 nächsten Schritte den größten Impact haben. Optional: 7-Tage-E-Mail-Kurs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section class="form-section" id="form">
+  <div class="wrap">
+    <div class="form-box">
+      <div class="urgency-wrap">
+        <div class="urgency-badge">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Aktualisiert Juli 2026 — kostenlos verfügbar
+        </div>
+      </div>
+      <h3>Hol dir deinen FIRE-Schnellcheck</h3>
+      <p class="sub">Trage deinen Vornamen und deine E-Mail ein. Du erhältst den 15-seitigen PDF-Guide sofort zum Download.</p>
+      <form class="lead-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="if(typeof fbq!=='undefined')fbq('track','Lead');if(typeof gtag!=='undefined')gtag('event','generate_lead');">
+        <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
+        <input type="hidden" name="subject" value="Neuer Lead: 09-finanzielle-freiheit">
+        <input type="text" name="first_name" placeholder="Dein Vorname" required>
+        <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
+        <input type="hidden" name="tag" value="09-finanzielle-freiheit">
+        <button type="submit">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;margin-right:6px"><path d="M12 15V3m0 0L7 8m5-5l5 5M3 12h1.5a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5H3a1.5 1.5 0 01-1.5-1.5v-6A1.5 1.5 0 013 12zm16.5 0H21a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5h-1.5a1.5 1.5 0 01-1.5-1.5v-6a1.5 1.5 0 011.5-1.5z"/></svg>
+          FIRE-Schnellcheck sofort anfordern
+        </button>
+      </form>
+      <div class="form-trust">
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>DSGVO-konform</span>
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Jederzeit abbestellbar</span>
+        <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Kein Spam</span>
+      </div>
+      <p class="form-disclaimer">Mit der Anmeldung akzeptierst du unsere <a href="../datenschutz.html">Datenschutzerklärung</a>. Die Inhalte dienen ausschließlich der Bildung und stellen keine Anlageberatung dar. <br><a href="lead-magnet.pdf" download>PDF ohne Anmeldung herunterladen</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Häufige Fragen</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Für wen ist der FIRE-Schnellcheck geeignet?
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a">Für alle ab 35 im DACH-Raum, die Vermögensaufbau ernst meinen — egal ob Angestellter, Selbstständiger oder Beamter, mit oder ohne Kinder. Der Check ist speziell auf die Lebenslage 35+ zugeschnitten: Familie, Immobilien, berufliche Mitte, Steueroptimierung.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Ist der Download wirklich kostenlos?
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a">Ja, vollkommen kostenlos. Du bekommst den 15-seitigen PDF-Guide sofort per E-Mail. Optional erhältst du danach unsere 7-Tage-Willkommens-Sequenz — die du jederzeit mit einem Klick abbestellen kannst.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Brauche ich Vorkenntnisse in Geldanlage?
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a">Nein. Der Schnellcheck ist so aufgebaut, dass er sowohl für Anfänger als auch für Fortgeschrittene wertvolle Erkenntnisse liefert. Wir verwenden kein Fachchinesisch und erklären jeden Fachbegriff direkt im Kontext.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Ist das eine Anlageberatung?
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a">Nein. Alle Inhalte dienen ausschließlich der Bildung und stellen keine Anlage-, Steuer- oder Versicherungsberatung dar. Bei komplexen Fällen empfehlen wir immer einen unabhängigen Honorarberater. Alle Affiliate-Links werden transparent als Werbung gekennzeichnet.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+        Was passiert nach dem Download?
+        <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+      <div class="faq-a">Du erhältst den PDF-Link sofort. Optional: Eine 5-teilige E-Mail-Sequenz über 7 Tage mit dem 3-Schritte-Framework, aktuellen Markteinblicken und dem Angebot für unseren ETF-Einsteigerkurs (97 €) oder ein kostenloses Erstgespräch. Kein Zwang, keine versteckten Kosten.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Bereit für deine finanzielle Standortbestimmung?</h2>
+    <p>Trag dich jetzt ein und hol dir den FIRE-Schnellcheck. Es dauert weniger als eine Minute — und kann dir Jahre ineffizienter Geldanlage ersparen.</p>
+<!-- Professional PDF Mockup -->
+<div style="max-width: 320px; margin: 0 auto 24px; filter: drop-shadow(0 12px 24px rgba(0,0,0,0.15)); transform: rotate(-1deg);">
+<svg viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; border-radius: 8px;">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#16213e" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Document background -->
+  <rect x="0" y="0" width="320" height="420" rx="6" fill="#ffffff" filter="url(#shadow)"/>
+  
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="320" height="8" rx="6" fill="#ffb800"/>
+  <rect x="0" y="8" width="320" height="4" fill="#ffb800"/>
+  
+  <!-- Right side accent block -->
+  <rect x="220" y="0" width="100" height="160" rx="6" fill="#ffb800" opacity="0.9"/>
+  
+  <!-- Empire Expansion logo area -->
+  <text x="20" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#16213e">EMPIRE EXPANSION</text>
+  
+  <!-- Free badge -->
+  <rect x="20" y="45" width="120" height="18" rx="9" fill="#ffb800"/>
+  <text x="80" y="57" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">KOSTENLOSER DOWNLOAD</text>
+  
+  <!-- Main title -->
+  <text x="20" y="110" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#16213e">Der Finanzielle Freiheit-Check für 40+</text>
+  
+  <!-- Subtitle -->
+  <text x="20" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#666666">Aktuelle Marktdaten & konkrete Handlungsschritte.</text>
+  
+  <!-- Bottom dark bar with details -->
+  <rect x="0" y="340" width="320" height="80" rx="6" fill="#16213e"/>
+  <text x="20" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#ffffff" opacity="0.9">ecom28.de | hallo@ecom28.de</text>
+  <text x="20" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#ffffff" opacity="0.9">cal.com/empire-expansion</text>
+  <text x="20" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#ffffff" opacity="0.6">Teil des Empire-Expansion-Oekosystems</text>
+  
+  <!-- Decorative page lines -->
+  <line x1="20" y1="170" x2="180" y2="170" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="185" x2="160" y2="185" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="200" x2="190" y2="200" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="215" x2="140" y2="215" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="230" x2="170" y2="230" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="245" x2="150" y2="245" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="260" x2="180" y2="260" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="275" x2="160" y2="275" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="290" x2="190" y2="290" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="305" x2="170" y2="305" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Checklist checkbox simulation -->
+  <rect x="20" y="178" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="193" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="208" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="223" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="238" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="253" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="268" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="283" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="298" width="6" height="6" fill="none" stroke="#16213e" stroke-width="0.5" rx="1"/>
+  
+  <!-- Checkmark in some boxes -->
+  <path d="M22 180 l1 1.5 l2 -2.5" stroke="#ffb800" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 210 l1 1.5 l2 -2.5" stroke="#ffb800" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 240 l1 1.5 l2 -2.5" stroke="#ffb800" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 270 l1 1.5 l2 -2.5" stroke="#ffb800" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Corner fold effect -->
+  <polygon points="320,0 320,30 290,0" fill="#16213e" opacity="0.1"/>
+</svg>
+</div>
+    <a href="#form" class="cta-btn">
+      <svg viewBox="0 0 24 24" style="width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><path d="M12 15V3m0 0L7 8m5-5l5 5M3 12h1.5a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5H3a1.5 1.5 0 01-1.5-1.5v-6A1.5 1.5 0 013 12zm16.5 0H21a1.5 1.5 0 011.5 1.5v6a1.5 1.5 0 01-1.5 1.5h-1.5a1.5 1.5 0 01-1.5-1.5v-6a1.5 1.5 0 011.5-1.5z"/></svg>
+      Jetzt kostenlos sichern
+    </a>
+    <p class="fine-print">Keine versteckten Kosten. Kein Abo. Jederzeit abbestellbar. DSGVO-konform.</p>
+  </div>
+</section>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="#form">Kostenlosen FIRE-Schnellcheck sichern →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family:var(--display);font-weight:600;font-size:1.1rem;color:rgba(255,255,255,0.8);margin-bottom:4px">Empire <span style="color:var(--amber)">Expansion</span></div>
+        <div style="font-family:var(--mono);font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.35)">Verfahren 09 — Finanzielle Freiheit</div>
+      </div>
+      <div class="footer-links">
+        <a href="../impressum.html">Impressum</a>
+        <a href="../datenschutz.html">Datenschutz</a>
+        <a href="mailto:hallo@ecom28.de">Kontakt</a>
+      </div>
+    </div>
+    <p class="footer-disclaimer">Hinweis: Alle Inhalte dienen ausschließlich der Bildung und stellen keine Anlage-, Steuer- oder Versicherungsberatung dar. Bei komplexen Entscheidungen konsultieren Sie bitte einen unabhängigen Honorarberater. Empire Expansion ist keine Bank, kein Versicherungsmakler und kein Finanzdienstleister. Affiliate-Links werden als Werbung gekennzeichnet. Aktuelle Marktdaten: Juli 2026.</p>
+  </div>
+</footer>
+
+</body>
+</html>
