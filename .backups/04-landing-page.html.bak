@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KI-Potenzial-Check für den Mittelstand — Ihr PDF-Report in 5 Minuten</title>
+  <meta name="description" content="Finden Sie in 5 Minuten heraus, wo KI in Ihrem Unternehmen Zeit und Kosten spart. Kostenloser PDF-Report + Erstgespräch.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel Platzhalter -->
+  <script>
+    // META PIXEL — EINFÜGEN BEI GO-LIVE
+    // !function(f,b,e,v,n,t,s){...}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    // fbq('init', 'YOUR_PIXEL_ID'); fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <!-- <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/> -->
+  </noscript>
+
+  <!-- Google Analytics 4 Platzhalter -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID'); // ECHTE ID EINSETZEN
+  </script>
+
+  <style>
+    :root{
+      --paper:#f6f1e7;
+      --paper-raised:#fffdf8;
+      --ink:#1c2333;
+      --muted:#5b5a6e;
+      --line:#e0d8c6;
+      --amber:#b8842e;
+      --business:#3d4f8f;
+      --business-tint:#eef0f7;
+      --business-deep:#2a3a6b;
+      --accent:#c75d3a;
+      --accent-tint:#fdf2ed;
+      --mono: 'IBM Plex Mono', ui-monospace, Menlo, monospace;
+      --sans: 'IBM Plex Sans', system-ui, sans-serif;
+      --display: 'Fraunces', Georgia, serif;
+      --success:#1f6f5c;
+      --urgent:#c0392b;
+    }
+    *{ margin:0; padding:0; box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap{ max-width: 720px; margin: 0 auto; padding: 0 28px; }
+    a{ color: inherit; }
+    :focus-visible{ outline: 3px solid var(--amber); outline-offset: 2px; }
+
+    /* FOMO Banner */
+    .fomo-banner{
+      background: var(--urgent);
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .fomo-banner strong{ font-weight: 600; }
+    .fomo-banner .pulse-dot{
+      display: inline-block;
+      width: 7px; height: 7px;
+      background: #fff;
+      border-radius: 50%;
+      margin-right: 8px;
+      animation: pulse 1.6s ease-in-out infinite;
+      vertical-align: middle;
+    }
+    @keyframes pulse{
+      0%,100%{ opacity:1; transform:scale(1); }
+      50%{ opacity:0.4; transform:scale(0.85); }
+    }
+
+    /* Masthead */
+    .masthead{ border-bottom: 1px solid var(--line); background: rgba(246,241,231,0.95); backdrop-filter: blur(6px); }
+    .masthead-inner{ display:flex; align-items:center; justify-content:space-between; padding: 16px 0; flex-wrap: wrap; gap: 8px 20px; }
+    .wordmark{ font-family: var(--display); font-weight:600; font-size:1.18rem; letter-spacing:-0.01em; color: var(--ink); }
+    .wordmark span{ color: var(--business); }
+    .masthead nav{ display:flex; gap:22px; font-family: var(--mono); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--muted); }
+    .masthead nav a{ text-decoration:none; }
+    .masthead nav a:hover{ color: var(--ink); }
+    @media (max-width: 600px){ .masthead nav{ display:none; } }
+
+    /* Hero */
+    .hero{ padding: 56px 0 44px; text-align: center; }
+    .hero-eyebrow{
+      font-family: var(--mono); font-size:0.74rem; letter-spacing:0.14em; text-transform:uppercase;
+      color: var(--business); margin-bottom: 18px; display:flex; align-items:center; justify-content:center; gap:10px;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after{
+      content:""; width:24px; height:1px; background: var(--business); display:inline-block;
+    }
+    .hero h1{
+      font-family: var(--display); font-weight:600;
+      font-size: clamp(1.9rem, 5.5vw, 3.2rem);
+      line-height: 1.1; letter-spacing:-0.02em;
+      max-width: 18ch; margin: 0 auto 22px;
+    }
+    .hero h1 em{ font-style:italic; color: var(--business); font-weight:500; }
+    .hero-lede{
+      font-size: 1.08rem; color: var(--muted); max-width: 52ch; margin: 0 auto 32px;
+    }
+    .hero-badge{
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--business-tint); color: var(--business-deep);
+      font-family: var(--mono); font-size: 0.76rem; padding: 6px 14px; border-radius: 20px;
+      margin-bottom: 28px;
+    }
+    .hero-badge svg{ width: 16px; height: 16px; }
+
+    /* PDF Mockup SVG */
+    .mockup-wrap{ display:flex; justify-content:center; margin-bottom: 32px; }
+    .pdf-mockup{
+      width: 220px; filter: drop-shadow(0 18px 40px rgba(29,35,51,0.18));
+      transition: transform 0.3s ease;
+    }
+    .pdf-mockup:hover{ transform: translateY(-6px) rotate(-1deg); }
+
+    /* CTAs */
+    .cta-primary{
+      display: inline-block; background: var(--business); color: white;
+      padding: 16px 36px; font-size: 1.05rem; border-radius: 10px;
+      text-decoration: none; font-weight: 600; letter-spacing: -0.01em;
+      transition: background 0.2s, transform 0.2s; border: none; cursor: pointer;
+      box-shadow: 0 6px 20px rgba(61,79,143,0.28);
+    }
+    .cta-primary:hover{ background: var(--business-deep); transform: translateY(-1px); }
+    .cta-secondary{
+      display: inline-block; background: transparent; color: var(--ink);
+      padding: 14px 28px; font-size: 0.98rem; border-radius: 10px;
+      text-decoration: none; font-weight: 500;
+      border: 1.5px solid var(--line); margin-left: 12px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .cta-secondary:hover{ border-color: var(--business); background: var(--business-tint); }
+    @media (max-width: 520px){
+      .cta-secondary{ display: block; margin: 12px auto 0; max-width: 280px; }
+    }
+    .cta-note{
+      font-family: var(--mono); font-size: 0.72rem; color: var(--muted);
+      margin-top: 14px;
+    }
+
+    /* Social Proof Bar */
+    .social-bar{
+      background: var(--paper-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      padding: 18px 0; text-align: center;
+    }
+    .social-bar-inner{ display:flex; justify-content:center; align-items:center; gap: 28px; flex-wrap:wrap; }
+    .social-bar .stat{ font-family: var(--display); font-weight:600; font-size: 1.5rem; color: var(--business); }
+    .social-bar .stat-label{ font-family: var(--mono); font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* Sections */
+    .section{ padding: 56px 0; }
+    .section h2{
+      font-family: var(--display); font-weight:600; font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+      letter-spacing: -0.01em; margin-bottom: 18px; text-align: center;
+    }
+    .section h2 em{ font-style:italic; color: var(--business); font-weight:500; }
+    .section-intro{ text-align: center; color: var(--muted); font-size: 1.02rem; max-width: 54ch; margin: 0 auto 36px; }
+
+    /* Problem cards */
+    .problem-grid{ display:grid; gap: 16px; }
+    .problem-card{
+      background: var(--paper-raised); border: 1px solid var(--line); border-radius: 14px;
+      padding: 24px 24px 22px; display:flex; gap: 16px; align-items:flex-start;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .problem-card:hover{ box-shadow: 0 10px 28px -12px rgba(28,35,51,0.12); border-color: var(--business); }
+    .problem-icon{
+      flex-shrink:0; width:40px; height:40px; border-radius:10px;
+      background: var(--accent-tint); color: var(--accent);
+      display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.1rem;
+      font-family: var(--display);
+    }
+    .problem-card h4{ font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; color: var(--ink); }
+    .problem-card p{ font-size: 0.95rem; color: var(--muted); line-height:1.55; }
+
+    /* Steps */
+    .steps-bg{ background: var(--business-tint); }
+    .step-grid{ display:grid; gap: 18px; counter-reset: step; }
+    .step-card{
+      background: var(--paper-raised); border: 1px solid var(--line); border-radius: 14px;
+      padding: 26px 24px; position: relative; overflow: hidden;
+    }
+    .step-card::before{
+      counter-increment: step;
+      content: counter(step);
+      position: absolute; top: -10px; right: 14px;
+      font-family: var(--display); font-weight: 600; font-size: 4.5rem;
+      color: var(--business); opacity: 0.06; line-height: 1;
+    }
+    .step-card h4{ font-family: var(--display); font-weight: 600; font-size: 1.15rem; margin-bottom: 8px; color: var(--business-deep); }
+    .step-card p{ font-size: 0.96rem; color: var(--muted); }
+    .step-meta{
+      font-family: var(--mono); font-size: 0.7rem; color: var(--business);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;
+    }
+    @media (min-width: 620px){ .step-grid{ grid-template-columns: 1fr 1fr 1fr; } }
+
+    /* Service preview */
+    .service-card{
+      background: var(--paper-raised); border: 1px solid var(--line); border-radius: 14px;
+      padding: 22px 20px; text-align: center; transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .service-card:hover{ box-shadow: 0 10px 28px -12px rgba(28,35,51,0.12); border-color: var(--business); }
+    .service-card h4{ font-size: 1rem; font-weight: 600; margin-bottom: 6px; color: var(--ink); }
+    .service-card p{ font-size: 0.9rem; color: var(--muted); }
+    .service-grid{ display:grid; gap: 16px; margin-bottom: 32px; }
+    @media (min-width: 520px){ .service-grid{ grid-template-columns: 1fr 1fr; } }
+
+    /* Price anchor */
+    .price-box{
+      background: var(--ink); color: white; border-radius: 16px; padding: 36px 28px; text-align: center;
+      margin-top: 8px;
+    }
+    .price-box h3{ font-family: var(--display); font-weight: 600; font-size: 1.4rem; margin-bottom: 12px; }
+    .price-anchor{
+      font-family: var(--mono); font-size: 0.8rem; color: rgba(255,255,255,0.6); text-decoration: line-through;
+      display: block; margin-bottom: 4px;
+    }
+    .price-real{
+      font-family: var(--display); font-weight: 600; font-size: 2.6rem; color: var(--amber); line-height: 1;
+    }
+    .price-real span{ font-size: 1.1rem; color: rgba(255,255,255,0.8); }
+    .price-note{
+      font-size: 0.92rem; color: rgba(255,255,255,0.75); margin: 14px 0 24px;
+    }
+    .price-savings{
+      display: inline-block; background: rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 20px;
+      font-family: var(--mono); font-size: 0.75rem; color: rgba(255,255,255,0.85); margin-bottom: 20px;
+    }
+
+    /* Trust / FAQ */
+    .trust-grid{ display:flex; flex-wrap:wrap; justify-content:center; gap: 10px; list-style:none; }
+    .trust-pill{
+      background: var(--paper-raised); border: 1px solid var(--line); padding: 8px 16px; border-radius: 20px;
+      font-size: 0.88rem; color: var(--ink); display:flex; align-items:center; gap: 6px;
+    }
+    .trust-pill .check{ color: var(--success); font-weight: 700; }
+
+    .faq-item{ background: var(--paper-raised); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin-bottom: 14px; }
+    .faq-item h4{ font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; color: var(--ink); }
+    .faq-item p{ font-size: 0.95rem; color: var(--muted); }
+
+    /* Form */
+    .form-section{ background: var(--paper-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .lead-form{ max-width: 480px; margin: 0 auto; text-align: left; }
+    .lead-form label{ display:block; font-size: 0.82rem; font-weight: 600; margin-bottom: 6px; color: var(--ink); font-family: var(--sans); }
+    .lead-form input, .lead-form select{
+      width: 100%; padding: 14px 16px; margin-bottom: 16px; border: 1.5px solid var(--line); border-radius: 10px;
+      font-size: 1rem; background: white; font-family: var(--sans); color: var(--ink);
+      transition: border-color 0.2s;
+    }
+    .lead-form input:focus, .lead-form select:focus{ border-color: var(--business); outline: none; }
+    .lead-form button{ width: 100%; padding: 16px; background: var(--business); color: white; border: none; border-radius: 10px; font-size: 1.05rem; font-weight: 600; cursor: pointer; font-family: var(--sans); transition: background 0.2s; }
+    .lead-form button:hover{ background: var(--business-deep); }
+    .form-disclaimer{ font-size: 0.78rem; color: var(--muted); margin-top: 14px; text-align: center; font-family: var(--mono); }
+    .form-guarantee{
+      display:flex; align-items:center; justify-content:center; gap: 8px; margin-top: 18px;
+      font-size: 0.85rem; color: var(--success); font-weight: 500;
+    }
+
+    /* Final CTA */
+    .final-cta{ background: var(--business-deep); color: white; text-align: center; padding: 64px 0; }
+    .final-cta h2{ color: white; margin-bottom: 12px; }
+    .final-cta p{ color: rgba(255,255,255,0.8); margin-bottom: 28px; font-size: 1.05rem; }
+    .final-cta .cta-primary{ background: white; color: var(--business-deep); box-shadow: 0 6px 20px rgba(0,0,0,0.18); }
+    .final-cta .cta-primary:hover{ background: var(--paper); }
+
+    /* Footer */
+    footer{ background: #141821; color: rgba(255,255,255,0.55); text-align: center; padding: 32px 0; font-size: 0.85rem; }
+    footer a{ color: rgba(255,255,255,0.7); text-decoration: none; margin: 0 10px; }
+    footer a:hover{ color: white; text-decoration: underline; }
+
+    /* Sticky CTA */
+    .sticky-cta{ display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.96); padding: 12px 20px; box-shadow: 0 -4px 20px rgba(0,0,0,0.08); z-index: 90; border-top: 1px solid var(--line); backdrop-filter: blur(6px); }
+    .sticky-cta a{ display: block; width: 100%; text-align: center; }
+    @media (max-width: 599px){ .sticky-cta{ display: block; } body{ padding-bottom: 72px; } }
+
+    /* Urgency timer */
+    .urgency-box{
+      background: var(--accent-tint); border: 1.5px solid var(--accent); border-radius: 12px;
+      padding: 14px 18px; text-align: center; margin-bottom: 28px; font-size: 0.92rem; color: var(--accent);
+      font-weight: 500;
+    }
+    .urgency-box strong{ color: var(--urgent); }
+
+    /* Animations */
+    @keyframes rise{ to{ opacity:1; transform:none; } }
+    .fade-in{ opacity:0; transform: translateY(14px); animation: rise 0.7s ease-out forwards; }
+    .delay-1{ animation-delay: 0.1s; }
+    .delay-2{ animation-delay: 0.25s; }
+    .delay-3{ animation-delay: 0.4s; }
+
+    @media (prefers-reduced-motion: reduce){ .fade-in{ animation: none; opacity:1; transform:none; } }
+  </style>
+  <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
+  <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
+</head>
+<body data-theme="ki-integrationen">
+
+<!-- Masthead -->
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <div class="wordmark">Empire<span>·</span>Expansion</div>
+    <nav>
+      <a href="../index.html">Verfahrensregister</a>
+      <a href="#check">Check starten</a>
+      <a href="#preis">Preise</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <p class="hero-eyebrow">AZ 04 · KI-Integrationen 35+</p>
+    <h1 class="fade-in delay-1">Wo verliert Ihr Unternehmen <em>jede Woche Stunden?</em></h1>
+    <p class="hero-lede fade-in delay-2">Finden Sie in 5 Minuten heraus, welche Prozesse sich mit KI automatisieren lassen — und was das konkret in Zeit und Geld bedeutet. Kostenlos, unverbindlich, DSGVO-konform.</p>
+
+    <div class="hero-badge fade-in delay-2">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7v1a7 7 0 11-4-6.5"/><polyline points="16 1 8 9 5 6"/></svg>
+      12 Fragen · Individueller Score · Sofortiger PDF-Report
+    </div>
+
+    <!-- PDF Mockup SVG -->
+    <div class="mockup-wrap fade-in delay-3">
+      <svg class="pdf-mockup" viewBox="0 0 280 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="coverGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#3d4f8f"/>
+            <stop offset="100%" stop-color="#2a3a6b"/>
+          </linearGradient>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="rgba(29,35,51,0.18)"/>
+          </filter>
+        </defs>
+        <!-- Back page -->
+        <rect x="12" y="8" width="256" height="340" rx="10" fill="#e8e4db" transform="rotate(3 140 180)"/>
+        <!-- Front page -->
+        <rect x="4" y="4" width="256" height="340" rx="10" fill="url(#coverGrad)" filter="url(#shadow)"/>
+        <!-- Decorative circles -->
+        <circle cx="200" cy="60" r="40" fill="rgba(255,255,255,0.04)"/>
+        <circle cx="60" cy="300" r="50" fill="rgba(255,255,255,0.03)"/>
+        <!-- Top bar -->
+        <rect x="4" y="4" width="256" height="6" rx="3" fill="#b8842e"/>
+        <!-- Logo area -->
+        <text x="32" y="52" fill="white" font-family="Georgia, serif" font-size="16" font-weight="600" letter-spacing="-0.5">Empire</text>
+        <text x="32" y="70" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="8" letter-spacing="1">EXPANSION</text>
+        <!-- Title -->
+        <text x="32" y="120" fill="white" font-family="Georgia, serif" font-size="20" font-weight="600">KI-Potenzial-</text>
+        <text x="32" y="144" fill="white" font-family="Georgia, serif" font-size="20" font-weight="600">Check</text>
+        <!-- Subtitle -->
+        <text x="32" y="172" fill="rgba(255,255,255,0.75)" font-family="sans-serif" font-size="9">Ihr persönlicher Report für den</text>
+        <text x="32" y="186" fill="rgba(255,255,255,0.75)" font-family="sans-serif" font-size="9">Mittelstand — in 5 Minuten</text>
+        <!-- Score visualization -->
+        <rect x="32" y="210" width="200" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+        <rect x="32" y="210" width="156" height="8" rx="4" fill="#b8842e"/>
+        <text x="32" y="236" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="7" letter-spacing="0.5">SCORE: 78/100 · HOCHES POTENZIAL</text>
+        <!-- Bottom section -->
+        <rect x="32" y="260" width="200" height="1" fill="rgba(255,255,255,0.15)"/>
+        <text x="32" y="282" fill="white" font-family="sans-serif" font-size="10" font-weight="600">Top 3 Automatisierungsbereiche</text>
+        <rect x="32" y="294" width="180" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+        <rect x="32" y="308" width="140" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+        <rect x="32" y="322" width="100" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+        <!-- Corner fold -->
+        <path d="M 220 344 L 260 344 L 260 304 Z" fill="#e0d8c6" opacity="0.3"/>
+      </svg>
+    </div>
+
+    <div class="fade-in delay-3">
+      <a href="{{STRIPE_LINK}}" class="cta-primary">KI-Tool-Stack + Vorlagen-Set kaufen — 49 € →</a>
+      <a href="lead-magnet.pdf" class="cta-secondary" download>PDF direkt laden</a>
+      <p class="cta-note">30-Tage-Geld-zurück-Garantie · Sofortiger Download · DSGVO-konform</p>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof Bar -->
+<section class="social-bar">
+  <div class="wrap">
+    <div class="social-bar-inner">
+      <div><div class="stat">12</div><div class="stat-label">Fragen im Check</div></div>
+      <div><div class="stat">30</div><div class="stat-label">Tage Garantie</div></div>
+      <div><div class="stat">49 €</div><div class="stat-label">KI-Tool-Stack</div></div>
+      <div><div class="stat">299 €</div><div class="stat-label">Individuelles Setup</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Section -->
+<section class="section">
+  <div class="wrap">
+    <h2>Klingt das <em>bekannt?</em></h2>
+    <p class="section-intro">Die meisten Mittelständler verlieren 10–20 Stunden pro Woche an Aufgaben, die längst automatisiert sein könnten.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-icon">1</div>
+        <div>
+          <h4>Anfragen gehen verloren</h4>
+          <p>E-Mails, WhatsApp und Anrufe außerhalb der Bürozeiten. Manche bleiben unbeantwortet — und damit Aufträge liegen.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">2</div>
+        <div>
+          <h4>Ihr Team ist mit Routine überlastet</h4>
+          <p>Terminabsprachen, FAQs, Dokumente sortieren, Daten einpflegen. Stunden, die für wichtigere Arbeit fehlen.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">3</div>
+        <div>
+          <h4>Angebote dauern zu lange</h4>
+          <p>Was manuell Tage dauert, lässt sich mit KI in Minuten erledigen — wenn die Prozesse richtig aufgesetzt sind.</p>
+        </div>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">4</div>
+        <div>
+          <h4>Keine klare Übersicht</h4>
+          <p>Kennzahlen liegen in Excel oder im Kopf einzelner Mitarbeiter. Entscheidungen auf unvollständigen Daten.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Steps -->
+<section class="section steps-bg" id="check">
+  <div class="wrap">
+    <h2>Der KI-Potenzial-Check zeigt Ihnen den <em>konkreten Hebel</em></h2>
+    <p class="section-intro">In drei Schritten von der Frage zur ersten Umsetzung.</p>
+    <div class="step-grid">
+      <div class="step-card">
+        <div class="step-meta">Schritt 1 · 5 Minuten</div>
+        <h4>Check ausfüllen</h4>
+        <p>12 Fragen zu Ihren Prozessen, Tools und Zielen. Keine technischen Vorkenntnisse nötig.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-meta">Schritt 2 · Sofort</div>
+        <h4>PDF-Report erhalten</h4>
+        <p>Ihr persönlicher KI-Score, Top-3-Bereiche und geschätztes Einsparpotenzial — als Download.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-meta">Schritt 3 · 20 Minuten</div>
+        <h4>Erstgespräch buchen</h4>
+        <p>Wir besprechen, welcher erste Use-Case in den nächsten 14 Tagen live gehen kann.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Service Preview -->
+<section class="section" id="preis">
+  <div class="wrap">
+    <h2>Unser Einstiegspaket: <em>KI-Kundenkommunikation</em></h2>
+    <p class="section-intro">Ein KI-Agent für WhatsApp, E-Mail oder Webchat — der Anfragen beantwortet, Leads qualifiziert und Termine bucht. 24/7, in Ihrem Look & Feel, DSGVO-konform.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>🤖 KI-Agent</h4>
+        <p>Natürliche Sprache auf Deutsch. Antworten aus Ihren FAQs und Prozessen.</p>
+      </div>
+      <div class="service-card">
+        <h4>📅 Terminbuchung</h4>
+        <p>Kalenderanbindung, Verfügbarkeitsprüfung, Erinnerungen.</p>
+      </div>
+      <div class="service-card">
+        <h4>🎯 Lead-Qualifikation</h4>
+        <p>Name, Anliegen, Budget, Dringlichkeit — automatisch erfasst.</p>
+      </div>
+      <div class="service-card">
+        <h4>🔒 DSGVO-konform</h4>
+        <p>EU-basierte Verarbeitung. Keine unnötigen Daten an US-Clouds.</p>
+      </div>
+    </div>
+
+    <!-- Price Anchor Box -->
+    <div class="price-box">
+      <h3>Der Markt verlangt 990 € bis 1.500 € für ein KI-Setup.</h3>
+      <span class="price-anchor">Marktüblich: 1.490 €</span>
+      <div class="price-real">299 € <span>/ Setup</span></div>
+      <p class="price-note">Monatliche Betreuung ab 199 € · Go-Live in 14 Tagen · 30-Tage-Erfolgsgarantie</p>
+      <div class="price-savings">💰 Sie sparen 1.191 € gegenüber dem Marktdurchschnitt</div>
+      <a href="#form" class="cta-primary" style="background: white; color: var(--business-deep); box-shadow: 0 6px 20px rgba(0,0,0,0.18);">Jetzt Setup sichern →</a>
+      <p style="margin-top:14px; font-size:0.82rem; color:rgba(255,255,255,0.6);">Keine versteckten Kosten</p>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section class="section" style="background: var(--business-tint);">
+  <div class="wrap">
+    <h2>Worauf es <em>beim Check ankommt</em></h2>
+    <p class="section-intro">Keine Buzzword-Beratung. Keine theoretischen Vorträge. Konkrete Prozesse, messbare Ergebnisse.</p>
+    <div class="problem-grid">
+      <div class="problem-card" style="border-left: 4px solid var(--business);">
+        <div>
+          <h4>DSGVO-konforme Umsetzung</h4>
+          <p>EU-basierte Infrastruktur, keine Daten an US-Clouds. Compliance eingebaut, nicht nachträglich gepatcht.</p>
+        </div>
+      </div>
+      <div class="problem-card" style="border-left: 4px solid var(--business);">
+        <div>
+          <h4>Konkrete Prozess-Empfehlung</h4>
+          <p>Sie erhalten keinen generischen KI-Vortrag, sondern eine priorisierte Liste: Was zuerst, was danach, was das kostet.</p>
+        </div>
+      </div>
+      <div class="problem-card" style="border-left: 4px solid var(--business);">
+        <div>
+          <h4>Kein Vertragszwang nach dem Gespräch</h4>
+          <p>Der Check und das Erstgespräch sind kostenlos. Sie entscheiden, ob und wann Sie starten.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Form Section -->
+<section class="section form-section" id="form">
+  <div class="wrap">
+    <h2>Kaufen Sie den KI-Tool-Stack <em>jetzt</em></h2>
+    <p class="section-intro">Sofortiger Download nach dem Kauf. 30-Tage-Geld-zurück-Garantie.</p>
+
+    <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
+      <input type="hidden" name="subject" value="Neuer Lead: 04-ki-integrationen-35plus">
+      <input type="hidden" name="tag" value="04-ki-integrationen-35plus">
+
+      <label for="first_name">Vorname</label>
+      <input type="text" id="first_name" name="first_name" placeholder="Ihr Vorname" required>
+
+      <label for="email">E-Mail-Adresse</label>
+      <input type="email" id="email" name="email" placeholder="name@unternehmen.de" required>
+
+      <label for="company_size">Unternehmensgröße</label>
+      <select id="company_size" name="company_size" required>
+        <option value="" disabled selected>Wählen Sie...</option>
+        <option value="1">1 Mitarbeiter (Solopreneur)</option>
+        <option value="2-5">2–5 Mitarbeiter</option>
+        <option value="6-20">6–20 Mitarbeiter</option>
+        <option value="21-50">21–50 Mitarbeiter</option>
+        <option value="50+">Mehr als 50 Mitarbeiter</option>
+      </select>
+
+      <label for="industry">Branche</label>
+      <select id="industry" name="industry" required>
+        <option value="" disabled selected>Wählen Sie...</option>
+        <option value="handwerk">Handwerk / Gewerbe</option>
+        <option value="b2b-dienstleistung">B2B-Dienstleistung</option>
+        <option value="kanzlei-praxis">Kanzlei / Praxis</option>
+        <option value="handel">Handel / E-Commerce</option>
+        <option value="sonstige">Sonstige</option>
+      </select>
+
+      <label for="pain_point">Größter Schmerzpunkt</label>
+      <select id="pain_point" name="pain_point" required>
+        <option value="" disabled selected>Wählen Sie...</option>
+        <option value="anfragen-termine">Anfragen beantworten / Termine buchen</option>
+        <option value="angebote">Angebote erstellen</option>
+        <option value="vertrieb-followup">Vertrieb & Follow-up</option>
+        <option value="wissensorganisation">Interne Wissensorganisation</option>
+        <option value="reporting">Reporting & Kennzahlen</option>
+        <option value="backoffice">Backoffice & Datenpflege</option>
+      </select>
+
+      <button type="submit">Jetzt kaufen — 49 € →</button>
+      <p class="form-disclaimer">Ihre Daten werden DSGVO-konform verarbeitet und nicht an Dritte weitergegeben. Sie können sich jederzeit abmelden.</p>
+      <div class="form-guarantee">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1l2.5 2.5h3L14 6v7a2 2 0 01-2 2H4a2 2 0 01-2-2V6l.5-2.5h3L8 1z"/><path d="M5 8l2 2 4-4"/></svg>
+        30-Tage-Erfolgsgarantie auf jedes Setup
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Trust Section -->
+<section class="section">
+  <div class="wrap">
+    <h2>Sie können sich <em>darauf verlassen</em></h2>
+    <p class="section-intro">Kein Spam. Keine versteckten Kosten. Kein Kleingedrucktes.</p>
+    <ul class="trust-grid">
+      <li class="trust-pill"><span class="check">✓</span> DSGVO-konform</li>
+      <li class="trust-pill"><span class="check">✓</span> EU-basierte Verarbeitung</li>
+      <li class="trust-pill"><span class="check">✓</span> Kein Spam</li>
+      <li class="trust-pill"><span class="check">✓</span> 30-Tage-Erfolgsgarantie</li>
+      <li class="trust-pill"><span class="check">✓</span> Festpreis statt Stundensatz</li>
+      <li class="trust-pill"><span class="check">✓</span> Go-Live in 14 Tagen</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background: var(--paper-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <h2>Häufige <em>Fragen</em></h2>
+    <div class="faq-item">
+      <h4>Was ist im KI-Tool-Stack enthalten?</h4>
+      <p>Ein komplettes Set an KI-Vorlagen, Prompt-Bibliotheken und einem Schritt-für-Schritt-Setup-Guide für Ihr Unternehmen — sofort als Download nach dem Kauf.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Wer bekommt meine Daten?</h4>
+      <p>Nur Empire-Expansion. Wir geben Ihre Daten nicht weiter und verarbeiten sie DSGVO-konform auf EU-Servern.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Was ist der Unterschied zum Setup für 299 €?</h4>
+      <p>Der KI-Tool-Stack (49 €) ist ein Selbststarter-Paket mit Vorlagen. Das individuelle Setup (299 €) beinhaltet persönliche Beratung, maßgeschneiderte Konfiguration und Go-Live-Begleitung.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Für welche Unternehmen ist das geeignet?</h4>
+      <p>Für Unternehmen ab 1 Mitarbeiter, besonders Handwerk, B2B-Dienstleistungen, Kanzleien, Praxen und Solopreneure ab 35.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Kann ich den Check auch ohne Terminbuchung nutzen?</h4>
+      <p>Ja. Der Report steht Ihnen auch ohne weiteren Kontakt zur Verfügung. Laden Sie ihn einfach herunter.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Starten Sie jetzt. In 5 Minuten wissen Sie mehr.</h2>
+    <p>Oder vereinbaren Sie direkt ein kostenloses Erstgespräch.</p>
+<!-- Professional PDF Mockup -->
+<div style="max-width: 320px; margin: 0 auto 24px; filter: drop-shadow(0 12px 24px rgba(0,0,0,0.15)); transform: rotate(-1deg);">
+<svg viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; border-radius: 8px;">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#006266" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Document background -->
+  <rect x="0" y="0" width="320" height="420" rx="6" fill="#ffffff" filter="url(#shadow)"/>
+  
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="320" height="8" rx="6" fill="#00b8a9"/>
+  <rect x="0" y="8" width="320" height="4" fill="#00b8a9"/>
+  
+  <!-- Right side accent block -->
+  <rect x="220" y="0" width="100" height="160" rx="6" fill="#00b8a9" opacity="0.9"/>
+  
+  <!-- Empire Expansion logo area -->
+  <text x="20" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#006266">EMPIRE EXPANSION</text>
+  
+  <!-- Free badge -->
+  <rect x="20" y="45" width="120" height="18" rx="9" fill="#00b8a9"/>
+  <text x="80" y="57" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">KOSTENLOSER DOWNLOAD</text>
+  
+  <!-- Main title -->
+  <text x="20" y="110" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#006266">KI-Automatisierung für Ihr Business</text>
+  
+  <!-- Subtitle -->
+  <text x="20" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#666666">KI-Agentur ab 299 EUR statt 990-1.500 EUR Marktpreis</text>
+  
+  <!-- Bottom dark bar with details -->
+  <rect x="0" y="340" width="320" height="80" rx="6" fill="#006266"/>
+  <text x="20" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#ffffff" opacity="0.9">ecom28.de | hallo@ecom28.de</text>
+  <text x="20" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#ffffff" opacity="0.9">cal.com/empire-expansion</text>
+  <text x="20" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#ffffff" opacity="0.6">Teil des Empire-Expansion-Oekosystems</text>
+  
+  <!-- Decorative page lines -->
+  <line x1="20" y1="170" x2="180" y2="170" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="185" x2="160" y2="185" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="200" x2="190" y2="200" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="215" x2="140" y2="215" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="230" x2="170" y2="230" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="245" x2="150" y2="245" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="260" x2="180" y2="260" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="275" x2="160" y2="275" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="290" x2="190" y2="290" stroke="#e0e0e0" stroke-width="1"/>
+  <line x1="20" y1="305" x2="170" y2="305" stroke="#e0e0e0" stroke-width="1"/>
+  
+  <!-- Checklist checkbox simulation -->
+  <rect x="20" y="178" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="193" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="208" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="223" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="238" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="253" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="268" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="283" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="298" width="6" height="6" fill="none" stroke="#006266" stroke-width="0.5" rx="1"/>
+  
+  <!-- Checkmark in some boxes -->
+  <path d="M22 180 l1 1.5 l2 -2.5" stroke="#00b8a9" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 210 l1 1.5 l2 -2.5" stroke="#00b8a9" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 240 l1 1.5 l2 -2.5" stroke="#00b8a9" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 270 l1 1.5 l2 -2.5" stroke="#00b8a9" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  
+  <!-- Corner fold effect -->
+  <polygon points="320,0 320,30 290,0" fill="#006266" opacity="0.1"/>
+</svg>
+</div>
+    <a href="{{STRIPE_LINK}}" class="cta-primary">KI-Tool-Stack + Vorlagen-Set — 49 € →</a>
+    <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-secondary" style="border-color:rgba(255,255,255,0.3); color:white; margin-top:12px;">Individuelles Setup ab 299 € buchen</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="wrap">
+    <p>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="mailto:hallo@ecom28.de">Kontakt</a>
+    </p>
+    <p>&copy; 2026 Empire-Expansion</p>
+  </div>
+</footer>
+
+<!-- Sticky Mobile CTA -->
+<div class="sticky-cta">
+  <a href="{{STRIPE_LINK}}" class="cta-primary">KI-Tool-Stack + Vorlagen-Set kaufen — 49 € →</a>
+</div>
+
+</body>
+</html>

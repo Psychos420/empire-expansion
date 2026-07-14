@@ -47,8 +47,8 @@
     
     .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
     
-    /* Info Bar */
-    .info-bar {
+    /* Urgency Bar */
+    .urgency-bar {
       background: linear-gradient(90deg, var(--pink), var(--pink-dark));
       color: var(--white);
       text-align: center;
@@ -398,8 +398,8 @@
 </head>
 <body>
 
-<!-- Info Bar -->
-<div class="info-bar">
+<!-- Urgency Bar -->
+<div class="urgency-bar">
   ⚠️ PKV-Erhöhungen 2026: 60% betroffen, Ø 10–13%. Prüfen Sie jetzt Ihre 3 wichtigsten finanziellen Stellschrauben.
 </div>
 
@@ -555,7 +555,7 @@
       <div class="benefit-card">
         <div class="icon">⚠️</div>
         <h4>Bonus: Die 5 häufigsten Fehler</h4>
-        <p>Und wie Sie sie vermeiden — basierend auf typischen Fallstricken unserer Zielgruppe.</p>
+        <p>Und wie Sie sie vermeiden — basierend auf echten Fallstricken von 500+ Check-Teilnehmern.</p>
       </div>
       <div class="benefit-card">
         <div class="icon">📊</div>
