@@ -1,6 +1,6 @@
 # Lead-Magnet: Der 10-Punkte-Check
 
-**Titel:** Der 10-Punkte-Check: Verkaufen Sie mehr Leads in 30 Tagen  
+**Titel:** Der 10-Punkte-Check: Generieren Sie mehr Leads in 30 Tagen  
 **Untertitel:** Für Dienstleister, die keine Lust mehr auf „mehr Sichtbarkeit" haben – und endlich messbare Anfragen wollen  
 **Zielgruppe:** Dienstleister mit 35+ Zielkunden  
 **Format:** PDF-Checkliste, 10–12 Seiten  

@@ -2,7 +2,7 @@
 
 **Ziel:** Vertrauen aufbauen, Einwände abbauen, zum kostenlosen Strategiegespräch führen  
 **Zielgruppe:** Dienstleister mit 35+ Zielkunden  
-**Lead-Magnet:** „Der 10-Punkte-Check: Verkaufen Sie mehr Leads in 30 Tagen"  
+**Lead-Magnet:** „Der 10-Punkte-Check: Generieren Sie mehr Leads in 30 Tagen"  
 **Absender-Name:** [Ihr Name] | [Agenturname]  
 **Absender-E-Mail:** [name]@[agentur].de  
 **Automation-Tool:** [Brevo / ActiveCampaign / GoHighLevel]

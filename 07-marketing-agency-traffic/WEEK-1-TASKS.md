@@ -45,7 +45,7 @@
 
 | Angebot | Preis | Positionierung |
 |---------|-------|----------------|
-| **Lead-Magnet** | 0 € | „Der 10-Punkte-Check: Verkaufen Sie mehr Leads in 30 Tagen" – qualifiziert Interessenten. |
+| **Lead-Magnet** | 0 € | „Der 10-Punkte-Check: Generieren Sie mehr Leads in 30 Tagen" – qualifiziert Interessenten. |
 | **Woche-1-Schnellstart-Paket** | **997 €** | Reduziertes Setup: Lead-Generator-Audit (60 Min Video), Landing Page, Lead-Magnet-PDF, 5-teilige E-Mail-Sequenz. Ohne laufende Betreuung. |
 | **Upgrade** | 1.497 €/Monat | Monatliche Betreuung & Optimierung nach dem ersten Monat. |
 

@@ -42,7 +42,7 @@ Ein komplettes, wiederholbares System, das in 30 Tagen Besucher in qualifizierte
 - Ziel: Conversion Rate von mindestens 25 %
 
 ### 4. Lead-Magnet
-- „Der 10-Punkte-Check: Verkaufen Sie mehr Leads in 30 Tagen"
+- „Der 10-Punkte-Check: Generieren Sie mehr Leads in 30 Tagen"
 - Als PDF-Checkliste mit Ihrem Branding
 - Optimiert für sofortigen Mehrwert und Weitergabe
 

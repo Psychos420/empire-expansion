@@ -104,7 +104,7 @@ Die Erfahrung zeigt: Viele Dienstleister investieren in Sichtbarkeit, haben aber
 
 Ich habe dazu einen kostenlosen 10-Punkte-Check erstellt:
 
-„Der 10-Punkte-Check: Verkaufen Sie mehr Leads in 30 Tagen"
+„Der 10-Punkte-Check: Generieren Sie mehr Leads in 30 Tagen"
 
 [PDF herunterladen]
 

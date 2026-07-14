@@ -1,6 +1,6 @@
 # Kimi — Live-Marktforschung für Empire Expansion
 
-**Letztes Update:** 2026-07-07  
+**Letztes Update:** 2026-07-14 (Session 11)  
 **Nächstes Update:** Bei jeder neuen Kimi-Session oder auf Anfrage via `REQUEST-FOR-KIMI.md`
 
 ---
@@ -224,6 +224,69 @@ Basierend auf gängigen B2B-Kaufprozessen und Rechtsanforderungen in DACH:
 - **Reddit r/Finanzen** akzeptiert keine Werbung, aber wertvolle Antworten mit Link im Profil funktionieren.
 - **Pinterest** liefert kostenlosen Traffic für Lifestyle-, Gesundheits- und Reise-Nischen mit Verzögerung (2–4 Wochen).
 - **TikTok** ist unberechenbar, aber mit 7+ Videos/Woche steigt die Wahrscheinlichkeit eines Viral-Hits.
+
+---
+
+## Aktive Anfragen an Kimi
+
+Siehe `REQUEST-FOR-KIMI.md`
+
+---
+
+## PayPal Business DE — Schnellstart (Update 2026-07-14)
+
+> **Kontext:** Claude Session 10 — Nutzer will PayPal selbst einrichten. Alle 10 Nischen mit `{{STRIPE_LINK}}` hängen an diesem Stop-Punkt.
+
+### Schnellste Route: Kontoeröffnung → Zahlungslink (1–3 Werktage)
+
+**Voraussetzung:** Alle Dokumente vorab als PDF bereit.
+
+| Schritt | Dauer | Was zu tun ist |
+|---------|-------|---------------|
+| 1. Registrierung | 10 Min | Auf `paypal.de/haendler` → „Geschäftskonto eröffnen". E-Mail (nicht bei PayPal hinterlegt), Passwort, Firmenname `eCom28 GmbH`, Rechtsform `GmbH`, HRB 39329 HB, Adresse, Branche. |
+| 2. E-Mail bestätigen | Sofort | Link in Bestätigungsmail klicken. |
+| 3. Bankkonto verknüpfen | 5 Min | Geschäftliches Bankkonto der eCom28 GmbH hinzufügen. Micro-Einzahlung oder Lastschriftmandat zur Verifizierung (1–2 Werktage). |
+| 4. Limits aufheben | 5 Min | Im Profil unter „Zahlungen empfangen" → „Limits aufheben". Ohne dieses Schritt ist das Empfangslimit niedrig. |
+| 5. KYC-Dokumente hochladen | 10 Min | Ausweis GF, aktueller Handelsregisterauszug (nicht älter als 12 Monate), Gesellschaftsvertrag, Adressnachweis (Strom-/Telefonrechnung oder Kontoauszug ≤ 12 Monate). |
+| 6. Wartezeit | 1–3 Werktage | PayPal prüft. Bei vollständigen Unterlagen meist automatische Freigabe. |
+| 7. Zahlungslink erstellen | 5 Min | Unter „Tools" → „PayPal.Me" oder „Zahlungen empfangen" → individuellen Link erstellen. Oder HTML-Button für Landing Pages generieren. |
+
+**Gesamtaufwand:** ~30 Minuten Aktivzeit + 1–3 Werktage Wartezeit.
+
+### Dokumenten-Checkliste für eCom28 GmbH
+
+- [ ] **Personalausweis oder Reisepass** des Geschäftsführers (Caner Ferhat Demirbas)
+- [ ] **Aktueller Handelsregisterauszug** (HRB 39329 HB, Bremen) — nicht älter als 12 Monate
+- [ ] **Gesellschaftsvertrag / Satzung** der eCom28 GmbH
+- [ ] **Gesellschafterliste** (falls UBOs > 25 % geprüft werden)
+- [ ] **Adressnachweis** für Geschäftsadresse (Rechnung oder Kontoauszug ≤ 12 Monate, kein Postfach)
+- [ ] **Geschäftliches Bankkonto** auf Firmennamen (für Auszahlungen)
+
+### Gebühren (Stand Juli 2026)
+
+| Transaktionstyp | Gebühr |
+|-----------------|--------|
+| PayPal Checkout | **2,99 % + 0,39 €** pro Transaktion |
+| Geld für Waren & Dienstleistungen | **2,49 % + 0,35 €** |
+| QR-Code | **0,90 %** |
+| Mikrozahlungen (< 5 €) | **4,99 % + 0,09 €** (muss beantragt werden) |
+
+**Staffelung ab 2.000 €/Monat:** Auf Antrag sinkt die Gebühr — 2,49 % (0–2.000 €) → 2,19 % (2.001–5.000 €) → 1,99 % (5.001–25.000 €) → 1,79 % (25.001–100.000 €) → **1,49 %** (> 100.000 €). Pauschale 0,35 € bleibt.
+
+### DACH-spezifische Fallstricke
+
+1. **Reserve-Mechanismus:** PayPal kann bei Neukonten 30 Tage lang einen Teil des Umsatzes (10–30 %) als Reserve einbehalten. Das ist normal, nicht persönlich gegen eCom28 gerichtet.
+2. **Auszahlungs-Sperre:** Erste Auszahlungen dauern 1–3 Werktage. Nach 30–60 Tagen Regelmäßigkeit meist sofort.
+3. **Chargeback-Risiko:** Digitale Produkte (PDFs, Kurse) haben höheres Chargeback-Risiko. PayPal entscheidet oft zugunsten des Käufers. Lösung: Klare AGBs, Download-Bestätigung per E-Mail, DSGVO-konformes Opt-in.
+4. **Kontosperrung:** Plötzliche Umsatzsprünge (z. B. 10 Verkäufe an einem Tag nach Wochen der Inaktivität) können Risikoprüfungen auslösen. Pro-Tipp: Kontinuierlich, nicht in Bursts verkaufen.
+5. **Naming:** Der angezeigte Firmenname im PayPal-Checkout sollte „eCom28 GmbH" oder „Empire Expansion" sein — nicht der persönliche Name des GF. Das erhöht Vertrauen und senkt Chargebacks.
+
+### Empfehlung für Empire Expansion
+
+- **Sofort:** PayPal Business Konto für eCom28 GmbH eröffnen (Stop-Punkt: Nutzer muss selbst die Daten eingeben).
+- **Parallel:** Stripe weiterhin beantragen (bessere Automatisierung, niedrigere Gebühren ab Volumen).
+- **Für den Start:** PayPal ist schneller live. Stripe besser für Langfrist-Automatisierung.
+- **Für Landing Pages:** PayPal-Button als `{{PAYPAL_LINK}}` einfügen, parallel zu `{{STRIPE_LINK}}`. Beide Optionen geben Käufern Wahl.
 
 ---
 

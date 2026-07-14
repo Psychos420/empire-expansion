@@ -17,10 +17,29 @@
 - Alles committed + gepusht.
 
 ### Noch offen
-- Stripe/PayPal-Links für 10 Nischen — bleibt Stop-Punkt beim Nutzer (Stripe „kommt später", PayPal „muss ich noch schauen").
-- Persönlicher Outreach-Versand, Social-Posting, Video-Aufnahmen — bleibt Stop-Punkt Nutzer (Session 8/9 unverändert).
+- Stripe/PayPal-Links für 10 Nischen — bleibt Stop-Punkt beim Nutzer (Stripe „kommt später", PayPal-Checkliste von Kimi bereit, Kontoeröffnung bleibt Nutzer).
+- Persönlicher Outreach-Versand, Social-Posting, Video-Aufnahmen — bleibt Stop-Punkt Nutzer. LinkedIn-Login in der Browser-Session geprüft: nicht eingeloggt, kein automatisches Posten/DMs möglich ohne Nutzer-Login (harte Grenze, kein Passwort-Eingriff durch Claude).
 - Thematische Nähe 01-affiliate-marketing ↔ 09-finanzielle-freiheit (s. o.) — Beobachtung, keine Aktion.
 - Brevo-Formulare weiterhin gesperrt für den Account — Web3Forms-Fallback läuft stabil (heute live verifiziert).
+- Kimis P0/P1-Liste aus dem Quality-Audit (PDF-Redesign, echte Mockups, Multi-Step-Formulare, Exit-Intent) — bewusst nicht in dieser Session durchgezogen, siehe unten.
+
+---
+
+## Session 10 Fortsetzung (2026-07-14) — Homepage-Redesign, Kimi-Quality-Audit-Reaktion, fehlende Call-Scripts
+
+- **Nutzer-Auftrag:** Website soll nicht wie eine Liste aussehen, sondern „bezaubern", jedes Thema soll seinen eigenen Platz haben. Außerdem: alles bis zum letzten Schritt selbstständig abarbeiten, Kimi bei Bedarf als Hilfe einsetzen.
+- **Homepage komplett neu gebaut** (`index.html`): von tabellarischem „Verfahrensregister" zu editorialem Dossier-Layout — drei vollflächig eingefärbte Kapitel-Sektionen (Finanz/Business/Alltag), Fraunces (Display-Serif) + IBM Plex Sans/Mono statt Space Grotesk/Source Serif, jede der 14 Nischen als eigene Karte mit individuellem rotierten SVG-Siegel (Winkel aus Aktenzeichen abgeleitet). Lokal mit Preview-Server geprüft, dann live deployt (Commit `de8a6dc`), auf Produktion verifiziert (Titel + Build-Status).
+- **Grenzen bei „ALLES selbst machen" transparent gemacht:** LinkedIn-Login in der Browser-Session geprüft (nicht eingeloggt, echte Google-Konten in der Auswahl sichtbar) — kein automatisches Posten/DMs möglich, das ist eine harte technische + Policy-Grenze, keine Ermessensfrage. Kimi kann nicht als Subagent/Swarm direkt gesteuert werden, nur über das bestehende Datei-Protokoll.
+- **Kimi hat parallel `KIMI-QUALITY-AUDIT-REPORT.md` geliefert** (unaufgefordert, Session 11 auf Kimi-Seite) — kritischster Fund: erfundene Testimonials mit Fake-Namen (M. K./S. B./Michael K./Sabine K./Anna/Sabine/etc.) und unbelegte Zahlen ("500+ Downloads 2025", "15–25 % Einsparung ohne Quelle", "über 1.000 Downloads") in 6 Landing Pages (01, 02, 03, 04, 05, 06) — potenziell irreführende Werbung, kein rein kosmetisches Problem. **Sofort behoben:** alle fabrizierten Zitate/Zahlen entfernt, 05 PKV nutzt jetzt echte, von Kimi gesourcte Zahlen (~60 % betroffen, 10–13 % Erhöhung 2026).
+- **Copy-Fehler bei 07 gefixt:** "Verkaufen Sie mehr Leads" → "Generieren Sie mehr Leads" (Kimi-Fund), in allen 9 betroffenen Dateien der Nische konsistent ersetzt (Landing Page, index.html, LEAD-MAGNET.md, EMAIL-SEQUENCE.md, etc.).
+- **Kimis Behauptung "02 TikTok Shop Landing Page fehlt fast vollständig" gegengeprüft und nicht bestätigt** (166 Zeilen, vergleichbar mit anderen Nischen) — in `REQUEST-FOR-KIMI.md` zurückgemeldet.
+- **3 fehlende CALL-SCRIPT.md ergänzt** (05 PKV, 08 App-Ideen, 12 Selbstständigkeit) — die einzigen 3 der 7 Terminbuchungs-Nischen ohne Verkaufs-/Gesprächsleitfaden. 05 bewusst als Qualifizierungs-/Weiterleitungs-Gespräch (kein eigener Abschluss, keine Maklerlizenz) statt als Sales-Close geschrieben.
+- **Bewusst NICHT in dieser Session gemacht:** Kimis P0/P1-Liste (professionelle PDF-Redesigns mit echten Mockups/Infografiken, Multi-Step-Formulare, Exit-Intent-Popups, Sticky-CTAs) — das ist ein eigener, großer Umbau über alle 14 PDFs/Landing-Pages, bewusst als nächster dedizierter Baustein zurückgestellt statt hastig durchgezogen. Neue Anfrage an Kimi gestellt: Recherche zu PDF-Design-Tools als Ersatz/Ergänzung für die aktuelle fpdf2-Pipeline.
+- Autopilot zweimal erneut gelaufen (nach Call-Scripts, nach Testimonial-Fixes), alles committed + gepusht.
+
+### Noch offen
+- Kimis P0/P1-Design-Backlog (s. o.) — nächster großer Baustein, noch nicht begonnen.
+- Alles Übrige aus Session 10 (Stripe/PayPal, persönlicher Versand) unverändert offen.
 
 ---
 

@@ -19,7 +19,7 @@
 ## Hero-Bereich
 
 **Headline:**
-# Verkaufen Sie mehr Leads in 30 Tagen – ohne mehr auf Social Media zu posten
+# Generieren Sie mehr Leads in 30 Tagen – ohne mehr auf Social Media zu posten
 
 **Subheadline:**
 Der 10-Punkte-Check für Dienstleister, die keine Lust mehr auf „mehr Sichtbarkeit" haben und endlich messbare Anfragen wollen.
@@ -62,7 +62,7 @@ Das Problem ist nicht Ihre Expertise. Das Problem ist ein System, das Besucher n
 ## Ein simpler Check – 10 Fragen, die Ihren Funnel entblößen
 
 **Body:**
-Der „10-Punkte-Check: Verkaufen Sie mehr Leads in 30 Tagen" ist keine theoretische Abhandlung. Er ist ein Diagnose-Tool für Dienstleister, die wissen wollen, an welchen 3 Stellschrauben sie sofort drehen können.
+Der „10-Punkte-Check: Generieren Sie mehr Leads in 30 Tagen" ist keine theoretische Abhandlung. Er ist ein Diagnose-Tool für Dienstleister, die wissen wollen, an welchen 3 Stellschrauben sie sofort drehen können.
 
 In 10–12 Seiten prüfen Sie:
 - Ob Ihr Angebot als konkretes Ergebnis verkauft wird
