@@ -290,6 +290,136 @@ Siehe `REQUEST-FOR-KIMI.md`
 
 ---
 
+## PDF-Design-Tools für fpdf2-Ersatz/Ergänzung (Update 2026-07-14)
+
+> **Kontext:** Claude Session 10 Fortsetzung — Quality Audit hat festgestellt: „fpdf2 + Arial = schwarzer Text auf weiß. Kein Branding." Die bestehenden `build-pdfs.py` (xhtml2pdf) und `build-pdfs-v2.py` (fpdf2) produzieren funktionale, aber nicht überzeugende PDFs. Diese Recherche identifiziert 3–5 konkrete, kostenlose oder günstige Upgrades, ohne die gesamte Pipeline zu verwerfen.
+
+### Empfehlung 1: WeasyPrint statt xhtml2pdf (Upgrade der bestehenden HTML-Pipeline)
+
+**Was ist das?** WeasyPrint ist ein Python-HTML-zu-PDF-Renderer mit exzellenter CSS-Unterstützung (Flexbox, Grid, CSS Paged Media). Im Gegensatz zu xhtml2pdf (begrenzter CSS-Subset, sporadische Wartung) erzeugt WeasyPrint moderne, professionelle Drucklayouts. [Quelle: PDF4.dev Playwright vs WeasyPrint Vergleich](https://pdf4.dev/blog/playwright-vs-weasyprint), [Quelle: Nutrient.io WeasyPrint Guide](https://www.nutrient.io/blog/how-to-generate-pdf-reports-from-html-in-python/)
+
+**Warum für Empire Expansion passend:**
+- Die bestehende `build-pdfs.py` nutzt bereits HTML/CSS-Templates — ein Wechsel zu WeasyPrint ist ein Drop-in-Replacement, kein Rewrite.
+- Unterstützt `@font-face` für die bereits vorhandenen Fraunces/IBM Plex Fonts.
+- CSS Paged Media (`@page`, `page-break-before`, `running headers/footers`) erlaubt professionelle Deckblätter, Fußzeilen und Kolumnen.
+- Dateigröße ist dramatisch kleiner als Browser-Engines (8 KB vs. 16–125 KB pro Dokument), was bei E-Mail-Versand wichtig ist.
+- Aktiv gepflegt (Latest Release Februar 2026, Python 3.10+).
+
+**Kosten:** 0 € (Open Source, BSD-Lizenz).
+
+**System-Abhängigkeit:** Benötigt Pango/Cairo systemseitig (unter Windows: `weasyprint` installiert diese meist automatisch via pip, sonst MSYS2/MinGW-Setup nötig). Auf Linux-Servern (GitHub Actions, VPS) ist die Installation trivial (`apt-get install libpango1.0-dev`).
+
+**Einbau-Option:** `build-pdfs.py` ersetzt `from xhtml2pdf import pisa` durch `from weasyprint import HTML` und `HTML(string=html).write_pdf(path)`. Das Template-HTML/CSS bleibt fast identisch, gewinnt aber sofort an Layout-Qualität.
+
+**Farbwerte:** Die verbindlichen Cluster-Farben (`#1f6f5c` für Finanz, `#3d4f8f` für Business, `#b0602c` für Alltag) funktionieren 1:1 in WeasyPrint-CSS ohne Konvertierung.
+
+---
+
+### Empfehlung 2: Playwright als Headless-Chrome-Alternative (für maximale Layout-Kontrolle)
+
+**Was ist das?** Playwright ist ein Browser-Automation-Tool, das HTML in einem echten Chromium-Headless-Tab rendert und dann als PDF exportiert. [Quelle: APITemplate.io Python PDF Libraries 2026](https://apitemplate.io/blog/how-to-convert-html-to-pdf-using-python/)
+
+**Warum für Empire Expansion passend:**
+- Höchste Rendering-Treue: Wie im Browser aussieht, so kommt es im PDF an.
+- Eignet sich für komplexe Deckblätter mit CSS-Gradients, abgerundeten Ecken, Schatten.
+- Kann aus einer lokalen HTML-Datei rendern (kein Webserver nötig).
+- Gut für einmaligen Build-Prozess (nicht für High-Volume-API geeignet, aber für 14 PDFs/Woche absolut ausreichend).
+
+**Kosten:** 0 € (Open Source, Apache-2.0).
+
+**Nachteile:** Schwerere Binär-Abhängigkeit (Chromium ~150 MB), langsamerer Cold-Start (147–227 ms vs. WeasyPrint), größere PDF-Dateien.
+
+**Empfohlener Einsatz:** Als sekundäre Option für den Cover-Page-Render (erst mit WeasyPrint den Inhalt bauen, bei unzureichender Qualität auf Playwright zurückfallen) oder für A/B-Tests, wenn WeasyPrint ein CSS-Feature nicht korrekt rendert.
+
+---
+
+### Empfehlung 3: Canva — Kostenlose eBook/Guide-Templates (visuelles Redesign als Inspiration)
+
+**Was ist das?** Canva bietet eine große Bibliothek an kostenlosen eBook-, Guide- und Lead-Magnet-Templates. [Quelle: Canva Lead Magnet Templates](https://www.canva.com/templates/s/lead-magnet/), [Quelle: Canva eBook Templates](https://www.canva.com/templates/?query=ebook)
+
+**Konkrete, für Empire Expansion passende Templates (kostenlos, Juli 2026):**
+- **„Business Guide" Templates:** [canva.com/templates/s/business-guide/](https://www.canva.com/templates/s/business-guide/) — strukturierte Layouts mit Kapiteln, Callouts, Checklisten. Passend für 04-KI, 07-Agentur, 12-Selbstständigkeit.
+- **„Finance" Templates:** [canva.com/templates/s/finance/](https://www.canva.com/templates/s/finance/) — saubere Tabellen, Infografiken, Zahlen-Callouts. Passend für 01, 03, 05, 09, 11.
+- **„Handbook" Templates:** [canva.com/templates/s/handbook/](https://www.canva.com/templates/s/handbook/) — professionelle, seriöse Ästhetik für 35+ Zielgruppe.
+- **„Lead Magnet" Templates:** [canva.com/templates/s/lead-magnet/](https://www.canva.com/templates/s/lead-magnet/) — direkt für Opt-in-Guides optimiert, mit CTA-Seiten und Social-Proof-Boxen.
+
+**Wie als Referenz nutzen:**
+1. In Canva (kostenlose Version reicht) ein passendes Template öffnen.
+2. Farben auf die Empire-Cluster-Farben anpassen: `#1f6f5c` (Finanz), `#3d4f8f` (Business), `#b0602c` (Alltag).
+3. Schriften auf Fraunces (Headlines) + IBM Plex Sans (Body) wechseln (falls in Canva Free verfügbar, sonst visuelle Äquivalente).
+4. Die Layout-Struktur (Seitenverhältnis, Margen, Boxen, Raster) als visuelle Spezifikation für die Python-Pipeline extrahieren.
+5. Screenshots der einzelnen Seiten-Typen (Cover, Kapitelseite, Checkliste, CTA-Seite) als PNGs in `00-shared/themes/` speichern, damit der Python-Code das Layout 1:1 nachbaut.
+
+**Kosten:** 0 € (Canva Free). Für Premium-Assets (einige Schriften, Stock-Fotos) optional 14,99 €/Monat, aber nicht nötig.
+
+**Hinweis:** Canva eignet sich **nicht** für die automatisierte Massenproduktion (14 Nischen × manuelles Design = zu aufwändig). Es ist eine **Design-Referenz-Quelle** für die Python-Pipeline.
+
+---
+
+### Empfehlung 4: Figma Community — Kostenlose Design-Systeme & eBook-Templates (Pixel-Exaktes Design-System)
+
+**Was ist das?** Die Figma Community bietet kostenlose, von Designern geteilte Templates, die direkt in Figma dupliziert und angepasst werden können. [Quelle: Figma Community Templates](https://www.figma.com/community/design-templates)
+
+**Konkrete, für Empire Expansion passende Files (kostenlos, Juli 2026):**
+- **„Modern E-book Design (Free)"** von [Figma Community](https://www.figma.com/community/file/1449130613685654367/modern-e-book-design-free) — ein vollständiges eBook-Template mit Cover, Inhaltsverzeichnis, Kapitelseiten, Textlayouts, CTA-Seiten. Bereits 3,8k+ Nutzer. Ideal als Master-Template für alle 14 Nischen.
+- **„Book Cover Templates | Free Design Templates"** von [Figma Community](https://www.figma.com/community/file/1111699246235339099/book-cover-templates-free-design-templates) — 110+ Cover-Designs, davon viele Business-/Finance-Optik. Für die PDF-Deckblätter nutzbar.
+- **„Shadcn/UI Design System 2025 (FREE)"** von [Figma Community](https://www.figma.com/community/file/1554177993232416414/shadcn-ui-design-system-2025-free) — Komponenten-Bibliothek mit Buttons, Cards, Callouts. Perfekt für die Infoboxen, Checklisten und CTA-Boxen in den PDFs.
+- **„Untitled UI — Ultimate Starter Style Guide"** von [Figma Community](https://figmafreebie.com/figma-templates-by-category/design-systems) — umfassendes Design-System mit Farbpaletten, Typografie-Skalen, Spacing-System. Kann als Grundlage für das Empire-PDF-Design-System dienen.
+
+**Wie als Referenz nutzen:**
+1. Figma-Account (kostenlos) erstellen.
+2. Obige Community-Files duplizieren.
+3. Empire-Cluster-Farben einfügen (`#1f6f5c`, `#3d4f8f`, `#b0602c`).
+4. Fraunces/IBM Plex Fonts als Design-System-Schriften setzen.
+5. Die Pixel-Werte (Margins, Padding, Font-Sizes, Line-Heights) aus Figma direkt in die Python-CSS-Templates übertragen.
+6. Die Komponenten (Cover, Checkliste, Infobox, Stat-Bar) als wiederverwendbare Figma-Components bauen und dann in CSS/WeasyPrint nachbauen.
+
+**Kosten:** 0 € (Figma Free + Community Files).
+
+**Vorteil gegenüber Canva:** Figma ist exakter (Pixel-Werte, Auto-Layout, Components). Die Spezifikation kann direkt an den Python-Entwickler übergeben werden ohne „ungefähr so aussehen"-Kommunikation.
+
+---
+
+### Empfehlung 5: APITemplate.io / PDF4.dev — Managed APIs (Fallback für Skalierung)
+
+**Was ist das?** APITemplate.io bietet eine REST-API, die HTML/CSS in PDFs wandelt, ohne dass Chromium oder Pango lokal installiert werden müssen. PDF4.dev bietet ähnliche Managed-Dienste. [Quelle: APITemplate.io HTML to PDF API](https://apitemplate.io/blog/how-to-convert-html-to-pdf-using-python/)
+
+**Warum für Empire Expansion relevant:**
+- Falls die lokale WeasyPrint/Playwright-Installation auf Windows zu komplex wird oder GitHub Actions nicht die nötigen Systembibliotheken hat, bietet eine Managed API einen sofort funktionierenden Fallback.
+- Keine Binary-Dependencies (kein Chromium, kein Pango).
+- Templates können zentral in der Cloud verwaltet werden.
+
+**Kosten:** APITemplate.io hat einen Free-Tier (50 PDFs/Monat). Für 14 Nischen × 1 Build/Woche = 56 PDFs/Monat gerade noch im Free-Tier. Danach ab ~9 $/Monat.
+
+**Empfohlener Einsatz:** **Nicht für den aktuellen Sprint nötig**, aber als Dokumentation für den Fall, dass die lokale Pipeline scheitert. Ein `{{APITEMPLATE_API_KEY}}`-Platzhalter in der Konfiguration hinterlegen, falls der Nutzer später auf Managed umsteigen möchte.
+
+---
+
+### Vergleichstabelle: Python HTML-zu-PDF-Engines für Empire Expansion
+
+| Kriterium | xhtml2pdf (aktuell) | WeasyPrint (Empfohlen) | Playwright (Alternative) |
+|-----------|---------------------|------------------------|------------------------|
+| **Installationsaufwand** | Sehr einfach (`pip install xhtml2pdf`) | Moderat (Pango/Cairo nötig) | Moderat (Chromium-Binary) |
+| **CSS-Qualität** | Begrenzt, legacy | Exzellent (Paged Media, Flexbox) | Browser-perfekt |
+| **Dateigröße** | Klein | Sehr klein (8 KB) | Größer (16–125 KB) |
+| **Font-Embedding** | Ja, mit Einschränkungen | Ja, vollständig | Ja, vollständig |
+| **Custom Fonts (Fraunces/IBM Plex)** | Teilweise problematisch | Vollständig unterstützt | Vollständig unterstützt |
+| **Aufwand zum Umstellen** | — | Gering (HTML-Template bleibt) | Gering-Mittel |
+| **Langzeit-Wartung** | Sporadisch | Aktiv (Release Feb 2026) | Aktiv (Microsoft) |
+| **Kosten** | 0 € | 0 € | 0 € |
+
+---
+
+### Konkrete Empfehlung für Claude (Nächster Schritt)
+
+1. **Sofort:** `build-pdfs.py` auf WeasyPrint umstellen. Der HTML/CSS-Template-Code bleibt erhalten, die Render-Qualität steigt signifikant. Die Fraunces/IBM Plex Fonts sind bereits im `fonts/`-Verzeichnis vorhanden.
+2. **Parallel:** Ein Empire-PDF-Design-System in Figma (kostenlos) aufbauen: Cover, Kapitelseite, Checkliste, Infobox, Stat-Bar, CTA-Seite, Fußzeile. Die Pixel-Werte aus Figma in die Python-CSS übertragen.
+3. **Canva als Inspirations-Quelle:** 2–3 kostenlose Canva Business-Guide-Templates durchblättern, Screenshots der besten Layout-Elemente speichern, um das Figma-Design-System zu füttern.
+4. **Keine Urgency-Countdowns, keine fiktiven Testimonials, keine erfundenen Nutzerzahlen in den PDF-Design-Elementen einbauen.** Social Proof nur über die bereits recherchierten, sourceten Marktdaten (z. B. „Trade Republic: 10 Mio. Kunden, 150 Mrd. € AUM").
+5. **Farbwerte beibehalten:** `#1f6f5c` (Finanz), `#3d4f8f` (Business), `#b0602c` (Alltag) — keine Abweichungen.
+
+---
+
 ## Aktive Anfragen an Kimi
 
 Siehe `REQUEST-FOR-KIMI.md`
