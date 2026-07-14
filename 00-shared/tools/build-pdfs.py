@@ -2,6 +2,9 @@
 """
 Build PDF lead magnets from each niche's LEAD-MAGNET.md.
 
+Renders real HTML/CSS (xhtml2pdf) instead of fpdf2's plain-text output, using
+the same brand system as the website (Fraunces / IBM Plex, cluster colors).
+
 Usage:
     cd C:/Users/aksoy/Claude/Projects/Empire-Expansion
     .venv/Scripts/python 00-shared/tools/build-pdfs.py
@@ -17,208 +20,155 @@ import re
 import sys
 from pathlib import Path
 
-from fpdf import FPDF
 from markdown import markdown
+from xhtml2pdf import pisa
 
 ROOT = Path(__file__).resolve().parents[2]
-FONT_DIR = Path("C:/Windows/Fonts")
-
-# (family, style, filename)
-FONTS = [
-    ("ArialUnicode", "", "arial.ttf"),
-    ("ArialUnicode", "B", "arialbd.ttf"),
-    ("ArialUnicode", "I", "ariali.ttf"),
-    ("ArialUnicode", "BI", "arialbi.ttf"),
-    ("Code", "", "consola.ttf"),
-]
+FONT_DIR = Path(__file__).resolve().parent / "fonts"
 
 NICHE_DIRS = sorted([d for d in ROOT.iterdir() if d.is_dir() and d.name[:2].isdigit()])
 
+CLUSTERS = {
+    "finanz": {"accent": "#1f6f5c", "tint": "#eef4f0", "label": "Finanz & Vorsorge"},
+    "business": {"accent": "#3d4f8f", "tint": "#eef0f7", "label": "Business & Digital"},
+    "alltag": {"accent": "#b0602c", "tint": "#f8f0e8", "label": "Alltag & Lifestyle"},
+}
 
-def add_fonts(pdf: FPDF) -> None:
-    for family, style, filename in FONTS:
-        path = FONT_DIR / filename
-        if path.exists():
-            pdf.add_font(family, style, str(path))
-        else:
-            print(f"WARN: font {path} not found, falling back to Helvetica")
+NICHE_CLUSTER = {
+    "01-affiliate-marketing": "finanz",
+    "03-pdfs-guides": "finanz",
+    "05-lead-generation-pkv": "finanz",
+    "08-app-ideen-appstore": "finanz",
+    "09-finanzielle-freiheit": "finanz",
+    "11-immobilien-baufinanzierung": "finanz",
+    "04-ki-integrationen-35plus": "business",
+    "07-marketing-agency-traffic": "business",
+    "12-selbststaendigkeit-business-setup": "business",
+    "02-tiktok-shop": "alltag",
+    "06-lead-generation-dropshipping": "alltag",
+    "10-gesundheit-praevention-40plus": "alltag",
+    "13-reisen-lifestyle-35plus": "alltag",
+    "14-nachhaltigkeit-eco": "alltag",
+}
+
+AMBER = "#b8842e"
+INK = "#1c2333"
+MUTED = "#5b5a6e"
+PAPER = "#f6f1e7"
 
 
-def extract_cover_title(text: str) -> str:
-    for line in text.splitlines():
+def extract_cover_title(text: str) -> tuple[str, str]:
+    """Returns (title, rest_of_text_without_h1)."""
+    lines = text.splitlines()
+    title = "Lead-Magnet"
+    for i, line in enumerate(lines):
         if line.startswith("# "):
-            return line.lstrip("# ").strip()
-    return "Lead-Magnet"
+            title = line.lstrip("# ").strip()
+            lines = lines[:i] + lines[i + 1 :]
+            break
+    return title, "\n".join(lines)
 
 
-def _is_table_separator(row_cells: list[str]) -> bool:
-    return all(
-        re.fullmatch(r"[-:\s]+", c) for c in row_cells if c.strip()
-    )
-
-
-def flatten_markdown_tables(md: str) -> str:
-    """
-    Convert markdown tables to plain key/value paragraphs.
-    fpdf2's write_html has severe problems rendering HTML tables that contain
-    nested emphasis or long unbreakable content. Flattening keeps the PDF
-    readable and avoids those crashes.
-    """
-    lines = md.splitlines()
-    out: list[str] = []
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-        if "|" in line:
-            block: list[str] = []
-            while i < len(lines) and "|" in lines[i]:
-                block.append(lines[i])
-                i += 1
-            out.extend(_table_block_to_lines(block))
-        else:
-            out.append(line)
-            i += 1
-    return "\n".join(out)
-
-
-def _table_block_to_lines(block: list[str]) -> list[str]:
-    rows: list[list[str]] = []
-    for line in block:
-        cells = [c.strip() for c in line.split("|")]
-        # Drop empty cells caused by leading/trailing pipes
-        if cells and cells[0] == "":
-            cells = cells[1:]
-        if cells and cells[-1] == "":
-            cells = cells[:-1]
-        rows.append(cells)
-
-    # Remove separator row
-    sep_idx = next(
-        (idx for idx, row in enumerate(rows) if _is_table_separator(row)), None
-    )
-    if sep_idx is not None:
-        header_rows = rows[:sep_idx]
-        body_rows = rows[sep_idx + 1 :]
-    else:
-        header_rows = []
-        body_rows = rows
-
-    headers = header_rows[0] if header_rows else []
-    result: list[str] = []
-    if headers:
-        result.append(" | ".join(headers))
-        result.append("")
-
-    for row in body_rows:
-        if not row:
-            continue
-        if headers and len(row) == len(headers):
-            parts = []
-            for h, c in zip(headers, row):
-                if c:
-                    parts.append(f"**{h}:** {c}")
-                else:
-                    parts.append(h)
-            result.append(" | ".join(parts))
-        else:
-            result.append(" | ".join(row))
-    return result
+def style_checkboxes(md: str) -> str:
+    md = re.sub(r"\[ \]", '<span class="chk"></span>', md)
+    md = re.sub(r"\[[xX]\]", '<span class="chk chk-done"></span>', md)
+    return md
 
 
 def md_to_html(text: str) -> str:
-    # Strip optional YAML frontmatter
     if text.startswith("---"):
         parts = text.split("---", 2)
         if len(parts) >= 3:
             text = parts[2].lstrip("\n")
-
-    text = flatten_markdown_tables(text)
-
-    html = markdown(
-        text,
-        extensions=["fenced_code", "nl2br"],
-        output_format="html",
-    )
-
-    # write_html in fpdf2 does not know <code>/<pre>; keep text readable.
-    html = html.replace("<code>", "<em>").replace("</code>", "</em>")
-    html = html.replace("<pre>", "<p>").replace("</pre>", "</p>")
-
-    # Keep checkbox markers as plain ASCII so every font can render them.
-    # We deliberately do NOT convert them to unicode symbols because Arial
-    # is missing those glyphs in the Windows font files.
-    html = html.replace("[ ]", "[  ]").replace("[x]", "[x]").replace("[X]", "[x]")
-
-    # Replace arrows and other symbols that Arial may not contain.
-    arrow_map = {
-        "\u2192": "->",
-        "\u2794": "->",
-        "\u2190": "<-",
-        "\u2191": "^",
-        "\u2193": "v",
-        "\u2013": "-",
-        "\u2014": "-",
-        "\u2610": "[ ]",
-        "\u2611": "[x]",
-        "\u2612": "[x]",
-        "\u2713": "[x]",
-        "\u2714": "[x]",
-        "\u2705": "[OK]",
-        "\u274c": "[X]",
-    }
-    for src, dst in arrow_map.items():
-        html = html.replace(src, dst)
-
-    # Flatten fill-in-line patterns like <strong><em>_</em></strong>___ that
-    # confuse fpdf2's renderer. Replace with a plain underscore line.
-    html = re.sub(r"<strong><em>_</em></strong>_+", "__________", html)
-    html = re.sub(r"<strong><strong><em>_</em></strong>_+</strong>", "<strong>__________</strong>", html)
-    # Also collapse accidental nested identical emphasis tags.
-    html = re.sub(r"<strong>\s*<strong>(.*?)</strong>\s*</strong>", r"<strong>\1</strong>", html, flags=re.S)
-    html = re.sub(r"<em>\s*<em>(.*?)</em>\s*</em>", r"<em>\1</em>", html, flags=re.S)
-
-    # fpdf2 write_html supports <font face="...">; force a readable body font
-    html = f'<font face="ArialUnicode">{html}</font>'
+    text = style_checkboxes(text)
+    html = markdown(text, extensions=["fenced_code", "tables", "nl2br"], output_format="html")
     return html
 
 
-def build_pdf(input_path: Path, output_path: Path, subtitle: str = "") -> None:
+def font_face_css() -> str:
+    """One distinct family name per weight — xhtml2pdf's CSS parser handles
+    numeric font-weight matching in @font-face inconsistently, so we sidestep
+    weight-matching entirely."""
+
+    def url(name: str) -> str:
+        return (FONT_DIR / name).resolve().as_uri()
+
+    return f"""
+    @font-face {{ font-family: 'Fraunces'; src: url('{url("Fraunces-Regular.ttf")}'); }}
+    @font-face {{ font-family: 'FrauncesSemiBold'; src: url('{url("Fraunces-SemiBold.ttf")}'); }}
+    @font-face {{ font-family: 'FrauncesDisplay'; src: url('{url("Fraunces-Bold72.ttf")}'); }}
+    @font-face {{ font-family: 'Plex'; src: url('{url("IBMPlexSans-Regular.ttf")}'); }}
+    @font-face {{ font-family: 'PlexMedium'; src: url('{url("IBMPlexSans-Medium.ttf")}'); }}
+    @font-face {{ font-family: 'PlexSemiBold'; src: url('{url("IBMPlexSans-SemiBold.ttf")}'); }}
+    @font-face {{ font-family: 'PlexMono'; src: url('{url("IBMPlexMono-Regular.ttf")}'); }}
+    @font-face {{ font-family: 'PlexMonoMedium'; src: url('{url("IBMPlexMono-Medium.ttf")}'); }}
+    """
+
+
+def render_html(title: str, body_html: str, cluster_key: str, az: str, kicker: str) -> str:
+    c = CLUSTERS[cluster_key]
+    return f"""<html>
+<head><style>
+{font_face_css()}
+@page {{ size: A4; margin: 2.4cm 2.2cm 2.6cm 2.2cm; }}
+body {{ font-family: 'Plex'; font-size: 10.5pt; color: {INK}; line-height: 1.55; }}
+
+.cover-band {{ background-color: {c['accent']}; height: 14pt; width: 100%; margin: -2.4cm -2.2cm 2.6cm -2.2cm; width: 21cm; }}
+.cover-brand {{ font-family: 'FrauncesSemiBold'; font-size: 15pt; color: {INK}; }}
+.cover-brand span {{ color: {AMBER}; }}
+.cover-kicker {{ font-family: 'PlexMono'; font-size: 9pt; letter-spacing: 2pt; color: {MUTED}; margin-top: 60pt; }}
+.cover-title {{ font-family: 'FrauncesDisplay'; font-size: 32pt; color: {INK}; margin-top: 14pt; line-height: 1.15; }}
+.cover-az {{ font-family: 'PlexMono'; font-size: 10pt; color: {c['accent']}; margin-top: 20pt; }}
+.cover-foot {{ font-family: 'PlexMono'; font-size: 8.5pt; color: {MUTED}; margin-top: 200pt; }}
+
+h1 {{ font-family: 'FrauncesSemiBold'; font-size: 19pt; color: {INK}; margin-top: 22pt; margin-bottom: 8pt; border-bottom: 1pt solid {c['accent']}; padding-bottom: 6pt; }}
+h2 {{ font-family: 'FrauncesSemiBold'; font-size: 14pt; color: {c['accent']}; margin-top: 16pt; margin-bottom: 6pt; }}
+h3 {{ font-family: 'PlexSemiBold'; font-size: 11.5pt; color: {INK}; margin-top: 12pt; margin-bottom: 4pt; }}
+p {{ margin: 6pt 0; }}
+strong {{ color: {INK}; }}
+em {{ color: {c['accent']}; font-style: normal; }}
+
+ul, ol {{ margin: 6pt 0 6pt 14pt; padding: 0; }}
+li {{ margin-bottom: 4pt; }}
+.chk {{ display: inline-block; width: 8pt; height: 8pt; border: 1pt solid {INK}; margin-right: 5pt; }}
+.chk-done {{ background-color: {c['accent']}; border-color: {c['accent']}; }}
+
+table {{ width: 100%; border-collapse: collapse; margin: 10pt 0; font-size: 9.5pt; }}
+th {{ background-color: {c['tint']}; color: {INK}; font-family: 'PlexSemiBold'; text-align: left; padding: 5pt 7pt; border-bottom: 1pt solid {c['accent']}; }}
+td {{ padding: 5pt 7pt; border-bottom: 0.5pt solid #ddd; vertical-align: top; }}
+
+blockquote {{ background-color: {c['tint']}; border-left: 2pt solid {c['accent']}; margin: 10pt 0; padding: 8pt 12pt; color: {INK}; }}
+
+.footer-note {{ font-family: 'PlexMono'; font-size: 7.5pt; color: {MUTED}; margin-top: 24pt; border-top: 0.5pt solid #ddd; padding-top: 8pt; }}
+</style></head>
+<body>
+
+<div class="cover-band"></div>
+<div class="cover-brand">Empire<span>&middot;</span>Expansion</div>
+<div class="cover-kicker">{kicker}</div>
+<div class="cover-title">{title}</div>
+<div class="cover-az">Aktenzeichen {az} &middot; {c['label']}</div>
+<div class="cover-foot">ecom28.de &middot; Kostenloser Download &middot; Stand 2026</div>
+
+<div style="page-break-before: always;"></div>
+{body_html}
+
+<div class="footer-note">Empire Expansion &middot; ecom28.de &middot; Dieser Guide ersetzt keine individuelle Rechts-, Steuer- oder Finanzberatung.</div>
+
+</body>
+</html>"""
+
+
+def build_pdf(input_path: Path, output_path: Path, cluster_key: str, az: str, kicker: str) -> None:
     text = input_path.read_text(encoding="utf-8")
-    title = extract_cover_title(text)
-    html = md_to_html(text)
+    title, rest = extract_cover_title(text)
+    body_html = md_to_html(rest)
+    html = render_html(title, body_html, cluster_key, az, kicker)
 
-    pdf = FPDF(format="A4")
-    add_fonts(pdf)
-
-    # Cover page
-    pdf.add_page()
-    pdf.set_auto_page_break(auto=False)
-    pdf.set_font("ArialUnicode", "B", 28)
-    pdf.set_y(80)
-    pdf.multi_cell(0, 16, title, align="C")
-    if subtitle:
-        pdf.set_font("ArialUnicode", "", 14)
-        pdf.ln(8)
-        pdf.multi_cell(0, 10, subtitle, align="C")
-    pdf.set_font("ArialUnicode", "", 11)
-    pdf.set_y(-60)
-    pdf.set_text_color(100, 100, 100)
-    pdf.multi_cell(0, 8, "Empire Expansion — 35+ Lead-Ökosystem\nKostenloser Lead-Magnet", align="C")
-    pdf.set_text_color(0, 0, 0)
-
-    # Content pages
-    pdf.add_page()
-    pdf.set_auto_page_break(auto=True, margin=18)
-    pdf.set_font("ArialUnicode", "", 11)
-    try:
-        pdf.write_html(html)
-    except Exception as e:
-        print(f"  HTML render warning for {input_path}: {e}")
-        # Fallback: write plain text blocks
-        for line in text.splitlines():
-            pdf.multi_cell(0, 6, line)
-
-    pdf.output(str(output_path))
+    with open(output_path, "wb") as out:
+        result = pisa.CreatePDF(html, dest=out)
+    if result.err:
+        raise RuntimeError(f"{result.err} rendering error(s)")
 
 
 def main() -> int:
@@ -231,9 +181,11 @@ def main() -> int:
             print(f"SKIP {niche.name}: no LEAD-MAGNET.md")
             continue
 
+        cluster_key = NICHE_CLUSTER.get(niche.name, "finanz")
+        az = niche.name[:2]
         out = niche / "lead-magnet.pdf"
         try:
-            build_pdf(lead_magnet, out, subtitle="Kostenloser Download")
+            build_pdf(lead_magnet, out, cluster_key, az, kicker="Kostenloser Lead-Magnet")
             print(f"[OK] {out.relative_to(ROOT)}")
         except Exception as e:
             print(f"[ERR] {niche.name}: {e}")
@@ -244,7 +196,7 @@ def main() -> int:
     if paid.exists():
         out = paid.parent / "paid-product.pdf"
         try:
-            build_pdf(paid, out, subtitle="Paid Guide - ETF-Strategie fuer 40+")
+            build_pdf(paid, out, "finanz", "03", kicker="Bezahlter Guide")
             print(f"[OK] {out.relative_to(ROOT)}")
         except Exception as e:
             print(f"[ERR] paid-product: {e}")
