@@ -1,12 +1,12 @@
 # Empire Expansion — Launch-Status-Report
-**Erstellt:** 2026-07-07 23:27
+**Erstellt:** 2026-07-14 07:17
 
 ## Zusammenfassung
 
 - PDFs neu gebaut: ✅ Ja
-- Landing Pages gepatched: 7 von 14
+- Landing Pages gepatched: 0 von 14
 - Nischen mit fehlenden Dateien: 0
-- Nischen mit noch vorhandenen Platzhaltern: 12
+- Nischen mit noch vorhandenen Platzhaltern: 10
 
 ## Ordner-Status
 
@@ -34,15 +34,15 @@
 | 01-affiliate-marketing | - |
 | 02-tiktok-shop | {{STRIPE_LINK}} |
 | 03-pdfs-guides | {{STRIPE_LINK}} |
-| 04-ki-integrationen-35plus | {{CAL_LINK}}, {{STRIPE_LINK}} |
-| 05-lead-generation-pkv | {{CAL_LINK}} |
+| 04-ki-integrationen-35plus | {{STRIPE_LINK}} |
+| 05-lead-generation-pkv | - |
 | 06-lead-generation-dropshipping | - |
-| 07-marketing-agency-traffic | {{CAL_LINK}}, {{STRIPE_LINK}} |
-| 08-app-ideen-appstore | {{CAL_LINK}} |
-| 09-finanzielle-freiheit | {{CAL_LINK}}, {{STRIPE_LINK}} |
+| 07-marketing-agency-traffic | {{STRIPE_LINK}} |
+| 08-app-ideen-appstore | - |
+| 09-finanzielle-freiheit | {{STRIPE_LINK}} |
 | 10-gesundheit-praevention-40plus | {{STRIPE_LINK}} |
-| 11-immobilien-baufinanzierung | {{CAL_LINK}}, {{STRIPE_LINK}} |
-| 12-selbststaendigkeit-business-setup | {{CAL_LINK}}, {{STRIPE_LINK}} |
+| 11-immobilien-baufinanzierung | {{STRIPE_LINK}} |
+| 12-selbststaendigkeit-business-setup | {{STRIPE_LINK}} |
 | 13-reisen-lifestyle-35plus | {{STRIPE_LINK}} |
 | 14-nachhaltigkeit-eco | {{STRIPE_LINK}} |
 

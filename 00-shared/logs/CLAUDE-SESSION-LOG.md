@@ -1,6 +1,38 @@
 # Claude Session Log — Empire Expansion
 
-**Letzte Aktivität:** Session 8 (2026-07-07, spät) — Cal.com live verdrahtet, Week-1-Content + Outreach für alle 14 Nischen komplett, SSL-Zertifikat ecom28.de gefixt.
+**Letzte Aktivität:** Session 10 (2026-07-14) — 6 Tage Pause (Nutzer krank), Relaunch: GitHub Pages war komplett offline, wieder aktiviert.
+
+---
+
+## Session 10 (2026-07-14) — Relaunch nach 6 Tagen Pause
+
+- **Kontext:** Nutzer war krank, Sprint pausiert seit Session 9 (08.07.). Auftrag: alle 14 Nischen heute lauffähig machen. Stripe kommt später, PayPal prüft Nutzer selbst — beides bleibt Stop-Punkt.
+- **Kritischer Fund:** `https://ecom28.de/` und alle 14 Unterseiten lieferten 404 — GitHub Pages war für das Repo komplett deaktiviert (`gh api repos/.../pages` → 404 Not Found), obwohl Custom Domain + SSL-Zertifikat (gültig bis 2026-10-05) noch korrekt hinterlegt waren. Ursache unklar (evtl. GitHub-seitiger Timeout durch Inaktivität).
+- **Fix:** Pages per `gh api -X POST repos/Psychos420/empire-expansion/pages -f source[branch]=main -f source[path]=/` neu aktiviert. Build lief automatisch durch (Status `building` → `built` in ~10s), Zertifikat blieb `approved`. Alle 14 Nischen-URLs auf `https://ecom28.de/<nische>/` liefern wieder 200.
+- **Autopilot-Lauf:** PDFs neu gebaut, Landing Pages geprüft, Content-Plan + Outreach-Vorlagen für heute generiert (`00-shared/generated-content/260714-*`). Neuer `LAUNCH-STATUS-REPORT.md`: 14/14 Nischen vollständig, einziger verbleibender Platzhalter überall ist `{{STRIPE_LINK}}` (10 Nischen betroffen) — reiner Zahlungs-Stop-Punkt, kein technisches Problem.
+- **Lead-Pipeline live verifiziert:** Server-seitiger curl-Test gegen Web3Forms wird geblockt (Pro-Plan nötig für API-Zugriff außerhalb des Browsers). Echter Browser-Test über `01-affiliate-marketing/` durchgeführt (Chrome-Automatisierung: Formular ausgefüllt, abgeschickt) → `https://api.web3forms.com/submit/success` bestätigt „Form Submitted Successfully". Lead-Erfassung funktioniert end-to-end.
+- **PDF-Downloads stichprobenartig geprüft** (01, 05, 09) — alle 200 OK.
+- **Beobachtung (kein Blocker, nur dokumentiert):** `01-affiliate-marketing/landing-page.html` trägt Titel „Der Finanzielle Freiheit-Check für 40+" — inhaltlich thematisch nah an `09-finanzielle-freiheit` (dort: „FIRE-Schnellcheck für 35+"). Vermutlich bewusst so gewählt, weil die Affiliate-Produkte für Nische 01 (Trade Republic, PKV, Zahnzusatz) am besten über einen "Finanzielle Freiheit"-Lead-Magnet funktionieren — aber zwei ähnlich betitelte Freiheits-Checks unter verschiedenen Nischen könnten sich beim organischen Posting gegenseitig verwässern. Keine Änderung vorgenommen, nur für Nutzer/Kimi vermerkt.
+- **Neue Anfragen an Kimi** in `REQUEST-FOR-KIMI.md`: (1) PayPal-Business-DE-Schnellstart-Checkliste, (2) Markt-Update-Refresh nach 6 Tagen Pause.
+- Alles committed + gepusht.
+
+### Noch offen
+- Stripe/PayPal-Links für 10 Nischen — bleibt Stop-Punkt beim Nutzer (Stripe „kommt später", PayPal „muss ich noch schauen").
+- Persönlicher Outreach-Versand, Social-Posting, Video-Aufnahmen — bleibt Stop-Punkt Nutzer (Session 8/9 unverändert).
+- Thematische Nähe 01-affiliate-marketing ↔ 09-finanzielle-freiheit (s. o.) — Beobachtung, keine Aktion.
+- Brevo-Formulare weiterhin gesperrt für den Account — Web3Forms-Fallback läuft stabil (heute live verifiziert).
+
+---
+
+## Session 9 (2026-07-08) — Kimi beantwortet dringende Anfrage zur eCom28 GmbH Corporate-Website
+
+- **Kontext:** Claude hat in `REQUEST-FOR-KIMI.md` eine DRINGENDE Anfrage gestellt: Die alte Startseite wurde als interne Nischen-Liste wahrgenommen und ist offline. eCom28 GmbH braucht eine professionelle Corporate-Website.
+- **Kimi-Recherche:**
+  - Beispiele seriöser, moderner Agentur-Websites recherchiert: Suxeedo, Brixon Group, BGP, Lunapark, Webneo, Greenstein.
+  - B2B-Vertrauenssignale für DACH zusammengestellt: Impressum, HRB, Geschäftsführer, USt-IdNr., DSGVO, Cases, Team, LinkedIn, Kontaktdaten.
+  - Empfohlene Startseiten-Struktur für eCom28 GmbH erstellt.
+- **Ergebnis:** Neue Sektion „eCom28 GmbH — Corporate Website (neue Ausrichtung)" in `KIMI-LIVE-RESEARCH.md`.
+- **Dateien aktualisiert:** `KIMI-LIVE-RESEARCH.md`, `REQUEST-FOR-KIMI.md`, `KIMI-STATUS-REPORT.md`.
 
 ---
 

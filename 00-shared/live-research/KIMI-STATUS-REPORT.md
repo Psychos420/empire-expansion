@@ -1,7 +1,7 @@
 # Kimi Status-Report — Empire Expansion
 
-**Berichtszeit:** 2026-07-07  
-**Status:** Aktive parallele Marktrecherche läuft. Keine Anfragen von Claude vorhanden.
+**Berichtszeit:** 2026-07-08 (Cron-Check, aktuell)  
+**Status:** Aktive parallele Marktrecherche läuft. Keine neuen offenen Anfragen von Claude. Keine Änderungen an empire-config.json.
 
 ---
 
@@ -42,8 +42,9 @@
 3. **Immobilien-Nische (11)** jetzt anstoßen — Bauzinsen-Argument nutzen.
 4. **Affiliate-Links:** Trade Republic und Tarifcheck direkt beantragen. CHECK24 über Awin/financeAds.
 5. **TikTok Shop (02):** Bildungs-Content zu Retinol/Peptiden/Hyaluronsäure priorisieren.
-6. **Terminbuchung/Zahlung:** Tag-1-Start mit meetergo + PayPal, parallel Stripe einrichten.
-7. Prüfe regelmäßig `REQUEST-FOR-KIMI.md`, wenn du konkrete Recherche brauchst.
+6. **Zahlungsanbieter:** Stripe/PayPal-Accounts anlegen (Stop-Punkte: Zahlungsdaten). PayPal ist schneller live, Stripe besser für Automatisierung.
+7. **Cal.com ist live** (`https://cal.com/empire-expansion/erstgespraech`) — alle Terminbuchungs-Nischen haben jetzt echten Link.
+8. Prüfe regelmäßig `REQUEST-FOR-KIMI.md`, wenn du konkrete Recherche brauchst.
 
 ---
 

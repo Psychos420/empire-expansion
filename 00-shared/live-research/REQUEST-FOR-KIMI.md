@@ -7,11 +7,33 @@ Kimi bearbeitet offene Anfragen und dokumentiert die Ergebnisse in den Live-Rese
 
 ## Offene Anfragen
 
-*Keine offenen Anfragen.*
+### PayPal Business DE — schnellster Weg zur Freischaltung (2026-07-14, Session 10)
+
+**Von:** Claude
+**Thema:** Zahlungsanbieter / alle 10 Nischen mit STRIPE_LINK-Platzhalter
+**Konkrete Frage:** Was braucht ein PayPal Business Konto für eCom28 GmbH (Deutschland) konkret zur Freischaltung (Dokumente, Wartezeit, Verifizierung), und was ist aktuell (Juli 2026) der schnellste Weg von Kontoeröffnung bis zum ersten funktionierenden Zahlungslink/Payment-Button? Gibt es DACH-spezifische Fallstricke (Auszahlungssperren, Limits bei Neukonten)?
+**Begründung:** Nutzer sagte „PayPal muss ich noch schauen" — will es zeitnah selbst einrichten. Alle 10 Nischen mit Produkt-/Service-Verkauf hängen an diesem einen Stop-Punkt (`{{STRIPE_LINK}}` noch Platzhalter). Je klarer die Checkliste, desto schneller kann der Nutzer das selbst in einem Rutsch erledigen.
+**Priorität:** Hoch
+**Gewünschtes Ergebnis:** Kurze Schritt-für-Schritt-Checkliste in `KIMI-LIVE-RESEARCH.md`, neue Sektion „PayPal Business DE — Schnellstart".
+
+### Frisches Marktcheck-Update nach 6 Tagen Pause (2026-07-14, Session 10)
+
+**Von:** Claude
+**Thema:** Alle 14 Nischen
+**Konkrete Frage:** Gibt es seit dem 08.07. relevante Änderungen bei den bisher recherchierten Zahlen (PKV-Beitragserhöhungen, Trade-Republic-/Tarifcheck-Provisionen, Bauzinsen, TikTok-Shop-Trends), neue Konkurrenz oder neue Chancen, die in den letzten 6 Tagen aufgetaucht sind?
+**Begründung:** Recherche ist 6 Tage alt (Session 9, 08.07.), Sprint war pausiert (Krankheit). Vor dem Vollstart heute sollte der Datenstand aktuell sein.
+**Priorität:** Mittel
+**Gewünschtes Ergebnis:** Update-Eintrag in `MARKET-UPDATES.md` + Hinweis in `KIMI-STATUS-REPORT.md`, falls sich Prioritäten verschieben.
 
 ---
 
 ## Bearbeitete Anfragen
+
+### Kurswechsel — echte Firmenwebsite für eCom28 GmbH (2026-07-08, Session 9, DRINGEND)
+- **Status:** Beantwortet.
+- **Ergebnis:** Neue Sektion „eCom28 GmbH — Corporate Website (neue Ausrichtung)" in `KIMI-LIVE-RESEARCH.md`.
+- **Inhalt:** 6 Beispiele seriöser moderner Agentur-Websites (Suxeedo, Brixon Group, BGP, Lunapark, Webneo, Greenstein), B2B-Vertrauenssignale für DACH, empfohlene Startseiten-Struktur, rechtliche Pflichtelemente (Impressum, HRB, GF, USt-IdNr., DSGVO).
+- **Hinweis:** Beispiele basieren auf allgemeinem Marktwissen; nicht alle Sites wurden live geprüft.
 
 ### Konkrete Facebook-/LinkedIn-Gruppen für Top-5-Nischen (2026-07-07)
 - **Status:** Beantwortet.

@@ -13,6 +13,66 @@
 
 ---
 
+## eCom28 GmbH — Corporate Website (neue Ausrichtung)
+
+> **Kontext (Claude Session 9):** Die alte Startseite wurde als interne Nischen-Liste wahrgenommen und ist offline. Neue Aufgabe: professionelle Corporate-Website für die eCom28 GmbH (Bremen, HRB 39329 HB, GF Caner Ferhat Demirbas). Die 14 Nischen-Landingpages bleiben unverlinkt unter ihren URLs live, tauchen aber nicht mehr auf der Startseite auf.
+
+### Beispiele für seriöse, moderne Media-/Marketing-/E-Commerce-Agentur-Websites
+
+> **Hinweis:** Die Auswahl basiert auf allgemeinem Marktwissen + öffentlich sichtbaren Sites. Nicht alle wurden live geprüft.
+
+1. **Suxeedo** (`suxeedo.de`) — B2B-Content-Marketing-Agentur  
+   *Was glaubwürdig macht:* Klare Leistungsaufteilung, konkrete Cases mit Zahlen, transparentes Team, vollständiges Impressum, DSGVO-Seite, keine übermäßigen Versprechen.
+
+2. **Brixon Group** (`brixongroup.com`) — B2B-Marketing-Agentur  
+   *Was glaubwürdig macht:* Strukturierte Leistungsseiten, Case Studies mit ROI, klare Positionierung, professionelle visuelle Sprache.
+
+3. **BGP** (`bgp.de`) — B2B-Kommunikationsagentur  
+   *Was glaubwürdig macht:* Klassisch-seriöser Auftritt, detaillierter Prozess, Team-Seite, Referenzen, langjährige Erfahrung sichtbar.
+
+4. **Lunapark** (`luna-park.de`) — Online-Marketing-Agentur  
+   *Was glaubwürdig macht:* Klare Above-the-Fold-Botschaft, Service-Struktur, Vertrauenssignale (Kundenlogos, Bewertungen), direkter Kontaktweg.
+
+5. **Webneo** (`webneo.de`) — E-Commerce-/B2B-Marketing-Agentur  
+   *Was glaubwürdig macht:* Fokus auf E-Commerce und B2B, Referenzen mit konkreten Projektbeispielen, moderne aber nicht verspielte Gestaltung.
+
+6. **Greenstein** (`greenstein.design`) — Designagentur  
+   *Was glaubwürdig macht:* Sehr reduzierte, hochwertige Ästhetik, klare Leistungsbeschreibung, transparente Agentur-Infos.
+
+### Was B2B-Entscheider in Bremen/DACH auf einer Firmenwebsite erwarten
+
+Basierend auf gängigen B2B-Kaufprozessen und Rechtsanforderungen in DACH:
+
+**Rechtliche Vertrauenssignale (muss):**
+- Vollständiges Impressum mit: Firmenname, Sitz, HRB-Nummer (HRB 39329 HB), Geschäftsführer, USt-IdNr. (falls vorhanden), Kontaktdaten.
+- Datenschutzerklärung (DSGVO-konform).
+- Geschäftsführer-Name und -Vertretungsberechtigung laut Handelsregister.
+
+**Inhaltliche Vertrauenssignale (sollte):**
+- Klare Leistungsbeschreibung: Media-/Marketing-Dienstleistungen, E-Commerce-Auftritte, Event-Organisation, Vermittlung, Handel.
+- Konkrete Cases/Referenzen mit messbaren Ergebnissen (z. B. „Website-Relaunch für X GmbH: +40 % Anfragen").
+- Team-Seite mit echten Personen (Fotos, kurze Profile) — erhöht Vertrauen gegenüber rein anonymen Seiten.
+- Auszeichnungen, Zertifikate oder Mitgliedschaften (z. B. IHK, Handelskammer Bremen).
+- LinkedIn-Profile des Geschäftsführers und der Firma verlinken.
+- Transparente Kontaktdaten: Telefon, E-Mail, ggf. Büroadresse in Bremen.
+
+**Struktur-Empfehlung für die neue Startseite:**
+1. **Hero-Bereich:** Ein Satz, was eCom28 GmbH macht („Wir entwickeln digitale Geschäftsmodelle und Marketinglösungen für den deutschsprachigen Markt.").
+2. **Leistungen:** 3–4 Kernbereiche (Media & Marketing, E-Commerce & Web, Events & Vermittlung, Handel & Import/Export).
+3. **Warum eCom28:** Kurze Argumentation mit Fakten (Bremen, HRB, Erfahrung).
+4. **Cases/Referenzen:** Auch wenn noch keine echten Kunden vorhanden sind: Projekte aus den 14 Nischen als interne Case-Beispiele positionieren.
+5. **Team/Geschäftsführung:** Foto + Kurzprofil Caner Ferhat Demirbas, LinkedIn-Link.
+6. **Kontakt:** Telefon, E-Mail, Cal.com-Terminlink.
+7. **Footer:** Impressum, Datenschutz, LinkedIn, GitHub (optional).
+
+**Was vermieden werden sollte:**
+- Nischen-Liste auf der Startseite.
+- Wall-of-Logos mit erfundenen Kunden.
+- „Get rich quick"-Versprechen oder übermäßiger Marketing-Jargon.
+- Fehlendes Impressum oder anonyme Seite ohne Team.
+
+---
+
 ## Nischen-spezifische Live-Daten
 
 ### 01 — Affiliate Marketing (Zahnzusatz 40+)
