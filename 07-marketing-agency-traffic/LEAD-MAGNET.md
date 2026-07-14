@@ -41,7 +41,7 @@ Jeder Punkt folgt diesem Schema:
 2. **Kernfrage:** „Können Sie das mit Ja beantworten?"
 3. **Häufiges Problem**
 4. **Sofort-Tipp:** In 10 Minuten umsetzbar
-5. **Check-Box:** □ Erledigt
+5. **Check-Box:** [ ] Erledigt
 
 ---
 

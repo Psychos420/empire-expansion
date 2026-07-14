@@ -1,12 +1,12 @@
 # Empire Expansion — Launch-Status-Report
-**Erstellt:** 2026-07-14 08:49
+**Erstellt:** 2026-07-14 09:14
 
 ## Zusammenfassung
 
 - PDFs neu gebaut: ✅ Ja
 - Landing Pages gepatched: 0 von 14
 - Nischen mit fehlenden Dateien: 0
-- Nischen mit noch vorhandenen Platzhaltern: 7
+- Nischen mit noch vorhandenen Platzhaltern: 8
 
 ## Ordner-Status
 
@@ -37,7 +37,7 @@
 | 04-ki-integrationen-35plus | - |
 | 05-lead-generation-pkv | - |
 | 06-lead-generation-dropshipping | - |
-| 07-marketing-agency-traffic | - |
+| 07-marketing-agency-traffic | {{STRIPE_LINK}} |
 | 08-app-ideen-appstore | - |
 | 09-finanzielle-freiheit | - |
 | 10-gesundheit-praevention-40plus | {{STRIPE_LINK}} |

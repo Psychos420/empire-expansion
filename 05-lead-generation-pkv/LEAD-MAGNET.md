@@ -43,16 +43,16 @@ Ein kostenloses PDF-Download für Beamte und Beamtenanwärter, das den Wechsel i
 
 | # | Prüfpunkt | Status |
 |---|-----------|--------|
-| 1 | Beihilfesatz meines Bundeslandes kennen | ☐ |
-| 2 | Aktuellen Beihilfebescheid vorliegen | ☐ |
-| 3 | Gesundheitszustand dokumentieren (Vorerkrankungen, Medikamente) | ☐ |
-| 4 | Familienplanung / Kinderwunsch berücksichtigt | ☐ |
-| 5 | Restkostenversicherung mit Kopf- bzw. Krankenhaustarif abgeglichen | ☐ |
-| 6 | Wahlleistungen (Chefarzt, Einbettzimmer) geprüft | ☐ |
-| 7 | Zahnleistungen und Zahnersatz im Tarif enthalten | ☐ |
-| 8 | Beitragsentwicklung / Alterungsrückstellungen vergleichen | ☐ |
-| 9 | Anbieter-Wechsel vs. Tarifwechsel innerhalb der PKV geprüft | ☐ |
-| 10 | Termin mit lizenziertem Makler vereinbart | ☐ |
+| 1 | Beihilfesatz meines Bundeslandes kennen | [ ] |
+| 2 | Aktuellen Beihilfebescheid vorliegen | [ ] |
+| 3 | Gesundheitszustand dokumentieren (Vorerkrankungen, Medikamente) | [ ] |
+| 4 | Familienplanung / Kinderwunsch berücksichtigt | [ ] |
+| 5 | Restkostenversicherung mit Kopf- bzw. Krankenhaustarif abgeglichen | [ ] |
+| 6 | Wahlleistungen (Chefarzt, Einbettzimmer) geprüft | [ ] |
+| 7 | Zahnleistungen und Zahnersatz im Tarif enthalten | [ ] |
+| 8 | Beitragsentwicklung / Alterungsrückstellungen vergleichen | [ ] |
+| 9 | Anbieter-Wechsel vs. Tarifwechsel innerhalb der PKV geprüft | [ ] |
+| 10 | Termin mit lizenziertem Makler vereinbart | [ ] |
 
 ### Seite 4: Beihilfe-Übersicht 2026
 - Tabelle: Beihilfesätze nach Bundesland (knappe Übersicht, ohne Gewähr)

@@ -63,10 +63,10 @@ Kostenloser PDF-Guide + Bonus: „Dein 30-Tage Retinol-Startplan"
 „Kostenlos: Die 7-Schritte-Checkliste für Haut ab 40"
 
 **Bullets:**
-- ✅ Die 3 Inhaltsstoffe, die wirklich wirken
-- ✅ 7-Tage-Routine zum Sofort-Starten
-- ✅ 30-Tage Retinol-Plan als Bonus
-- ✅ 15 % Rabatt auf GlowAfter35
+- [x] Die 3 Inhaltsstoffe, die wirklich wirken
+- [x] 7-Tage-Routine zum Sofort-Starten
+- [x] 30-Tage Retinol-Plan als Bonus
+- [x] 15 % Rabatt auf GlowAfter35
 
 **Formular:** Nur E-Mail-Adresse.
 

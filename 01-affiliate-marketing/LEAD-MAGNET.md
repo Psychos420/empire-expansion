@@ -57,7 +57,7 @@ Ein unabhängiger PKV-Vergleich lohnt sich wahrscheinlich. Nutze einen Vergleich
 Eine Zahnzusatzversicherung kann sich schnell amortisieren — besonders bei geplanten Behandlungen wie Implantaten oder Kieferorthopädie. Wichtig: Abschluss *vor* der Behandlungsplanung.
 
 ### Nächster Schritt
-➔ Vergleiche aktuelle PKV- und Zahnzusatz-Tarife über ein unabhängiges Vergleichsportal.
+-> Vergleiche aktuelle PKV- und Zahnzusatz-Tarife über ein unabhängiges Vergleichsportal.
 
 ### Affiliate-Integration (Seite 12)
 - CHECK24 PKV-Vergleich
@@ -94,7 +94,7 @@ Die gesetzliche Rente reicht für die meisten 40+ nicht, um den gewohnten Lebens
 > 300 €/Monat über 20 Jahre bei durchschnittlich 7 % p. a. = ca. 156.000 € (ohne Garantie, historische Rendite).
 
 ### Nächster Schritt
-➔ Eröffne ein kostengünstiges Depot und lege einen monatlichen ETF-Sparplan an.
+-> Eröffne ein kostengünstiges Depot und lege einen monatlichen ETF-Sparplan an.
 
 ### Affiliate-Integration (Seite 12)
 - Scalable Capital Depot
@@ -132,7 +132,7 @@ Die gesetzliche Rente reicht für die meisten 40+ nicht, um den gewohnten Lebens
 3. **In 12 Monaten:** Erster Jahres-Review, Sparrate ggf. erhöhen, Freiheits-Fortschritt dokumentiert
 
 ### Nächster Schritt
-➔ Trage deine Zahlen in den Rentenlücken-Rechner ein und finde deine persönliche Sparrate.
+-> Trage deine Zahlen in den Rentenlücken-Rechner ein und finde deine persönliche Sparrate.
 
 ### Affiliate-Integration (Seite 12)
 - justETF Rentenrechner
