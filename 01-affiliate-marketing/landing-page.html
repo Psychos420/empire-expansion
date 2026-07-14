@@ -369,7 +369,26 @@
       .step-num{ width:38px; height:38px; font-size:0.95rem; border-radius: 10px; }
       .lead-form{ padding: 24px 20px; }
     }
-  </style>
+      /* Sticky Mobile CTA */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.96);
+      padding: 12px 20px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      z-index: 90;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
+    }
+    .sticky-cta.is-visible { display: block; }
+    .sticky-cta a { display: block; width: 100%; text-align: center; }
+    .sticky-cta .cta-text { display: block; text-align: center; font-size: 0.85rem; color: rgba(0,0,0,0.5); margin-bottom: 8px; }
+    @media (max-width: 599px) {
+      .sticky-cta, .sticky-cta.is-visible { display: block !important; }
+      body { padding-bottom: 72px; }
+    }
+</style>
   <link rel="stylesheet" href="../00-shared/themes/empire-core.css">
   <link rel="stylesheet" href="../00-shared/themes/niche-themes.css">
 </head>

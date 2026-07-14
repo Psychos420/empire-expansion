@@ -692,7 +692,26 @@
       .stat-number { font-size: 1.6rem; }
       .form-card { padding: 24px; }
     }
-  </style>
+      /* Sticky Mobile CTA */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.96);
+      padding: 12px 20px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      z-index: 90;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      backdrop-filter: blur(6px);
+    }
+    .sticky-cta.is-visible { display: block; }
+    .sticky-cta a { display: block; width: 100%; text-align: center; }
+    .sticky-cta .cta-text { display: block; text-align: center; font-size: 0.85rem; color: rgba(0,0,0,0.5); margin-bottom: 8px; }
+    @media (max-width: 599px) {
+      .sticky-cta, .sticky-cta.is-visible { display: block !important; }
+      body { padding-bottom: 72px; }
+    }
+</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -1058,8 +1077,7 @@
 
 <!-- Sticky CTA -->
 <div class="sticky-cta" id="stickyCta">
-  <span class="cta-text">Bereit für mehr Klarheit?</span>
-  <a href="#form" class="cta-button">Jetzt kostenlos starten <span class="arrow">→</span></a>
+  <a href="{{STRIPE_LINK}}" class="cta-button">PKV-Wechsel-Kompaktguide 2026 kaufen — 24 € <span class="arrow">→</span></a>
 </div>
 
   <script>
