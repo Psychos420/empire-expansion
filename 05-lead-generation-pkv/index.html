@@ -31,17 +31,17 @@
   
   <style>
     :root {
-      --color-primary: #0B1F3F;
-      --color-accent: #D4A017;
-      --color-cta: #C0392B;
-      --color-cta-hover: #A93226;
+      --color-primary: #1f6f5c;
+      --color-accent: #2a9d8f;
+      --color-cta: #1f6f5c;
+      --color-cta-hover: #164c3e;
       --color-bg: #F5F1EB;
       --color-bg-warm: #FDFBF7;
       --color-card: #FFFFFF;
       --color-text: #1A1A2E;
       --color-muted: #6B7280;
       --color-border: #E5E7EB;
-      --color-urgency: #7B1F2A;
+      --color-urgency: #1f6f5c;
       --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
       --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -80,14 +80,14 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    .urgency-bar strong { color: #FFD700; }
+    .urgency-bar strong { color: #2a9d8f; }
     
     /* Sticky Nav */
     .sticky-nav {
       position: fixed;
       top: 40px;
       left: 0; right: 0;
-      background: rgba(11, 31, 63, 0.95);
+      background: rgba(31, 111, 92, 0.95);
       backdrop-filter: blur(10px);
       padding: 16px 0;
       transform: translateY(-100%);
@@ -132,7 +132,7 @@
       position: absolute;
       top: -50%; right: -10%;
       width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(212, 160, 23, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(42, 157, 143, 0.15) 0%, transparent 70%);
       border-radius: 50%;
     }
     .hero-grid {
@@ -145,8 +145,8 @@
     }
     .hero-badge {
       display: inline-block;
-      background: rgba(212, 160, 23, 0.2);
-      color: #FFD700;
+      background: rgba(42, 157, 143, 0.2);
+      color: #2a9d8f;
       padding: 6px 14px;
       border-radius: 100px;
       font-size: 0.8rem;
@@ -178,7 +178,7 @@
       border-radius: 8px;
       text-decoration: none;
       transition: all 0.2s;
-      box-shadow: 0 4px 14px rgba(192, 57, 43, 0.4);
+      box-shadow: 0 4px 14px rgba(31, 111, 92, 0.4);
       border: none;
       cursor: pointer;
       font-family: inherit;
@@ -186,10 +186,10 @@
     .cta-primary:hover {
       background: var(--color-cta-hover);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(192, 57, 43, 0.5);
+      box-shadow: 0 6px 20px rgba(31, 111, 92, 0.5);
     }
     .cta-text {
-      color: #FFD700;
+      color: #2a9d8f;
       font-weight: 600;
       text-decoration: none;
       font-size: 1rem;
@@ -325,7 +325,7 @@
       color: #fff;
       border-color: var(--color-primary);
     }
-    .stat-card.accent .stat-number { color: #FFD700; }
+    .stat-card.accent .stat-number { color: #2a9d8f; }
     .stat-card.accent .stat-label, .stat-card.accent .stat-source { color: rgba(255,255,255,0.85); }
     .stat-number {
       font-size: 2rem;
@@ -436,7 +436,7 @@
     }
     .benefit-icon {
       width: 48px; height: 48px;
-      background: rgba(212, 160, 23, 0.1);
+      background: rgba(42, 157, 143, 0.1);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -502,14 +502,14 @@
       font-size: 0.95rem;
     }
     .scarcity-box {
-      background: rgba(212, 160, 23, 0.15);
-      border: 1px solid rgba(212, 160, 23, 0.3);
+      background: rgba(42, 157, 143, 0.15);
+      border: 1px solid rgba(42, 157, 143, 0.3);
       padding: 16px;
       border-radius: 8px;
       font-size: 0.9rem;
       color: rgba(255,255,255,0.9);
     }
-    .scarcity-box strong { color: #FFD700; }
+    .scarcity-box strong { color: #2a9d8f; }
     
     .form-card {
       background: var(--color-card);
@@ -542,7 +542,7 @@
     .lead-form input:focus, .lead-form select:focus {
       outline: none;
       border-color: var(--color-accent);
-      box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.1);
+      box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.1);
     }
     .lead-form label {
       display: flex;
@@ -573,12 +573,12 @@
       font-family: inherit;
       transition: all 0.2s;
       margin-top: 8px;
-      box-shadow: 0 4px 14px rgba(192, 57, 43, 0.3);
+      box-shadow: 0 4px 14px rgba(31, 111, 92, 0.3);
     }
     .lead-form button:hover {
       background: var(--color-cta-hover);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(192, 57, 43, 0.4);
+      box-shadow: 0 6px 20px rgba(31, 111, 92, 0.4);
     }
     .form-card .disclaimer {
       font-size: 0.75rem;
@@ -661,7 +661,7 @@
       color: rgba(255,255,255,0.8);
       text-decoration: none;
     }
-    footer a:hover { color: var(--color-accent); }
+    footer a:hover { color: #2a9d8f; }
     footer .legal {
       font-size: 0.75rem;
       color: rgba(255,255,255,0.4);
@@ -710,16 +710,11 @@
     </nav>
   </div>
 </header>
-  <!-- Urgency Bar -->
-  <div class="urgency-bar">
-    <strong>PKV-Alarm 2026:</strong> ~60% der Tarife steigen. Einzelne Anbieter (VKB) erhöhen um bis zu 40%. Prüfen Sie Ihren Tarif jetzt.
-  </div>
-  
   <!-- Sticky Nav -->
   <nav class="sticky-nav" id="stickyNav">
     <div class="container">
       <div class="logo">Empire <span>Expansion</span></div>
-      <a href="#form" class="cta-small">Checkliste sichern</a>
+      <a href="{{STRIPE_LINK}}" class="cta-small">Guide kaufen — 24 €</a>
     </div>
   </nav>
   
@@ -731,13 +726,13 @@
           <span class="hero-badge">Marktdaten Juli 2026</span>
           <h1>Die stille Beitragsfalle: Jeder 2. Beamte zahlt 2026 zu viel für seine PKV</h1>
           <p class="subheadline">
-            60% der Privatversicherten sind von Erhöhungen betroffen. Der Standardtarif liegt bei 848,62 €/Monat. 
+            60 % der Privatversicherten sind von Erhöhungen betroffen. Der Standardtarif liegt bei 848,62 €/Monat. 
             Die richtige Restkostenversicherung spart Beamten bis zu 2.400 € im Jahr. 
-            Prüfen Sie Ihren Tarif in 10 Minuten — mit der kostenlosen Beamten-Checkliste.
+            Der PKV-Wechsel-Kompaktguide 2026 zeigt Ihnen in 10 Minuten, was zu tun ist.
           </p>
           <div class="hero-ctas">
-            <a href="#form" class="cta-primary">Kostenlose Checkliste sichern</a>
-            <a href="#wie-es-funktioniert" class="cta-text">So funktioniert's →</a>
+            <a href="{{STRIPE_LINK}}" class="cta-primary">PKV-Guide kaufen — 24 €</a>
+            <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-text">Kostenlose Makler-Beratung →</a>
           </div>
           <div class="hero-trust">
             <span>✓ Unabhängig & DSGVO-konform</span>
@@ -751,7 +746,7 @@
             <div class="pdf-badge">Exklusiv für Beamte</div>
             <div class="pdf-pages">10-Punkte-Plan • 8 Seiten • Druckbar</div>
           </div>
-          <div class="mockup-caption">Kostenloser Download • Sofort per E-Mail</div>
+          <div class="mockup-caption">Sofortiger Download nach dem Kauf • 30-Tage-Garantie</div>
         </div>
       </div>
     </div>
@@ -852,14 +847,14 @@
     <div class="container">
       <div class="form-grid">
         <div class="form-text">
-          <h2>Sichern Sie sich die Checkliste — bevor das Tarifwechsel-Fenster schließt</h2>
-          <p>Füllen Sie das Formular aus. Sie erhalten den Download-Link sofort per E-Mail.</p>
+          <h2>PKV-Wechsel-Kompaktguide 2026 kaufen</h2>
+          <p>Sofortiger Download nach dem Kauf. 30-Tage-Geld-zurück-Garantie.</p>
 <!-- Professional PDF Mockup -->
 <div style="max-width: 320px; margin: 0 auto 24px; filter: drop-shadow(0 12px 24px rgba(0,0,0,0.15)); transform: rotate(-1deg);">
 <svg viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto; border-radius: 8px;">
   <defs>
     <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#003366" flood-opacity="0.2"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#164c3e" flood-opacity="0.2"/>
     </filter>
   </defs>
   
@@ -867,27 +862,27 @@
   <rect x="0" y="0" width="320" height="420" rx="6" fill="#ffffff" filter="url(#shadow)"/>
   
   <!-- Top accent bar -->
-  <rect x="0" y="0" width="320" height="8" rx="6" fill="#0094d6"/>
-  <rect x="0" y="8" width="320" height="4" fill="#0094d6"/>
+  <rect x="0" y="0" width="320" height="8" rx="6" fill="#1f6f5c"/>
+  <rect x="0" y="8" width="320" height="4" fill="#1f6f5c"/>
   
   <!-- Right side accent block -->
-  <rect x="220" y="0" width="100" height="160" rx="6" fill="#0094d6" opacity="0.9"/>
+  <rect x="220" y="0" width="100" height="160" rx="6" fill="#1f6f5c" opacity="0.9"/>
   
   <!-- Empire Expansion logo area -->
-  <text x="20" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#003366">EMPIRE EXPANSION</text>
+  <text x="20" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="9" font-weight="700" fill="#164c3e">EMPIRE EXPANSION</text>
   
   <!-- Free badge -->
-  <rect x="20" y="45" width="120" height="18" rx="9" fill="#0094d6"/>
+  <rect x="20" y="45" width="120" height="18" rx="9" fill="#1f6f5c"/>
   <text x="80" y="57" font-family="system-ui, -apple-system, sans-serif" font-size="8" font-weight="700" fill="#ffffff" text-anchor="middle">KOSTENLOSER DOWNLOAD</text>
   
   <!-- Main title -->
-  <text x="20" y="110" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#003366">PKV-Wechsel-Checkliste 2026</text>
+  <text x="20" y="110" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#164c3e">PKV-Wechsel-Checkliste 2026</text>
   
   <!-- Subtitle -->
   <text x="20" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#666666">Beihilfe + Restkostenversicherung = optimale Absicherung</text>
   
   <!-- Bottom dark bar with details -->
-  <rect x="0" y="340" width="320" height="80" rx="6" fill="#003366"/>
+  <rect x="0" y="340" width="320" height="80" rx="6" fill="#164c3e"/>
   <text x="20" y="365" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#ffffff" opacity="0.9">ecom28.de | hallo@ecom28.de</text>
   <text x="20" y="382" font-family="system-ui, -apple-system, sans-serif" font-size="8" fill="#ffffff" opacity="0.9">cal.com/empire-expansion</text>
   <text x="20" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="7" fill="#ffffff" opacity="0.6">Teil des Empire-Expansion-Oekosystems</text>
@@ -905,38 +900,39 @@
   <line x1="20" y1="305" x2="170" y2="305" stroke="#e0e0e0" stroke-width="1"/>
   
   <!-- Checklist checkbox simulation -->
-  <rect x="20" y="178" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
-  <rect x="20" y="193" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
-  <rect x="20" y="208" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
-  <rect x="20" y="223" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
-  <rect x="20" y="238" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
-  <rect x="20" y="253" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
-  <rect x="20" y="268" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
-  <rect x="20" y="283" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
-  <rect x="20" y="298" width="6" height="6" fill="none" stroke="#003366" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="178" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="193" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="208" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="223" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="238" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="253" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="268" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="283" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
+  <rect x="20" y="298" width="6" height="6" fill="none" stroke="#164c3e" stroke-width="0.5" rx="1"/>
   
   <!-- Checkmark in some boxes -->
-  <path d="M22 180 l1 1.5 l2 -2.5" stroke="#0094d6" stroke-width="0.8" fill="none" stroke-linecap="round"/>
-  <path d="M22 210 l1 1.5 l2 -2.5" stroke="#0094d6" stroke-width="0.8" fill="none" stroke-linecap="round"/>
-  <path d="M22 240 l1 1.5 l2 -2.5" stroke="#0094d6" stroke-width="0.8" fill="none" stroke-linecap="round"/>
-  <path d="M22 270 l1 1.5 l2 -2.5" stroke="#0094d6" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 180 l1 1.5 l2 -2.5" stroke="#1f6f5c" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 210 l1 1.5 l2 -2.5" stroke="#1f6f5c" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 240 l1 1.5 l2 -2.5" stroke="#1f6f5c" stroke-width="0.8" fill="none" stroke-linecap="round"/>
+  <path d="M22 270 l1 1.5 l2 -2.5" stroke="#1f6f5c" stroke-width="0.8" fill="none" stroke-linecap="round"/>
   
   <!-- Corner fold effect -->
-  <polygon points="320,0 320,30 290,0" fill="#003366" opacity="0.1"/>
+  <polygon points="320,0 320,30 290,0" fill="#164c3e" opacity="0.1"/>
 </svg>
 </div>
           <ul class="form-benefits">
-            <li>✓ Kostenlos & unverbindlich</li>
+            <li>✓ Sofortiger PDF-Download nach dem Kauf</li>
             <li>✓ 8 Seiten, druckbar, mit Checkboxen</li>
             <li>✓ Speziell für Beamte, Beamtenanwärter & Verbeamtete</li>
+            <li>✓ 30-Tage-Geld-zurück-Garantie</li>
           </ul>
           <div class="scarcity-box">
-            <strong>⏳ Fristen-Alarm:</strong> Das Tarifwechsel-Fenster für 2026 läuft. Jeder Monat, den Sie warten, kann Ihnen mehrere Hundert Euro kosten. Prüfen Sie jetzt.
+            <strong>Marktdaten Juli 2026:</strong> ~60 % der PKV-Tarife steigen. Einzelne Anbieter erhöhen um bis zu 40 %. Quelle: PKV-Verband, BaFin.
           </div>
         </div>
         <div class="form-card">
-          <h3>Jetzt kostenlos anfordern</h3>
-          <p class="subtitle">Nur 2 Felder ausfüllen. Der Rest ist optional.</p>
+          <h3>PKV-Wechsel-Kompaktguide 2026 kaufen</h3>
+          <p class="subtitle">Sofortiger Download nach dem Kauf. 30-Tage-Geld-zurück-Garantie.</p>
           <form class="lead-form" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="d4cddc96-085c-497b-bd25-b77b7dd3eca9">
             <input type="hidden" name="subject" value="Neuer Lead: 05-lead-generation-pkv">
@@ -965,7 +961,7 @@
             <input type="hidden" name="tag" value="05-lead-generation-pkv">
             <label>
               <input type="checkbox" name="checkliste_consent" required>
-              Ich möchte die kostenlose Checkliste per E-Mail erhalten.
+              Ich möchte den PKV-Guide per E-Mail erhalten.
             </label>
             <label>
               <input type="checkbox" name="privacy_consent" required>
@@ -975,10 +971,10 @@
               <input type="checkbox" name="contact_consent">
               Ich bin einverstanden, dass mich ein lizenzierter Versicherungsmakler telefonisch oder per E-Mail kontaktieren darf. (Optional)
             </label>
-            <button type="submit">Checkliste jetzt sichern →</button>
+            <button type="submit">Guide kaufen — 24 € →</button>
           </form>
           <p class="disclaimer">
-            <a href="lead-magnet.pdf" download>PDF ohne Anmeldung herunterladen</a><br>
+            <a href="lead-magnet.pdf" download>PDF-Vorschau ohne Kauf ansehen</a><br>
             Kein Spam. Sie können sich jederzeit abmelden. Ihre Daten werden DSGVO-konform verarbeitet.
           </p>
         </div>
@@ -991,8 +987,8 @@
     <div class="container">
       <h2 class="fade-in">Häufige Fragen</h2>
       <div class="faq-item fade-in">
-        <h4>Ist die Checkliste wirklich kostenlos?</h4>
-        <p>Ja, absolut. Der Download ist kostenlos und unverbindlich. Sie erhalten die PDF per E-Mail und können sich jederzeit abmelden.</p>
+        <h4>Was kostet der PKV-Guide?</h4>
+        <p>Der PKV-Wechsel-Kompaktguide 2026 kostet 24 € (einmalig). Sie erhalten sofort nach dem Kauf den PDF-Download per E-Mail. 30-Tage-Geld-zurück-Garantie.</p>
       </div>
       <div class="faq-item fade-in">
         <h4>Erhalte ich Versicherungsberatung?</h4>
@@ -1013,12 +1009,12 @@
   <section class="final-cta">
     <div class="container">
       <h2 class="fade-in">Starten Sie Ihre PKV-Prüfung noch heute</h2>
-      <p class="fade-in">Laden Sie die kostenlose Checkliste herunter und buchen Sie anschließend einen unverbindlichen 15-Minuten-Check.</p>
+      <p class="fade-in">Kaufen Sie den Kompaktguide für 24 € oder vereinbaren Sie eine kostenlose Makler-Beratung.</p>
       <p class="fade-in">
-        <a href="#form" class="cta-primary">Checkliste herunterladen</a>
+        <a href="{{STRIPE_LINK}}" class="cta-primary">PKV-Guide kaufen — 24 €</a>
       </p>
       <p class="mt-2 fade-in">
-        <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-text">Oder direkt Termin buchen →</a>
+        <a href="https://cal.com/empire-expansion/erstgespraech" class="cta-text">Kostenlose Makler-Beratung vereinbaren →</a>
       </p>
     </div>
   </section>
